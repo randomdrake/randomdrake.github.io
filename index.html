@@ -87,6 +87,29 @@
             border-left-color: #f97316;
             background: rgba(249, 115, 22, 0.05);
         }
+        .commit-item.claude-commit {
+            border-left-color: #d4a574;
+            background: rgba(212, 165, 116, 0.04);
+        }
+        .commit-item.claude-commit:hover {
+            border-left-color: #e8c49a;
+            background: rgba(212, 165, 116, 0.08);
+        }
+        .commit-item.david-commit {
+            border-left-color: #f97316;
+        }
+        .commit-avatar {
+            font-size: 1.15rem;
+            line-height: 1;
+            animation: botWobble 3s ease-in-out infinite;
+            display: inline-block;
+        }
+        .commit-avatar:nth-child(odd) { animation-delay: -1.5s; }
+        @keyframes botWobble {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-6deg); }
+            75% { transform: rotate(6deg); }
+        }
 
         /* New commit toast notification */
         .commit-toast {
@@ -436,7 +459,7 @@
         <!-- Commit Livestream -->
         <section class="bg-gh-card border border-gh-border rounded-lg p-6 mb-10 fade-in-up delay-300">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🔥</span> Commit Livestream</h2>
+                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🤖</span> Commit Livestream</h2>
                 <div class="flex items-center gap-2 text-xs text-gh-muted">
                     <span class="live-dot"></span>
                     <span id="commit-count">Loading...</span>
@@ -937,6 +960,71 @@
         }).join('');
     }
 
+    // --- Commit author helpers ---
+    const ROBOT_EMOJIS = ['🤖', '🦾', '⚙️', '🔧', '🛠️', '🧠', '💡', '🔩'];
+    const DAVID_EMOJIS = ['👨‍💻', '🧑‍🔬', '🚀', '🔥', '⚡', '💪', '🎯', '🏗️'];
+
+    function isClaudeCommit(c) {
+        if (c.full_message && c.full_message.includes('Co-Authored-By: Claude')) return true;
+        if (c.author === 'github-actions[bot]') return false;
+        // Check message for Claude co-author pattern
+        if (c.message && c.message.includes('Claude')) return true;
+        return false;
+    }
+
+    function isDavidCommit(c) {
+        return c.author === 'David Drake' || c.author === 'randomdrake';
+    }
+
+    function isBotCommit(c) {
+        return c.author === 'github-actions[bot]';
+    }
+
+    function commitAvatar(c) {
+        // Pick a deterministic-ish emoji based on sha
+        const idx = parseInt(c.sha?.slice(0, 4) || '0', 16);
+        if (isBotCommit(c)) return '⚙️';
+        if (isClaudeCommit(c)) return ROBOT_EMOJIS[idx % ROBOT_EMOJIS.length];
+        if (isDavidCommit(c)) return DAVID_EMOJIS[idx % DAVID_EMOJIS.length];
+        return '👤';
+    }
+
+    function commitClass(c) {
+        if (isClaudeCommit(c)) return 'claude-commit';
+        if (isDavidCommit(c)) return 'david-commit';
+        return '';
+    }
+
+    function authorBadge(c) {
+        if (isClaudeCommit(c)) return '<span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-amber-900/40 text-amber-300 border border-amber-700/40">Claude</span>';
+        if (isDavidCommit(c)) return '<span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-orange-900/40 text-orange-300 border border-orange-700/40">David</span>';
+        if (isBotCommit(c)) return '<span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-zinc-800 text-zinc-400 border border-zinc-700">Bot</span>';
+        return `<span class="text-[10px] px-1.5 py-0.5 rounded-full bg-zinc-800 text-zinc-400 border border-zinc-700">${c.author}</span>`;
+    }
+
+    // --- Shared commit item renderer ---
+    function renderCommitItems(commits) {
+        return commits.map((c, i) => `
+            <a href="${c.url}" target="_blank" rel="noopener"
+               class="commit-item ${commitClass(c)} block pl-3 py-2.5 slide-in-left"
+               style="animation-delay: ${Math.min(i, 20) * 40}ms">
+                <div class="flex items-start gap-3">
+                    <span class="commit-avatar shrink-0 mt-0.5" title="${c.author}">${commitAvatar(c)}</span>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-sm text-gh-text truncate">${c.message.replace(/</g, '&lt;')}</p>
+                        <div class="flex items-center gap-2 mt-1 text-xs text-gh-muted flex-wrap">
+                            ${authorBadge(c)}
+                            <code class="text-[10px] text-gh-accent">${(c.sha || '').slice(0, 7)}</code>
+                            <span class="text-gh-accent">${c.repo}</span>
+                            <span>&middot;</span>
+                            <span>${timeAgo(c.date)}</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        `).join('');
+    }
+
     // --- Commit Livestream ---
     async function loadCommitFeed(repos) {
         if (!repos || repos.length === 0) return;
@@ -984,32 +1072,11 @@
             return;
         }
 
-        // Render commit items (duplicate the list for seamless infinite scroll)
-        function renderItems(commits) {
-            return commits.map((c, i) => `
-                <a href="${c.url}" target="_blank" rel="noopener"
-                   class="commit-item block pl-4 py-2.5 slide-in-left"
-                   style="animation-delay: ${Math.min(i, 20) * 40}ms">
-                    <div class="flex items-start gap-3">
-                        <code class="commit-sha text-xs text-gh-accent shrink-0 mt-0.5">${c.sha}</code>
-                        <div class="min-w-0 flex-1">
-                            <p class="text-sm text-gh-text truncate">${c.message.replace(/</g, '&lt;')}</p>
-                            <div class="flex items-center gap-2 mt-0.5 text-xs text-gh-muted">
-                                <span class="text-gh-accent">${c.repo}</span>
-                                <span>&middot;</span>
-                                <span>${timeAgo(c.date)}</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            `).join('');
-        }
-
-        // Reverse so newest commits are at the bottom (scroll up into view first)
-        const reversed = [...allCommits].reverse();
+        // Chronological: oldest first, newest at bottom (scrolls up into view)
+        const chronological = [...allCommits].sort((a, b) => new Date(a.date) - new Date(b.date));
 
         const feed = document.getElementById('commit-feed');
-        const itemsHTML = renderItems(reversed);
+        const itemsHTML = renderCommitItems(chronological);
 
         // Set scroll speed based on number of commits (~2s per commit)
         const duration = Math.max(30, allCommits.length * 2);
@@ -1344,6 +1411,9 @@
     }
 
     function renderCommitFeed(commits) {
+        // Sort chronologically (oldest first) — newest at bottom scrolls up into view
+        const sorted = [...commits].sort((a, b) => new Date(a.date) - new Date(b.date));
+
         document.getElementById('commit-count').textContent =
             `${commits.length} commits`;
 
@@ -1353,31 +1423,8 @@
             return;
         }
 
-        function renderItems(list) {
-            return list.map((c, i) => `
-                <a href="${c.url}" target="_blank" rel="noopener"
-                   class="commit-item block pl-4 py-2.5 slide-in-left"
-                   style="animation-delay: ${Math.min(i, 20) * 40}ms">
-                    <div class="flex items-start gap-3">
-                        <code class="commit-sha text-xs text-gh-accent shrink-0 mt-0.5">${c.sha.slice(0, 7)}</code>
-                        <div class="min-w-0 flex-1">
-                            <p class="text-sm text-gh-text truncate">${c.message.replace(/</g, '&lt;')}</p>
-                            <div class="flex items-center gap-2 mt-0.5 text-xs text-gh-muted">
-                                <span class="text-gh-accent">${c.repo}</span>
-                                <span>&middot;</span>
-                                <span>${timeAgo(c.date)}</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            `).join('');
-        }
-
-        // Reverse so newest commits are at the bottom (scroll up into view first)
-        const reversed = [...commits].reverse();
-
         const feed = document.getElementById('commit-feed');
-        const itemsHTML = renderItems(reversed);
+        const itemsHTML = renderCommitItems(sorted);
         const duration = Math.max(30, commits.length * 2);
         feed.style.setProperty('--scroll-duration', duration + 's');
         feed.innerHTML = `<div class="commit-feed-inner">${itemsHTML}${itemsHTML}</div>`;

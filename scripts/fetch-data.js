@@ -93,9 +93,11 @@ async function main() {
     const raw = await apiFetch(`/repos/${USERNAME}/${repo.name}/commits?per_page=15`);
     if (!raw) continue;
     raw.forEach(c => {
+      const fullMsg = c.commit.message;
       commits.push({
         sha: c.sha,
-        message: c.commit.message.split('\n')[0],
+        message: fullMsg.split('\n')[0],
+        full_message: fullMsg,
         repo: repo.name,
         date: c.commit.author.date,
         author: c.commit.author.name,
