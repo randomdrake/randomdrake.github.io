@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T03:51:40.957Z",
+  "generated_at": "2026-03-01T04:10:30.344Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T03:51:30Z",
-      "pushed_at": "2026-03-01T03:51:27Z"
+      "updated_at": "2026-03-01T04:10:19Z",
+      "pushed_at": "2026-03-01T04:10:16Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -223,7 +223,7 @@
     },
     "randomdrake": {},
     "randomdrake.github.io": {
-      "HTML": 79479,
+      "HTML": 74252,
       "JavaScript": 4639
     },
     "react-flow-org-chart": {
@@ -242,6 +242,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "4b16810115f5c0b4bed362ddb89bcd1b564e982c",
+      "message": "Remove Recent Activity section — redundant with unified feed",
+      "full_message": "Remove Recent Activity section — redundant with unified feed\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T04:10:13Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/4b16810115f5c0b4bed362ddb89bcd1b564e982c"
+    },
+    {
+      "sha": "49cc9f2c98e5a69194ac723b46138944a7db3f8a",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T03:51:40Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/49cc9f2c98e5a69194ac723b46138944a7db3f8a"
+    },
     {
       "sha": "e9f9fbc8a7aec01a27129a1ea03ed0128e4b05b6",
       "message": "Add CI/CD pass rate stat box to dashboard",
@@ -358,24 +376,6 @@
       "date": "2026-03-01T03:04:36Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e4b431d1beac910a0e902ce37b8043c0b628c1c7"
-    },
-    {
-      "sha": "a9b9b4992264c9f2fb3cb87495c00d507c7e299f",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T03:04:16Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/a9b9b4992264c9f2fb3cb87495c00d507c7e299f"
-    },
-    {
-      "sha": "97dcec37e0aad9289aa82fabafbf7c1bfd02eb47",
-      "message": "Better Claude detection, repo robots, LOC counter, timeAgo fix, easter egg fix",
-      "full_message": "Better Claude detection, repo robots, LOC counter, timeAgo fix, easter egg fix\n\n- Improved isClaudeCommit: detects em dashes, bullet-point bodies,\n  and emoji-heavy subjects as Claude-authored\n- Each repo gets a unique robot character (hat + face emoji)\n- Added Lines of Code stat card (estimated from language bytes)\n- Fixed timeAgo: \"106mo ago\" now shows \"8y 10mo ago\", added weeks\n- Easter egg moved inside robot-lane so it's actually scrollable\n- countUp auto-scales duration for big numbers (dramatic LOC count)\n- fetch-data.js now computes total_code_bytes in stats\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T03:04:00Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/97dcec37e0aad9289aa82fabafbf7c1bfd02eb47"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1450,6 +1450,22 @@
       },
       "payload": {
         "repository_id": 973888039,
+        "push_id": 31206373605,
+        "ref": "refs/heads/main",
+        "head": "4b16810115f5c0b4bed362ddb89bcd1b564e982c",
+        "before": "49cc9f2c98e5a69194ac723b46138944a7db3f8a"
+      },
+      "created_at": "2026-03-01T04:10:16Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
         "push_id": 31206141281,
         "ref": "refs/heads/main",
         "head": "e9f9fbc8a7aec01a27129a1ea03ed0128e4b05b6",
@@ -1904,27 +1920,11 @@
         "before": "905cc88f43df862665170a39a8710f43a84517e0"
       },
       "created_at": "2026-02-28T23:10:48Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1169575717,
-        "name": "randomdrake/randomdrake",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake"
-      },
-      "payload": {
-        "repository_id": 1169575717,
-        "push_id": 31202435807,
-        "ref": "refs/heads/main",
-        "head": "905cc88f43df862665170a39a8710f43a84517e0",
-        "before": "5ff98a145fa258003d0a816f631e4d83213229c9"
-      },
-      "created_at": "2026-02-28T23:08:01Z"
     }
   ],
   "stats": {
     "total_stars": 203,
     "total_forks": 69,
-    "total_code_bytes": 1337393
+    "total_code_bytes": 1332166
   }
 }
