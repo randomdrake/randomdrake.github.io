@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T04:10:30.344Z",
+  "generated_at": "2026-03-01T06:09:49.597Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -116,7 +116,7 @@
       "stargazers_count": 151,
       "forks_count": 60,
       "updated_at": "2026-02-16T17:52:08Z",
-      "pushed_at": "2022-07-06T19:18:11Z"
+      "pushed_at": "2026-03-01T05:54:02Z"
     },
     {
       "name": "nextjs-dashboard",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T04:10:19Z",
-      "pushed_at": "2026-03-01T04:10:16Z"
+      "updated_at": "2026-03-01T06:09:40Z",
+      "pushed_at": "2026-03-01T06:09:37Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -223,7 +223,7 @@
     },
     "randomdrake": {},
     "randomdrake.github.io": {
-      "HTML": 74252,
+      "HTML": 74278,
       "JavaScript": 4639
     },
     "react-flow-org-chart": {
@@ -242,6 +242,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "eb956092c1bc906bc1a4ff922720b6c6b6a63244",
+      "message": "Fix malformed SVG data URI in Substack CTA background pattern",
+      "full_message": "Fix malformed SVG data URI in Substack CTA background pattern\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T06:09:23Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/eb956092c1bc906bc1a4ff922720b6c6b6a63244"
+    },
+    {
+      "sha": "7a5a37cb00e4e993459e81a80609a769466b8f2a",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T04:10:30Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/7a5a37cb00e4e993459e81a80609a769466b8f2a"
+    },
     {
       "sha": "4b16810115f5c0b4bed362ddb89bcd1b564e982c",
       "message": "Remove Recent Activity section — redundant with unified feed",
@@ -358,24 +376,6 @@
       "date": "2026-03-01T03:10:45Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/5025a2d31bc1d2086371cf61dbb8e00db54900c1"
-    },
-    {
-      "sha": "73ef0af767bad342ecc1e0357c3e3cdccb6f8feb",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T03:04:53Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/73ef0af767bad342ecc1e0357c3e3cdccb6f8feb"
-    },
-    {
-      "sha": "e4b431d1beac910a0e902ce37b8043c0b628c1c7",
-      "message": "Move easter egg to top of lane (scroll up to find it)",
-      "full_message": "Move easter egg to top of lane (scroll up to find it)\n\nThe egg was at the bottom where auto-scroll starts, making it\nimmediately visible. Now it's at the top — you have to scroll\nthrough all commits to discover it.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T03:04:36Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e4b431d1beac910a0e902ce37b8043c0b628c1c7"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1450,6 +1450,1159 @@
       },
       "payload": {
         "repository_id": 973888039,
+        "push_id": 31207885916,
+        "ref": "refs/heads/main",
+        "head": "eb956092c1bc906bc1a4ff922720b6c6b6a63244",
+        "before": "7a5a37cb00e4e993459e81a80609a769466b8f2a"
+      },
+      "created_at": "2026-03-01T06:09:37Z"
+    },
+    {
+      "type": "PullRequestEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "closed",
+        "number": 19,
+        "pull_request": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/19",
+          "id": 2877407087,
+          "number": 19,
+          "head": {
+            "ref": "master",
+            "sha": "6565478a624fad519350dc015d1485737165a6ab",
+            "repo": {
+              "id": 1067689870,
+              "url": "https://api.github.com/repos/LorenzoTell/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          },
+          "base": {
+            "ref": "master",
+            "sha": "237e6925cef41ec40eac4f4c348b8163521e7623",
+            "repo": {
+              "id": 5223187,
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          }
+        }
+      },
+      "created_at": "2025-10-01T08:52:04Z"
+    },
+    {
+      "type": "IssueCommentEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/19",
+          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/19/labels{/name}",
+          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/19/comments",
+          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/19/events",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/19",
+          "id": 3472639148,
+          "node_id": "PR_kwDOAE-zE86rgb9v",
+          "number": 19,
+          "title": "Add Wayland support for wallpaper setting",
+          "user": {
+            "login": "LorenzoTell",
+            "id": 40907126,
+            "node_id": "MDQ6VXNlcjQwOTA3MTI2",
+            "avatar_url": "https://avatars.githubusercontent.com/u/40907126?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/LorenzoTell",
+            "html_url": "https://github.com/LorenzoTell",
+            "followers_url": "https://api.github.com/users/LorenzoTell/followers",
+            "following_url": "https://api.github.com/users/LorenzoTell/following{/other_user}",
+            "gists_url": "https://api.github.com/users/LorenzoTell/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/LorenzoTell/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/LorenzoTell/subscriptions",
+            "organizations_url": "https://api.github.com/users/LorenzoTell/orgs",
+            "repos_url": "https://api.github.com/users/LorenzoTell/repos",
+            "events_url": "https://api.github.com/users/LorenzoTell/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/LorenzoTell/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2025-10-01T08:52:04Z",
+          "updated_at": "2026-03-01T05:54:03Z",
+          "closed_at": "2026-03-01T05:54:03Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/19",
+            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/19",
+            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/19.diff",
+            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/19.patch",
+            "merged_at": null
+          },
+          "body": "## Problem\r\nThe current wallpaper setting function doesn't work properly on Ubuntu 22.04 with Wayland sessions because `gsettings` behaves differently in Wayland vs X11. Also the code is change to work in python3.\r\n\r\n## Solution\r\n- Added automatic detection of Wayland sessions using environment variables\r\n- For Wayland sessions, set both `picture-uri` and `picture-uri-dark` properties\r\n- Maintains full backward compatibility with X11 sessions\r\n- No breaking changes to existing functionality\r\n\r\n## Testing\r\nTested on:\r\n- Ubuntu 22.04 with Wayland (fixed the issue)\r\n- Should work on X11 sessions (backward compatible)\r\n\r\n## Changes\r\n- Modified `set_gnome_wallpaper()` function to detect session type\r\n- Added dual property setting for Wayland compatibility",
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/19/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/19/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208506",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/19#issuecomment-3979208506",
+          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/19",
+          "id": 3979208506,
+          "node_id": "IC_kwDOAE-zE87tLec6",
+          "user": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-03-01T05:54:02Z",
+          "updated_at": "2026-03-01T05:54:02Z",
+          "body": "Hey @LorenzoTell — thank you for this substantial contribution. There's clearly a lot of work here, and several parts of it are genuinely valuable.\n\nThe Python 3 migration work you did (urllib, subprocess, print functions, LANCZOS, etc.) is solid, but as it turns out, the codebase has already been independently ported to Python 3 on our end. The Wayland wallpaper fix — setting both `picture-uri` and `picture-uri-dark` — is a great catch for GNOME on Wayland, and I'll be incorporating that idea.\n\nYou also found several real bugs that I want to call out and give you credit for:\n- The missing `return` in `human_readable_size()` for GB-range values\n- The `largest` variable never being updated in `find_resolution()`\n- The missing default for the `content-length` header in `get_image_info()`\n\nI'll be cherry-picking those fixes into the current codebase. I'm closing the PR because the full diff changes too many things at once (config defaults, removal of the `main()` wrapper, dropping `lxml`, etc.) to merge cleanly, but your bug-finding and Wayland work are appreciated and won't go to waste. Thanks for the effort.",
+          "pin": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208506/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "created_at": "2026-03-01T05:54:02Z"
+    },
+    {
+      "type": "PullRequestEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "closed",
+        "number": 18,
+        "pull_request": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/18",
+          "id": 989186468,
+          "number": 18,
+          "head": {
+            "ref": "dependabot/pip/lxml-4.9.1",
+            "sha": "95575b3c8a7e63b6f5e8e065d041037ce6813c00",
+            "repo": {
+              "id": 5223187,
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          },
+          "base": {
+            "ref": "master",
+            "sha": "237e6925cef41ec40eac4f4c348b8163521e7623",
+            "repo": {
+              "id": 5223187,
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          }
+        }
+      },
+      "created_at": "2022-07-06T19:18:08Z"
+    },
+    {
+      "type": "IssueCommentEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/18",
+          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/18/labels{/name}",
+          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/18/comments",
+          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/18/events",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/18",
+          "id": 1296266937,
+          "node_id": "PR_kwDOAE-zE8469cmk",
+          "number": 18,
+          "title": "Bump lxml from 2.3.6 to 4.9.1",
+          "user": {
+            "login": "dependabot[bot]",
+            "id": 49699333,
+            "node_id": "MDM6Qm90NDk2OTkzMzM=",
+            "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/dependabot%5Bbot%5D",
+            "html_url": "https://github.com/apps/dependabot",
+            "followers_url": "https://api.github.com/users/dependabot%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/dependabot%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/dependabot%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/dependabot%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/dependabot%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/dependabot%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/dependabot%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/dependabot%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/dependabot%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [
+            {
+              "id": 2640545616,
+              "node_id": "MDU6TGFiZWwyNjQwNTQ1NjE2",
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/labels/dependencies",
+              "name": "dependencies",
+              "color": "0366d6",
+              "default": false,
+              "description": "Pull requests that update a dependency file"
+            }
+          ],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 2,
+          "created_at": "2022-07-06T19:18:07Z",
+          "updated_at": "2026-03-01T05:54:03Z",
+          "closed_at": "2026-03-01T05:53:54Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/18",
+            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/18",
+            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/18.diff",
+            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/18.patch",
+            "merged_at": null
+          },
+          "body": "Bumps [lxml](https://github.com/lxml/lxml) from 2.3.6 to 4.9.1.\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/lxml/lxml/blob/master/CHANGES.txt\">lxml's changelog</a>.</em></p>\n<blockquote>\n<h1>4.9.1 (2022-07-01)</h1>\n<h2>Bugs fixed</h2>\n<ul>\n<li>A crash was resolved when using <code>iterwalk()</code> (or <code>canonicalize()</code>)\nafter parsing certain incorrect input.  Note that <code>iterwalk()</code> can crash\non <em>valid</em> input parsed with the same parser <em>after</em> failing to parse the\nincorrect input.</li>\n</ul>\n<h1>4.9.0 (2022-06-01)</h1>\n<h2>Bugs fixed</h2>\n<ul>\n<li>GH#341: The mixin inheritance order in <code>lxml.html</code> was corrected.\nPatch by xmo-odoo.</li>\n</ul>\n<h2>Other changes</h2>\n<ul>\n<li>\n<p>Built with Cython 0.29.30 to adapt to changes in Python 3.11 and 3.12.</p>\n</li>\n<li>\n<p>Wheels include zlib 1.2.12, libxml2 2.9.14 and libxslt 1.1.35\n(libxml2 2.9.12+ and libxslt 1.1.34 on Windows).</p>\n</li>\n<li>\n<p>GH#343: Windows-AArch64 build support in Visual Studio.\nPatch by Steve Dower.</p>\n</li>\n</ul>\n<h1>4.8.0 (2022-02-17)</h1>\n<h2>Features added</h2>\n<ul>\n<li>\n<p>GH#337: Path-like objects are now supported throughout the API instead of just strings.\nPatch by Henning Janssen.</p>\n</li>\n<li>\n<p>The <code>ElementMaker</code> now supports <code>QName</code> values as tags, which always override\nthe default namespace of the factory.</p>\n</li>\n</ul>\n<h2>Bugs fixed</h2>\n<ul>\n<li>GH#338: In lxml.objectify, the XSI float annotation &quot;nan&quot; and &quot;inf&quot; were spelled in\nlower case, whereas XML Schema datatypes define them as &quot;NaN&quot; and &quot;INF&quot; respectively.</li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/lxml/lxml/commit/d01872ccdf7e1e5e825b6c6292b43e7d27ae5fc4\"><code>d01872c</code></a> Prevent parse failure in new test from leaking into later test runs.</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/d65e63229e8958bc08344a85cd3f09ceeef933c3\"><code>d65e632</code></a> Prepare release of lxml 4.9.1.</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/86368e9cf70a0ad23cccd5ee32de847149af0c6f\"><code>86368e9</code></a> Fix a crash when incorrect parser input occurs together with usages of iterwa...</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/50c276412880c1a3dde8a6d6c909e3ed8ef47e43\"><code>50c2764</code></a> Delete unused Travis CI config and reference in docs (<a href=\"https://github-redirect.dependabot.com/lxml/lxml/issues/345\">GH-345</a>)</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/8f0bf2d158f2dd3f98d410c8a38fcd536fd11b53\"><code>8f0bf2d</code></a> Try to speed up the musllinux AArch64 build by splitting the different CPytho...</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/b9f7074430594b95824059eef931dfbb27a7645e\"><code>b9f7074</code></a> Remove debug print from test.</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/b224e0f69dde58425d1077e07d193d19d3f803a9\"><code>b224e0f</code></a> Try to install 'xz' in wheel builds, if available, since it's now needed to e...</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/897ebfa002fe5ec773ffe8851721047fedcc6928\"><code>897ebfa</code></a> Update macOS deployment target version from 10.14 to 10.15 since 10.14 starts...</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/853c9e9cbf1c82d1ad3c096362372a048108905e\"><code>853c9e9</code></a> Prepare release of 4.9.0.</li>\n<li><a href=\"https://github.com/lxml/lxml/commit/d3f77e678a8394559331d27257714e8aa4b082f2\"><code>d3f77e6</code></a> Add a test for <a href=\"https://bugs.launchpad.net/lxml/+bug/1965070\">https://bugs.launchpad.net/lxml/+bug/1965070</a> leaving out the a...</li>\n<li>Additional commits viewable in <a href=\"https://github.com/lxml/lxml/compare/lxml-2.3.6...lxml-4.9.1\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=lxml&package-manager=pip&previous-version=2.3.6&new-version=4.9.1)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge and block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot use these labels` will set the current labels as the default for future PRs for this repo and language\n- `@dependabot use these reviewers` will set the current reviewers as the default for future PRs for this repo and language\n- `@dependabot use these assignees` will set the current assignees as the default for future PRs for this repo and language\n- `@dependabot use this milestone` will set the current milestone as the default for future PRs for this repo and language\n\nYou can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/randomdrake/nasa-apod-desktop/network/alerts).\n\n</details>",
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/18/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/18/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208378",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/18#issuecomment-3979208378",
+          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/18",
+          "id": 3979208378,
+          "node_id": "IC_kwDOAE-zE87tLea6",
+          "user": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-03-01T05:53:54Z",
+          "updated_at": "2026-03-01T05:53:54Z",
+          "body": "Closing this Dependabot PR — thanks for the automated security nudge, but it's been overtaken by events. The project's dependencies have been modernized to use `lxml>=5.0` and `Pillow>=10.0` (replacing the old `PIL==1.1.7`), so the bump to 4.9.1 proposed here is no longer needed. Appreciate Dependabot keeping an eye on things.",
+          "pin": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208378/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "created_at": "2026-03-01T05:53:54Z"
+    },
+    {
+      "type": "PullRequestEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "closed",
+        "number": 11,
+        "pull_request": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/11",
+          "id": 40725989,
+          "number": 11,
+          "head": {
+            "ref": "pip_pil_install_issues",
+            "sha": "2ee44c69a96087122dcc180ae00943e8ec45b8fb",
+            "repo": {
+              "id": 39595169,
+              "url": "https://api.github.com/repos/jharmn/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          },
+          "base": {
+            "ref": "master",
+            "sha": "237e6925cef41ec40eac4f4c348b8163521e7623",
+            "repo": {
+              "id": 5223187,
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          }
+        }
+      },
+      "created_at": "2015-07-23T22:33:12Z"
+    },
+    {
+      "type": "IssueCommentEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/11",
+          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/11/labels{/name}",
+          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/11/comments",
+          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/11/events",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/11",
+          "id": 96918646,
+          "node_id": "MDExOlB1bGxSZXF1ZXN0NDA3MjU5ODk=",
+          "number": 11,
+          "title": "Pip install issues",
+          "user": {
+            "login": "jharmn",
+            "id": 1305160,
+            "node_id": "MDQ6VXNlcjEzMDUxNjA=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1305160?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jharmn",
+            "html_url": "https://github.com/jharmn",
+            "followers_url": "https://api.github.com/users/jharmn/followers",
+            "following_url": "https://api.github.com/users/jharmn/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jharmn/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jharmn/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jharmn/subscriptions",
+            "organizations_url": "https://api.github.com/users/jharmn/orgs",
+            "repos_url": "https://api.github.com/users/jharmn/repos",
+            "events_url": "https://api.github.com/users/jharmn/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jharmn/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2015-07-23T22:33:12Z",
+          "updated_at": "2026-03-01T05:53:52Z",
+          "closed_at": "2026-03-01T05:53:52Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/11",
+            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/11",
+            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/11.diff",
+            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/11.patch",
+            "merged_at": null
+          },
+          "body": "My environment: Debian 8\nVarious switches on pip, more apt-get packages, and tricks for virtualenv were needed to complete install.\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/11/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/11/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208334",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/11#issuecomment-3979208334",
+          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/11",
+          "id": 3979208334,
+          "node_id": "IC_kwDOAE-zE87tLeaO",
+          "user": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-03-01T05:53:51Z",
+          "updated_at": "2026-03-01T05:53:51Z",
+          "body": "Hey @jharmn — thanks for documenting the installation pain points you ran into on Debian 8. Dependency installation has historically been one of the trickiest parts of getting this script running, and you took the time to write up what worked for you, which is appreciated.\n\nSince 2015, the landscape has shifted considerably: the `PIL` package has been fully replaced by `Pillow`, the `--allow-external` and `--allow-unverified` pip flags have been removed, and the apt packages you referenced (`python-imaging`) no longer exist in modern distributions. The project's dependencies have also been modernized to use `Pillow>=10.0` and `lxml>=5.0`.\n\nI'm closing this out since the content is no longer applicable to current systems, but thanks for contributing back your findings at the time.",
+          "pin": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208334/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "created_at": "2026-03-01T05:53:51Z"
+    },
+    {
+      "type": "IssueCommentEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/6",
+          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/6/labels{/name}",
+          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/6/comments",
+          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/6/events",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/6",
+          "id": 6029541,
+          "node_id": "MDExOlB1bGxSZXF1ZXN0MTk3NDAzNg==",
+          "number": 6,
+          "title": "Mac OSX Support",
+          "user": {
+            "login": "simonrw",
+            "id": 59756,
+            "node_id": "MDQ6VXNlcjU5NzU2",
+            "avatar_url": "https://avatars.githubusercontent.com/u/59756?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/simonrw",
+            "html_url": "https://github.com/simonrw",
+            "followers_url": "https://api.github.com/users/simonrw/followers",
+            "following_url": "https://api.github.com/users/simonrw/following{/other_user}",
+            "gists_url": "https://api.github.com/users/simonrw/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/simonrw/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/simonrw/subscriptions",
+            "organizations_url": "https://api.github.com/users/simonrw/orgs",
+            "repos_url": "https://api.github.com/users/simonrw/repos",
+            "events_url": "https://api.github.com/users/simonrw/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/simonrw/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2012-08-04T11:16:31Z",
+          "updated_at": "2026-03-01T05:53:47Z",
+          "closed_at": "2026-03-01T05:53:47Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/6",
+            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/6",
+            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/6.diff",
+            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/6.patch",
+            "merged_at": null
+          },
+          "body": "Adding code to support wallpaper changing on Mac OSX\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/6/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/6/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208259",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/6#issuecomment-3979208259",
+          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/6",
+          "id": 3979208259,
+          "node_id": "IC_kwDOAE-zE87tLeZD",
+          "user": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-03-01T05:53:47Z",
+          "updated_at": "2026-03-01T05:53:47Z",
+          "body": "Hey @simonrw — thank you for working on macOS support! Having NASA's Astronomy Picture of the Day as your wallpaper on a Mac is a great idea, and you were the first to take a shot at making it happen.\n\nSince 2012, both the codebase and macOS itself have changed dramatically. The script has been rewritten for Python 3, and modern macOS versions (Ventura and later) have moved away from the System Preferences AppleScript model that this PR targets. The resolution detection (`xrandr`) and wallpaper setting (`gsettings`) are also Linux-specific, so proper macOS support would need its own detection paths throughout.\n\nI'm closing this PR, but macOS support remains a genuinely desirable feature. If it gets built in the future, it'll need a fresh implementation targeting modern macOS APIs and Python 3 — but your PR proved the concept that it's possible. Thanks for the contribution.",
+          "pin": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208259/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "created_at": "2026-03-01T05:53:47Z"
+    },
+    {
+      "type": "PullRequestEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "closed",
+        "number": 6,
+        "pull_request": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/6",
+          "id": 1974036,
+          "number": 6,
+          "head": {
+            "ref": "macosx",
+            "sha": "30a507071f37579be328e060ed007e6d29098a67",
+            "repo": {
+              "id": null,
+              "url": "https://api.github.com/repos/",
+              "name": null
+            }
+          },
+          "base": {
+            "ref": "master",
+            "sha": "54be520ddf006ba8c8aea136cef509d856911144",
+            "repo": {
+              "id": 5223187,
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          }
+        }
+      },
+      "created_at": "2014-06-19T02:24:10Z"
+    },
+    {
+      "type": "IssueCommentEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5",
+          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/labels{/name}",
+          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/comments",
+          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/events",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5",
+          "id": 6023249,
+          "node_id": "MDExOlB1bGxSZXF1ZXN0MTk3MTI3MA==",
+          "number": 5,
+          "title": "Added functionality to differentiate between Window Managers",
+          "user": {
+            "login": "xraymemory",
+            "id": 970291,
+            "node_id": "MDQ6VXNlcjk3MDI5MQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/970291?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/xraymemory",
+            "html_url": "https://github.com/xraymemory",
+            "followers_url": "https://api.github.com/users/xraymemory/followers",
+            "following_url": "https://api.github.com/users/xraymemory/following{/other_user}",
+            "gists_url": "https://api.github.com/users/xraymemory/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/xraymemory/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/xraymemory/subscriptions",
+            "organizations_url": "https://api.github.com/users/xraymemory/orgs",
+            "repos_url": "https://api.github.com/users/xraymemory/repos",
+            "events_url": "https://api.github.com/users/xraymemory/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/xraymemory/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 2,
+          "created_at": "2012-08-03T20:31:40Z",
+          "updated_at": "2026-03-01T05:53:42Z",
+          "closed_at": "2026-03-01T05:53:42Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/5",
+            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5",
+            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5.diff",
+            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5.patch",
+            "merged_at": null
+          },
+          "body": "Hello. Neat little script. I've added about five lines of code that now make sure that it can run on both Gnome and xfce. It is hard, if not impossible, to do this in the general case so I just have it read the output of 'top' and search for specific processes ('gnome-sessions' for gnome, 'xfwm4' for xfce4). \n",
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208171",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5#issuecomment-3979208171",
+          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5",
+          "id": 3979208171,
+          "node_id": "IC_kwDOAE-zE87tLeXr",
+          "user": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-03-01T05:53:41Z",
+          "updated_at": "2026-03-01T05:53:41Z",
+          "body": "Hey @xraymemory — thanks for taking a crack at adding multi-window-manager support. The goal of detecting whether the user is running GNOME vs. XFCE and setting the wallpaper accordingly was a worthwhile one.\n\nAs @tgulacsi noted at the time, parsing `top` output for process detection is fragile and there are better approaches (like checking environment variables or using `xprop`). The PR also inadvertently includes some debugging artifacts. Since then, the codebase has been rewritten for Python 3, so this can no longer be applied. Closing this out — but thanks for the contribution and the early exploration of multi-DE support.",
+          "pin": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208171/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "created_at": "2026-03-01T05:53:41Z"
+    },
+    {
+      "type": "PullRequestEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "closed",
+        "number": 5,
+        "pull_request": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/5",
+          "id": 1971270,
+          "number": 5,
+          "head": {
+            "ref": "master",
+            "sha": "be5763328276e49e5c171d2ff2befce4367080f4",
+            "repo": {
+              "id": 5289820,
+              "url": "https://api.github.com/repos/xraymemory/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          },
+          "base": {
+            "ref": "master",
+            "sha": "54be520ddf006ba8c8aea136cef509d856911144",
+            "repo": {
+              "id": 5223187,
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          }
+        }
+      },
+      "created_at": "2014-07-20T10:25:35Z"
+    },
+    {
+      "type": "PullRequestEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "closed",
+        "number": 4,
+        "pull_request": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/4",
+          "id": 1971267,
+          "number": 4,
+          "head": {
+            "ref": "master",
+            "sha": "10c0e1b86030e9ed5af581678943990397cef28a",
+            "repo": {
+              "id": 5289271,
+              "url": "https://api.github.com/repos/tgulacsi/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          },
+          "base": {
+            "ref": "master",
+            "sha": "54be520ddf006ba8c8aea136cef509d856911144",
+            "repo": {
+              "id": 5223187,
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          }
+        }
+      },
+      "created_at": "2014-06-16T17:33:35Z"
+    },
+    {
+      "type": "IssueCommentEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4",
+          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/labels{/name}",
+          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/comments",
+          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/events",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4",
+          "id": 6023237,
+          "node_id": "MDExOlB1bGxSZXF1ZXN0MTk3MTI2Nw==",
+          "number": 4,
+          "title": "Download path, window geometry discovery, plus wallpaper setting on XFCE4",
+          "user": {
+            "login": "tgulacsi",
+            "id": 256074,
+            "node_id": "MDQ6VXNlcjI1NjA3NA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/256074?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/tgulacsi",
+            "html_url": "https://github.com/tgulacsi",
+            "followers_url": "https://api.github.com/users/tgulacsi/followers",
+            "following_url": "https://api.github.com/users/tgulacsi/following{/other_user}",
+            "gists_url": "https://api.github.com/users/tgulacsi/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/tgulacsi/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/tgulacsi/subscriptions",
+            "organizations_url": "https://api.github.com/users/tgulacsi/orgs",
+            "repos_url": "https://api.github.com/users/tgulacsi/repos",
+            "events_url": "https://api.github.com/users/tgulacsi/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/tgulacsi/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2012-08-03T20:31:26Z",
+          "updated_at": "2026-03-01T05:53:38Z",
+          "closed_at": "2026-03-01T05:53:38Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/4",
+            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4",
+            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4.diff",
+            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4.patch",
+            "merged_at": null
+          },
+          "body": "1. Add flags for command-line overriding of download path, image size and SHOW_DEBUG.\n2. get default download path from glib, if importable - otherwise use $HOME/Downloads\n3. get default image size using xprop (I think it exists on every X11)\n4. format flake8-compatible.\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208092",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4#issuecomment-3979208092",
+          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4",
+          "id": 3979208092,
+          "node_id": "IC_kwDOAE-zE87tLeWc",
+          "user": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-03-01T05:53:37Z",
+          "updated_at": "2026-03-01T05:53:37Z",
+          "body": "Hey @tgulacsi — thank you for this really thoughtful and ambitious contribution. You were ahead of your time on several fronts here: auto-detecting resolution, auto-detecting the download folder, adding XFCE4 support, and introducing command-line arguments. That's a lot of good ideas packed into one PR.\n\nSince this was opened, the codebase has been significantly modernized — it's now Python 3 and already has auto-resolution detection (via `xrandr`) and auto-download-path detection (via `GLib`), covering two of the big features you proposed here, just implemented differently. The Python 2 imports (`optparse`, old `glib`, `urllib2`) and structure mean this can't be merged into the current code.\n\nI'm closing this out, but wanted to acknowledge that features like CLI argument support and multi-desktop-environment support are still interesting ideas for the future. If they get built, your PR laid the groundwork for thinking about them. Thanks for the effort you put into this.",
+          "pin": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208092/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "created_at": "2026-03-01T05:53:37Z"
+    },
+    {
+      "type": "PullRequestEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "closed",
+        "number": 3,
+        "pull_request": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/3",
+          "id": 1918139,
+          "number": 3,
+          "head": {
+            "ref": "patch-1",
+            "sha": "4f525697b08564174a78a81256d0457283bced36",
+            "repo": {
+              "id": null,
+              "url": "https://api.github.com/repos/",
+              "name": null
+            }
+          },
+          "base": {
+            "ref": "master",
+            "sha": "54be520ddf006ba8c8aea136cef509d856911144",
+            "repo": {
+              "id": 5223187,
+              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+              "name": "nasa-apod-desktop"
+            }
+          }
+        }
+      },
+      "created_at": "2014-07-26T04:24:19Z"
+    },
+    {
+      "type": "IssueCommentEvent",
+      "repo": {
+        "id": 5223187,
+        "name": "randomdrake/nasa-apod-desktop",
+        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
+      },
+      "payload": {
+        "action": "created",
+        "issue": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3",
+          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
+          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/labels{/name}",
+          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/comments",
+          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/events",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3",
+          "id": 5909023,
+          "node_id": "MDExOlB1bGxSZXF1ZXN0MTkxODEzOQ==",
+          "number": 3,
+          "title": "Keep the aspect ratio through ImageOps.fit",
+          "user": {
+            "login": "milot-mirdita",
+            "id": 63657,
+            "node_id": "MDQ6VXNlcjYzNjU3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/63657?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/milot-mirdita",
+            "html_url": "https://github.com/milot-mirdita",
+            "followers_url": "https://api.github.com/users/milot-mirdita/followers",
+            "following_url": "https://api.github.com/users/milot-mirdita/following{/other_user}",
+            "gists_url": "https://api.github.com/users/milot-mirdita/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/milot-mirdita/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/milot-mirdita/subscriptions",
+            "organizations_url": "https://api.github.com/users/milot-mirdita/orgs",
+            "repos_url": "https://api.github.com/users/milot-mirdita/repos",
+            "events_url": "https://api.github.com/users/milot-mirdita/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/milot-mirdita/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 2,
+          "created_at": "2012-07-30T00:28:54Z",
+          "updated_at": "2026-03-01T05:53:33Z",
+          "closed_at": "2026-03-01T05:53:33Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/3",
+            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3",
+            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3.diff",
+            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3.patch",
+            "merged_at": null
+          },
+          "body": "With the use of ImageOps.fit the aspect ratio of the picture isn't distorted. This cuts off (in a pretty dumb way) that is outside of the center.\nA better approach might be something based on image entropy to cut out \"uninteresting\" parts of the images. Reddit uses a setup similar to this to make good thumbnails.\n",
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        "comment": {
+          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208003",
+          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3#issuecomment-3979208003",
+          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3",
+          "id": 3979208003,
+          "node_id": "IC_kwDOAE-zE87tLeVD",
+          "user": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "created_at": "2026-03-01T05:53:32Z",
+          "updated_at": "2026-03-01T05:53:32Z",
+          "body": "Hey @milot-mirdita — thank you for this contribution, and apologies for letting it sit so long without a response. The idea of using `ImageOps.fit()` to preserve aspect ratio instead of stretching is a genuinely good one, and your observation about the distortion problem was spot-on.\n\nSince this was opened, the codebase has gone through a full Python 3 rewrite, and `Image.ANTIALIAS` (used in the PR) has been removed from modern Pillow in favor of `Image.LANCZOS`. Between the merge conflicts and the API changes, this PR can't be applied as-is anymore. I'm going to close it, but the core idea is worth revisiting — if aspect-ratio-aware resizing gets added down the road, your PR was the original inspiration. Thanks again for taking the time.",
+          "pin": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208003/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "performed_via_github_app": null
+        }
+      },
+      "created_at": "2026-03-01T05:53:32Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
         "push_id": 31206373605,
         "ref": "refs/heads/main",
         "head": "4b16810115f5c0b4bed362ddb89bcd1b564e982c",
@@ -1680,251 +2833,11 @@
         "before": "0b18df0c6071d84e41d39f9e40d7a1aa1f83aace"
       },
       "created_at": "2026-03-01T02:25:42Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31204980047,
-        "ref": "refs/heads/main",
-        "head": "bc5acf3aaba1e632763ef60691b3262310d0353d",
-        "before": "2b156e56a674717aa480da12a2075acb0128725f"
-      },
-      "created_at": "2026-03-01T02:21:36Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31204973812,
-        "ref": "refs/heads/main",
-        "head": "e1e72310820483980536959222d1c1e0160629ed",
-        "before": "21b91de43b8e9a597df5395789c672600d0ec483"
-      },
-      "created_at": "2026-03-01T02:21:07Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31204945376,
-        "ref": "refs/heads/main",
-        "head": "cf7de1441d66e9ccb68a5b307ebfeaab01799c17",
-        "before": "292f6b06e13d1f2d416f45a306142b06e984d6b8"
-      },
-      "created_at": "2026-03-01T02:18:46Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31204774344,
-        "ref": "refs/heads/main",
-        "head": "30894ce70c01c09d9b4557dc76403dc7777edcfe",
-        "before": "ae7219f9830d54d38464d50b596c8d4f268b07ec"
-      },
-      "created_at": "2026-03-01T02:05:20Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31204694706,
-        "ref": "refs/heads/main",
-        "head": "310b13b71c51bd3abfac45b62e01b84de37eb279",
-        "before": "1d8e95f22f6eff62e800eaf6c1ccdf047db4f639"
-      },
-      "created_at": "2026-03-01T02:00:14Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31204640821,
-        "ref": "refs/heads/main",
-        "head": "995438c0d00354db164443cc1beca8f67138d804",
-        "before": "6d9a30587f71f1e142c1a3f7a0f10e196e123b06"
-      },
-      "created_at": "2026-03-01T01:56:12Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31204356493,
-        "ref": "refs/heads/main",
-        "head": "edc8a8d85ee7928d6fc45d1b7bed84faeb803864",
-        "before": "bad98fbe15dca780602a31d8c58574a8dfcb7024"
-      },
-      "created_at": "2026-03-01T01:33:33Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31204340716,
-        "ref": "refs/heads/main",
-        "head": "c0969cae6f6cc5cfe140f8effc240d2d3ef00789",
-        "before": "d3ac59363ac254c7b71feb877992b31cbe9807f8"
-      },
-      "created_at": "2026-03-01T01:32:12Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1169575717,
-        "name": "randomdrake/randomdrake",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake"
-      },
-      "payload": {
-        "repository_id": 1169575717,
-        "push_id": 31204233606,
-        "ref": "refs/heads/main",
-        "head": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
-        "before": "b0358e1c9e5c64200acc2ab62375c84e6b92d566"
-      },
-      "created_at": "2026-03-01T01:23:54Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1169575717,
-        "name": "randomdrake/randomdrake",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake"
-      },
-      "payload": {
-        "repository_id": 1169575717,
-        "push_id": 31204166120,
-        "ref": "refs/heads/main",
-        "head": "b0358e1c9e5c64200acc2ab62375c84e6b92d566",
-        "before": "58206ec5798ac692230dc099a18774eeda3a441f"
-      },
-      "created_at": "2026-03-01T01:19:02Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31203923182,
-        "ref": "refs/heads/main",
-        "head": "56fe7c45fec4b1686870a7500c62608dabcbd364",
-        "before": "ae87533a0e38c4cc5c60984e4b70cdf1bcfd4826"
-      },
-      "created_at": "2026-03-01T01:01:22Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31203873093,
-        "ref": "refs/heads/main",
-        "head": "a4d015564048e0d5a15beed3d44408e2dcceb5e5",
-        "before": "31404a5ea08c596c0b7dcb56c7aa209c3b631741"
-      },
-      "created_at": "2026-03-01T00:58:06Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31203641422,
-        "ref": "refs/heads/main",
-        "head": "31404a5ea08c596c0b7dcb56c7aa209c3b631741",
-        "before": "c3e92bd8efcaee08ebc157193cd7aa73be394912"
-      },
-      "created_at": "2026-03-01T00:39:38Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31203540161,
-        "ref": "refs/heads/main",
-        "head": "c3e92bd8efcaee08ebc157193cd7aa73be394912",
-        "before": "2c6cfa0c260cad4f255d4402ef75822d05ee4fa5"
-      },
-      "created_at": "2026-03-01T00:31:55Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1169575717,
-        "name": "randomdrake/randomdrake",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake"
-      },
-      "payload": {
-        "repository_id": 1169575717,
-        "push_id": 31202472478,
-        "ref": "refs/heads/main",
-        "head": "58206ec5798ac692230dc099a18774eeda3a441f",
-        "before": "905cc88f43df862665170a39a8710f43a84517e0"
-      },
-      "created_at": "2026-02-28T23:10:48Z"
     }
   ],
   "stats": {
     "total_stars": 203,
     "total_forks": 69,
-    "total_code_bytes": 1332166
+    "total_code_bytes": 1332192
   }
 }
