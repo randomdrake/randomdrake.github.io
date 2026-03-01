@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T06:09:49.597Z",
+  "generated_at": "2026-03-01T06:11:54.539Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T06:09:40Z",
-      "pushed_at": "2026-03-01T06:09:37Z"
+      "updated_at": "2026-03-01T06:11:45Z",
+      "pushed_at": "2026-03-01T06:11:42Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -223,7 +223,7 @@
     },
     "randomdrake": {},
     "randomdrake.github.io": {
-      "HTML": 74278,
+      "HTML": 74180,
       "JavaScript": 4639
     },
     "react-flow-org-chart": {
@@ -242,6 +242,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "82613b55fb1f1b5c5a1acea463274de4ce42563e",
+      "message": "Replace SVG data URI with CSS radial-gradient for dot pattern",
+      "full_message": "Replace SVG data URI with CSS radial-gradient for dot pattern\n\nAvoids encoding issues that caused raw text to render on the page.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T06:11:36Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/82613b55fb1f1b5c5a1acea463274de4ce42563e"
+    },
+    {
+      "sha": "b7c4201e35676d4a28d594c9ebdc6c6eea89a8c8",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T06:09:49Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/b7c4201e35676d4a28d594c9ebdc6c6eea89a8c8"
+    },
     {
       "sha": "eb956092c1bc906bc1a4ff922720b6c6b6a63244",
       "message": "Fix malformed SVG data URI in Substack CTA background pattern",
@@ -358,24 +376,6 @@
       "date": "2026-03-01T03:16:47Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6fc30faa8c1b5eaf06cbb31c0624942772f2c79f"
-    },
-    {
-      "sha": "ec49b608b0bbf13788f1dbb2435e7b079e3e376c",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T03:11:03Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/ec49b608b0bbf13788f1dbb2435e7b079e3e376c"
-    },
-    {
-      "sha": "5025a2d31bc1d2086371cf61dbb8e00db54900c1",
-      "message": "Show full dates instead of ugly relative months/years",
-      "full_message": "Show full dates instead of ugly relative months/years\n\nAnything older than 7 days now shows 'Feb 28, 2026' style dates\ninstead of '97mo ago'. Recent stuff still shows m/h/d ago.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T03:10:45Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/5025a2d31bc1d2086371cf61dbb8e00db54900c1"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1441,6 +1441,22 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
+        "push_id": 31207911324,
+        "ref": "refs/heads/main",
+        "head": "82613b55fb1f1b5c5a1acea463274de4ce42563e",
+        "before": "b7c4201e35676d4a28d594c9ebdc6c6eea89a8c8"
+      },
+      "created_at": "2026-03-01T06:11:42Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
@@ -2817,27 +2833,11 @@
         "before": "9747e691161aff804cb01d80871d06db5a8e588e"
       },
       "created_at": "2026-03-01T02:32:46Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205032423,
-        "ref": "refs/heads/main",
-        "head": "9f7e2cd1972442234eac0b4691fff72bd0b903e0",
-        "before": "0b18df0c6071d84e41d39f9e40d7a1aa1f83aace"
-      },
-      "created_at": "2026-03-01T02:25:42Z"
     }
   ],
   "stats": {
     "total_stars": 203,
     "total_forks": 69,
-    "total_code_bytes": 1332192
+    "total_code_bytes": 1332094
   }
 }
