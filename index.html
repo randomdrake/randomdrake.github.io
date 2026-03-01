@@ -268,6 +268,12 @@
 <body class="min-h-screen font-sans antialiased">
     <div class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
 
+        <!-- Rate Limit Banner (hidden by default) -->
+        <div id="rate-limit-banner" class="hidden bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 mb-6 text-center fade-in-up">
+            <p class="text-amber-400 text-sm font-medium">⚠️ GitHub API rate limit reached (60 requests/hour)</p>
+            <p class="text-gh-muted text-xs mt-1">Showing cached data. Fresh data will load after <span id="rate-limit-reset">--:--</span>.</p>
+        </div>
+
         <!-- Header -->
         <header id="header" class="flex flex-col sm:flex-row items-center gap-6 mb-10 fade-in-up">
             <div class="skeleton w-24 h-24 rounded-full shrink-0" id="avatar-skeleton"></div>
@@ -486,14 +492,65 @@
     const USERNAME = 'randomdrake';
     const API = 'https://api.github.com';
 
-    // Simple request cache to avoid duplicate fetches
-    const cache = new Map();
+    // LocalStorage cache — survives page reloads, avoids burning rate limit
+    const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+    let rateLimited = false;
+
+    function lsGet(key) {
+        try {
+            const item = localStorage.getItem('gh_' + key);
+            if (!item) return null;
+            const { data, ts } = JSON.parse(item);
+            if (Date.now() - ts > CACHE_TTL) return null; // expired
+            return data;
+        } catch { return null; }
+    }
+
+    function lsSet(key, data) {
+        try {
+            localStorage.setItem('gh_' + key, JSON.stringify({ data, ts: Date.now() }));
+        } catch { /* storage full, ignore */ }
+    }
+
+    function showRateLimitBanner(resetEpoch) {
+        const banner = document.getElementById('rate-limit-banner');
+        banner.classList.remove('hidden');
+        if (resetEpoch) {
+            const resetTime = new Date(resetEpoch * 1000);
+            document.getElementById('rate-limit-reset').textContent =
+                resetTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+    }
 
     async function ghFetch(url) {
-        if (cache.has(url)) return cache.get(url);
+        // Try localStorage cache first
+        const cacheKey = url.replace(API, '');
+        const cached = lsGet(cacheKey);
+
+        // If we're rate-limited, return whatever we have cached (even if expired)
+        if (rateLimited) {
+            if (cached) return cached;
+            try {
+                const item = localStorage.getItem('gh_' + cacheKey);
+                if (item) return JSON.parse(item).data; // return stale
+            } catch {}
+            return null;
+        }
+
+        // Return fresh cache if available
+        if (cached) return cached;
+
         const res = await fetch(url);
         if (res.status === 403 || res.status === 429) {
+            rateLimited = true;
+            const reset = res.headers.get('x-ratelimit-reset');
+            showRateLimitBanner(reset ? parseInt(reset) : null);
             console.warn('Rate limited:', url);
+            // Fall back to stale cache
+            try {
+                const item = localStorage.getItem('gh_' + cacheKey);
+                if (item) return JSON.parse(item).data;
+            } catch {}
             return null;
         }
         if (!res.ok) {
@@ -501,7 +558,7 @@
             return null;
         }
         const data = await res.json();
-        cache.set(url, data);
+        lsSet(cacheKey, data);
         return data;
     }
 
@@ -1038,30 +1095,40 @@
 
     // --- Init ---
     async function init() {
+        // Claude usage is static data — always render, no API needed
+        renderClaudeUsage();
+
         try {
             const [, repos] = await Promise.all([
                 loadProfile(),
                 loadRepos(),
             ]);
 
-            // Claude usage is static data, render immediately
-            renderClaudeUsage();
-
             // These depend on repos or use the same events endpoint, run in parallel
-            await Promise.all([
-                loadLanguages(repos),
-                loadCommitFeed(repos),
-                loadActivity(),
-            ]);
+            if (repos && repos.length > 0) {
+                await Promise.all([
+                    loadLanguages(repos),
+                    loadCommitFeed(repos),
+                    loadActivity(),
+                ]);
+            }
 
             // Data loaded! Celebrate with confetti 🎉
-            spawnConfetti();
+            if (!rateLimited) {
+                spawnConfetti();
+            }
 
             // Start ambient floating emojis for a living feel
             startAmbientEmojis();
         } catch (err) {
             console.error('Dashboard init error:', err);
         }
+
+        // Clean up any remaining skeletons (replace with empty state)
+        document.querySelectorAll('.skeleton').forEach(el => {
+            el.style.animation = 'none';
+            el.style.background = 'transparent';
+        });
     }
 
     init();
