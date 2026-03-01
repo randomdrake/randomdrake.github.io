@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T03:17:02.053Z",
+  "generated_at": "2026-03-01T03:17:32.980Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T03:16:54Z",
-      "pushed_at": "2026-03-01T03:16:50Z"
+      "updated_at": "2026-03-01T03:17:25Z",
+      "pushed_at": "2026-03-01T03:17:21Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -223,7 +223,7 @@
     },
     "randomdrake": {},
     "randomdrake.github.io": {
-      "HTML": 84823,
+      "HTML": 85024,
       "JavaScript": 4639
     },
     "react-flow-org-chart": {
@@ -242,6 +242,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "6edd5203e997761e4f0967bd2ce46ebf5a8e3bb1",
+      "message": "Add favicon and apple-touch-icon using GitHub avatar",
+      "full_message": "Add favicon and apple-touch-icon using GitHub avatar\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T03:17:18Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6edd5203e997761e4f0967bd2ce46ebf5a8e3bb1"
+    },
+    {
+      "sha": "1756a31a93e9304bd47db102fce078dd03a3e3e7",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T03:17:02Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/1756a31a93e9304bd47db102fce078dd03a3e3e7"
+    },
     {
       "sha": "6fc30faa8c1b5eaf06cbb31c0624942772f2c79f",
       "message": "Replace robot characters with simple repo/author emojis",
@@ -358,24 +376,6 @@
       "date": "2026-03-01T02:35:53Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/38375394d3050428668e9af9d1a244262ba0be00"
-    },
-    {
-      "sha": "e2fc10f41b0365a4c67a361d6032b2b70c6345b3",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T02:33:39Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e2fc10f41b0365a4c67a361d6032b2b70c6345b3"
-    },
-    {
-      "sha": "e57e4406c3b325100573ec1e94dfdf4d59480ba6",
-      "message": "Speed up workshop scroll to 2s per card",
-      "full_message": "Speed up workshop scroll to 2s per card\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T02:33:24Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e57e4406c3b325100573ec1e94dfdf4d59480ba6"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1450,6 +1450,22 @@
       },
       "payload": {
         "repository_id": 973888039,
+        "push_id": 31205722856,
+        "ref": "refs/heads/main",
+        "head": "6edd5203e997761e4f0967bd2ce46ebf5a8e3bb1",
+        "before": "1756a31a93e9304bd47db102fce078dd03a3e3e7"
+      },
+      "created_at": "2026-03-01T03:17:22Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
         "push_id": 31205715774,
         "ref": "refs/heads/main",
         "head": "6fc30faa8c1b5eaf06cbb31c0624942772f2c79f",
@@ -1904,28 +1920,11 @@
         "before": "38a9ddf512ef40ff2bb56b45b75b1df87ccd4238"
       },
       "created_at": "2026-02-28T22:47:29Z"
-    },
-    {
-      "type": "CreateEvent",
-      "repo": {
-        "id": 1169575717,
-        "name": "randomdrake/randomdrake",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake"
-      },
-      "payload": {
-        "ref": "main",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/main",
-        "master_branch": "main",
-        "description": null,
-        "pusher_type": "user"
-      },
-      "created_at": "2026-02-28T22:23:55Z"
     }
   ],
   "stats": {
     "total_stars": 203,
     "total_forks": 69,
-    "total_code_bytes": 1342737
+    "total_code_bytes": 1342938
   }
 }
