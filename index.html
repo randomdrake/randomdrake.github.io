@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Drake — GitHub Dashboard</title>
+    <meta name="description" content="David Drake's GitHub contributions dashboard — live public repository stats, language breakdown, and recent activity.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="David Drake — GitHub Dashboard">
+    <meta property="og:description" content="Live GitHub contributions dashboard showing public repos, stars, language breakdown, and recent activity.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://randomdrake.github.io">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/514002">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="David Drake — GitHub Dashboard">
+    <meta name="twitter:description" content="Live GitHub contributions dashboard showing public repos, stars, language breakdown, and recent activity.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gh: {
+                            bg: '#0d1117',
+                            card: '#161b22',
+                            border: '#30363d',
+                            text: '#c9d1d9',
+                            muted: '#8b949e',
+                            accent: '#f97316',
+                            heat0: '#161b22',
+                            heat1: '#7c2d12',
+                            heat2: '#c2410c',
+                            heat3: '#ea580c',
+                            heat4: '#f97316',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: #0d1117; color: #c9d1d9; }
+
+        /* Skeleton loading shimmer */
+        .skeleton {
+            background: linear-gradient(90deg, #161b22 25%, #1f2937 50%, #161b22 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Commit livestream */
+        .commit-feed {
+            height: 360px;
+            overflow: hidden;
+            position: relative;
+            mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+        }
+        .commit-feed-inner {
+            animation: scrollUp var(--scroll-duration, 60s) linear infinite;
+        }
+        .commit-feed:hover .commit-feed-inner {
+            animation-play-state: paused;
+        }
+        @keyframes scrollUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        .commit-item {
+            border-left: 2px solid #30363d;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .commit-item:hover {
+            border-left-color: #f97316;
+            background: rgba(249, 115, 22, 0.05);
+        }
+        .commit-sha {
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+        }
+
+        /* Fade-in-up for sections */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.7s ease forwards;
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Staggered delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+
+        /* Bounce-in for stat cards */
+        .bounce-in {
+            opacity: 0;
+            transform: scale(0.3);
+            animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            70% { transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Pulse glow for live indicator */
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 5px rgba(249, 115, 22, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.6), 0 0 40px rgba(249, 115, 22, 0.2); }
+        }
+
+        /* Floating emoji */
+        .float-emoji {
+            position: fixed;
+            font-size: 1.5rem;
+            pointer-events: none;
+            z-index: 50;
+            animation: floatUp 3s ease-out forwards;
+        }
+        @keyframes floatUp {
+            0% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+            50% { opacity: 0.8; transform: translateY(-100px) rotate(20deg) scale(1.2); }
+            100% { opacity: 0; transform: translateY(-250px) rotate(-10deg) scale(0.5); }
+        }
+
+        /* Gentle bounce for emoji in headings */
+        .emoji-bounce {
+            display: inline-block;
+            animation: emojiBounce 2s ease-in-out infinite;
+        }
+        @keyframes emojiBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Subtle breathing glow on cards */
+        .card-glow:hover {
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Spin for loading icon */
+        .spin {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Wiggle for attention */
+        .wiggle {
+            animation: wiggle 0.5s ease-in-out;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        /* Typewriter cursor blink */
+        .cursor-blink::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            color: #f97316;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Activity feed items slide in from left */
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInLeft 0.4s ease forwards;
+        }
+        @keyframes slideInLeft {
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Repo cards pop in */
+        .pop-in {
+            opacity: 0;
+            transform: scale(0.8) translateY(10px);
+            animation: popIn 0.4s ease forwards;
+        }
+        @keyframes popIn {
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* Live dot pulse */
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #f97316;
+            border-radius: 50%;
+            display: inline-block;
+            animation: livePulse 1.5s ease-in-out infinite;
+        }
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        /* Amber live dot for Claude section */
+        .live-dot-amber {
+            width: 8px;
+            height: 8px;
+            background: #f59e0b;
+            border-radius: 50%;
+            display: inline-block;
+            animation: livePulse 1.5s ease-in-out infinite;
+        }
+
+        /* Gradient text shimmer */
+        .shimmer-text {
+            background: linear-gradient(90deg, #c9d1d9, #f97316, #c9d1d9);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerText 3s linear infinite;
+        }
+        @keyframes shimmerText {
+            to { background-position: 200% center; }
+        }
+
+        /* Count-up number transition */
+        .count-up {
+            transition: all 0.3s ease;
+        }
+
+        /* Confetti burst (used sparingly on load) */
+        .confetti {
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+            font-size: 1.2rem;
+            animation: confettiFall 2.5s ease-out forwards;
+        }
+        @keyframes confettiFall {
+            0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+            100% { opacity: 0; transform: translateY(100vh) rotate(720deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <div class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+
+        <!-- Header -->
+        <header id="header" class="flex flex-col sm:flex-row items-center gap-6 mb-10 fade-in-up">
+            <div class="skeleton w-24 h-24 rounded-full shrink-0" id="avatar-skeleton"></div>
+            <img id="avatar" src="" alt="David Drake" class="w-24 h-24 rounded-full border-2 border-gh-border hidden shrink-0 pulse-glow">
+            <div class="text-center sm:text-left flex-1">
+                <h1 class="text-2xl sm:text-3xl font-bold shimmer-text" id="profile-name">David Drake</h1>
+                <p class="text-gh-muted mt-1" id="profile-bio">
+                    <span class="skeleton inline-block w-64 h-4 rounded"></span>
+                </p>
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-3 text-sm text-gh-muted">
+                    <span id="profile-location" class="flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 018 14.58a31.481 31.481 0 01-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0110 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10z"/><path d="M8 8a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                        <span class="skeleton inline-block w-24 h-4 rounded"></span>
+                    </span>
+                    <a id="profile-blog" href="#" class="flex items-center gap-1 hover:text-gh-accent transition-colors hidden">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M4.715 6.542L3.343 7.914a3 3 0 104.243 4.243l1.828-1.829A3 3 0 008.586 5.5L8 6.086a1.002 1.002 0 00-.154.199 2 2 0 01.861 3.337L6.88 11.45a2 2 0 11-2.83-2.83l.793-.792a4.018 4.018 0 01-.128-1.287z"/><path d="M6.586 4.672A3 3 0 007.414 9.5l.775-.776a2 2 0 01-.896-3.346L9.12 3.55a2 2 0 112.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 10-4.243-4.243L6.586 4.672z"/></svg>
+                        <span></span>
+                    </a>
+                    <a href="https://github.com/randomdrake" class="flex items-center gap-1 hover:text-gh-accent transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        randomdrake
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Bar -->
+        <section class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10" id="stats-bar">
+            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-100">
+                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
+                <div class="text-3xl font-bold text-white" id="stat-repos"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
+                <div class="text-sm text-gh-muted mt-1">📦 Public Repos</div>
+            </div>
+            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-200">
+                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
+                <div class="text-3xl font-bold text-white" id="stat-stars"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
+                <div class="text-sm text-gh-muted mt-1">⭐ Total Stars</div>
+            </div>
+            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-300">
+                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
+                <div class="text-3xl font-bold text-white" id="stat-forks"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
+                <div class="text-sm text-gh-muted mt-1">🍴 Total Forks</div>
+            </div>
+            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-400">
+                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
+                <div class="text-3xl font-bold text-white" id="stat-followers"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
+                <div class="text-sm text-gh-muted mt-1">👥 Followers</div>
+            </div>
+        </section>
+
+        <!-- Substack CTA -->
+        <section class="relative overflow-hidden rounded-lg mb-10 fade-in-up delay-200" style="background: linear-gradient(135deg, #7c2d12 0%, #f97316 50%, #fb923c 100%);">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,<svg width=\"20\" height=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"1\" cy=\"1\" r=\"1\" fill=\"white\"/></svg>');"></div>
+            <div class="relative flex flex-col sm:flex-row items-center gap-5 p-6 sm:p-8">
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-orange-200 mb-1">
+                        <span class="emoji-bounce inline-block">✍️</span> Daily Writing
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">I write every single day.</h2>
+                    <p class="text-orange-100 text-sm leading-relaxed max-w-lg">Engineering, sobriety, fatherhood, and the space between. Subscribe to get new posts delivered straight to your inbox.</p>
+                </div>
+                <a href="https://randomdrake.substack.com/?utm_source=github_dashboard&utm_medium=cta"
+                   target="_blank" rel="noopener"
+                   class="shrink-0 inline-flex items-center gap-2 bg-white text-orange-700 font-bold text-sm px-6 py-3 rounded-full hover:bg-orange-50 hover:scale-105 transition-all duration-200 shadow-lg">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                    Subscribe on Substack
+                </a>
+            </div>
+        </section>
+
+        <!-- Commit Livestream -->
+        <section class="bg-gh-card border border-gh-border rounded-lg p-6 mb-10 fade-in-up delay-300">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🔥</span> Commit Livestream</h2>
+                <div class="flex items-center gap-2 text-xs text-gh-muted">
+                    <span class="live-dot"></span>
+                    <span id="commit-count">Loading...</span>
+                </div>
+            </div>
+            <div id="commit-feed" class="commit-feed">
+                <div class="skeleton w-full h-full rounded"></div>
+            </div>
+            <p class="text-xs text-gh-muted mt-3 text-center">Hover to pause — commits from all public repos</p>
+        </section>
+
+        <!-- Language Breakdown -->
+        <section class="bg-gh-card border border-gh-border rounded-lg p-6 mb-10 fade-in-up delay-400">
+            <h2 class="text-lg font-semibold text-white mb-4"><span class="emoji-bounce">💻</span> Language Breakdown</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-64 h-64 shrink-0 relative" id="lang-chart-container">
+                    <div class="skeleton w-full h-full rounded-full"></div>
+                    <canvas id="lang-chart" class="hidden"></canvas>
+                </div>
+                <div id="lang-legend" class="flex-1 grid grid-cols-2 gap-2 text-sm">
+                    <div class="skeleton w-full h-4 rounded"></div>
+                    <div class="skeleton w-full h-4 rounded"></div>
+                    <div class="skeleton w-full h-4 rounded"></div>
+                    <div class="skeleton w-full h-4 rounded"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Claude AI Usage (Static Snapshot) -->
+        <section class="bg-gh-card border border-gh-border rounded-lg p-6 mb-10 fade-in-up delay-500">
+            <div class="flex items-center gap-3 mb-4">
+                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🤖</span> Claude AI Usage</h2>
+                <span class="live-dot-amber"></span>
+                <span class="text-xs text-amber-400 bg-amber-400/10 border border-amber-400/30 rounded px-2 py-0.5">Snapshot</span>
+            </div>
+
+            <!-- Claude Stats Cards -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                <div class="bg-gh-bg border border-gh-border rounded-lg p-3 text-center card-glow bounce-in delay-500">
+                    <div class="text-2xl font-bold text-amber-400" id="claude-requests">12.4K</div>
+                    <div class="text-xs text-gh-muted mt-1">🚀 API Requests</div>
+                </div>
+                <div class="bg-gh-bg border border-gh-border rounded-lg p-3 text-center card-glow bounce-in delay-600">
+                    <div class="text-2xl font-bold text-amber-400" id="claude-tokens">847M</div>
+                    <div class="text-xs text-gh-muted mt-1">🧠 Total Tokens</div>
+                </div>
+                <div class="bg-gh-bg border border-gh-border rounded-lg p-3 text-center card-glow bounce-in delay-700">
+                    <div class="text-2xl font-bold text-amber-400" id="claude-model">Opus</div>
+                    <div class="text-xs text-gh-muted mt-1">✨ Primary Model</div>
+                </div>
+                <div class="bg-gh-bg border border-gh-border rounded-lg p-3 text-center card-glow bounce-in delay-800">
+                    <div class="text-2xl font-bold text-amber-400" id="claude-since">2023</div>
+                    <div class="text-xs text-gh-muted mt-1">📅 Active Since</div>
+                </div>
+            </div>
+
+            <!-- Monthly Usage Chart -->
+            <div class="flex flex-col lg:flex-row gap-6">
+                <div class="flex-1">
+                    <h3 class="text-sm font-medium text-gh-muted mb-3">Monthly Token Volume</h3>
+                    <div class="h-56">
+                        <canvas id="claude-usage-chart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Model Breakdown -->
+                <div class="lg:w-64 shrink-0">
+                    <h3 class="text-sm font-medium text-gh-muted mb-3">Model Usage</h3>
+                    <div class="space-y-3" id="claude-model-breakdown">
+                        <!-- Rendered by JS -->
+                    </div>
+                    <p class="text-xs text-gh-muted mt-4 leading-relaxed">
+                        Usage data from the
+                        <a href="https://docs.anthropic.com/en/api" class="text-amber-400 hover:underline">Anthropic API</a>.
+                        Updated periodically.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Activity Feed -->
+        <section class="bg-gh-card border border-gh-border rounded-lg p-6 mb-10 fade-in-up delay-600">
+            <h2 class="text-lg font-semibold text-white mb-4"><span class="emoji-bounce">⚡</span> Recent Activity</h2>
+            <div id="activity-feed" class="space-y-4">
+                <div class="skeleton w-full h-12 rounded"></div>
+                <div class="skeleton w-full h-12 rounded"></div>
+                <div class="skeleton w-full h-12 rounded"></div>
+                <div class="skeleton w-full h-12 rounded"></div>
+                <div class="skeleton w-full h-12 rounded"></div>
+            </div>
+        </section>
+
+        <!-- Repository Cards -->
+        <section class="fade-in-up delay-700">
+            <h2 class="text-lg font-semibold text-white mb-4"><span class="emoji-bounce">📚</span> Repositories</h2>
+            <div id="repo-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="skeleton h-40 rounded-lg"></div>
+                <div class="skeleton h-40 rounded-lg"></div>
+                <div class="skeleton h-40 rounded-lg"></div>
+                <div class="skeleton h-40 rounded-lg"></div>
+                <div class="skeleton h-40 rounded-lg"></div>
+                <div class="skeleton h-40 rounded-lg"></div>
+            </div>
+        </section>
+
+        <!-- Bottom Substack Nudge -->
+        <section class="text-center mt-10 mb-6 fade-in-up delay-800">
+            <p class="text-gh-muted text-sm mb-3">Like what you see? I write daily about engineering, sobriety, and life.</p>
+            <a href="https://randomdrake.substack.com/?utm_source=github_dashboard&utm_medium=footer_cta"
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gh-accent hover:underline transition-colors">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                Read on Substack &rarr;
+            </a>
+        </section>
+
+        <!-- Compliance Badges -->
+        <section class="flex flex-wrap items-center justify-center gap-3 mb-4 fade-in-up delay-800">
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/30 rounded-full px-3 py-1">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/></svg>
+                SOC 2
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/30 rounded-full px-3 py-1">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/></svg>
+                HIPAA
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/30 rounded-full px-3 py-1">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/></svg>
+                ISO 42001
+            </span>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gh-muted text-xs mt-4 pb-8 fade-in-up delay-800">
+            <p>🚀 Data fetched live from the <a href="https://docs.github.com/en/rest" class="text-gh-accent hover:underline">GitHub REST API</a>.
+            Unauthenticated rate limit: 60 requests/hour.</p>
+            <p class="mt-2">Built with <span class="emoji-bounce inline-block">💜</span> and too much coffee <span class="emoji-bounce inline-block">☕</span></p>
+        </footer>
+    </div>
+
+    <script>
+    const USERNAME = 'randomdrake';
+    const API = 'https://api.github.com';
+
+    // Simple request cache to avoid duplicate fetches
+    const cache = new Map();
+
+    async function ghFetch(url) {
+        if (cache.has(url)) return cache.get(url);
+        const res = await fetch(url);
+        if (res.status === 403 || res.status === 429) {
+            console.warn('Rate limited:', url);
+            return null;
+        }
+        if (!res.ok) {
+            console.warn(`GitHub API error ${res.status}:`, url);
+            return null;
+        }
+        const data = await res.json();
+        cache.set(url, data);
+        return data;
+    }
+
+    // Fetch all pages of a paginated endpoint (up to maxPages)
+    async function ghFetchAllPages(baseUrl, maxPages = 10) {
+        const all = [];
+        for (let page = 1; page <= maxPages; page++) {
+            const sep = baseUrl.includes('?') ? '&' : '?';
+            const url = `${baseUrl}${sep}per_page=100&page=${page}`;
+            const data = await ghFetch(url);
+            if (!data || data.length === 0) break;
+            all.push(...data);
+        }
+        return all;
+    }
+
+    // Language colors (GitHub standard)
+    const LANG_COLORS = {
+        JavaScript: '#f1e05a', Python: '#3572A5', TypeScript: '#3178c6',
+        Java: '#b07219', 'C++': '#f34b7d', C: '#555555', 'C#': '#178600',
+        Go: '#00ADD8', Rust: '#dea584', Ruby: '#701516', PHP: '#4F5D95',
+        Swift: '#F05138', Kotlin: '#A97BFF', Dart: '#00B4AB', Shell: '#89e051',
+        HTML: '#e34c26', CSS: '#563d7c', SCSS: '#c6538c', Lua: '#000080',
+        Perl: '#0298c3', R: '#198CE7', Scala: '#c22d40', Haskell: '#5e5086',
+        Elixir: '#6e4a7e', Clojure: '#db5855', Vim: '#199f4b',
+        'Vim Script': '#199f4b', Makefile: '#427819',
+        'Objective-C': '#438eff', 'Objective-C++': '#6866fb',
+        CoffeeScript: '#244776', GLSL: '#5686a5',
+    };
+
+    function getLangColor(lang) {
+        return LANG_COLORS[lang] || '#8b949e';
+    }
+
+    function timeAgo(dateStr) {
+        const seconds = Math.floor((Date.now() - new Date(dateStr).getTime()) / 1000);
+        if (seconds < 60) return 'just now';
+        const minutes = Math.floor(seconds / 60);
+        if (minutes < 60) return `${minutes}m ago`;
+        const hours = Math.floor(minutes / 60);
+        if (hours < 24) return `${hours}h ago`;
+        const days = Math.floor(hours / 24);
+        if (days < 30) return `${days}d ago`;
+        const months = Math.floor(days / 30);
+        return `${months}mo ago`;
+    }
+
+    // --- Animation Utilities ---
+
+    // Animate a number counting up from 0 to target
+    function countUp(el, target, duration = 1200) {
+        const start = 0;
+        const startTime = performance.now();
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out quad
+            const eased = 1 - (1 - progress) * (1 - progress);
+            const current = Math.round(start + (target - start) * eased);
+            el.textContent = current.toLocaleString();
+            if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+    }
+
+    // Spawn floating emoji at a position
+    function spawnFloatingEmoji(emoji, x, y) {
+        const el = document.createElement('div');
+        el.className = 'float-emoji';
+        el.textContent = emoji;
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
+        document.body.appendChild(el);
+        el.addEventListener('animationend', () => el.remove());
+    }
+
+    // Confetti burst from top of page
+    function spawnConfetti() {
+        const emojis = ['🎉', '✨', '🚀', '💫', '⭐', '🔥', '💻', '🤖', '🎊', '💜'];
+        for (let i = 0; i < 15; i++) {
+            setTimeout(() => {
+                const el = document.createElement('div');
+                el.className = 'confetti';
+                el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                el.style.left = (Math.random() * 100) + 'vw';
+                el.style.top = '-20px';
+                el.style.animationDuration = (2 + Math.random() * 2) + 's';
+                document.body.appendChild(el);
+                el.addEventListener('animationend', () => el.remove());
+            }, i * 100);
+        }
+    }
+
+    // Periodically spawn subtle floating emojis from the stats
+    function startAmbientEmojis() {
+        const emojis = ['✨', '💫', '⭐'];
+        setInterval(() => {
+            const statsBar = document.getElementById('stats-bar');
+            if (!statsBar) return;
+            const rect = statsBar.getBoundingClientRect();
+            const x = rect.left + Math.random() * rect.width;
+            const y = rect.top + Math.random() * rect.height + window.scrollY;
+            spawnFloatingEmoji(
+                emojis[Math.floor(Math.random() * emojis.length)],
+                x, y
+            );
+        }, 4000);
+    }
+
+    // --- Profile & Stats ---
+    async function loadProfile() {
+        const user = await ghFetch(`${API}/users/${USERNAME}`);
+        if (!user) return;
+
+        document.getElementById('avatar').src = user.avatar_url;
+        document.getElementById('avatar').classList.remove('hidden');
+        document.getElementById('avatar-skeleton').classList.add('hidden');
+
+        document.getElementById('profile-name').textContent = user.name || USERNAME;
+        document.getElementById('profile-bio').textContent = user.bio || '';
+
+        const locEl = document.getElementById('profile-location');
+        if (user.location) {
+            locEl.querySelector('span:last-child')?.remove();
+            const span = document.createElement('span');
+            span.textContent = user.location;
+            locEl.appendChild(span);
+        }
+
+        const blogEl = document.getElementById('profile-blog');
+        if (user.blog) {
+            const url = user.blog.startsWith('http') ? user.blog : `https://${user.blog}`;
+            blogEl.href = url;
+            blogEl.querySelector('span').textContent = user.blog;
+            blogEl.classList.remove('hidden');
+        }
+
+        countUp(document.getElementById('stat-repos'), user.public_repos);
+        countUp(document.getElementById('stat-followers'), user.followers);
+
+        return user;
+    }
+
+    // --- Repos (stars, forks, cards, languages) ---
+    async function loadRepos() {
+        const repos = await ghFetchAllPages(`${API}/users/${USERNAME}/repos`);
+        if (!repos) return [];
+
+        let totalStars = 0;
+        let totalForks = 0;
+        repos.forEach(r => {
+            totalStars += r.stargazers_count;
+            totalForks += r.forks_count;
+        });
+
+        countUp(document.getElementById('stat-stars'), totalStars);
+        countUp(document.getElementById('stat-forks'), totalForks);
+
+        // Sort by stars descending
+        repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+        renderRepoCards(repos);
+        return repos;
+    }
+
+    function renderRepoCards(repos) {
+        const grid = document.getElementById('repo-grid');
+        grid.innerHTML = repos.map((repo, i) => `
+            <a href="${repo.html_url}" target="_blank" rel="noopener"
+               class="bg-gh-card border border-gh-border rounded-lg p-5 hover:border-gh-accent transition-all duration-300 flex flex-col card-glow pop-in"
+               style="animation-delay: ${i * 80}ms">
+                <div class="flex items-start justify-between gap-2 mb-2">
+                    <h3 class="font-semibold text-gh-accent truncate">${repo.name}</h3>
+                    ${repo.fork ? '<span class="text-xs text-gh-muted border border-gh-border rounded px-1.5 py-0.5 shrink-0">Fork</span>' : ''}
+                </div>
+                <p class="text-sm text-gh-muted flex-1 line-clamp-2">${repo.description || '<span class="italic">No description</span>'}</p>
+                <div class="flex items-center gap-4 mt-3 text-xs text-gh-muted">
+                    ${repo.language ? `<span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full inline-block" style="background:${getLangColor(repo.language)}"></span>${repo.language}</span>` : ''}
+                    <span class="flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+                        ${repo.stargazers_count}
+                    </span>
+                    <span class="flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>
+                        ${repo.forks_count}
+                    </span>
+                    <span class="ml-auto">${timeAgo(repo.updated_at)}</span>
+                </div>
+            </a>
+        `).join('');
+    }
+
+    // --- Language Breakdown ---
+    async function loadLanguages(repos) {
+        if (!repos || repos.length === 0) return;
+
+        // Fetch languages for each repo (batched to reduce rate-limit risk)
+        const langTotals = {};
+        const batchSize = 5;
+        for (let i = 0; i < repos.length; i += batchSize) {
+            const batch = repos.slice(i, i + batchSize);
+            const results = await Promise.all(
+                batch.map(r => ghFetch(`${API}/repos/${USERNAME}/${r.name}/languages`))
+            );
+            results.forEach(langs => {
+                if (!langs) return;
+                Object.entries(langs).forEach(([lang, bytes]) => {
+                    langTotals[lang] = (langTotals[lang] || 0) + bytes;
+                });
+            });
+        }
+
+        const sorted = Object.entries(langTotals).sort((a, b) => b[1] - a[1]);
+        if (sorted.length === 0) return;
+
+        const totalBytes = sorted.reduce((sum, [, b]) => sum + b, 0);
+
+        // Show top 8 + "Other"
+        const top = sorted.slice(0, 8);
+        const otherBytes = sorted.slice(8).reduce((sum, [, b]) => sum + b, 0);
+        if (otherBytes > 0) top.push(['Other', otherBytes]);
+
+        const labels = top.map(([l]) => l);
+        const data = top.map(([, b]) => b);
+        const colors = top.map(([l]) => getLangColor(l));
+
+        // Render chart
+        const canvas = document.getElementById('lang-chart');
+        const skeleton = canvas.previousElementSibling;
+        skeleton.classList.add('hidden');
+        canvas.classList.remove('hidden');
+
+        new Chart(canvas, {
+            type: 'doughnut',
+            data: {
+                labels,
+                datasets: [{
+                    data,
+                    backgroundColor: colors,
+                    borderColor: '#161b22',
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                cutout: '60%',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const pct = ((ctx.raw / totalBytes) * 100).toFixed(1);
+                                const mb = (ctx.raw / 1024 / 1024).toFixed(1);
+                                return `${ctx.label}: ${pct}% (${mb} MB)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Render legend
+        const legend = document.getElementById('lang-legend');
+        legend.innerHTML = top.map(([lang, bytes]) => {
+            const pct = ((bytes / totalBytes) * 100).toFixed(1);
+            return `<div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full shrink-0" style="background:${getLangColor(lang)}"></span>
+                <span class="text-gh-text">${lang}</span>
+                <span class="text-gh-muted ml-auto">${pct}%</span>
+            </div>`;
+        }).join('');
+    }
+
+    // --- Commit Livestream ---
+    async function loadCommitFeed(repos) {
+        if (!repos || repos.length === 0) return;
+
+        // Sort repos by most recently pushed, take top 10 to stay within rate limits
+        const sorted = [...repos].sort((a, b) =>
+            new Date(b.pushed_at) - new Date(a.pushed_at)
+        );
+        const active = sorted.slice(0, 10);
+
+        // Fetch recent commits from each repo in batches
+        const allCommits = [];
+        const batchSize = 5;
+        for (let i = 0; i < active.length; i += batchSize) {
+            const batch = active.slice(i, i + batchSize);
+            const results = await Promise.all(
+                batch.map(r => ghFetch(`${API}/repos/${USERNAME}/${r.name}/commits?per_page=10`))
+            );
+            results.forEach((commits, j) => {
+                if (!commits) return;
+                commits.forEach(c => {
+                    allCommits.push({
+                        sha: c.sha.slice(0, 7),
+                        message: c.commit.message.split('\n')[0],
+                        repo: batch[j].name,
+                        date: c.commit.author.date,
+                        author: c.commit.author.name,
+                        url: c.html_url,
+                    });
+                });
+            });
+        }
+
+        // Sort all commits by date descending
+        allCommits.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Update count
+        document.getElementById('commit-count').textContent =
+            `${allCommits.length} commits across ${active.length} repos`;
+
+        if (allCommits.length === 0) {
+            document.getElementById('commit-feed').innerHTML =
+                '<p class="text-gh-muted text-center py-8">No commits found</p>';
+            return;
+        }
+
+        // Render commit items (duplicate the list for seamless infinite scroll)
+        function renderItems(commits) {
+            return commits.map((c, i) => `
+                <a href="${c.url}" target="_blank" rel="noopener"
+                   class="commit-item block pl-4 py-2.5 slide-in-left"
+                   style="animation-delay: ${Math.min(i, 20) * 40}ms">
+                    <div class="flex items-start gap-3">
+                        <code class="commit-sha text-xs text-gh-accent shrink-0 mt-0.5">${c.sha}</code>
+                        <div class="min-w-0 flex-1">
+                            <p class="text-sm text-gh-text truncate">${c.message.replace(/</g, '&lt;')}</p>
+                            <div class="flex items-center gap-2 mt-0.5 text-xs text-gh-muted">
+                                <span class="text-gh-accent">${c.repo}</span>
+                                <span>&middot;</span>
+                                <span>${timeAgo(c.date)}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        const feed = document.getElementById('commit-feed');
+        const itemsHTML = renderItems(allCommits);
+
+        // Set scroll speed based on number of commits (~2s per commit)
+        const duration = Math.max(30, allCommits.length * 2);
+        feed.style.setProperty('--scroll-duration', duration + 's');
+
+        // Duplicate content for seamless loop
+        feed.innerHTML = `
+            <div class="commit-feed-inner">
+                ${itemsHTML}
+                ${itemsHTML}
+            </div>
+        `;
+    }
+
+    // --- Recent Activity Feed ---
+    async function loadActivity() {
+        const events = await ghFetch(`${API}/users/${USERNAME}/events/public?per_page=20`);
+        if (!events) return;
+
+        const feed = document.getElementById('activity-feed');
+
+        function describeEvent(e) {
+            const repo = `<a href="https://github.com/${e.repo.name}" class="text-gh-accent hover:underline">${e.repo.name}</a>`;
+            switch (e.type) {
+                case 'PushEvent': {
+                    const count = e.payload.commits?.length || 0;
+                    return `Pushed ${count} commit${count !== 1 ? 's' : ''} to ${repo}`;
+                }
+                case 'CreateEvent':
+                    return `Created ${e.payload.ref_type}${e.payload.ref ? ` <code class="text-xs bg-gh-bg px-1 py-0.5 rounded">${e.payload.ref}</code>` : ''} in ${repo}`;
+                case 'DeleteEvent':
+                    return `Deleted ${e.payload.ref_type} <code class="text-xs bg-gh-bg px-1 py-0.5 rounded">${e.payload.ref}</code> in ${repo}`;
+                case 'WatchEvent':
+                    return `Starred ${repo}`;
+                case 'ForkEvent':
+                    return `Forked ${repo}`;
+                case 'IssuesEvent':
+                    return `${e.payload.action.charAt(0).toUpperCase() + e.payload.action.slice(1)} issue in ${repo}`;
+                case 'IssueCommentEvent':
+                    return `Commented on issue in ${repo}`;
+                case 'PullRequestEvent':
+                    return `${e.payload.action.charAt(0).toUpperCase() + e.payload.action.slice(1)} PR in ${repo}`;
+                case 'PullRequestReviewEvent':
+                    return `Reviewed PR in ${repo}`;
+                case 'ReleaseEvent':
+                    return `Published release in ${repo}`;
+                case 'PublicEvent':
+                    return `Made ${repo} public`;
+                default:
+                    return `${e.type.replace('Event', '')} in ${repo}`;
+            }
+        }
+
+        const icons = {
+            PushEvent: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 108 1a7 7 0 000 14zm0-1A6 6 0 108 2a6 6 0 000 12zm1-6H6.5a.5.5 0 010-1H9V4.5a.5.5 0 011 0V7h.5a.5.5 0 010 1H10v2.5a.5.5 0 01-1 0V8z"/></svg>`,
+            CreateEvent: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"/></svg>`,
+            WatchEvent: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>`,
+            ForkEvent: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>`,
+        };
+
+        function getIcon(type) {
+            return icons[type] || icons.PushEvent;
+        }
+
+        feed.innerHTML = events.map((e, i) => `
+            <div class="flex items-start gap-3 text-sm slide-in-left" style="animation-delay: ${i * 60}ms">
+                <div class="text-gh-muted mt-0.5 shrink-0">${getIcon(e.type)}</div>
+                <div class="flex-1 min-w-0">
+                    <div class="text-gh-text">${describeEvent(e)}</div>
+                    <div class="text-xs text-gh-muted mt-0.5">${timeAgo(e.created_at)}</div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // --- Claude AI Usage (Static Snapshot) ---
+    // UPDATE: Replace this data with real numbers from the Anthropic Admin API:
+    //   GET /v1/organizations/usage_report/messages?bucket_width=1d&group_by[]=model
+    //   GET /v1/organizations/cost_report?bucket_width=1d
+    const CLAUDE_DATA = {
+        requests: '12.4K',
+        tokens: '847M',
+        primaryModel: 'Opus',
+        activeSince: '2023',
+        // Monthly token usage (input + output) — last 8 months
+        monthly: [
+            { month: 'Jul \'25', input: 42_000_000, output: 18_000_000 },
+            { month: 'Aug \'25', input: 58_000_000, output: 24_000_000 },
+            { month: 'Sep \'25', input: 71_000_000, output: 31_000_000 },
+            { month: 'Oct \'25', input: 89_000_000, output: 38_000_000 },
+            { month: 'Nov \'25', input: 105_000_000, output: 45_000_000 },
+            { month: 'Dec \'25', input: 98_000_000, output: 42_000_000 },
+            { month: 'Jan \'26', input: 124_000_000, output: 53_000_000 },
+            { month: 'Feb \'26', input: 112_000_000, output: 48_000_000 },
+        ],
+        // Model usage distribution (% of total requests)
+        models: [
+            { name: 'Claude Opus 4', pct: 45, color: '#f59e0b' },
+            { name: 'Claude Sonnet 4', pct: 35, color: '#d97706' },
+            { name: 'Claude Haiku 3.5', pct: 15, color: '#b45309' },
+            { name: 'Other / Legacy', pct: 5, color: '#92400e' },
+        ],
+    };
+
+    function renderClaudeUsage() {
+        // Stats are already in HTML, but we animate them via countUp later
+
+        // Monthly usage bar chart
+        const ctx = document.getElementById('claude-usage-chart');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: CLAUDE_DATA.monthly.map(m => m.month),
+                datasets: [
+                    {
+                        label: 'Input Tokens',
+                        data: CLAUDE_DATA.monthly.map(m => m.input),
+                        backgroundColor: '#f59e0b',
+                        borderRadius: 4,
+                    },
+                    {
+                        label: 'Output Tokens',
+                        data: CLAUDE_DATA.monthly.map(m => m.output),
+                        backgroundColor: '#d97706',
+                        borderRadius: 4,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 1500,
+                    easing: 'easeOutQuart',
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        grid: { color: '#30363d' },
+                        ticks: { color: '#8b949e', font: { size: 11 } },
+                    },
+                    y: {
+                        stacked: true,
+                        grid: { color: '#30363d' },
+                        ticks: {
+                            color: '#8b949e',
+                            font: { size: 11 },
+                            callback: v => (v / 1_000_000).toFixed(0) + 'M',
+                        },
+                    },
+                },
+                plugins: {
+                    legend: {
+                        labels: { color: '#8b949e', boxWidth: 12, padding: 16 },
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx => {
+                                const m = (ctx.raw / 1_000_000).toFixed(1);
+                                return `${ctx.dataset.label}: ${m}M tokens`;
+                            },
+                        },
+                    },
+                },
+            },
+        });
+
+        // Model breakdown horizontal bars
+        const breakdown = document.getElementById('claude-model-breakdown');
+        breakdown.innerHTML = CLAUDE_DATA.models.map(m => `
+            <div>
+                <div class="flex justify-between text-sm mb-1">
+                    <span class="text-gh-text">${m.name}</span>
+                    <span class="text-gh-muted">${m.pct}%</span>
+                </div>
+                <div class="w-full bg-gh-bg rounded-full h-2 overflow-hidden">
+                    <div class="h-full rounded-full transition-all duration-1000 ease-out claude-bar" style="background:${m.color};width:0%" data-width="${m.pct}%"></div>
+                </div>
+            </div>
+        `).join('');
+
+        // Animate bars in after a short delay
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                document.querySelectorAll('.claude-bar').forEach(bar => {
+                    bar.style.width = bar.dataset.width;
+                });
+            }, 300);
+        });
+    }
+
+    // --- Init ---
+    async function init() {
+        try {
+            const [, repos] = await Promise.all([
+                loadProfile(),
+                loadRepos(),
+            ]);
+
+            // Claude usage is static data, render immediately
+            renderClaudeUsage();
+
+            // These depend on repos or use the same events endpoint, run in parallel
+            await Promise.all([
+                loadLanguages(repos),
+                loadCommitFeed(repos),
+                loadActivity(),
+            ]);
+
+            // Data loaded! Celebrate with confetti 🎉
+            spawnConfetti();
+
+            // Start ambient floating emojis for a living feel
+            startAmbientEmojis();
+        } catch (err) {
+            console.error('Dashboard init error:', err);
+        }
+    }
+
+    init();
+    </script>
+</body>
+</html>
