@@ -163,37 +163,34 @@
             100% { transform: scale(1.4) rotate(0deg); }
         }
 
-        /* Individual robot + commit card */
-        .robot-card {
+        /* Feed cards — commits and pipeline runs */
+        .feed-card {
             display: flex;
             align-items: flex-start;
             gap: 10px;
             padding: 8px 14px;
-            border-radius: 10px;
-            background: rgba(22, 27, 34, 0.85);
-            border: 1px solid rgba(48, 54, 61, 0.6);
-            backdrop-filter: blur(8px);
-            transition: all 0.3s ease;
-            position: relative;
-            max-width: 92%;
+            border-radius: 8px;
+            background: rgba(22, 27, 34, 0.7);
+            border: 1px solid rgba(48, 54, 61, 0.5);
+            transition: background 0.2s, border-color 0.2s;
             text-decoration: none;
         }
-        .robot-card:hover {
+        .feed-card:hover {
             background: rgba(30, 37, 46, 0.95);
-            border-color: rgba(249, 115, 22, 0.4);
-            transform: scale(1.03);
-            z-index: 20;
-            box-shadow: 0 0 20px rgba(249, 115, 22, 0.15);
+            border-color: rgba(249, 115, 22, 0.35);
         }
-        .robot-card.claude { border-color: rgba(212, 165, 116, 0.25); }
-        .robot-card.claude:hover { border-color: rgba(232, 196, 154, 0.5); box-shadow: 0 0 24px rgba(212, 165, 116, 0.2); }
-        .robot-card.david { border-color: rgba(249, 115, 22, 0.2); }
-        .robot-card.bot { border-color: rgba(82, 82, 91, 0.3); opacity: 0.6; }
+        .feed-card.claude { border-left: 2px solid #d4a574; }
+        .feed-card.david { border-left: 2px solid #f97316; }
+        .feed-card.bot { border-left: 2px solid #52525b; opacity: 0.7; }
+        .feed-card.pipeline { border-left: 2px solid #22c55e; }
+        .feed-card.pipeline.failed { border-left-color: #ef4444; }
+        .feed-card.pipeline.running { border-left-color: #eab308; }
 
         .card-emoji {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1;
             flex-shrink: 0;
+            margin-top: 1px;
         }
 
         /* Author tag */
@@ -249,70 +246,6 @@
         }
         .commit-sha {
             font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
-        }
-
-        /* Pipeline status */
-        .pipeline-row {
-            transition: background 0.2s ease;
-        }
-        .pipeline-row:hover {
-            background: rgba(249, 115, 22, 0.05);
-        }
-        .status-icon {
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .status-success {
-            background: #2ea04370;
-            color: #3fb950;
-            animation: statusPop 0.4s ease forwards;
-        }
-        .status-failure {
-            background: #f8514970;
-            color: #f85149;
-            animation: statusPop 0.4s ease forwards;
-        }
-        .status-pending {
-            background: #d29922;
-            animation: pendingSpin 1.2s linear infinite;
-        }
-        .status-in_progress {
-            background: #d2992240;
-            color: #d29922;
-            animation: inProgressPulse 1.5s ease-in-out infinite;
-        }
-        @keyframes statusPop {
-            0% { transform: scale(0); }
-            60% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-        @keyframes pendingSpin {
-            to { transform: rotate(360deg); }
-        }
-        @keyframes inProgressPulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.3); opacity: 0.6; }
-        }
-        .pipeline-progress {
-            height: 3px;
-            border-radius: 2px;
-            overflow: hidden;
-            background: #30363d;
-        }
-        .pipeline-progress-bar {
-            height: 100%;
-            border-radius: 2px;
-            background: linear-gradient(90deg, #f97316, #fb923c);
-            animation: progressPulse 2s ease-in-out infinite;
-        }
-        @keyframes progressPulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
         }
 
         /* Fade-in-up for sections */
@@ -694,20 +627,7 @@
             </div>
         </section>
 
-        <!-- Pipeline Status -->
-        <section class="bg-gh-card border border-gh-border rounded-lg p-6 mt-10 mb-10 fade-in-up delay-800">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🚦</span> Pipeline Status</h2>
-                <a href="https://github.com/randomdrake/randomdrake.github.io/actions" target="_blank" rel="noopener"
-                   class="text-xs text-gh-accent hover:underline">View all runs &rarr;</a>
-            </div>
-            <div id="pipeline-feed" class="space-y-3">
-                <div class="skeleton w-full h-14 rounded"></div>
-                <div class="skeleton w-full h-14 rounded"></div>
-                <div class="skeleton w-full h-14 rounded"></div>
-            </div>
-            <p class="text-xs text-gh-muted mt-3 text-center">Live from <a href="https://docs.github.com/en/rest/actions/workflow-runs" class="text-gh-accent hover:underline">GitHub Actions API</a></p>
-        </section>
+        <!-- Pipeline feed is now merged into the Engineer Workshop above -->
 
         <!-- Bottom Substack Nudge -->
         <section class="text-center mt-10 mb-6 fade-in-up delay-800">
@@ -1161,14 +1081,33 @@
         return REPO_EMOJI[c.repo] || AUTHOR_EMOJI[commitType(c)] || '🔧';
     }
 
-    // Build a single commit card
-    function robotCard(c, i) {
+    // Build a single feed card (commit or pipeline run)
+    function feedCard(item) {
+        if (item._type === 'pipeline') {
+            const r = item;
+            const cls = r.conclusion === 'failure' ? 'failed' : (r.status === 'in_progress' || r.status === 'queued') ? 'running' : '';
+            const emoji = r.conclusion === 'success' ? '✅' : r.conclusion === 'failure' ? '❌' : '🔄';
+            const label = r.status === 'in_progress' ? 'RUNNING' : r.conclusion === 'success' ? 'passed' : r.conclusion === 'failure' ? 'failed' : r.status;
+            return `
+            <a href="${r.html_url}" target="_blank" rel="noopener" class="feed-card pipeline ${cls}">
+                <span class="card-emoji">${emoji}</span>
+                <div style="min-width:0;flex:1">
+                    <p style="font-size:12px;color:#e6edf3;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${(r.head_commit?.message?.split('\\n')[0] || r.name || 'Pipeline run').replace(/</g, '&lt;')}</p>
+                    <div style="display:flex;align-items:center;gap:6px;margin-top:3px;flex-wrap:wrap">
+                        <span class="author-tag bot">${label}</span>
+                        <span style="font-size:10px;color:#484f58">${r.name}</span>
+                        <span style="font-size:10px;color:#484f58">#${r.run_number}</span>
+                        <span style="font-size:10px;color:#484f58">&middot;</span>
+                        <span style="font-size:10px;color:#484f58">${timeAgo(r.created_at)}</span>
+                    </div>
+                </div>
+            </a>`;
+        }
+        // Commit card
+        const c = item;
         const type = commitType(c);
-        const align = i % 2 === 0 ? 'margin-left: 4%' : 'margin-left: auto; margin-right: 4%';
-        const nudge = (parseInt((c.sha || '0').slice(0, 2), 16) % 30);
         return `
-        <a href="${c.url}" target="_blank" rel="noopener"
-           class="robot-card ${type}" style="${align}; transform: translateX(${nudge - 15}px)">
+        <a href="${c.url}" target="_blank" rel="noopener" class="feed-card ${type}">
             <span class="card-emoji" title="${c.repo}">${cardEmoji(c)}</span>
             <div style="min-width:0;flex:1">
                 <p style="font-size:12px;color:#e6edf3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0">${c.message.replace(/</g, '&lt;')}</p>
@@ -1343,90 +1282,21 @@
         });
     }
 
-    // --- Init ---
-    // --- Pipeline Status (always live — pipelines are inherently real-time) ---
+    // --- Pipeline data (merged into unified feed) ---
     async function loadPipelines() {
-        const feed = document.getElementById('pipeline-feed');
         try {
-            const data = await ghFetch(`${API}/repos/${USERNAME}/randomdrake.github.io/actions/runs?per_page=8`);
-            if (!data) {
-                if (!feed.querySelector('.pipeline-row')) {
-                    feed.innerHTML = '<p class="text-gh-muted text-sm text-center py-4">Pipeline data unavailable (rate limited?)</p>';
-                }
+            const data = await ghFetch(`${API}/repos/${USERNAME}/randomdrake.github.io/actions/runs?per_page=20`);
+            if (data && data.workflow_runs) {
+                _feedPipelines = data.workflow_runs;
+                renderUnifiedFeed();
+
+                const hasActive = data.workflow_runs.some(r => r.status === 'in_progress' || r.status === 'queued');
+                setTimeout(loadPipelines, hasActive ? 15000 : 60000);
+            } else {
                 setTimeout(loadPipelines, 60000);
-                return;
             }
-            const runs = data.workflow_runs || [];
-
-            if (runs.length === 0) {
-                feed.innerHTML = '<p class="text-gh-muted text-sm text-center py-4">No workflow runs found</p>';
-                return;
-            }
-
-            function statusIcon(status, conclusion) {
-                if (status === 'in_progress' || status === 'queued') {
-                    return `<span class="status-icon status-in_progress" title="In progress">
-                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4a4 4 0 100 8 4 4 0 000-8z"/></svg>
-                    </span>`;
-                }
-                if (conclusion === 'success') {
-                    return `<span class="status-icon status-success" title="Success">
-                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
-                    </span>`;
-                }
-                if (conclusion === 'failure') {
-                    return `<span class="status-icon status-failure" title="Failed">
-                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 16 16"><path d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"/></svg>
-                    </span>`;
-                }
-                return `<span class="status-icon status-pending" title="${conclusion || status}">
-                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4a4 4 0 100 8 4 4 0 000-8z"/></svg>
-                </span>`;
-            }
-
-            function durationStr(run) {
-                if (!run.updated_at || !run.run_started_at) return '';
-                const ms = new Date(run.updated_at) - new Date(run.run_started_at);
-                const secs = Math.floor(ms / 1000);
-                if (secs < 60) return `${secs}s`;
-                return `${Math.floor(secs / 60)}m ${secs % 60}s`;
-            }
-
-            feed.innerHTML = runs.map((run, i) => {
-                const isActive = run.status === 'in_progress' || run.status === 'queued';
-                return `
-                <a href="${run.html_url}" target="_blank" rel="noopener"
-                   class="pipeline-row block rounded-lg border border-gh-border p-3 slide-in-left"
-                   style="animation-delay: ${i * 80}ms">
-                    <div class="flex items-center gap-3">
-                        ${statusIcon(run.status, run.conclusion)}
-                        <div class="min-w-0 flex-1">
-                            <div class="flex items-center gap-2">
-                                <span class="text-sm text-gh-text font-medium truncate">${run.name}</span>
-                                ${isActive ? '<span class="text-xs text-amber-400 font-medium">RUNNING</span>' : ''}
-                            </div>
-                            <div class="flex items-center gap-2 text-xs text-gh-muted mt-0.5">
-                                <span class="truncate">${run.head_commit?.message?.split('\\n')[0] || run.display_title || ''}</span>
-                                <span class="shrink-0">&middot;</span>
-                                <span class="shrink-0">${timeAgo(run.created_at)}</span>
-                                ${!isActive && durationStr(run) ? `<span class="shrink-0">&middot; ${durationStr(run)}</span>` : ''}
-                            </div>
-                        </div>
-                        <span class="text-xs text-gh-muted shrink-0 hidden sm:block">#${run.run_number}</span>
-                    </div>
-                    ${isActive ? `<div class="pipeline-progress mt-2"><div class="pipeline-progress-bar" style="width:65%"></div></div>` : ''}
-                </a>`;
-            }).join('');
-
-            // Auto-refresh: 15s if a run is active, 60s otherwise
-            const hasActive = runs.some(r => r.status === 'in_progress' || r.status === 'queued');
-            setTimeout(loadPipelines, hasActive ? 15000 : 60000);
         } catch (err) {
             console.warn('Pipeline fetch failed:', err);
-            // Don't overwrite existing content on transient failures — just retry
-            if (!feed.querySelector('.pipeline-row')) {
-                feed.innerHTML = '<p class="text-gh-muted text-sm text-center py-4">Pipeline data unavailable</p>';
-            }
             setTimeout(loadPipelines, 60000);
         }
     }
@@ -1484,9 +1354,8 @@
             // Languages
             renderLanguageChart(langTotals);
 
-            // Commits
+            // Commits (lastKnownCommitSha set inside renderCommitFeed)
             renderCommitFeed(data.commits);
-            if (data.commits.length > 0) lastKnownCommitSha = data.commits[0].sha;
 
             // Activity
             renderActivityFeed(data.events);
@@ -1550,38 +1419,52 @@
         }).join('');
     }
 
-    function renderCommitFeed(commits) {
+    // Store commits + pipeline runs globally so they can be merged
+    let _feedCommits = [];
+    let _feedPipelines = [];
+    let _autoScrollStarted = false;
+
+    function renderUnifiedFeed() {
         const feed = document.getElementById('commit-feed');
-        // Sort chronologically — oldest first, newest at bottom
-        const sorted = [...commits].sort((a, b) => new Date(a.date) - new Date(b.date));
 
+        // Normalize to a common shape for sorting
+        const items = [];
+        _feedCommits.forEach(c => items.push({ ...c, _type: 'commit', _date: new Date(c.date) }));
+        _feedPipelines.forEach(r => items.push({ ...r, _type: 'pipeline', _date: new Date(r.created_at) }));
+
+        // Chronological: oldest first, newest at bottom
+        items.sort((a, b) => a._date - b._date);
+
+        const commitCount = _feedCommits.length;
+        const pipelineCount = _feedPipelines.length;
         document.getElementById('commit-count').textContent =
-            `${commits.length} commits`;
+            `${commitCount} commits` + (pipelineCount ? ` · ${pipelineCount} runs` : '');
 
-        if (commits.length === 0) {
-            feed.innerHTML = '<p class="text-gh-muted text-center py-8">No commits found</p>';
+        if (items.length === 0) {
+            feed.innerHTML = '<p class="text-gh-muted text-center py-8">No activity found</p>';
             return;
         }
 
-        // Build robot cards
-        const cardsHTML = sorted.map((c, i) => robotCard(c, i)).join('');
+        const cardsHTML = items.map(item => feedCard(item)).join('');
 
-        // Easter egg at the very bottom
         const easterEggHTML = `
             <div class="easter-egg" id="easter-egg">
                 <div class="egg" onclick="document.getElementById('egg-secret').style.display='block';this.textContent='🐣'">🥚</div>
-                <div class="egg-msg">You scrolled through all ${commits.length} commits. You earned this.</div>
+                <div class="egg-msg">You scrolled through everything. You earned this.</div>
                 <div class="egg-secret" id="egg-secret">
                     🐣 <strong>Congrats, you found me!</strong><br><br>
                     This entire dashboard was built by a human (David) and an AI (Claude) pair-programming together.<br>
-                    Every robot you see above represents a real commit — ${commits.filter(isClaudeCommit).length} co-authored with Claude,
-                    ${commits.filter(isDavidCommit).length} by David solo.<br><br>
+                    Every card above is real — ${_feedCommits.filter(isClaudeCommit).length} commits co-authored with Claude,
+                    ${_feedCommits.filter(isDavidCommit).length} by David solo, ${pipelineCount} pipeline runs.<br><br>
                     The future is humans and robots building things together. 🤖🧡👨‍💻<br><br>
                     <a href="https://randomdrake.substack.com?utm_source=dashboard&utm_medium=easter_egg" target="_blank"
                        style="color:#f97316;text-decoration:underline">Subscribe to see what we build next →</a>
                 </div>
             </div>
         `;
+
+        // Remember scroll position to avoid jarring re-render
+        const wasAtBottom = feed.scrollTop >= feed.scrollHeight - feed.clientHeight - 50;
 
         feed.innerHTML = `
             <div class="workshop-fade-top"></div>
@@ -1592,32 +1475,38 @@
             <div class="workshop-fade-bottom"></div>
         `;
 
-        // Start scrolled to the bottom (newest commits visible first)
-        feed.scrollTop = feed.scrollHeight;
+        if (!_autoScrollStarted) {
+            // Start scrolled to the bottom (newest first)
+            feed.scrollTop = feed.scrollHeight;
+            _autoScrollStarted = true;
 
-        // Auto-scroll upward slowly
-        let autoScrolling = true;
-        let userScrolled = false;
-        const SPEED = 0.6; // pixels per frame
+            let autoScrolling = true;
+            let userScrolled = false;
 
-        function autoScroll() {
-            if (autoScrolling && !userScrolled) {
-                feed.scrollTop -= SPEED;
-                // Loop back to bottom when we hit the top
-                if (feed.scrollTop <= 0) {
-                    feed.scrollTop = feed.scrollHeight - feed.clientHeight;
+            function autoScroll() {
+                if (autoScrolling && !userScrolled) {
+                    feed.scrollTop -= 0.6;
+                    if (feed.scrollTop <= 0) {
+                        feed.scrollTop = feed.scrollHeight - feed.clientHeight;
+                    }
                 }
+                requestAnimationFrame(autoScroll);
             }
+
+            feed.addEventListener('mouseenter', () => { autoScrolling = false; });
+            feed.addEventListener('mouseleave', () => { autoScrolling = true; userScrolled = false; });
+            feed.addEventListener('wheel', () => { userScrolled = true; }, { passive: true });
+            feed.addEventListener('touchstart', () => { userScrolled = true; }, { passive: true });
             requestAnimationFrame(autoScroll);
+        } else if (wasAtBottom) {
+            feed.scrollTop = feed.scrollHeight;
         }
+    }
 
-        // Pause auto-scroll on hover or manual scroll
-        feed.addEventListener('mouseenter', () => { autoScrolling = false; });
-        feed.addEventListener('mouseleave', () => { autoScrolling = true; userScrolled = false; });
-        feed.addEventListener('wheel', () => { userScrolled = true; }, { passive: true });
-        feed.addEventListener('touchstart', () => { userScrolled = true; }, { passive: true });
-
-        requestAnimationFrame(autoScroll);
+    function renderCommitFeed(commits) {
+        _feedCommits = commits;
+        if (_feedCommits.length > 0) lastKnownCommitSha = [..._feedCommits].sort((a, b) => new Date(b.date) - new Date(a.date))[0].sha;
+        renderUnifiedFeed();
     }
 
     function renderActivityFeed(events) {
