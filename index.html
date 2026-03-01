@@ -1539,10 +1539,15 @@
         requestAnimationFrame(() => {
             const lane = feed.querySelector('.robot-lane');
             if (!lane) return;
-            const halfHeight = lane.scrollHeight / 2;
+            const totalHeight = lane.scrollHeight;
+            const halfHeight = totalHeight / 2;
+            const viewportHeight = feed.clientHeight;
             const duration = Math.max(50, sorted.length * 4);
 
-            // Create a dynamic keyframe animation based on actual pixel height
+            // Start position: second copy's bottom edge at workshop bottom
+            // This means we offset so content is visible immediately
+            const startY = viewportHeight - totalHeight;
+
             const styleId = 'workshop-scroll-style';
             let styleEl = document.getElementById(styleId);
             if (!styleEl) {
@@ -1550,12 +1555,17 @@
                 styleEl.id = styleId;
                 document.head.appendChild(styleEl);
             }
+            // Scroll up by exactly halfHeight (one copy). Since content is
+            // duplicated, this creates a seamless infinite loop.
             styleEl.textContent = `
                 @keyframes workshopScroll {
-                    0% { transform: translateY(0); }
-                    100% { transform: translateY(-${halfHeight}px); }
+                    0% { transform: translateY(${startY}px); }
+                    100% { transform: translateY(${startY - halfHeight}px); }
                 }
             `;
+            lane.style.position = 'absolute';
+            lane.style.top = '0';
+            lane.style.bottom = 'auto';
             lane.style.animation = `workshopScroll ${duration}s linear infinite`;
         });
 
