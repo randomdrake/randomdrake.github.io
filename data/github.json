@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T02:18:55.566Z",
+  "generated_at": "2026-03-01T02:21:20.161Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T02:18:48Z",
-      "pushed_at": "2026-03-01T02:18:45Z"
+      "updated_at": "2026-03-01T02:21:10Z",
+      "pushed_at": "2026-03-01T02:21:06Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -223,7 +223,7 @@
     },
     "randomdrake": {},
     "randomdrake.github.io": {
-      "HTML": 80514,
+      "HTML": 81267,
       "JavaScript": 4449
     },
     "react-flow-org-chart": {
@@ -242,6 +242,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "e1e72310820483980536959222d1c1e0160629ed",
+      "message": "Fix workshop scroll: use pixel-based animation from measured height",
+      "full_message": "Fix workshop scroll: use pixel-based animation from measured height\n\nThe percentage-based translateY was miscalculated, causing the robot\nlane to be invisible. Now uses requestAnimationFrame to measure\nactual content height and creates a pixel-based keyframe animation\nfor reliable seamless scrolling.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T02:21:03Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e1e72310820483980536959222d1c1e0160629ed"
+    },
+    {
+      "sha": "21b91de43b8e9a597df5395789c672600d0ec483",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T02:18:55Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/21b91de43b8e9a597df5395789c672600d0ec483"
+    },
     {
       "sha": "cf7de1441d66e9ccb68a5b307ebfeaab01799c17",
       "message": "Replace commit feed with animated Robot Engineer Workshop",
@@ -376,24 +394,6 @@
       "date": "2026-03-01T01:01:08Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/56fe7c45fec4b1686870a7500c62608dabcbd364"
-    },
-    {
-      "sha": "ae87533a0e38c4cc5c60984e4b70cdf1bcfd4826",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T00:58:20Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/ae87533a0e38c4cc5c60984e4b70cdf1bcfd4826"
-    },
-    {
-      "sha": "a4d015564048e0d5a15beed3d44408e2dcceb5e5",
-      "message": "Add GitHub Actions data pipeline — zero API calls for visitors",
-      "full_message": "Add GitHub Actions data pipeline — zero API calls for visitors\n\n- Add .github/workflows/update-data.yml: cron job runs every 6 hours,\n  fetches all GitHub data with authenticated token (5,000 req/hr),\n  writes to data/github.json, auto-commits if changed\n- Add scripts/fetch-data.js: fetches profile, repos, languages,\n  commits (top 10 repos), and events; writes static JSON\n- Add data/github.json: initial data (15 repos, 126 commits)\n- Refactor index.html: tries data/github.json first (instant load,\n  no API calls), falls back to live API if file missing\n- Extract shared render functions (renderLanguageChart,\n  renderCommitFeed, renderActivityFeed) used by both paths\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T00:58:04Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/a4d015564048e0d5a15beed3d44408e2dcceb5e5"
     },
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
@@ -1441,6 +1441,22 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
+        "push_id": 31204973812,
+        "ref": "refs/heads/main",
+        "head": "e1e72310820483980536959222d1c1e0160629ed",
+        "before": "21b91de43b8e9a597df5395789c672600d0ec483"
+      },
+      "created_at": "2026-03-01T02:21:07Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
