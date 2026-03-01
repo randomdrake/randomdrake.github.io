@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T03:04:16.041Z",
+  "generated_at": "2026-03-01T03:04:53.211Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T03:04:07Z",
-      "pushed_at": "2026-03-01T03:04:03Z"
+      "updated_at": "2026-03-01T03:04:42Z",
+      "pushed_at": "2026-03-01T03:04:39Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -242,6 +242,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "e4b431d1beac910a0e902ce37b8043c0b628c1c7",
+      "message": "Move easter egg to top of lane (scroll up to find it)",
+      "full_message": "Move easter egg to top of lane (scroll up to find it)\n\nThe egg was at the bottom where auto-scroll starts, making it\nimmediately visible. Now it's at the top — you have to scroll\nthrough all commits to discover it.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T03:04:36Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e4b431d1beac910a0e902ce37b8043c0b628c1c7"
+    },
+    {
+      "sha": "a9b9b4992264c9f2fb3cb87495c00d507c7e299f",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T03:04:16Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/a9b9b4992264c9f2fb3cb87495c00d507c7e299f"
+    },
     {
       "sha": "97dcec37e0aad9289aa82fabafbf7c1bfd02eb47",
       "message": "Better Claude detection, repo robots, LOC counter, timeAgo fix, easter egg fix",
@@ -358,24 +376,6 @@
       "date": "2026-03-01T02:25:39Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/9f7e2cd1972442234eac0b4691fff72bd0b903e0"
-    },
-    {
-      "sha": "0b18df0c6071d84e41d39f9e40d7a1aa1f83aace",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T02:21:49Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/0b18df0c6071d84e41d39f9e40d7a1aa1f83aace"
-    },
-    {
-      "sha": "bc5acf3aaba1e632763ef60691b3262310d0353d",
-      "message": "Slow down workshop scroll to 6s per card",
-      "full_message": "Slow down workshop scroll to 6s per card\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T02:21:33Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/bc5acf3aaba1e632763ef60691b3262310d0353d"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1441,6 +1441,22 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
+        "push_id": 31205558652,
+        "ref": "refs/heads/main",
+        "head": "e4b431d1beac910a0e902ce37b8043c0b628c1c7",
+        "before": "a9b9b4992264c9f2fb3cb87495c00d507c7e299f"
+      },
+      "created_at": "2026-03-01T03:04:39Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
