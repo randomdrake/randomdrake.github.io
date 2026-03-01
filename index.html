@@ -61,54 +61,179 @@
             100% { background-position: -200% 0; }
         }
 
-        /* Commit livestream — Star Wars style: newest rises from the bottom */
-        .commit-feed {
-            height: 360px;
-            overflow: hidden;
+        /* === Robot Engineer Workshop === */
+        .workshop {
+            height: 520px;
             position: relative;
-            mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+            overflow: hidden;
+            border-radius: 0.5rem;
+            background:
+                radial-gradient(ellipse at 50% 100%, rgba(249,115,22,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 30%, rgba(212,165,116,0.04) 0%, transparent 50%),
+                linear-gradient(to bottom, #0d1117 0%, #161b22 100%);
         }
-        .commit-feed-inner {
-            animation: scrollUp var(--scroll-duration, 60s) linear infinite;
+        .workshop::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+            background-size: 32px 32px;
+            pointer-events: none;
         }
-        .commit-feed:hover .commit-feed-inner {
+        .workshop-fade {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 10;
+            background: linear-gradient(to bottom,
+                #0d1117 0%, transparent 8%,
+                transparent 90%, #0d1117 100%);
+        }
+
+        /* Robot lanes — each repo gets a "lane" */
+        .robot-lane {
+            position: absolute;
+            left: 0; right: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            animation: laneFloat var(--lane-duration, 80s) linear infinite;
+        }
+        .workshop:hover .robot-lane {
             animation-play-state: paused;
         }
-        @keyframes scrollUp {
-            0% { transform: translateY(-50%); }
-            100% { transform: translateY(0); }
+        @keyframes laneFloat {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(var(--lane-end, -200%)); }
         }
-        .commit-item {
-            border-left: 2px solid #30363d;
-            transition: border-color 0.2s ease, background 0.2s ease;
+
+        /* Individual robot + commit card */
+        .robot-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 14px;
+            border-radius: 10px;
+            background: rgba(22, 27, 34, 0.85);
+            border: 1px solid rgba(48, 54, 61, 0.6);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            position: relative;
+            max-width: 92%;
+            text-decoration: none;
         }
-        .commit-item:hover {
-            border-left-color: #f97316;
-            background: rgba(249, 115, 22, 0.05);
+        .robot-card:hover {
+            background: rgba(30, 37, 46, 0.95);
+            border-color: rgba(249, 115, 22, 0.4);
+            transform: scale(1.03);
+            z-index: 20;
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.15);
         }
-        .commit-item.claude-commit {
-            border-left-color: #d4a574;
-            background: rgba(212, 165, 116, 0.04);
+        .robot-card.claude .robot-body { background: linear-gradient(135deg, #d4a574, #e8c49a); }
+        .robot-card.claude { border-color: rgba(212, 165, 116, 0.25); }
+        .robot-card.claude:hover { border-color: rgba(232, 196, 154, 0.5); box-shadow: 0 0 24px rgba(212, 165, 116, 0.2); }
+        .robot-card.david .robot-body { background: linear-gradient(135deg, #f97316, #fb923c); }
+        .robot-card.david { border-color: rgba(249, 115, 22, 0.2); }
+        .robot-card.bot .robot-body { background: linear-gradient(135deg, #52525b, #71717a); }
+        .robot-card.bot { border-color: rgba(82, 82, 91, 0.3); opacity: 0.6; }
+        .robot-card.other .robot-body { background: linear-gradient(135deg, #6366f1, #818cf8); }
+
+        /* The little robot character */
+        .robot-body {
+            width: 34px; height: 34px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            flex-shrink: 0;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
-        .commit-item.claude-commit:hover {
-            border-left-color: #e8c49a;
-            background: rgba(212, 165, 116, 0.08);
+        .robot-body::after {
+            content: '';
+            position: absolute;
+            top: -3px; left: 50%;
+            transform: translateX(-50%);
+            width: 8px; height: 5px;
+            background: inherit;
+            border-radius: 3px 3px 0 0;
         }
-        .commit-item.david-commit {
-            border-left-color: #f97316;
+        .robot-eyes {
+            display: flex; gap: 4px;
         }
-        .commit-avatar {
-            font-size: 1.15rem;
-            line-height: 1;
-            animation: botWobble 3s ease-in-out infinite;
-            display: inline-block;
+        .robot-eye {
+            width: 6px; height: 7px;
+            background: #0d1117;
+            border-radius: 2px;
+            animation: robotBlink 4s ease-in-out infinite;
         }
-        .commit-avatar:nth-child(odd) { animation-delay: -1.5s; }
-        @keyframes botWobble {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-6deg); }
-            75% { transform: rotate(6deg); }
+        .robot-eye.right { animation-delay: 0.1s; }
+        @keyframes robotBlink {
+            0%, 42%, 46%, 100% { height: 7px; }
+            44% { height: 1px; }
+        }
+
+        /* Robot wobble — each one slightly different */
+        .robot-card:nth-child(3n)   .robot-body { animation: botHover 2.5s ease-in-out infinite; }
+        .robot-card:nth-child(3n+1) .robot-body { animation: botHover 3.0s ease-in-out infinite 0.5s; }
+        .robot-card:nth-child(3n+2) .robot-body { animation: botHover 2.8s ease-in-out infinite 1.2s; }
+        @keyframes botHover {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-3px) rotate(2deg); }
+        }
+
+        /* Sparkle trail behind robots */
+        .sparkle-trail {
+            position: absolute;
+            left: 14px; top: 50%;
+            width: 3px; height: 3px;
+            border-radius: 50%;
+            background: currentColor;
+            opacity: 0;
+            animation: sparkleFloat 1.8s ease-out infinite;
+            pointer-events: none;
+        }
+        .robot-card.claude .sparkle-trail { color: #e8c49a; }
+        .robot-card.david .sparkle-trail { color: #fb923c; }
+        .robot-card.bot .sparkle-trail { color: #71717a; }
+        .sparkle-trail:nth-child(1) { animation-delay: 0s; left: 8px; }
+        .sparkle-trail:nth-child(2) { animation-delay: 0.6s; left: 18px; }
+        .sparkle-trail:nth-child(3) { animation-delay: 1.2s; left: 12px; }
+        @keyframes sparkleFloat {
+            0% { opacity: 0.8; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(20px) scale(0); }
+        }
+
+        /* Author tag */
+        .author-tag {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 1px 6px;
+            border-radius: 6px;
+        }
+        .author-tag.claude { background: rgba(212,165,116,0.2); color: #e8c49a; }
+        .author-tag.david  { background: rgba(249,115,22,0.2); color: #fb923c; }
+        .author-tag.bot    { background: rgba(82,82,91,0.25); color: #a1a1aa; }
+        .author-tag.other  { background: rgba(99,102,241,0.2); color: #a5b4fc; }
+
+        /* Floating ambient particles in workshop */
+        .workshop-particle {
+            position: absolute;
+            width: 2px; height: 2px;
+            border-radius: 50%;
+            background: rgba(249, 115, 22, 0.3);
+            animation: workshopDrift linear infinite;
+            pointer-events: none;
+        }
+        @keyframes workshopDrift {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-520px) translateX(var(--drift-x, 20px)); opacity: 0; }
         }
 
         /* New commit toast notification */
@@ -456,19 +581,29 @@
             </div>
         </section>
 
-        <!-- Commit Livestream -->
-        <section class="bg-gh-card border border-gh-border rounded-lg p-6 mb-10 fade-in-up delay-300">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🤖</span> Commit Livestream</h2>
-                <div class="flex items-center gap-2 text-xs text-gh-muted">
+        <!-- Commit Livestream — Robot Engineer Workshop -->
+        <section class="bg-gh-card border border-gh-border rounded-lg p-4 mb-10 fade-in-up delay-300">
+            <div class="flex items-center justify-between mb-3 px-2">
+                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🤖</span> Engineer Workshop</h2>
+                <div class="flex items-center gap-3 text-xs text-gh-muted">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-sm" style="background:linear-gradient(135deg,#d4a574,#e8c49a)"></span>
+                        <span>Claude</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-sm" style="background:linear-gradient(135deg,#f97316,#fb923c)"></span>
+                        <span>David</span>
+                    </div>
+                    <span class="text-gh-border">|</span>
                     <span class="live-dot"></span>
                     <span id="commit-count">Loading...</span>
                 </div>
             </div>
-            <div id="commit-feed" class="commit-feed">
+            <div id="commit-feed" class="workshop">
+                <div class="workshop-fade"></div>
                 <div class="skeleton w-full h-full rounded"></div>
             </div>
-            <p class="text-xs text-gh-muted mt-3 text-center">Hover to pause — commits from all public repos</p>
+            <p class="text-xs text-gh-muted mt-3 text-center">Hover to pause — a fleet of tiny engineers building across all repos</p>
         </section>
 
         <!-- Language Breakdown -->
@@ -961,81 +1096,72 @@
     }
 
     // --- Commit author helpers ---
-    const ROBOT_EMOJIS = ['🤖', '🦾', '⚙️', '🔧', '🛠️', '🧠', '💡', '🔩'];
-    const DAVID_EMOJIS = ['👨‍💻', '🧑‍🔬', '🚀', '🔥', '⚡', '💪', '🎯', '🏗️'];
-
     function isClaudeCommit(c) {
         if (c.full_message && c.full_message.includes('Co-Authored-By: Claude')) return true;
         if (c.author === 'github-actions[bot]') return false;
-        // Check message for Claude co-author pattern
         if (c.message && c.message.includes('Claude')) return true;
         return false;
     }
-
     function isDavidCommit(c) {
         return c.author === 'David Drake' || c.author === 'randomdrake';
     }
-
     function isBotCommit(c) {
         return c.author === 'github-actions[bot]';
     }
-
-    function commitAvatar(c) {
-        // Pick a deterministic-ish emoji based on sha
-        const idx = parseInt(c.sha?.slice(0, 4) || '0', 16);
-        if (isBotCommit(c)) return '⚙️';
-        if (isClaudeCommit(c)) return ROBOT_EMOJIS[idx % ROBOT_EMOJIS.length];
-        if (isDavidCommit(c)) return DAVID_EMOJIS[idx % DAVID_EMOJIS.length];
-        return '👤';
+    function commitType(c) {
+        if (isBotCommit(c)) return 'bot';
+        if (isClaudeCommit(c)) return 'claude';
+        if (isDavidCommit(c)) return 'david';
+        return 'other';
+    }
+    function authorLabel(c) {
+        const t = commitType(c);
+        if (t === 'claude') return 'Claude';
+        if (t === 'david') return 'David';
+        if (t === 'bot') return 'Bot';
+        return c.author?.split(' ')[0] || '?';
     }
 
-    function commitClass(c) {
-        if (isClaudeCommit(c)) return 'claude-commit';
-        if (isDavidCommit(c)) return 'david-commit';
-        return '';
-    }
-
-    function authorBadge(c) {
-        if (isClaudeCommit(c)) return '<span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-amber-900/40 text-amber-300 border border-amber-700/40">Claude</span>';
-        if (isDavidCommit(c)) return '<span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-orange-900/40 text-orange-300 border border-orange-700/40">David</span>';
-        if (isBotCommit(c)) return '<span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-zinc-800 text-zinc-400 border border-zinc-700">Bot</span>';
-        return `<span class="text-[10px] px-1.5 py-0.5 rounded-full bg-zinc-800 text-zinc-400 border border-zinc-700">${c.author}</span>`;
-    }
-
-    // --- Shared commit item renderer ---
-    function renderCommitItems(commits) {
-        return commits.map((c, i) => `
-            <a href="${c.url}" target="_blank" rel="noopener"
-               class="commit-item ${commitClass(c)} block pl-3 py-2.5 slide-in-left"
-               style="animation-delay: ${Math.min(i, 20) * 40}ms">
-                <div class="flex items-start gap-3">
-                    <span class="commit-avatar shrink-0 mt-0.5" title="${c.author}">${commitAvatar(c)}</span>
-                    <div class="min-w-0 flex-1">
-                        <p class="text-sm text-gh-text truncate">${c.message.replace(/</g, '&lt;')}</p>
-                        <div class="flex items-center gap-2 mt-1 text-xs text-gh-muted flex-wrap">
-                            ${authorBadge(c)}
-                            <code class="text-[10px] text-gh-accent">${(c.sha || '').slice(0, 7)}</code>
-                            <span class="text-gh-accent">${c.repo}</span>
-                            <span>&middot;</span>
-                            <span>${timeAgo(c.date)}</span>
-                        </div>
-                    </div>
+    // Build a single robot card
+    function robotCard(c, i) {
+        const type = commitType(c);
+        const align = i % 2 === 0 ? 'margin-left: 4%' : 'margin-left: auto; margin-right: 4%';
+        // Stagger horizontal position based on sha for organic feel
+        const nudge = (parseInt((c.sha || '0').slice(0, 2), 16) % 30);
+        return `
+        <a href="${c.url}" target="_blank" rel="noopener"
+           class="robot-card ${type}" style="${align}; transform: translateX(${nudge - 15}px)">
+            <div class="sparkle-trail"></div>
+            <div class="sparkle-trail"></div>
+            <div class="sparkle-trail"></div>
+            <div class="robot-body">
+                <div class="robot-eyes">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
                 </div>
-            </a>
-        `).join('');
+            </div>
+            <div style="min-width:0;flex:1">
+                <p style="font-size:12px;color:#e6edf3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0">${c.message.replace(/</g, '&lt;')}</p>
+                <div style="display:flex;align-items:center;gap:6px;margin-top:3px;flex-wrap:wrap">
+                    <span class="author-tag ${type}">${authorLabel(c)}</span>
+                    <code style="font-size:9px;color:#f97316">${(c.sha || '').slice(0, 7)}</code>
+                    <span style="font-size:10px;color:#f97316">${c.repo}</span>
+                    <span style="font-size:10px;color:#484f58">&middot;</span>
+                    <span style="font-size:10px;color:#484f58">${timeAgo(c.date)}</span>
+                </div>
+            </div>
+        </a>`;
     }
 
     // --- Commit Livestream ---
     async function loadCommitFeed(repos) {
         if (!repos || repos.length === 0) return;
 
-        // Sort repos by most recently pushed, take top 10 to stay within rate limits
         const sorted = [...repos].sort((a, b) =>
             new Date(b.pushed_at) - new Date(a.pushed_at)
         );
         const active = sorted.slice(0, 10);
 
-        // Fetch recent commits from each repo in batches
         const allCommits = [];
         const batchSize = 5;
         for (let i = 0; i < active.length; i += batchSize) {
@@ -1049,6 +1175,7 @@
                     allCommits.push({
                         sha: c.sha.slice(0, 7),
                         message: c.commit.message.split('\n')[0],
+                        full_message: c.commit.message,
                         repo: batch[j].name,
                         date: c.commit.author.date,
                         author: c.commit.author.name,
@@ -1058,37 +1185,9 @@
             });
         }
 
-        // Sort all commits by date descending
         allCommits.sort((a, b) => new Date(b.date) - new Date(a.date));
         if (allCommits.length > 0) lastKnownCommitSha = allCommits[0].sha;
-
-        // Update count
-        document.getElementById('commit-count').textContent =
-            `${allCommits.length} commits across ${active.length} repos`;
-
-        if (allCommits.length === 0) {
-            document.getElementById('commit-feed').innerHTML =
-                '<p class="text-gh-muted text-center py-8">No commits found</p>';
-            return;
-        }
-
-        // Chronological: oldest first, newest at bottom (scrolls up into view)
-        const chronological = [...allCommits].sort((a, b) => new Date(a.date) - new Date(b.date));
-
-        const feed = document.getElementById('commit-feed');
-        const itemsHTML = renderCommitItems(chronological);
-
-        // Set scroll speed based on number of commits (~2s per commit)
-        const duration = Math.max(30, allCommits.length * 2);
-        feed.style.setProperty('--scroll-duration', duration + 's');
-
-        // Duplicate content for seamless loop
-        feed.innerHTML = `
-            <div class="commit-feed-inner">
-                ${itemsHTML}
-                ${itemsHTML}
-            </div>
-        `;
+        renderCommitFeed(allCommits);
     }
 
     // --- Recent Activity Feed ---
@@ -1411,23 +1510,49 @@
     }
 
     function renderCommitFeed(commits) {
-        // Sort chronologically (oldest first) — newest at bottom scrolls up into view
+        const feed = document.getElementById('commit-feed');
+        // Sort chronologically — oldest first, newest at bottom (rises into view)
         const sorted = [...commits].sort((a, b) => new Date(a.date) - new Date(b.date));
 
+        // Count by type for the counter
+        const claudeCount = commits.filter(isClaudeCommit).length;
+        const davidCount = commits.filter(isDavidCommit).length;
         document.getElementById('commit-count').textContent =
             `${commits.length} commits`;
 
         if (commits.length === 0) {
-            document.getElementById('commit-feed').innerHTML =
-                '<p class="text-gh-muted text-center py-8">No commits found</p>';
+            feed.innerHTML = '<div class="workshop-fade"></div><p class="text-gh-muted text-center py-8 relative z-20">No commits found</p>';
             return;
         }
 
-        const feed = document.getElementById('commit-feed');
-        const itemsHTML = renderCommitItems(sorted);
-        const duration = Math.max(30, commits.length * 2);
-        feed.style.setProperty('--scroll-duration', duration + 's');
-        feed.innerHTML = `<div class="commit-feed-inner">${itemsHTML}${itemsHTML}</div>`;
+        // Build robot cards
+        const cardsHTML = sorted.map((c, i) => robotCard(c, i)).join('');
+
+        // Calculate animation duration (~3s per card for readable speed)
+        const duration = Math.max(40, sorted.length * 3);
+
+        // Create the scrolling lane
+        feed.innerHTML = `
+            <div class="workshop-fade"></div>
+            <div class="robot-lane" style="--lane-duration:${duration}s; --lane-end:-${100 + (sorted.length * 4)}%">
+                ${cardsHTML}
+                ${cardsHTML}
+            </div>
+        `;
+
+        // Add ambient floating particles
+        for (let i = 0; i < 15; i++) {
+            const p = document.createElement('div');
+            p.className = 'workshop-particle';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.bottom = '-4px';
+            p.style.setProperty('--drift-x', (Math.random() * 40 - 20) + 'px');
+            p.style.animationDuration = (8 + Math.random() * 12) + 's';
+            p.style.animationDelay = (Math.random() * 10) + 's';
+            const colors = ['rgba(249,115,22,0.3)', 'rgba(212,165,116,0.3)', 'rgba(255,255,255,0.15)'];
+            p.style.background = colors[Math.floor(Math.random() * colors.length)];
+            feed.appendChild(p);
+        }
     }
 
     function renderActivityFeed(events) {
