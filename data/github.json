@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T01:32:26.621Z",
+  "generated_at": "2026-03-01T01:33:42.870Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T01:32:15Z",
-      "pushed_at": "2026-03-01T01:32:12Z"
+      "updated_at": "2026-03-01T01:33:36Z",
+      "pushed_at": "2026-03-01T01:33:32Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -223,7 +223,7 @@
     },
     "randomdrake": {},
     "randomdrake.github.io": {
-      "HTML": 68854,
+      "HTML": 69066,
       "JavaScript": 4387
     },
     "react-flow-org-chart": {
@@ -242,6 +242,22 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "edc8a8d85ee7928d6fc45d1b7bed84faeb803864",
+      "message": "Fix OG/share image to use GitHub avatar with proper size",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T01:33:27Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/edc8a8d85ee7928d6fc45d1b7bed84faeb803864"
+    },
+    {
+      "sha": "bad98fbe15dca780602a31d8c58574a8dfcb7024",
+      "message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T01:32:26Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/bad98fbe15dca780602a31d8c58574a8dfcb7024"
+    },
     {
       "sha": "c0969cae6f6cc5cfe140f8effc240d2d3ef00789",
       "message": "Fix activity feed: filter bot push events and deduplicate code",
@@ -409,22 +425,6 @@
       "date": "2025-07-18T00:05:48Z",
       "author": "randomdrake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/8a4d528ff314a1d721c0b1d7fd193634c294f9e9"
-    },
-    {
-      "sha": "bf8c9aaea2aa2ed807deeadce2b91495c18631c4",
-      "message": "Testing... 1, 2, 3",
-      "repo": "randomdrake.github.io",
-      "date": "2025-04-28T00:19:37Z",
-      "author": "randomdrake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/bf8c9aaea2aa2ed807deeadce2b91495c18631c4"
-    },
-    {
-      "sha": "19d00d7facc175a0274b508d16fd1ed5bfc53999",
-      "message": "Initial commit",
-      "repo": "randomdrake.github.io",
-      "date": "2025-04-27T23:55:08Z",
-      "author": "randomdrake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/19d00d7facc175a0274b508d16fd1ed5bfc53999"
     },
     {
       "sha": "b80750482bb8e20b7b4c2c14f04ff2ea0663bac0",
@@ -1308,6 +1308,22 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
+        "push_id": 31204356493,
+        "ref": "refs/heads/main",
+        "head": "edc8a8d85ee7928d6fc45d1b7bed84faeb803864",
+        "before": "bad98fbe15dca780602a31d8c58574a8dfcb7024"
+      },
+      "created_at": "2026-03-01T01:33:33Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
