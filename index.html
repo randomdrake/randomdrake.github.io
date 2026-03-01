@@ -87,6 +87,28 @@
             border-left-color: #f97316;
             background: rgba(249, 115, 22, 0.05);
         }
+
+        /* New commit toast notification */
+        .commit-toast {
+            position: fixed;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            min-width: 340px;
+            max-width: 520px;
+            animation: toastSlideDown 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        .commit-toast.dismissing {
+            animation: toastSlideUp 0.4s ease-in forwards;
+        }
+        @keyframes toastSlideDown {
+            to { top: 24px; }
+        }
+        @keyframes toastSlideUp {
+            from { top: 24px; }
+            to { top: -120px; }
+        }
         .commit-sha {
             font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
         }
@@ -950,6 +972,7 @@
 
         // Sort all commits by date descending
         allCommits.sort((a, b) => new Date(b.date) - new Date(a.date));
+        if (allCommits.length > 0) lastKnownCommitSha = allCommits[0].sha;
 
         // Update count
         document.getElementById('commit-count').textContent =
@@ -1256,6 +1279,7 @@
 
             // Commits
             renderCommitFeed(data.commits);
+            if (data.commits.length > 0) lastKnownCommitSha = data.commits[0].sha;
 
             // Activity
             renderActivityFeed(data.events);
@@ -1463,7 +1487,78 @@
         });
     }
 
-    init();
+    // --- New Commit Toast Notification ---
+    let lastKnownCommitSha = null;
+
+    function showCommitToast(commit) {
+        // Remove any existing toast
+        document.querySelectorAll('.commit-toast').forEach(el => el.remove());
+
+        const toast = document.createElement('div');
+        toast.className = 'commit-toast';
+        toast.innerHTML = `
+            <div class="bg-gh-card border border-gh-accent/40 rounded-lg shadow-lg shadow-orange-500/10 p-4 backdrop-blur-sm">
+                <div class="flex items-center gap-3">
+                    <div class="shrink-0 w-9 h-9 rounded-full bg-gh-accent/20 flex items-center justify-center">
+                        <span class="text-lg">🚀</span>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <span class="text-xs font-semibold text-gh-accent uppercase tracking-wide">New Commit</span>
+                            <span class="live-dot"></span>
+                        </div>
+                        <p class="text-sm text-gh-text truncate">${commit.message.replace(/</g, '&lt;')}</p>
+                        <div class="flex items-center gap-2 text-xs text-gh-muted mt-0.5">
+                            <code class="text-gh-accent">${commit.sha.slice(0, 7)}</code>
+                            <span>&middot;</span>
+                            <span>${commit.repo}</span>
+                            <span>&middot;</span>
+                            <span>${timeAgo(commit.date)}</span>
+                        </div>
+                    </div>
+                    <button onclick="this.closest('.commit-toast').classList.add('dismissing');setTimeout(()=>this.closest('.commit-toast')?.remove(),400)"
+                            class="shrink-0 text-gh-muted hover:text-gh-text transition-colors p-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(toast);
+
+        // Auto-dismiss after 8 seconds
+        setTimeout(() => {
+            if (toast.parentNode) {
+                toast.classList.add('dismissing');
+                setTimeout(() => toast.remove(), 400);
+            }
+        }, 8000);
+    }
+
+    async function pollForNewCommits() {
+        try {
+            const res = await fetch('data/github.json?_t=' + Date.now());
+            if (!res.ok) return;
+            const data = await res.json();
+            if (!data.commits || data.commits.length === 0) return;
+
+            const newestSha = data.commits[0].sha;
+
+            if (lastKnownCommitSha && newestSha !== lastKnownCommitSha) {
+                // New commit detected — show toast and refresh the feed
+                showCommitToast(data.commits[0]);
+                renderCommitFeed(data.commits);
+            }
+
+            lastKnownCommitSha = newestSha;
+        } catch (err) {
+            // Silently ignore poll failures
+        }
+    }
+
+    init().then(() => {
+        // Poll for new commits every 2 minutes
+        setInterval(pollForNewCommits, 120_000);
+    });
     </script>
 </body>
 </html>
