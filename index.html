@@ -999,61 +999,7 @@
     async function loadActivity() {
         const events = await ghFetch(`${API}/users/${USERNAME}/events/public?per_page=20`);
         if (!events) return;
-
-        const feed = document.getElementById('activity-feed');
-
-        function describeEvent(e) {
-            const repo = `<a href="https://github.com/${e.repo.name}" class="text-gh-accent hover:underline">${e.repo.name}</a>`;
-            switch (e.type) {
-                case 'PushEvent': {
-                    const count = e.payload.commits?.length || 0;
-                    return `Pushed ${count} commit${count !== 1 ? 's' : ''} to ${repo}`;
-                }
-                case 'CreateEvent':
-                    return `Created ${e.payload.ref_type}${e.payload.ref ? ` <code class="text-xs bg-gh-bg px-1 py-0.5 rounded">${e.payload.ref}</code>` : ''} in ${repo}`;
-                case 'DeleteEvent':
-                    return `Deleted ${e.payload.ref_type} <code class="text-xs bg-gh-bg px-1 py-0.5 rounded">${e.payload.ref}</code> in ${repo}`;
-                case 'WatchEvent':
-                    return `Starred ${repo}`;
-                case 'ForkEvent':
-                    return `Forked ${repo}`;
-                case 'IssuesEvent':
-                    return `${e.payload.action.charAt(0).toUpperCase() + e.payload.action.slice(1)} issue in ${repo}`;
-                case 'IssueCommentEvent':
-                    return `Commented on issue in ${repo}`;
-                case 'PullRequestEvent':
-                    return `${e.payload.action.charAt(0).toUpperCase() + e.payload.action.slice(1)} PR in ${repo}`;
-                case 'PullRequestReviewEvent':
-                    return `Reviewed PR in ${repo}`;
-                case 'ReleaseEvent':
-                    return `Published release in ${repo}`;
-                case 'PublicEvent':
-                    return `Made ${repo} public`;
-                default:
-                    return `${e.type.replace('Event', '')} in ${repo}`;
-            }
-        }
-
-        const icons = {
-            PushEvent: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 108 1a7 7 0 000 14zm0-1A6 6 0 108 2a6 6 0 000 12zm1-6H6.5a.5.5 0 010-1H9V4.5a.5.5 0 011 0V7h.5a.5.5 0 010 1H10v2.5a.5.5 0 01-1 0V8z"/></svg>`,
-            CreateEvent: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"/></svg>`,
-            WatchEvent: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>`,
-            ForkEvent: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>`,
-        };
-
-        function getIcon(type) {
-            return icons[type] || icons.PushEvent;
-        }
-
-        feed.innerHTML = events.map((e, i) => `
-            <div class="flex items-start gap-3 text-sm slide-in-left" style="animation-delay: ${i * 60}ms">
-                <div class="text-gh-muted mt-0.5 shrink-0">${getIcon(e.type)}</div>
-                <div class="flex-1 min-w-0">
-                    <div class="text-gh-text">${describeEvent(e)}</div>
-                    <div class="text-xs text-gh-muted mt-0.5">${timeAgo(e.created_at)}</div>
-                </div>
-            </div>
-        `).join('');
+        renderActivityFeed(events);
     }
 
     // --- Claude AI Usage (Static Snapshot) ---
@@ -1408,11 +1354,25 @@
         if (!events || events.length === 0) return;
         const feed = document.getElementById('activity-feed');
 
+        // Filter out bot-generated push events (0 commits = Actions bot)
+        events = events.filter(e => {
+            if (e.type === 'PushEvent') {
+                const count = e.payload.commits?.length || e.payload.size || 0;
+                if (count === 0) return false;
+            }
+            return true;
+        });
+
+        if (events.length === 0) {
+            feed.innerHTML = '<p class="text-gh-muted text-sm text-center py-4">No recent activity</p>';
+            return;
+        }
+
         function describeEvent(e) {
             const repo = `<a href="https://github.com/${e.repo.name}" class="text-gh-accent hover:underline">${e.repo.name}</a>`;
             switch (e.type) {
                 case 'PushEvent': {
-                    const count = e.payload.commits?.length || 0;
+                    const count = e.payload.commits?.length || e.payload.size || 0;
                     return `Pushed ${count} commit${count !== 1 ? 's' : ''} to ${repo}`;
                 }
                 case 'CreateEvent':
