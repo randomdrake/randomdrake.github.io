@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T02:00:30.350Z",
+  "generated_at": "2026-03-01T02:05:33.948Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T02:00:17Z",
-      "pushed_at": "2026-03-01T02:00:14Z"
+      "updated_at": "2026-03-01T02:05:23Z",
+      "pushed_at": "2026-03-01T02:05:20Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -223,8 +223,8 @@
     },
     "randomdrake": {},
     "randomdrake.github.io": {
-      "HTML": 73461,
-      "JavaScript": 4387
+      "HTML": 75478,
+      "JavaScript": 4449
     },
     "react-flow-org-chart": {
       "JavaScript": 6134,
@@ -243,8 +243,27 @@
   },
   "commits": [
     {
+      "sha": "30894ce70c01c09d9b4557dc76403dc7777edcfe",
+      "message": "Add robot avatars + author badges to commit livestream, fix ordering",
+      "full_message": "Add robot avatars + author badges to commit livestream, fix ordering\n\n- Each commit now shows an emoji avatar: robot emojis for Claude\n  co-authored commits, engineer emojis for David, gear for bot\n- Author badges (Claude/David/Bot) with distinct color schemes\n- Commits sorted chronologically (oldest→newest, scrolling upward)\n- Claude detection via Co-Authored-By in full commit message\n- fetch-data.js now stores full_message for co-author detection\n- Wobble animation on the little robot avatars\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T02:05:14Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/30894ce70c01c09d9b4557dc76403dc7777edcfe"
+    },
+    {
+      "sha": "ae7219f9830d54d38464d50b596c8d4f268b07ec",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T02:00:30Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/ae7219f9830d54d38464d50b596c8d4f268b07ec"
+    },
+    {
       "sha": "310b13b71c51bd3abfac45b62e01b84de37eb279",
       "message": "Add new commit toast notification with polling",
+      "full_message": "Add new commit toast notification with polling\n\nPolls data/github.json every 2 minutes for new commits. When a new\ncommit is detected, a toast slides down from the top showing the\ncommit message, SHA, repo, and timestamp. Auto-dismisses after 8s\nwith a smooth slide-up animation.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T02:00:08Z",
       "author": "David Drake",
@@ -253,6 +272,7 @@
     {
       "sha": "1d8e95f22f6eff62e800eaf6c1ccdf047db4f639",
       "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T01:56:23Z",
       "author": "github-actions[bot]",
@@ -261,6 +281,7 @@
     {
       "sha": "995438c0d00354db164443cc1beca8f67138d804",
       "message": "Reverse commit feed to Star Wars credits style",
+      "full_message": "Reverse commit feed to Star Wars credits style\n\nNewest commits now rise from the bottom of the feed, scrolling upward\nso the most recent activity is visible first. Reversed animation\ndirection and commit order for both static and live data paths.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T01:56:05Z",
       "author": "David Drake",
@@ -269,6 +290,7 @@
     {
       "sha": "6d9a30587f71f1e142c1a3f7a0f10e196e123b06",
       "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T01:33:42Z",
       "author": "github-actions[bot]",
@@ -277,6 +299,7 @@
     {
       "sha": "edc8a8d85ee7928d6fc45d1b7bed84faeb803864",
       "message": "Fix OG/share image to use GitHub avatar with proper size",
+      "full_message": "Fix OG/share image to use GitHub avatar with proper size\n\nAdd size parameter to avatar URL, add og:image dimensions, and add\nmissing twitter:image meta tag so social previews show the GH avatar.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T01:33:27Z",
       "author": "David Drake",
@@ -285,6 +308,7 @@
     {
       "sha": "bad98fbe15dca780602a31d8c58574a8dfcb7024",
       "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T01:32:26Z",
       "author": "github-actions[bot]",
@@ -293,6 +317,7 @@
     {
       "sha": "c0969cae6f6cc5cfe140f8effc240d2d3ef00789",
       "message": "Fix activity feed: filter bot push events and deduplicate code",
+      "full_message": "Fix activity feed: filter bot push events and deduplicate code\n\nFilter out 0-commit PushEvents (generated by GitHub Actions bot) from\nthe activity feed. Simplify loadActivity() fallback to delegate to\nrenderActivityFeed() instead of duplicating event description logic.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T01:32:05Z",
       "author": "David Drake",
@@ -301,6 +326,7 @@
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
       "message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:23:52Z",
       "author": "David Drake",
@@ -309,6 +335,7 @@
     {
       "sha": "b0358e1c9e5c64200acc2ab62375c84e6b92d566",
       "message": "🌐✨🏳️‍🌈 README glow-up!! aligned with the randomdrake.github.io dashboard vibes — polished heading, Daily Writing section, Claude AI usage, compliance badges, and that 💜☕ footer energy!! 🏳️‍⚧️✨",
+      "full_message": "🌐✨🏳️‍🌈 README glow-up!! aligned with the randomdrake.github.io dashboard vibes — polished heading, Daily Writing section, Claude AI usage, compliance badges, and that 💜☕ footer energy!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:18:56Z",
       "author": "David Drake",
@@ -317,6 +344,7 @@
     {
       "sha": "d3ac59363ac254c7b71feb877992b31cbe9807f8",
       "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T01:01:35Z",
       "author": "github-actions[bot]",
@@ -325,6 +353,7 @@
     {
       "sha": "56fe7c45fec4b1686870a7500c62608dabcbd364",
       "message": "Add live pipeline status section with auto-refresh",
+      "full_message": "Add live pipeline status section with auto-refresh\n\n- New Pipeline Status section shows last 8 GitHub Actions runs\n- Animated status icons: green checkmark (success), red X (failure),\n  pulsing amber dot (in progress), spinning dot (queued)\n- In-progress runs show animated progress bar and \"RUNNING\" badge\n- Auto-refreshes every 15s while any run is in progress\n- Shows run name, commit message, relative time, duration, run number\n- Always fetched live (not from static data) since pipeline status\n  is inherently real-time\n- Links to GitHub Actions for full details\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T01:01:08Z",
       "author": "David Drake",
@@ -333,6 +362,7 @@
     {
       "sha": "ae87533a0e38c4cc5c60984e4b70cdf1bcfd4826",
       "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T00:58:20Z",
       "author": "github-actions[bot]",
@@ -341,6 +371,7 @@
     {
       "sha": "a4d015564048e0d5a15beed3d44408e2dcceb5e5",
       "message": "Add GitHub Actions data pipeline — zero API calls for visitors",
+      "full_message": "Add GitHub Actions data pipeline — zero API calls for visitors\n\n- Add .github/workflows/update-data.yml: cron job runs every 6 hours,\n  fetches all GitHub data with authenticated token (5,000 req/hr),\n  writes to data/github.json, auto-commits if changed\n- Add scripts/fetch-data.js: fetches profile, repos, languages,\n  commits (top 10 repos), and events; writes static JSON\n- Add data/github.json: initial data (15 repos, 126 commits)\n- Refactor index.html: tries data/github.json first (instant load,\n  no API calls), falls back to live API if file missing\n- Extract shared render functions (renderLanguageChart,\n  renderCommitFeed, renderActivityFeed) used by both paths\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T00:58:04Z",
       "author": "David Drake",
@@ -349,6 +380,7 @@
     {
       "sha": "31404a5ea08c596c0b7dcb56c7aa209c3b631741",
       "message": "Add localStorage cache + rate limit banner for GitHub API",
+      "full_message": "Add localStorage cache + rate limit banner for GitHub API\n\n- Cache API responses in localStorage (30min TTL) to avoid burning\n  rate limit on repeat visits\n- Show stale cached data when rate-limited instead of empty skeletons\n- Display amber warning banner with reset time when 403/429 hit\n- Render Claude usage section before API calls (static, no API needed)\n- Clean up skeleton placeholders after init completes\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T00:39:36Z",
       "author": "David Drake",
@@ -357,6 +389,7 @@
     {
       "sha": "c3e92bd8efcaee08ebc157193cd7aa73be394912",
       "message": "Replace scrapbook with GitHub dashboard + Claude usage + Substack CTA",
+      "full_message": "Replace scrapbook with GitHub dashboard + Claude usage + Substack CTA\n\n- Delete old romantic scrapbook pages (1-4.HTML) and images\n- Add single-page dashboard (index.html) with live GitHub API data\n- Sections: profile, stats, commit livestream, languages, Claude AI\n  usage snapshot, activity feed, repo cards, compliance badges\n- Orange accent theme, dark mode, Tailwind + Chart.js via CDN\n- Animated: bounce-in cards, count-up numbers, auto-scrolling commit\n  feed, confetti, floating emojis, staggered fade-ins\n- Substack subscribe CTA (hero banner + footer nudge)\n- Responsive, no build step, all client-side\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake.github.io",
       "date": "2026-03-01T00:31:49Z",
       "author": "David Drake",
@@ -365,6 +398,7 @@
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
       "message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
+      "full_message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:10:43Z",
       "author": "David Drake",
@@ -373,6 +407,7 @@
     {
       "sha": "905cc88f43df862665170a39a8710f43a84517e0",
       "message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️",
+      "full_message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️\n\nsubstack is the money maker so let's give it the spotlight it deserves!!\nadded a big bold orange \"Subscribe on Substack\" badge right below the\nheader (downloaded locally, no hotlinking!!), moved substack to first\nposition in the links bar, bolded it in the \"what i'm up to\" section\nwith an inline subscribe link. substack is front and center everywhere\nnow. 💜🧡\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:07:56Z",
       "author": "David Drake",
@@ -381,6 +416,7 @@
     {
       "sha": "5ff98a145fa258003d0a816f631e4d83213229c9",
       "message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️",
+      "full_message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️\n\nreplaced the external LinkedIn hotlink with a proper local asset\nreference. downloaded the phytocannabinoid synthesis chart image into\nassets/ and updated the README link accordingly. hotlinking is a\nno-go — we keep our own copies around here!! 💜\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:05:55Z",
       "author": "David Drake",
@@ -389,6 +425,7 @@
     {
       "sha": "2aba64933c85b03a124d071f392bae9e0b4a99a3",
       "message": "🧬✨🏳️‍🌈 added phytocannabinoid synthesis pioneer cred — first to chart the whole process!! 🌿🔬✨🏳️‍⚧️",
+      "full_message": "🧬✨🏳️‍🌈 added phytocannabinoid synthesis pioneer cred — first to chart the whole process!! 🌿🔬✨🏳️‍⚧️\n\nbecause being the FIRST to map the complete phytocannabinoid synthesis\npathway is absolutely something that belongs on the profile!! added it\nto the intro paragraph with a link to the chart AND as a bullet in the\nfun facts section. science queen energy!! 🧪💜\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:03:27Z",
       "author": "David Drake",
@@ -397,6 +434,7 @@
     {
       "sha": "bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa",
       "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
+      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:41:58Z",
       "author": "David Drake",
@@ -405,30 +443,16 @@
     {
       "sha": "38a9ddf512ef40ff2bb56b45b75b1df87ccd4238",
       "message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
+      "full_message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:22:21Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake/commit/38a9ddf512ef40ff2bb56b45b75b1df87ccd4238"
     },
     {
-      "sha": "2c6cfa0c260cad4f255d4402ef75822d05ee4fa5",
-      "message": "Moving files...",
-      "repo": "randomdrake.github.io",
-      "date": "2025-07-18T00:57:11Z",
-      "author": "randomdrake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/2c6cfa0c260cad4f255d4402ef75822d05ee4fa5"
-    },
-    {
-      "sha": "0d7f1b0660ad9519180d9d15f38a4934069a4550",
-      "message": "Fixing share images",
-      "repo": "randomdrake.github.io",
-      "date": "2025-07-18T00:49:48Z",
-      "author": "randomdrake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/0d7f1b0660ad9519180d9d15f38a4934069a4550"
-    },
-    {
       "sha": "b80750482bb8e20b7b4c2c14f04ff2ea0663bac0",
       "message": "Update README.md",
+      "full_message": "Update README.md",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T17:59:18Z",
       "author": "David Drake",
@@ -437,6 +461,7 @@
     {
       "sha": "21bc943a7f8f625391c963200e2813fc701e7acb",
       "message": "Correctly use Next.js",
+      "full_message": "Correctly use Next.js",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T17:09:45Z",
       "author": "David Drake",
@@ -445,6 +470,7 @@
     {
       "sha": "ff3390992f4d2fdc45e4e5cb1c7ce15313bb59db",
       "message": "Adding screen recording",
+      "full_message": "Adding screen recording",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T16:43:51Z",
       "author": "David Drake",
@@ -453,6 +479,7 @@
     {
       "sha": "8c27641a65c04b667027262782fa380ed6c9adc1",
       "message": "Updating README",
+      "full_message": "Updating README",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T16:43:02Z",
       "author": "David Drake",
@@ -461,6 +488,7 @@
     {
       "sha": "6eaf19965a5811544c733a93c4cb6e69839bdbbb",
       "message": "Consistent headers",
+      "full_message": "Consistent headers",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T16:07:46Z",
       "author": "David Drake",
@@ -469,6 +497,7 @@
     {
       "sha": "efe28818af0058a55dfad698c3750ed9017cbb0d",
       "message": "Linter fixes",
+      "full_message": "Linter fixes",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T04:32:10Z",
       "author": "David Drake",
@@ -477,6 +506,7 @@
     {
       "sha": "81909702195e6966a2d40c24d322c805fc450de0",
       "message": "Using chart.js for Dashboard Chart",
+      "full_message": "Using chart.js for Dashboard Chart",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T04:31:01Z",
       "author": "David Drake",
@@ -485,6 +515,7 @@
     {
       "sha": "a7f4255e0ce1ec6c0a263fdc525d30aa96e290b3",
       "message": "Getting rid of (overview)",
+      "full_message": "Getting rid of (overview)",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T04:30:28Z",
       "author": "David Drake",
@@ -493,6 +524,7 @@
     {
       "sha": "b1c24dca9ae2e2893d053f6940cab8b6975fc99b",
       "message": "Moving revenue to API",
+      "full_message": "Moving revenue to API",
       "repo": "nextjs-dashboard",
       "date": "2024-11-08T04:28:28Z",
       "author": "David Drake",
@@ -501,6 +533,7 @@
     {
       "sha": "65700e0f117c51f094fade695e0167afb637cef3",
       "message": "Adjust profile image to provide w/h classes",
+      "full_message": "Adjust profile image to provide w/h classes",
       "repo": "nextjs-dashboard",
       "date": "2024-11-07T23:28:20Z",
       "author": "David Drake",
@@ -509,6 +542,7 @@
     {
       "sha": "7cf30bc47560f751b1d26772824b3932051baaec",
       "message": "Use Promise where necessary",
+      "full_message": "Use Promise where necessary",
       "repo": "nextjs-dashboard",
       "date": "2024-11-07T23:23:21Z",
       "author": "David Drake",
@@ -517,6 +551,7 @@
     {
       "sha": "63235d4b140031626c878d32f79adaba9bc56d7a",
       "message": "Hopefully fix bug",
+      "full_message": "Hopefully fix bug",
       "repo": "nextjs-dashboard",
       "date": "2024-11-07T23:19:28Z",
       "author": "David Drake",
@@ -525,6 +560,7 @@
     {
       "sha": "ec6e9e388865c746879e87b4776bb323a2dfa715",
       "message": "Fixes #2 Utilize Profile Images for Customers on Create Invoice",
+      "full_message": "Fixes #2 Utilize Profile Images for Customers on Create Invoice",
       "repo": "nextjs-dashboard",
       "date": "2024-11-07T21:29:33Z",
       "author": "David Drake",
@@ -533,6 +569,7 @@
     {
       "sha": "23fdf26cb48380b0b82daf87e25ee8079383e383",
       "message": "#2 Let Us Use www.gravatar.com For Images",
+      "full_message": "#2 Let Us Use www.gravatar.com For Images",
       "repo": "nextjs-dashboard",
       "date": "2024-11-07T21:29:08Z",
       "author": "David Drake",
@@ -541,6 +578,7 @@
     {
       "sha": "5c6c2e71455df631cb98d80987917db6a72a2bf7",
       "message": "#2 Using and Updating Profile Image on Edit Invoice Page",
+      "full_message": "#2 Using and Updating Profile Image on Edit Invoice Page",
       "repo": "nextjs-dashboard",
       "date": "2024-11-07T21:10:56Z",
       "author": "David Drake",
@@ -549,6 +587,7 @@
     {
       "sha": "38a47894027e5776c19f84d6bfbef88904704f82",
       "message": "Fix issue with new Node version",
+      "full_message": "Fix issue with new Node version",
       "repo": "react-flow-org-chart",
       "date": "2024-11-01T19:48:03Z",
       "author": "David Drake",
@@ -557,6 +596,7 @@
     {
       "sha": "6be4899187e72e6f98705729f13b3ac7c267f92d",
       "message": "Small updates to README",
+      "full_message": "Small updates to README",
       "repo": "react-flow-org-chart",
       "date": "2024-10-30T19:28:26Z",
       "author": "David Drake",
@@ -565,6 +605,7 @@
     {
       "sha": "85ab84223f309ba4470b7c63c64d065ddf232bee",
       "message": "Removing more bad CSS files",
+      "full_message": "Removing more bad CSS files",
       "repo": "react-flow-org-chart",
       "date": "2024-10-30T19:13:19Z",
       "author": "David Drake",
@@ -573,6 +614,7 @@
     {
       "sha": "aa437e3d2f0912a7d182b3c1f3a16084c6f6f897",
       "message": "Removing another accidentally generated CSS",
+      "full_message": "Removing another accidentally generated CSS",
       "repo": "react-flow-org-chart",
       "date": "2024-10-30T18:49:49Z",
       "author": "David Drake",
@@ -581,6 +623,7 @@
     {
       "sha": "95de7876192bdcdc7a0ef673466ee2f713113ee7",
       "message": "Removing generated CSS",
+      "full_message": "Removing generated CSS",
       "repo": "react-flow-org-chart",
       "date": "2024-10-30T18:48:57Z",
       "author": "David Drake",
@@ -589,6 +632,7 @@
     {
       "sha": "c57e613c0d8180b67e388e8370a9474ef7aa612e",
       "message": "Adding more README stuff and a recording",
+      "full_message": "Adding more README stuff and a recording",
       "repo": "react-flow-org-chart",
       "date": "2024-10-30T18:48:03Z",
       "author": "David Drake",
@@ -597,6 +641,7 @@
     {
       "sha": "caa371bc7a42e0863de6bc13a07e631b9f534aa8",
       "message": "Adding screenshots",
+      "full_message": "Adding screenshots",
       "repo": "react-flow-org-chart",
       "date": "2024-10-30T18:30:18Z",
       "author": "David Drake",
@@ -605,6 +650,7 @@
     {
       "sha": "abdcf9c3a0db5b846bdc43bfd8e9b5add90274c6",
       "message": "First commit 🎉",
+      "full_message": "First commit 🎉",
       "repo": "react-flow-org-chart",
       "date": "2024-10-30T18:19:06Z",
       "author": "David Drake",
@@ -613,6 +659,7 @@
     {
       "sha": "67df927d194ace85e7b53cdb023d9402bce07438",
       "message": "Merge pull request #98 from Expensify/cole_fix",
+      "full_message": "Merge pull request #98 from Expensify/cole_fix\n\nCheck if the preferred host exists in keys not in array",
       "repo": "Bedrock-PHP",
       "date": "2018-05-09T10:59:28Z",
       "author": "Ionatan Wiznia",
@@ -621,6 +668,7 @@
     {
       "sha": "6458381155b490ee4ed6e3a7dbab77c2fcb4c670",
       "message": "Style",
+      "full_message": "Style",
       "repo": "Bedrock-PHP",
       "date": "2018-05-07T16:55:35Z",
       "author": "Cole Eason",
@@ -629,6 +677,7 @@
     {
       "sha": "b8ba3ae35bfaf831102ce2c61585ca2dca0e4911",
       "message": "Cast to string",
+      "full_message": "Cast to string",
       "repo": "Bedrock-PHP",
       "date": "2018-05-07T16:47:25Z",
       "author": "Cole Eason",
@@ -637,6 +686,7 @@
     {
       "sha": "8fba1a0b8ae58e2fcc120c2de84f72d71045823c",
       "message": "Update tag number",
+      "full_message": "Update tag number",
       "repo": "Bedrock-PHP",
       "date": "2018-05-07T16:01:15Z",
       "author": "Cole Eason",
@@ -645,6 +695,7 @@
     {
       "sha": "42e6fb63b77a6288ff6a3d245cb28f27f50308e3",
       "message": "Check if the preferred host exists in keys not in array",
+      "full_message": "Check if the preferred host exists in keys not in array",
       "repo": "Bedrock-PHP",
       "date": "2018-05-07T15:59:48Z",
       "author": "Cole Eason",
@@ -653,6 +704,7 @@
     {
       "sha": "286609798eb8ba782a94946c907d231c4874f19c",
       "message": "Merge pull request #97 from Expensify/cole_fix_preferredhost",
+      "full_message": "Merge pull request #97 from Expensify/cole_fix_preferredhost\n\nFix preferred host when host doesn't exist in the configs",
       "repo": "Bedrock-PHP",
       "date": "2018-05-03T19:02:22Z",
       "author": "Matt Bullock",
@@ -661,6 +713,7 @@
     {
       "sha": "79a8ee2ebcd572afa12828ca411a1cb1e78b6550",
       "message": "Too many brackets",
+      "full_message": "Too many brackets",
       "repo": "Bedrock-PHP",
       "date": "2018-05-03T18:53:01Z",
       "author": "Cole Eason",
@@ -669,6 +722,7 @@
     {
       "sha": "7dad92a5318ddf6208c10a959a71acf295cde1c8",
       "message": "Check earlier",
+      "full_message": "Check earlier",
       "repo": "Bedrock-PHP",
       "date": "2018-05-03T18:50:15Z",
       "author": "Cole Eason",
@@ -677,6 +731,7 @@
     {
       "sha": "ac65cc680dbe3c061ce7fe32d92d66ad55c45fb5",
       "message": "Update version number",
+      "full_message": "Update version number",
       "repo": "Bedrock-PHP",
       "date": "2018-05-03T18:43:02Z",
       "author": "Cole Eason",
@@ -685,6 +740,7 @@
     {
       "sha": "3e0519461b6ba885cc712fc1a1ef7865427811ca",
       "message": "Fix perferred host when host doesn't exist in the cconfigs",
+      "full_message": "Fix perferred host when host doesn't exist in the cconfigs",
       "repo": "Bedrock-PHP",
       "date": "2018-05-03T18:35:19Z",
       "author": "Cole Eason",
@@ -693,6 +749,7 @@
     {
       "sha": "c1cd4848fd069cf406b896b8f99598f20e88a941",
       "message": "Merge pull request #96 from Expensify/mb-vers",
+      "full_message": "Merge pull request #96 from Expensify/mb-vers\n\nVersion update for auto deleting stuck jobs",
       "repo": "Bedrock-PHP",
       "date": "2018-05-02T18:21:56Z",
       "author": "Tyler Karaszewski",
@@ -701,6 +758,7 @@
     {
       "sha": "4166519786b62f5ff70918a9bab708c4a49fa37b",
       "message": "build version 1.4.1",
+      "full_message": "build version 1.4.1",
       "repo": "Bedrock-PHP",
       "date": "2018-05-02T18:19:38Z",
       "author": "Matt Bullock",
@@ -709,6 +767,7 @@
     {
       "sha": "3c7f461b37227c5c44d02bb5ebaeac0aa6e9f324",
       "message": "Merge pull request #72 from Expensify/mb-clear-db",
+      "full_message": "Merge pull request #72 from Expensify/mb-clear-db\n\nClear stuck jobs automatically",
       "repo": "Bedrock-PHP",
       "date": "2018-05-02T18:16:12Z",
       "author": "Tyler Karaszewski",
@@ -717,6 +776,7 @@
     {
       "sha": "d39728ad2cfa8a9cde2c944b4c8db2493d246fb4",
       "message": "Merge pull request #95 from Expensify/mb-param",
+      "full_message": "Merge pull request #95 from Expensify/mb-param\n\nOnly send mockRequest when it's specified",
       "repo": "Bedrock-PHP",
       "date": "2018-05-02T17:22:07Z",
       "author": "Tyler Karaszewski",
@@ -725,6 +785,7 @@
     {
       "sha": "3aa33c1cdf3e7fa948021ef2b91fda327dffbe43",
       "message": "update composer",
+      "full_message": "update composer",
       "repo": "Bedrock-PHP",
       "date": "2018-05-01T23:39:39Z",
       "author": "Matt Bullock",
@@ -733,6 +794,7 @@
     {
       "sha": "5c0e6013fa5112867c6be9a2746830e2e22947c9",
       "message": "Updating \"Generated\" Date",
+      "full_message": "Updating \"Generated\" Date",
       "repo": "hots-cheat-sheet",
       "date": "2018-03-03T05:04:33Z",
       "author": "David Drake",
@@ -741,6 +803,7 @@
     {
       "sha": "af751f58088f8f3d7db6aad2638110b1dd0c0fdb",
       "message": "Merge branch 'master' of github.com:randomdrake/hots-cheat-sheet",
+      "full_message": "Merge branch 'master' of github.com:randomdrake/hots-cheat-sheet",
       "repo": "hots-cheat-sheet",
       "date": "2018-03-03T05:03:36Z",
       "author": "David Drake",
@@ -749,6 +812,7 @@
     {
       "sha": "90568a84042267c151dd8bb373967d3707fdb25b",
       "message": "Updates and Changes, Added Maiev",
+      "full_message": "Updates and Changes, Added Maiev\n\n-Alexstraza\n--Removed Flame, added Abundance\n-Cho\n--Firestarter\n-E.T.C.\n--Balanced\n-Gazlowe\n--Bruiser\n-Greymane\n--Cocktail Party\n-Kel'Thuzad\n--Plaguelands\n--Added Chains\n-Lunara\n--Removed all\n--Added Unfair Advantage, Poke\n-Maiev\n--NEW!\n-Malthael\n--Reaper, Soul Rip\n-Ragnaros\n--Adjusted all\n-Tassadar\n--Templar's Will\n-Thrall\n--Removed Feral Spirit, added Crash Lightning\n-Tyreal\n--Removed all\n--Added Bruiser, Tank\n-Uther\n--Holy Radiance\n-Zeratul\n--Wormhole Cleave",
       "repo": "hots-cheat-sheet",
       "date": "2018-03-03T04:58:31Z",
       "author": "David Drake",
@@ -757,6 +821,7 @@
     {
       "sha": "0589166e6479513d9909fb182586dfe5e705ca1f",
       "message": "Updating with latest build date",
+      "full_message": "Updating with latest build date",
       "repo": "hots-cheat-sheet",
       "date": "2018-01-17T20:40:12Z",
       "author": "David Drake",
@@ -765,6 +830,7 @@
     {
       "sha": "eb582550850aa45955644a22688eb03f48fa8745",
       "message": "Lots of Changes - New Heroes: Blaze, Hanzo",
+      "full_message": "Lots of Changes - New Heroes: Blaze, Hanzo\n\n-Adjusted Alextrasza build\n-Adjusted Auriel build\n-Added Blaze\n-Added Cassia build\n-Added Hanzo\n-Removed Leoric Mithril Mace build\n-Adjusted Malfurion builds\n-Removed Nazeebo Zombie, added Spider 2.0\n-Replaced Nova builds\n-Replaced Rehgar builds\n-Adjusted Valeera builds\n-Replaced Zeratul builds",
       "repo": "hots-cheat-sheet",
       "date": "2018-01-14T21:01:29Z",
       "author": "David Drake",
@@ -773,6 +839,7 @@
     {
       "sha": "176393f972f37cbc709ed3b54a2d0661e4495801",
       "message": "Adding Alexstrasza and Other Changes",
+      "full_message": "Adding Alexstrasza and Other Changes\n\n-Added Alexstrasza\n-Ana\n--Adjusted All-round, Grenade\n-Kharazim\n--Adjusted Damage\n--Removed Support, Added Transcendence\n-Li Li\n--Adjusted Healing, Serpent\n--Removed Damage\n-Nazeebo\n--Removed Spider\n-Varian\n--Adjusted Fury",
       "repo": "hots-cheat-sheet",
       "date": "2017-11-28T18:40:19Z",
       "author": "David Drake",
@@ -781,6 +848,7 @@
     {
       "sha": "ffe1e4bf461b58b59aca682d9a05cf25416efc9a",
       "message": "Merge branch 'master' of github.com:randomdrake/hots-cheat-sheet",
+      "full_message": "Merge branch 'master' of github.com:randomdrake/hots-cheat-sheet",
       "repo": "hots-cheat-sheet",
       "date": "2017-11-01T04:17:48Z",
       "author": "David Drake",
@@ -789,6 +857,7 @@
     {
       "sha": "ef80ab4ebc4041cbed10127b3eb8eab12f6c79d6",
       "message": "New Changes for Halloween",
+      "full_message": "New Changes for Halloween\n\n-Brightwing: removed Pixie Dust build\n-Junkrat: added\n-Muradin: removed Haymaker Playmaker build\n-Nazeebo: new builds\n-Stukov: added Poppin' build\n-Thrall: added Burst Damage build",
       "repo": "hots-cheat-sheet",
       "date": "2017-11-01T04:15:13Z",
       "author": "David Drake",
@@ -797,6 +866,7 @@
     {
       "sha": "8ed295402e2456442224499963b3ead9df3451fe",
       "message": "Update README.md",
+      "full_message": "Update README.md",
       "repo": "hots-cheat-sheet",
       "date": "2017-10-10T20:20:36Z",
       "author": "David Drake",
@@ -805,6 +875,7 @@
     {
       "sha": "1ad4458203f54501585f6b33e4cd58bd774c707e",
       "message": "Handling for Sgt Hammer and Vikings (Fixes #1)",
+      "full_message": "Handling for Sgt Hammer and Vikings (Fixes #1)\n\n-Added separate and special handling for Sgt. Hammer and The Lost\nVikings pages",
       "repo": "hots-cheat-sheet",
       "date": "2017-10-10T20:16:36Z",
       "author": "David Drake",
@@ -813,6 +884,7 @@
     {
       "sha": "41b32c8a0677f03f25c60b95dd8d83f745a0d38c",
       "message": "Kludge for Different Build Name Formats (Fixes #1)",
+      "full_message": "Kludge for Different Build Name Formats (Fixes #1)\n\n-Some heroes have different formats on their build pages\n-Added kludge to look for build names in <b> tags",
       "repo": "hots-cheat-sheet",
       "date": "2017-10-10T19:46:21Z",
       "author": "David Drake",
@@ -821,6 +893,7 @@
     {
       "sha": "cf92af70ca433a28057e9ccd9dfb095adc0ce611",
       "message": "Fixing Small Typo",
+      "full_message": "Fixing Small Typo",
       "repo": "hots-cheat-sheet",
       "date": "2017-10-09T15:18:43Z",
       "author": "David Drake",
@@ -829,6 +902,7 @@
     {
       "sha": "bf6991ff921ccb91f37d31bd9ff998b2806fd7e6",
       "message": "Update README.md",
+      "full_message": "Update README.md",
       "repo": "hots-cheat-sheet",
       "date": "2017-10-08T04:22:36Z",
       "author": "David Drake",
@@ -837,6 +911,7 @@
     {
       "sha": "825fa58c5dbebcc2bcc08e18b6214ed67869b41d",
       "message": "Update README.md",
+      "full_message": "Update README.md\n\nAdjusting link to point correctly to the PDF.",
       "repo": "hots-cheat-sheet",
       "date": "2017-10-08T04:20:01Z",
       "author": "David Drake",
@@ -845,6 +920,7 @@
     {
       "sha": "efa59a7475f8ec2194b7cf5ef6ad6ee788848aea",
       "message": "Update get-hots-data.php",
+      "full_message": "Update get-hots-data.php\n\nReplaced leftovers from license copy-pasta.",
       "repo": "hots-cheat-sheet",
       "date": "2017-10-08T03:59:34Z",
       "author": "David Drake",
@@ -853,6 +929,7 @@
     {
       "sha": "6f82b2a7d65a3aac3fea1bb9786d42054c01ea55",
       "message": "Bug Fixes and Removing Debug",
+      "full_message": "Bug Fixes and Removing Debug\n\n-Removing some accidentally left in debug lines.\n-Fixing error where path was changed and prevented future errors by\ndefining it.",
       "repo": "journal-down",
       "date": "2017-09-12T18:28:57Z",
       "author": "David Drake",
@@ -861,6 +938,7 @@
     {
       "sha": "a175074acdcbb29d314e5774327b7333bb0a56e5",
       "message": "Updating and Editing",
+      "full_message": "Updating and Editing",
       "repo": "journal-down",
       "date": "2017-09-12T04:12:58Z",
       "author": "David Drake",
@@ -869,6 +947,7 @@
     {
       "sha": "6a58537a6e381752dfcf093a4ed94de89b79d44f",
       "message": "Moving from /Journal to /JournalDown",
+      "full_message": "Moving from /Journal to /JournalDown",
       "repo": "journal-down",
       "date": "2017-09-12T04:12:45Z",
       "author": "David Drake",
@@ -877,6 +956,7 @@
     {
       "sha": "57db0e2c7835e63ceca34f1c550515c5b44a26d2",
       "message": "Update README.md",
+      "full_message": "Update README.md",
       "repo": "journal-down",
       "date": "2017-09-12T04:04:28Z",
       "author": "David Drake",
@@ -885,6 +965,7 @@
     {
       "sha": "4a703388182cd96a75208909c0177c9470db4410",
       "message": "Adding README Stuff",
+      "full_message": "Adding README Stuff",
       "repo": "journal-down",
       "date": "2017-09-12T04:01:13Z",
       "author": "David Drake",
@@ -893,6 +974,7 @@
     {
       "sha": "5e8502bf383f3370e94532c251885f821d303ff4",
       "message": "Remove old .sh File",
+      "full_message": "Remove old .sh File",
       "repo": "journal-down",
       "date": "2017-09-12T03:16:21Z",
       "author": "David Drake",
@@ -901,6 +983,7 @@
     {
       "sha": "44b96852dc6e7bb6b08e3b738b18b9d14dea0344",
       "message": "BASH Version of JournalDown",
+      "full_message": "BASH Version of JournalDown",
       "repo": "journal-down",
       "date": "2017-09-12T03:15:45Z",
       "author": "David Drake",
@@ -909,6 +992,7 @@
     {
       "sha": "7fcfa5b6f9d10658e382f2e6ddd186986e5d4bcf",
       "message": "Adding Bash File - Still Needs to Handle Arguments and Be Tested",
+      "full_message": "Adding Bash File - Still Needs to Handle Arguments and Be Tested",
       "repo": "journal-down",
       "date": "2017-09-11T18:34:43Z",
       "author": "David Drake",
@@ -917,6 +1001,7 @@
     {
       "sha": "dc1c215e82c1626412836963423dafa63832aaa2",
       "message": "Added Arguments, Cleaned up Code",
+      "full_message": "Added Arguments, Cleaned up Code",
       "repo": "journal-down",
       "date": "2017-09-11T16:58:55Z",
       "author": "David Drake",
@@ -925,6 +1010,7 @@
     {
       "sha": "5e17daceb146bbab64258a26a5f5794df63f3cf3",
       "message": "First Journaldown Script Commit",
+      "full_message": "First Journaldown Script Commit",
       "repo": "journal-down",
       "date": "2017-09-11T04:48:40Z",
       "author": "David Drake",
@@ -933,6 +1019,7 @@
     {
       "sha": "8d5ecd51b36388f7564fc0a718139496a7a3643f",
       "message": "Update README.md",
+      "full_message": "Update README.md",
       "repo": "journal-down",
       "date": "2017-09-11T04:34:16Z",
       "author": "David Drake",
@@ -941,6 +1028,7 @@
     {
       "sha": "0e00ca08bec85686691ce6a84ba3393417944a77",
       "message": "Initial commit",
+      "full_message": "Initial commit",
       "repo": "journal-down",
       "date": "2017-09-11T04:32:51Z",
       "author": "David Drake",
@@ -949,6 +1037,7 @@
     {
       "sha": "ea660553294c7288ebdf5aa9e29103927d870a20",
       "message": "Merge pull request #3181 from scottohara/rename-pulse-animation",
+      "full_message": "Merge pull request #3181 from scottohara/rename-pulse-animation\n\nUse less generic pulse animation name (Fixes #3169)",
       "repo": "swagger-ui",
       "date": "2017-06-05T16:31:20Z",
       "author": "Ron",
@@ -957,6 +1046,7 @@
     {
       "sha": "2257836114f8bc558e9cc5cf07c9781c432e3ff4",
       "message": "Merge branch 'master' into rename-pulse-animation",
+      "full_message": "Merge branch 'master' into rename-pulse-animation",
       "repo": "swagger-ui",
       "date": "2017-06-05T16:28:33Z",
       "author": "Ron",
@@ -965,6 +1055,7 @@
     {
       "sha": "563a5643e7ed9f8985c9e8d9800d3db1a5a14bd9",
       "message": "Merge pull request #3182 from scottohara/remove-legacy-clear-class",
+      "full_message": "Merge pull request #3182 from scottohara/remove-legacy-clear-class\n\nRemove unused legacy clear class (Fixes #3167)",
       "repo": "swagger-ui",
       "date": "2017-06-05T16:00:29Z",
       "author": "shockey",
@@ -973,6 +1064,7 @@
     {
       "sha": "af2c890e5130f510550557bebf1eaa3589ce3c6a",
       "message": "Use less generic pulse animation name (Fixes #3169)",
+      "full_message": "Use less generic pulse animation name (Fixes #3169)",
       "repo": "swagger-ui",
       "date": "2017-06-04T22:38:39Z",
       "author": "Scott O'Hara",
@@ -981,6 +1073,7 @@
     {
       "sha": "eed62339b2917c2d6f238f9637a847e08ab5293a",
       "message": "Remove unused legacy clear class (Fixes #3167)",
+      "full_message": "Remove unused legacy clear class (Fixes #3167)",
       "repo": "swagger-ui",
       "date": "2017-06-04T22:36:49Z",
       "author": "Scott O'Hara",
@@ -989,6 +1082,7 @@
     {
       "sha": "eec04f4ce289137225d33489ed39e467e393b1a5",
       "message": "Merge pull request #3180 from shockey/v/3.0.13",
+      "full_message": "Merge pull request #3180 from shockey/v/3.0.13\n\nv/3.0.13",
       "repo": "swagger-ui",
       "date": "2017-06-03T07:41:15Z",
       "author": "shockey",
@@ -997,6 +1091,7 @@
     {
       "sha": "58422825c987e07ce442dc8a109dacfa5cc48c12",
       "message": "Rebuild dist",
+      "full_message": "Rebuild dist",
       "repo": "swagger-ui",
       "date": "2017-06-03T07:18:15Z",
       "author": "Kyle Shockey",
@@ -1005,6 +1100,7 @@
     {
       "sha": "5952bb6cbf1c91d1579545147efbc4b3769b8262",
       "message": "Bump fast-json-patch in lockfile",
+      "full_message": "Bump fast-json-patch in lockfile",
       "repo": "swagger-ui",
       "date": "2017-06-03T07:16:44Z",
       "author": "Kyle Shockey",
@@ -1013,6 +1109,7 @@
     {
       "sha": "b4cb0ce247ee7948593b07fe65922f20c9430390",
       "message": "Rebuild dist",
+      "full_message": "Rebuild dist",
       "repo": "swagger-ui",
       "date": "2017-06-03T07:11:32Z",
       "author": "Kyle Shockey",
@@ -1021,6 +1118,7 @@
     {
       "sha": "19f7668b484a9b63beb1a904c8f360281169623b",
       "message": "Bump declared version and upstream minimum versions",
+      "full_message": "Bump declared version and upstream minimum versions",
       "repo": "swagger-ui",
       "date": "2017-06-03T05:42:18Z",
       "author": "Kyle Shockey",
@@ -1029,6 +1127,7 @@
     {
       "sha": "f862caa599b11a1fff0c42f4173c076bd01b5dce",
       "message": "Merge pull request #3178 from shockey/build",
+      "full_message": "Merge pull request #3178 from shockey/build\n\nRebuild dist",
       "repo": "swagger-ui",
       "date": "2017-06-02T22:55:09Z",
       "author": "shockey",
@@ -1037,6 +1136,7 @@
     {
       "sha": "c471f59c537461d5acf33c75a2ff0e1c1cc9e959",
       "message": "Rebuild dist",
+      "full_message": "Rebuild dist",
       "repo": "swagger-ui",
       "date": "2017-06-02T22:49:04Z",
       "author": "Kyle Shockey",
@@ -1045,6 +1145,7 @@
     {
       "sha": "9a089045747345f017afcd5d70c7fe7b69a0b674",
       "message": "Merge pull request #3165 from shockey/bug/3163-markdown-xss",
+      "full_message": "Merge pull request #3165 from shockey/bug/3163-markdown-xss\n\nSanitize Markdown inputs",
       "repo": "swagger-ui",
       "date": "2017-06-02T06:47:18Z",
       "author": "shockey",
@@ -1053,6 +1154,7 @@
     {
       "sha": "bec97cfaf51e572a7b603340363e72fad941bc0c",
       "message": "Fix style error",
+      "full_message": "Fix style error",
       "repo": "swagger-ui",
       "date": "2017-06-02T05:24:31Z",
       "author": "Kyle Shockey",
@@ -1061,6 +1163,7 @@
     {
       "sha": "6ccd0371976b4c6fcc2962f42b935802e5d14296",
       "message": "Merge branch 'bug/3163-markdown-xss' of github.com:shockey/swagger-ui into bug/3163-markdown-xss",
+      "full_message": "Merge branch 'bug/3163-markdown-xss' of github.com:shockey/swagger-ui into bug/3163-markdown-xss",
       "repo": "swagger-ui",
       "date": "2017-06-02T05:18:37Z",
       "author": "Kyle Shockey",
@@ -1069,6 +1172,7 @@
     {
       "sha": "7d9fc47139dfdba11254e4db4f55e000083d48cb",
       "message": "centered pagination",
+      "full_message": "centered pagination",
       "repo": "data.gov",
       "date": "2016-03-18T14:55:43Z",
       "author": "Alex Perfilov",
@@ -1077,6 +1181,7 @@
     {
       "sha": "821b47946559376e2e7867c81d61239d448c31c1",
       "message": "css fixes",
+      "full_message": "css fixes",
       "repo": "data.gov",
       "date": "2016-03-18T14:03:20Z",
       "author": "Alex Perfilov",
@@ -1085,6 +1190,7 @@
     {
       "sha": "af70e6a4c9a901ee7461684c581a8ce24226f3e6",
       "message": "apps grid view",
+      "full_message": "apps grid view",
       "repo": "data.gov",
       "date": "2016-03-17T20:31:25Z",
       "author": "Alex Perfilov",
@@ -1093,6 +1199,7 @@
     {
       "sha": "7caf2da6e526770424fe81eb19ae9adab9c2cc22",
       "message": "fetching WP_ERROR as an object :gem:",
+      "full_message": "fetching WP_ERROR as an object :gem:",
       "repo": "data.gov",
       "date": "2016-01-26T03:13:35Z",
       "author": "Alex Perfilov",
@@ -1101,6 +1208,7 @@
     {
       "sha": "b5719c645a7b7de02993876ec585f07bdf196a9a",
       "message": "fixing the link in header",
+      "full_message": "fixing the link in header",
       "repo": "data.gov",
       "date": "2015-10-30T18:08:20Z",
       "author": "kapil.bulchandani",
@@ -1109,6 +1217,7 @@
     {
       "sha": "a690843034b0f030f0326c2d23eaded793662a77",
       "message": "changing the class",
+      "full_message": "changing the class",
       "repo": "data.gov",
       "date": "2015-09-11T21:36:09Z",
       "author": "kapil.bulchandani",
@@ -1117,6 +1226,7 @@
     {
       "sha": "b916babda0f791303cc93fc55790818bb666afa3",
       "message": "new footer change",
+      "full_message": "new footer change",
       "repo": "data.gov",
       "date": "2015-09-10T22:17:32Z",
       "author": "kapil.bulchandani",
@@ -1125,6 +1235,7 @@
     {
       "sha": "ad07b8dc940c7f4e621cacfca97a5b43f27194fa",
       "message": "added supplemental menu in footer",
+      "full_message": "added supplemental menu in footer",
       "repo": "data.gov",
       "date": "2015-09-09T16:04:25Z",
       "author": "Jahangir Iqbal",
@@ -1133,6 +1244,7 @@
     {
       "sha": "4680aa6b0b2c690c54d3913beccf0bd4fc285abf",
       "message": "fixing the minor issues with the scroll bar on chrome and IE",
+      "full_message": "fixing the minor issues with the scroll bar on chrome and IE",
       "repo": "data.gov",
       "date": "2015-08-31T18:45:16Z",
       "author": "kapil.bulchandani",
@@ -1141,6 +1253,7 @@
     {
       "sha": "effd3cb2ce1232c8a82fc0eb892bd12a6aedc2cc",
       "message": "adding left margin",
+      "full_message": "adding left margin",
       "repo": "data.gov",
       "date": "2015-08-25T19:39:38Z",
       "author": "kapil.bulchandani",
@@ -1149,6 +1262,7 @@
     {
       "sha": "f20917d76606a43d80080a9ceb669f0a1d544ef3",
       "message": "adding span to revert last change",
+      "full_message": "adding span to revert last change",
       "repo": "data.gov",
       "date": "2015-08-25T19:32:01Z",
       "author": "kapil.bulchandani",
@@ -1157,6 +1271,7 @@
     {
       "sha": "8e104583e7f3173adff9c5415834753530023304",
       "message": "fixing the space",
+      "full_message": "fixing the space",
       "repo": "data.gov",
       "date": "2015-08-25T17:55:34Z",
       "author": "kapil.bulchandani",
@@ -1165,6 +1280,7 @@
     {
       "sha": "bf306273aa1168a5e5ae9c7b6b8577e4bedfd7cc",
       "message": "final changes to the table",
+      "full_message": "final changes to the table",
       "repo": "data.gov",
       "date": "2015-08-25T16:31:12Z",
       "author": "kapil.bulchandani",
@@ -1173,6 +1289,7 @@
     {
       "sha": "0310e480e37e1528d0e5ed0035433654727d8789",
       "message": "removing auto width on cell columns",
+      "full_message": "removing auto width on cell columns",
       "repo": "data.gov",
       "date": "2015-08-24T20:32:31Z",
       "author": "kapil.bulchandani",
@@ -1181,6 +1298,7 @@
     {
       "sha": "d3951cf95804f3b496616a38da9b1e03eea05ab4",
       "message": "fixing the active class",
+      "full_message": "fixing the active class",
       "repo": "data.gov",
       "date": "2015-08-24T19:00:34Z",
       "author": "kapil.bulchandani",
@@ -1189,6 +1307,7 @@
     {
       "sha": "237e6925cef41ec40eac4f4c348b8163521e7623",
       "message": "Update README.md",
+      "full_message": "Update README.md",
       "repo": "nasa-apod-desktop",
       "date": "2015-04-13T17:54:42Z",
       "author": "David Drake",
@@ -1197,6 +1316,7 @@
     {
       "sha": "ff8eda10dc97439c79eee5cbed6c734f9f6b8f9b",
       "message": "Update README.md",
+      "full_message": "Update README.md",
       "repo": "nasa-apod-desktop",
       "date": "2015-04-13T17:54:18Z",
       "author": "David Drake",
@@ -1205,6 +1325,7 @@
     {
       "sha": "ffad1ab6851488aab7b64485c7e202065c9a37b3",
       "message": "Merge pull request #9 from dannejosefsson/development",
+      "full_message": "Merge pull request #9 from dannejosefsson/development\n\nFix for first run of the script and if a non-picture is encountered while  building the library",
       "repo": "nasa-apod-desktop",
       "date": "2012-12-09T17:55:42Z",
       "author": "David Drake",
@@ -1213,6 +1334,7 @@
     {
       "sha": "aa679d3da6f35f2410f9371aca97e20e9ae77e84",
       "message": "Removed debug line.",
+      "full_message": "Removed debug line.\n\nSigned-off-by: Daniel Josefsson <dannejosefsson@gmail.com>",
       "repo": "nasa-apod-desktop",
       "date": "2012-11-24T17:05:42Z",
       "author": "Daniel Josefsson",
@@ -1221,6 +1343,7 @@
     {
       "sha": "40d84903601a6b71e0735b17a34219f2967f3cd2",
       "message": "Removed the exit call if create_desktop_background_scroll encounters something else than an image. Also added safty to the main function.",
+      "full_message": "Removed the exit call if create_desktop_background_scroll encounters something else than an image. Also added safty to the main function.\n\nSigned-off-by: Daniel Josefsson <dannejosefsson@gmail.com>",
       "repo": "nasa-apod-desktop",
       "date": "2012-11-23T13:27:58Z",
       "author": "Daniel Josefsson",
@@ -1229,6 +1352,7 @@
     {
       "sha": "a1d17ee5190162adc166b6bec3234dc14d3860f3",
       "message": "Indentation fix.",
+      "full_message": "Indentation fix.\n\nSigned-off-by: Daniel Josefsson <dannejosefsson@gmail.com>",
       "repo": "nasa-apod-desktop",
       "date": "2012-11-23T12:47:18Z",
       "author": "Daniel Josefsson",
@@ -1237,6 +1361,7 @@
     {
       "sha": "c7410cea3d6a7ec467abe79e34d1d570df1bf284",
       "message": "Added a recalculation of the number of images in the download directory. This to remove failure of first time run.",
+      "full_message": "Added a recalculation of the number of images in the download directory. This to remove failure of first time run.\n\nSigned-off-by: Daniel Josefsson <dannejosefsson@gmail.com>",
       "repo": "nasa-apod-desktop",
       "date": "2012-11-23T12:31:45Z",
       "author": "Daniel Josefsson",
@@ -1245,6 +1370,7 @@
     {
       "sha": "44f0d3990e296d733efbb81a4ca687714831d07f",
       "message": "Changing comments in the script",
+      "full_message": "Changing comments in the script\n\n-Project is different enough, removing references from base script but\nleaving on readme",
       "repo": "nasa-apod-desktop",
       "date": "2012-09-30T02:31:42Z",
       "author": "randomdrake",
@@ -1253,6 +1379,7 @@
     {
       "sha": "d573177bd179391dc71969f871935f8685dde1c6",
       "message": "Adding XML file for scrolling images and seeding",
+      "full_message": "Adding XML file for scrolling images and seeding\n\n-Now writing out an XML file of all the images in the directory\n-Seeding the downloaded images so there are a few to start with\n-Adding a reqiurements.txt for easier dependency installing",
       "repo": "nasa-apod-desktop",
       "date": "2012-09-30T02:29:24Z",
       "author": "randomdrake",
@@ -1261,6 +1388,7 @@
     {
       "sha": "3e8ef5033893f6f25bf60c5172389c5a5dc1aed9",
       "message": "Fixes #8",
+      "full_message": "Fixes #8\n\n-Adds handling if the response body is small, signifying error\n-Fixes debug message showing even if debug was set to false\n-Small fixes to clean up code",
       "repo": "nasa-apod-desktop",
       "date": "2012-09-17T00:09:13Z",
       "author": "randomdrake",
@@ -1269,6 +1397,7 @@
     {
       "sha": "f8f26e437a64769042e5d56b31e3bccdcae5945c",
       "message": "Update nasa_apod_desktop.py",
+      "full_message": "Update nasa_apod_desktop.py\n\nRemoving accidentally left in comment.",
       "repo": "nasa-apod-desktop",
       "date": "2012-08-19T19:22:44Z",
       "author": "David Drake",
@@ -1277,6 +1406,7 @@
     {
       "sha": "6b45c818a140199afd0e1c4f89dc4d73f3d63b48",
       "message": "Update README.md",
+      "full_message": "Update README.md\n\nEdited formatting for the defaults section.",
       "repo": "nasa-apod-desktop",
       "date": "2012-08-19T19:21:40Z",
       "author": "David Drake",
@@ -1285,6 +1415,7 @@
     {
       "sha": "c27549c0be9b7a07a4b60dac3b376704cb24c13f",
       "message": "Adding Additional Resolution Types",
+      "full_message": "Adding Additional Resolution Types\n\nOffering three different types of resolution detection depending on how\nyou want the image resized.\n\nChecking to see if already existing image is of the same size before\nattempting to resize.\n\nAdding additional debugging notes and cleaned up comments\n\nUpdated the README",
       "repo": "nasa-apod-desktop",
       "date": "2012-08-19T19:14:16Z",
       "author": "David Drake",
@@ -1293,6 +1424,7 @@
     {
       "sha": "60827271bb6e1a9805133099aa0662cbb4e0f0e5",
       "message": "Merge pull request #2 from dfuenzalida/master",
+      "full_message": "Merge pull request #2 from dfuenzalida/master\n\nAutomatically determining download folder. Obtaining current desktop resolution to scale the image to.",
       "repo": "nasa-apod-desktop",
       "date": "2012-08-19T16:36:24Z",
       "author": "David Drake",
@@ -1301,6 +1433,7 @@
     {
       "sha": "f96d1963ae0e1a365fda11d1238e905ed3e58f2e",
       "message": "Fixes #7 - now checking to make sure we could find an image in our regex search to handle cases where the APOD is a video.",
+      "full_message": "Fixes #7 - now checking to make sure we could find an image in our regex search to handle cases where the APOD is a video.",
       "repo": "nasa-apod-desktop",
       "date": "2012-08-14T12:14:21Z",
       "author": "David Drake",
@@ -1308,6 +1441,22 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
+        "push_id": 31204774344,
+        "ref": "refs/heads/main",
+        "head": "30894ce70c01c09d9b4557dc76403dc7777edcfe",
+        "before": "ae7219f9830d54d38464d50b596c8d4f268b07ec"
+      },
+      "created_at": "2026-03-01T02:05:20Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
