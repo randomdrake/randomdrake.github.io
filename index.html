@@ -461,7 +461,7 @@
         </header>
 
         <!-- Stats Bar -->
-        <section class="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-10" id="stats-bar">
+        <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10" id="stats-bar">
             <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-100">
                 <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
                 <div class="text-3xl font-bold text-white" id="stat-repos"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
@@ -486,6 +486,11 @@
                 <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
                 <div class="text-3xl font-bold text-white" id="stat-followers"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
                 <div class="text-sm text-gh-muted mt-1">👥 Followers</div>
+            </div>
+            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-500">
+                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
+                <div class="text-3xl font-bold text-white" id="stat-cicd"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
+                <div class="text-sm text-gh-muted mt-1">🚀 CI/CD Pass Rate</div>
             </div>
         </section>
 
@@ -1282,6 +1287,27 @@
         });
     }
 
+    // --- CI/CD pass rate stat ---
+    let _cicdStatUpdated = false;
+    function updateCicdStat(runs) {
+        const completed = runs.filter(r => r.status === 'completed');
+        if (completed.length === 0) {
+            document.getElementById('stat-cicd').textContent = '—';
+            return;
+        }
+        const passed = completed.filter(r => r.conclusion === 'success').length;
+        const rate = Math.round((passed / completed.length) * 100);
+        const el = document.getElementById('stat-cicd');
+        if (!_cicdStatUpdated) {
+            _cicdStatUpdated = true;
+            countUp(el, rate, 1200);
+            // Add % after animation
+            setTimeout(() => { el.textContent = rate + '%'; }, 1300);
+        } else {
+            el.textContent = rate + '%';
+        }
+    }
+
     // --- Pipeline data (merged into unified feed) ---
     async function loadPipelines() {
         try {
@@ -1289,6 +1315,7 @@
             if (data && data.workflow_runs) {
                 _feedPipelines = data.workflow_runs;
                 renderUnifiedFeed();
+                updateCicdStat(data.workflow_runs);
 
                 const hasActive = data.workflow_runs.some(r => r.status === 'in_progress' || r.status === 'queued');
                 setTimeout(loadPipelines, hasActive ? 15000 : 60000);
