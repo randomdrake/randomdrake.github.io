@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01T02:32:56.362Z",
+  "generated_at": "2026-03-01T02:33:39.243Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T02:32:49Z",
-      "pushed_at": "2026-03-01T02:32:45Z"
+      "updated_at": "2026-03-01T02:33:30Z",
+      "pushed_at": "2026-03-01T02:33:26Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -242,6 +242,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "e57e4406c3b325100573ec1e94dfdf4d59480ba6",
+      "message": "Speed up workshop scroll to 2s per card",
+      "full_message": "Speed up workshop scroll to 2s per card\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T02:33:24Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e57e4406c3b325100573ec1e94dfdf4d59480ba6"
+    },
+    {
+      "sha": "c056cfe7696653d7e40b5ed4995fecf2e2cbb3cf",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-01T02:32:56Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/c056cfe7696653d7e40b5ed4995fecf2e2cbb3cf"
+    },
     {
       "sha": "c32ab4870cd1c3bc29dd9d2c1c0c4b5445417e36",
       "message": "Fix workshop seamless loop — no empty gap at bottom",
@@ -358,24 +376,6 @@
       "date": "2026-03-01T02:00:08Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/310b13b71c51bd3abfac45b62e01b84de37eb279"
-    },
-    {
-      "sha": "1d8e95f22f6eff62e800eaf6c1ccdf047db4f639",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T01:56:23Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/1d8e95f22f6eff62e800eaf6c1ccdf047db4f639"
-    },
-    {
-      "sha": "995438c0d00354db164443cc1beca8f67138d804",
-      "message": "Reverse commit feed to Star Wars credits style",
-      "full_message": "Reverse commit feed to Star Wars credits style\n\nNewest commits now rise from the bottom of the feed, scrolling upward\nso the most recent activity is visible first. Reversed animation\ndirection and commit order for both static and live data paths.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T01:56:05Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/995438c0d00354db164443cc1beca8f67138d804"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1441,6 +1441,22 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 973888039,
+        "name": "randomdrake/randomdrake.github.io",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
+      },
+      "payload": {
+        "repository_id": 973888039,
+        "push_id": 31205132258,
+        "ref": "refs/heads/main",
+        "head": "e57e4406c3b325100573ec1e94dfdf4d59480ba6",
+        "before": "c056cfe7696653d7e40b5ed4995fecf2e2cbb3cf"
+      },
+      "created_at": "2026-03-01T02:33:27Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
