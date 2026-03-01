@@ -1316,12 +1316,14 @@
     async function loadPipelines() {
         const feed = document.getElementById('pipeline-feed');
         try {
-            const res = await fetch(`${API}/repos/${USERNAME}/randomdrake.github.io/actions/runs?per_page=8`);
-            if (!res.ok) {
-                feed.innerHTML = '<p class="text-gh-muted text-sm text-center py-4">Pipeline data unavailable</p>';
+            const data = await ghFetch(`${API}/repos/${USERNAME}/randomdrake.github.io/actions/runs?per_page=8`);
+            if (!data) {
+                if (!feed.querySelector('.pipeline-row')) {
+                    feed.innerHTML = '<p class="text-gh-muted text-sm text-center py-4">Pipeline data unavailable (rate limited?)</p>';
+                }
+                setTimeout(loadPipelines, 60000);
                 return;
             }
-            const data = await res.json();
             const runs = data.workflow_runs || [];
 
             if (runs.length === 0) {
@@ -1384,13 +1386,16 @@
                 </a>`;
             }).join('');
 
-            // If any runs are in progress, auto-refresh every 15s
-            if (runs.some(r => r.status === 'in_progress' || r.status === 'queued')) {
-                setTimeout(loadPipelines, 15000);
-            }
+            // Auto-refresh: 15s if a run is active, 60s otherwise
+            const hasActive = runs.some(r => r.status === 'in_progress' || r.status === 'queued');
+            setTimeout(loadPipelines, hasActive ? 15000 : 60000);
         } catch (err) {
             console.warn('Pipeline fetch failed:', err);
-            feed.innerHTML = '<p class="text-gh-muted text-sm text-center py-4">Pipeline data unavailable</p>';
+            // Don't overwrite existing content on transient failures — just retry
+            if (!feed.querySelector('.pipeline-row')) {
+                feed.innerHTML = '<p class="text-gh-muted text-sm text-center py-4">Pipeline data unavailable</p>';
+            }
+            setTimeout(loadPipelines, 60000);
         }
     }
 
