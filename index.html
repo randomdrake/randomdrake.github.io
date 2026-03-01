@@ -61,13 +61,13 @@
             100% { background-position: -200% 0; }
         }
 
-        /* Commit livestream */
+        /* Commit livestream — Star Wars style: newest rises from the bottom */
         .commit-feed {
             height: 360px;
             overflow: hidden;
             position: relative;
-            mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
         }
         .commit-feed-inner {
             animation: scrollUp var(--scroll-duration, 60s) linear infinite;
@@ -76,8 +76,8 @@
             animation-play-state: paused;
         }
         @keyframes scrollUp {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-50%); }
+            0% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
         }
         .commit-item {
             border-left: 2px solid #30363d;
@@ -982,8 +982,11 @@
             `).join('');
         }
 
+        // Reverse so newest commits are at the bottom (scroll up into view first)
+        const reversed = [...allCommits].reverse();
+
         const feed = document.getElementById('commit-feed');
-        const itemsHTML = renderItems(allCommits);
+        const itemsHTML = renderItems(reversed);
 
         // Set scroll speed based on number of commits (~2s per commit)
         const duration = Math.max(30, allCommits.length * 2);
@@ -1346,8 +1349,11 @@
             `).join('');
         }
 
+        // Reverse so newest commits are at the bottom (scroll up into view first)
+        const reversed = [...commits].reverse();
+
         const feed = document.getElementById('commit-feed');
-        const itemsHTML = renderItems(commits);
+        const itemsHTML = renderItems(reversed);
         const duration = Math.max(30, commits.length * 2);
         feed.style.setProperty('--scroll-duration', duration + 's');
         feed.innerHTML = `<div class="commit-feed-inner">${itemsHTML}${itemsHTML}</div>`;
