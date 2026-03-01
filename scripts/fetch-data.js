@@ -135,9 +135,15 @@ async function main() {
   };
 
   // Compute aggregates
+  let totalCodeBytes = 0;
+  Object.values(languages).forEach(langs => {
+    Object.values(langs).forEach(bytes => { totalCodeBytes += bytes; });
+  });
+
   output.stats = {
     total_stars: repos.reduce((s, r) => s + r.stargazers_count, 0),
     total_forks: repos.reduce((s, r) => s + r.forks_count, 0),
+    total_code_bytes: totalCodeBytes,
   };
 
   const outPath = path.join(__dirname, '..', 'data', 'github.json');

@@ -591,7 +591,7 @@
         </header>
 
         <!-- Stats Bar -->
-        <section class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10" id="stats-bar">
+        <section class="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-10" id="stats-bar">
             <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-100">
                 <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
                 <div class="text-3xl font-bold text-white" id="stat-repos"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
@@ -601,6 +601,11 @@
                 <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
                 <div class="text-3xl font-bold text-white" id="stat-stars"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
                 <div class="text-sm text-gh-muted mt-1">⭐ Total Stars</div>
+            </div>
+            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-250">
+                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
+                <div class="text-3xl font-bold text-white" id="stat-loc"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
+                <div class="text-sm text-gh-muted mt-1">💻 Lines of Code</div>
             </div>
             <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-300">
                 <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
@@ -915,15 +920,22 @@
         const hours = Math.floor(minutes / 60);
         if (hours < 24) return `${hours}h ago`;
         const days = Math.floor(hours / 24);
-        if (days < 30) return `${days}d ago`;
-        const months = Math.floor(days / 30);
-        return `${months}mo ago`;
+        if (days < 14) return `${days}d ago`;
+        if (days < 30) return `${Math.floor(days / 7)}w ago`;
+        const months = Math.floor(days / 30.44);
+        if (months < 12) return `${months}mo ago`;
+        const years = Math.floor(months / 12);
+        const remainMonths = months % 12;
+        if (remainMonths === 0) return `${years}y ago`;
+        return `${years}y ${remainMonths}mo ago`;
     }
 
     // --- Animation Utilities ---
 
     // Animate a number counting up from 0 to target
-    function countUp(el, target, duration = 1200) {
+    function countUp(el, target, duration) {
+        // Longer duration for bigger numbers for dramatic effect
+        if (!duration) duration = target > 10000 ? 2500 : target > 1000 ? 1800 : 1200;
         const start = 0;
         const startTime = performance.now();
         function update(currentTime) {
@@ -1090,6 +1102,10 @@
 
         const totalBytes = sorted.reduce((sum, [, b]) => sum + b, 0);
 
+        // Lines of code estimate (~25 bytes per line avg)
+        const estimatedLOC = Math.round(totalBytes / 25);
+        countUp(document.getElementById('stat-loc'), estimatedLOC);
+
         // Show top 8 + "Other"
         const top = sorted.slice(0, 8);
         const otherBytes = sorted.slice(8).reduce((sum, [, b]) => sum + b, 0);
@@ -1149,13 +1165,24 @@
 
     // --- Commit author helpers ---
     function isClaudeCommit(c) {
-        if (c.full_message && c.full_message.includes('Co-Authored-By: Claude')) return true;
-        if (c.author === 'github-actions[bot]') return false;
-        if (c.message && c.message.includes('Claude')) return true;
+        const fm = c.full_message || '';
+        const msg = c.message || '';
+        // Explicit co-author trailer
+        if (fm.includes('Co-Authored-By: Claude')) return true;
+        // Message mentions Claude
+        if (msg.includes('Claude')) return true;
+        // Heuristics for Claude-style commits:
+        // - Em dash in subject line (Claude's signature style)
+        if (msg.includes('\u2014')) return true;
+        // - Multi-line body with bullet points
+        if (fm.includes('\n- ') || fm.includes('\n  - ')) return true;
+        // - Emoji-heavy subjects (Claude README commits)
+        const emojiCount = (msg.match(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu) || []).length;
+        if (emojiCount >= 3) return true;
         return false;
     }
     function isDavidCommit(c) {
-        return c.author === 'David Drake' || c.author === 'randomdrake';
+        return (c.author === 'David Drake' || c.author === 'randomdrake') && !isClaudeCommit(c);
     }
     function isBotCommit(c) {
         return c.author === 'github-actions[bot]';
@@ -1174,23 +1201,45 @@
         return c.author?.split(' ')[0] || '?';
     }
 
+    // Repo-specific robot faces — each repo gets its own character
+    const REPO_ROBOTS = {
+        'randomdrake.github.io': { face: '🌐', hat: '🎨' },
+        'nextjs-dashboard':      { face: '📊', hat: '⚛️' },
+        'react-flow-org-chart':  { face: '🔀', hat: '🌳' },
+        'hots-cheat-sheet':      { face: '🎮', hat: '⚔️' },
+        'chanern':               { face: '🔬', hat: '🧬' },
+        'marijuana':             { face: '🌿', hat: '💚' },
+        'scern':                 { face: '🧪', hat: '📡' },
+        'php-nntp':              { face: '📰', hat: '🐘' },
+        'larpern':               { face: '🔍', hat: '🔎' },
+        'amber':                 { face: '💎', hat: '✨' },
+        'randomdrake':           { face: '👤', hat: '📝' },
+    };
+    const DEFAULT_ROBOT = { face: '🤖', hat: '🔧' };
+
+    function getRepoRobot(repo) {
+        return REPO_ROBOTS[repo] || DEFAULT_ROBOT;
+    }
+
     // Build a single robot card
     function robotCard(c, i) {
         const type = commitType(c);
         const align = i % 2 === 0 ? 'margin-left: 4%' : 'margin-left: auto; margin-right: 4%';
-        // Stagger horizontal position based on sha for organic feel
         const nudge = (parseInt((c.sha || '0').slice(0, 2), 16) % 30);
+        const robot = getRepoRobot(c.repo);
         return `
         <a href="${c.url}" target="_blank" rel="noopener"
            class="robot-card ${type}" style="${align}; transform: translateX(${nudge - 15}px)">
             <div class="sparkle-trail"></div>
             <div class="sparkle-trail"></div>
             <div class="sparkle-trail"></div>
-            <div class="robot-body">
+            <div class="robot-body" title="${c.repo}">
+                <span style="font-size:15px;position:absolute;top:-10px;left:50%;transform:translateX(-50%)">${robot.hat}</span>
                 <div class="robot-eyes">
                     <div class="robot-eye left"></div>
                     <div class="robot-eye right"></div>
                 </div>
+                <span style="font-size:8px;position:absolute;bottom:-2px;left:50%;transform:translateX(-50%)">${robot.face}</span>
             </div>
             <div style="min-width:0;flex:1">
                 <p style="font-size:12px;color:#e6edf3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0">${c.message.replace(/</g, '&lt;')}</p>
@@ -1487,17 +1536,23 @@
             countUp(document.getElementById('stat-stars'), data.stats.total_stars);
             countUp(document.getElementById('stat-forks'), data.stats.total_forks);
 
+            // Lines of code — estimate from language bytes (~25 bytes per line avg)
+            const langTotals = {};
+            let totalCodeBytes = data.stats.total_code_bytes || 0;
+            Object.values(data.languages).forEach(langs => {
+                Object.entries(langs).forEach(([lang, bytes]) => {
+                    langTotals[lang] = (langTotals[lang] || 0) + bytes;
+                    if (!totalCodeBytes) totalCodeBytes += bytes;
+                });
+            });
+            const estimatedLOC = Math.round(totalCodeBytes / 25);
+            countUp(document.getElementById('stat-loc'), estimatedLOC);
+
             // Repos
             const repos = data.repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
             renderRepoCards(repos);
 
-            // Languages (already aggregated per-repo in data.languages)
-            const langTotals = {};
-            Object.values(data.languages).forEach(langs => {
-                Object.entries(langs).forEach(([lang, bytes]) => {
-                    langTotals[lang] = (langTotals[lang] || 0) + bytes;
-                });
-            });
+            // Languages
             renderLanguageChart(langTotals);
 
             // Commits
@@ -1603,8 +1658,8 @@
             <div class="workshop-fade-top"></div>
             <div class="robot-lane">
                 ${cardsHTML}
+                ${easterEggHTML}
             </div>
-            ${easterEggHTML}
             <div class="workshop-fade-bottom"></div>
         `;
 
