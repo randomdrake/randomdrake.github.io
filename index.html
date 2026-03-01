@@ -913,21 +913,17 @@
     }
 
     function timeAgo(dateStr) {
-        const seconds = Math.floor((Date.now() - new Date(dateStr).getTime()) / 1000);
+        const date = new Date(dateStr);
+        const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
         if (seconds < 60) return 'just now';
         const minutes = Math.floor(seconds / 60);
         if (minutes < 60) return `${minutes}m ago`;
         const hours = Math.floor(minutes / 60);
         if (hours < 24) return `${hours}h ago`;
         const days = Math.floor(hours / 24);
-        if (days < 14) return `${days}d ago`;
-        if (days < 30) return `${Math.floor(days / 7)}w ago`;
-        const months = Math.floor(days / 30.44);
-        if (months < 12) return `${months}mo ago`;
-        const years = Math.floor(months / 12);
-        const remainMonths = months % 12;
-        if (remainMonths === 0) return `${years}y ago`;
-        return `${years}y ${remainMonths}mo ago`;
+        if (days < 7) return `${days}d ago`;
+        // Anything older than a week gets a clean formatted date
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }
 
     // --- Animation Utilities ---
