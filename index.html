@@ -91,21 +91,19 @@
                 transparent 90%, #0d1117 100%);
         }
 
-        /* Robot lanes — each repo gets a "lane" */
+        /* Robot lane — scrolls upward, newest at bottom rises into view */
         .robot-lane {
             position: absolute;
             left: 0; right: 0;
+            bottom: 0;
             display: flex;
             flex-direction: column;
             gap: 6px;
-            animation: laneFloat var(--lane-duration, 80s) linear infinite;
+            padding: 8px 0;
+            will-change: transform;
         }
         .workshop:hover .robot-lane {
-            animation-play-state: paused;
-        }
-        @keyframes laneFloat {
-            0% { transform: translateY(100%); }
-            100% { transform: translateY(var(--lane-end, -200%)); }
+            animation-play-state: paused !important;
         }
 
         /* Individual robot + commit card */
@@ -1528,17 +1526,38 @@
         // Build robot cards
         const cardsHTML = sorted.map((c, i) => robotCard(c, i)).join('');
 
-        // Calculate animation duration (~3s per card for readable speed)
-        const duration = Math.max(40, sorted.length * 3);
-
-        // Create the scrolling lane
+        // Create the scrolling lane (duplicate for seamless loop)
         feed.innerHTML = `
             <div class="workshop-fade"></div>
-            <div class="robot-lane" style="--lane-duration:${duration}s; --lane-end:-${100 + (sorted.length * 4)}%">
+            <div class="robot-lane">
                 ${cardsHTML}
                 ${cardsHTML}
             </div>
         `;
+
+        // After DOM renders, measure actual height and set up the scroll animation
+        requestAnimationFrame(() => {
+            const lane = feed.querySelector('.robot-lane');
+            if (!lane) return;
+            const halfHeight = lane.scrollHeight / 2;
+            const duration = Math.max(40, sorted.length * 2.5);
+
+            // Create a dynamic keyframe animation based on actual pixel height
+            const styleId = 'workshop-scroll-style';
+            let styleEl = document.getElementById(styleId);
+            if (!styleEl) {
+                styleEl = document.createElement('style');
+                styleEl.id = styleId;
+                document.head.appendChild(styleEl);
+            }
+            styleEl.textContent = `
+                @keyframes workshopScroll {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-${halfHeight}px); }
+                }
+            `;
+            lane.style.animation = `workshopScroll ${duration}s linear infinite`;
+        });
 
         // Add ambient floating particles
         for (let i = 0; i < 15; i++) {
