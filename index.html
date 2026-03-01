@@ -65,45 +65,100 @@
         .workshop {
             height: 520px;
             position: relative;
-            overflow: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
             border-radius: 0.5rem;
+            scroll-behavior: auto;
             background:
                 radial-gradient(ellipse at 50% 100%, rgba(249,115,22,0.06) 0%, transparent 60%),
                 radial-gradient(ellipse at 20% 30%, rgba(212,165,116,0.04) 0%, transparent 50%),
                 linear-gradient(to bottom, #0d1117 0%, #161b22 100%);
         }
+        .workshop::-webkit-scrollbar { width: 4px; }
+        .workshop::-webkit-scrollbar-track { background: transparent; }
+        .workshop::-webkit-scrollbar-thumb { background: rgba(249,115,22,0.25); border-radius: 4px; }
+        .workshop::-webkit-scrollbar-thumb:hover { background: rgba(249,115,22,0.5); }
         .workshop::before {
             content: '';
-            position: absolute;
-            inset: 0;
+            position: sticky;
+            top: 0;
+            display: block;
+            height: 0;
             background-image:
                 radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
             background-size: 32px 32px;
             pointer-events: none;
         }
-        .workshop-fade {
-            position: absolute;
-            inset: 0;
+        .workshop-fade-top, .workshop-fade-bottom {
+            position: sticky;
+            left: 0; right: 0;
+            height: 40px;
             pointer-events: none;
             z-index: 10;
-            background: linear-gradient(to bottom,
-                #0d1117 0%, transparent 8%,
-                transparent 90%, #0d1117 100%);
+        }
+        .workshop-fade-top {
+            top: 0;
+            background: linear-gradient(to bottom, #0d1117, transparent);
+        }
+        .workshop-fade-bottom {
+            bottom: 0;
+            background: linear-gradient(to top, #0d1117, transparent);
         }
 
-        /* Robot lane — scrolls upward, newest at bottom rises into view */
         .robot-lane {
-            position: absolute;
-            left: 0; right: 0;
-            bottom: 0;
             display: flex;
             flex-direction: column;
             gap: 6px;
             padding: 8px 0;
-            will-change: transform;
         }
-        .workshop:hover .robot-lane {
-            animation-play-state: paused !important;
+
+        /* Easter egg at the bottom */
+        .easter-egg {
+            text-align: center;
+            padding: 40px 20px 60px;
+            cursor: default;
+            user-select: none;
+        }
+        .easter-egg .egg {
+            font-size: 48px;
+            display: inline-block;
+            animation: eggWobble 2s ease-in-out infinite;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .easter-egg .egg:hover {
+            animation: eggCrack 0.5s ease forwards;
+        }
+        .easter-egg .egg-msg {
+            font-size: 11px;
+            color: #484f58;
+            margin-top: 8px;
+            opacity: 0;
+            transition: opacity 0.6s;
+        }
+        .easter-egg:hover .egg-msg { opacity: 1; }
+        .easter-egg .egg-secret {
+            display: none;
+            margin-top: 12px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: rgba(249,115,22,0.08);
+            border: 1px solid rgba(249,115,22,0.2);
+            font-size: 12px;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+        @keyframes eggWobble {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+        @keyframes eggCrack {
+            0% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.1) rotate(-8deg); }
+            50% { transform: scale(1.2) rotate(6deg); }
+            75% { transform: scale(1.3) rotate(-3deg); }
+            100% { transform: scale(1.4) rotate(0deg); }
         }
 
         /* Individual robot + commit card */
@@ -598,7 +653,6 @@
                 </div>
             </div>
             <div id="commit-feed" class="workshop">
-                <div class="workshop-fade"></div>
                 <div class="skeleton w-full h-full rounded"></div>
             </div>
             <p class="text-xs text-gh-muted mt-3 text-center">Hover to pause — a fleet of tiny engineers building across all repos</p>
@@ -1514,79 +1568,72 @@
 
     function renderCommitFeed(commits) {
         const feed = document.getElementById('commit-feed');
-        // Sort chronologically — oldest first, newest at bottom (rises into view)
+        // Sort chronologically — oldest first, newest at bottom
         const sorted = [...commits].sort((a, b) => new Date(a.date) - new Date(b.date));
 
-        // Count by type for the counter
-        const claudeCount = commits.filter(isClaudeCommit).length;
-        const davidCount = commits.filter(isDavidCommit).length;
         document.getElementById('commit-count').textContent =
             `${commits.length} commits`;
 
         if (commits.length === 0) {
-            feed.innerHTML = '<div class="workshop-fade"></div><p class="text-gh-muted text-center py-8 relative z-20">No commits found</p>';
+            feed.innerHTML = '<p class="text-gh-muted text-center py-8">No commits found</p>';
             return;
         }
 
         // Build robot cards
         const cardsHTML = sorted.map((c, i) => robotCard(c, i)).join('');
 
-        // Create the scrolling lane (duplicate for seamless loop)
-        feed.innerHTML = `
-            <div class="workshop-fade"></div>
-            <div class="robot-lane">
-                ${cardsHTML}
-                ${cardsHTML}
+        // Easter egg at the very bottom
+        const easterEggHTML = `
+            <div class="easter-egg" id="easter-egg">
+                <div class="egg" onclick="document.getElementById('egg-secret').style.display='block';this.textContent='🐣'">🥚</div>
+                <div class="egg-msg">You scrolled through all ${commits.length} commits. You earned this.</div>
+                <div class="egg-secret" id="egg-secret">
+                    🐣 <strong>Congrats, you found me!</strong><br><br>
+                    This entire dashboard was built by a human (David) and an AI (Claude) pair-programming together.<br>
+                    Every robot you see above represents a real commit — ${commits.filter(isClaudeCommit).length} co-authored with Claude,
+                    ${commits.filter(isDavidCommit).length} by David solo.<br><br>
+                    The future is humans and robots building things together. 🤖🧡👨‍💻<br><br>
+                    <a href="https://randomdrake.substack.com?utm_source=dashboard&utm_medium=easter_egg" target="_blank"
+                       style="color:#f97316;text-decoration:underline">Subscribe to see what we build next →</a>
+                </div>
             </div>
         `;
 
-        // After DOM renders, measure actual height and set up the scroll animation
-        requestAnimationFrame(() => {
-            const lane = feed.querySelector('.robot-lane');
-            if (!lane) return;
-            const totalHeight = lane.scrollHeight;
-            const halfHeight = totalHeight / 2;
-            const viewportHeight = feed.clientHeight;
-            const duration = Math.max(30, sorted.length * 2);
+        feed.innerHTML = `
+            <div class="workshop-fade-top"></div>
+            <div class="robot-lane">
+                ${cardsHTML}
+            </div>
+            ${easterEggHTML}
+            <div class="workshop-fade-bottom"></div>
+        `;
 
-            // Start position: second copy's bottom edge at workshop bottom
-            // This means we offset so content is visible immediately
-            const startY = viewportHeight - totalHeight;
+        // Start scrolled to the bottom (newest commits visible first)
+        feed.scrollTop = feed.scrollHeight;
 
-            const styleId = 'workshop-scroll-style';
-            let styleEl = document.getElementById(styleId);
-            if (!styleEl) {
-                styleEl = document.createElement('style');
-                styleEl.id = styleId;
-                document.head.appendChild(styleEl);
-            }
-            // Scroll up by exactly halfHeight (one copy). Since content is
-            // duplicated, this creates a seamless infinite loop.
-            styleEl.textContent = `
-                @keyframes workshopScroll {
-                    0% { transform: translateY(${startY}px); }
-                    100% { transform: translateY(${startY - halfHeight}px); }
+        // Auto-scroll upward slowly
+        let autoScrolling = true;
+        let userScrolled = false;
+        const SPEED = 0.6; // pixels per frame
+
+        function autoScroll() {
+            if (autoScrolling && !userScrolled) {
+                feed.scrollTop -= SPEED;
+                // Loop back to bottom when we hit the top
+                if (feed.scrollTop <= 0) {
+                    feed.scrollTop = feed.scrollHeight - feed.clientHeight;
                 }
-            `;
-            lane.style.position = 'absolute';
-            lane.style.top = '0';
-            lane.style.bottom = 'auto';
-            lane.style.animation = `workshopScroll ${duration}s linear infinite`;
-        });
-
-        // Add ambient floating particles
-        for (let i = 0; i < 15; i++) {
-            const p = document.createElement('div');
-            p.className = 'workshop-particle';
-            p.style.left = Math.random() * 100 + '%';
-            p.style.bottom = '-4px';
-            p.style.setProperty('--drift-x', (Math.random() * 40 - 20) + 'px');
-            p.style.animationDuration = (8 + Math.random() * 12) + 's';
-            p.style.animationDelay = (Math.random() * 10) + 's';
-            const colors = ['rgba(249,115,22,0.3)', 'rgba(212,165,116,0.3)', 'rgba(255,255,255,0.15)'];
-            p.style.background = colors[Math.floor(Math.random() * colors.length)];
-            feed.appendChild(p);
+            }
+            requestAnimationFrame(autoScroll);
         }
+
+        // Pause auto-scroll on hover or manual scroll
+        feed.addEventListener('mouseenter', () => { autoScrolling = false; });
+        feed.addEventListener('mouseleave', () => { autoScrolling = true; userScrolled = false; });
+        feed.addEventListener('wheel', () => { userScrolled = true; }, { passive: true });
+        feed.addEventListener('touchstart', () => { userScrolled = true; }, { passive: true });
+
+        requestAnimationFrame(autoScroll);
     }
 
     function renderActivityFeed(events) {
