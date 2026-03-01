@@ -191,40 +191,9 @@
         .robot-card.bot { border-color: rgba(82, 82, 91, 0.3); opacity: 0.6; }
 
         .card-emoji {
-            font-size: 22px;
+            font-size: 20px;
             line-height: 1;
             flex-shrink: 0;
-            display: inline-block;
-            animation: emojiFloat 3s ease-in-out infinite;
-        }
-        .robot-card:nth-child(3n)   .card-emoji { animation-delay: 0s; }
-        .robot-card:nth-child(3n+1) .card-emoji { animation-delay: -1s; }
-        .robot-card:nth-child(3n+2) .card-emoji { animation-delay: -2s; }
-        @keyframes emojiFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
-        }
-
-        /* Sparkle trail behind robots */
-        .sparkle-trail {
-            position: absolute;
-            left: 14px; top: 50%;
-            width: 3px; height: 3px;
-            border-radius: 50%;
-            background: currentColor;
-            opacity: 0;
-            animation: sparkleFloat 1.8s ease-out infinite;
-            pointer-events: none;
-        }
-        .robot-card.claude .sparkle-trail { color: #e8c49a; }
-        .robot-card.david .sparkle-trail { color: #fb923c; }
-        .robot-card.bot .sparkle-trail { color: #71717a; }
-        .sparkle-trail:nth-child(1) { animation-delay: 0s; left: 8px; }
-        .sparkle-trail:nth-child(2) { animation-delay: 0.6s; left: 18px; }
-        .sparkle-trail:nth-child(3) { animation-delay: 1.2s; left: 12px; }
-        @keyframes sparkleFloat {
-            0% { opacity: 0.8; transform: translateY(0) scale(1); }
-            100% { opacity: 0; transform: translateY(20px) scale(0); }
         }
 
         /* Author tag */
@@ -1200,9 +1169,6 @@
         return `
         <a href="${c.url}" target="_blank" rel="noopener"
            class="robot-card ${type}" style="${align}; transform: translateX(${nudge - 15}px)">
-            <div class="sparkle-trail"></div>
-            <div class="sparkle-trail"></div>
-            <div class="sparkle-trail"></div>
             <span class="card-emoji" title="${c.repo}">${cardEmoji(c)}</span>
             <div style="min-width:0;flex:1">
                 <p style="font-size:12px;color:#e6edf3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0">${c.message.replace(/</g, '&lt;')}</p>
