@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-02T06:20:15.316Z",
+  "generated_at": "2026-03-02T12:12:05.675Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-02T00:21:45Z",
-      "pushed_at": "2026-03-02T00:21:41Z"
+      "updated_at": "2026-03-02T06:20:19Z",
+      "pushed_at": "2026-03-02T06:20:16Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -175,8 +175,8 @@
       "language": "TypeScript",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-02T06:01:04Z",
-      "pushed_at": "2026-03-02T06:00:39Z"
+      "updated_at": "2026-03-02T07:54:16Z",
+      "pushed_at": "2026-03-02T07:54:13Z"
     },
     {
       "name": "swagger-ui",
@@ -245,8 +245,8 @@
       "CSS": 58
     },
     "reddep.com": {
-      "TypeScript": 55793,
-      "CSS": 2796,
+      "TypeScript": 84157,
+      "CSS": 2836,
       "JavaScript": 559
     },
     "swagger-ui": {
@@ -259,6 +259,51 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "77e475caa51830e25b63d758b420c31e17abdaae",
+      "message": "Add Vercel Analytics and update privacy policy",
+      "full_message": "Add Vercel Analytics and update privacy policy\n\nInstall @vercel/analytics and add the <Analytics /> component to the\nroot layout. Update the privacy policy to accurately describe the\ncookieless, privacy-friendly page view metrics.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T07:54:07Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/77e475caa51830e25b63d758b420c31e17abdaae"
+    },
+    {
+      "sha": "17a5c2c5c3fd45bfe654f3384e09a09ed343b129",
+      "message": "Add Privacy, Terms, Accessibility pages and remove Book footer link",
+      "full_message": "Add Privacy, Terms, Accessibility pages and remove Book footer link\n\nCreate three new legal pages (privacy policy, terms of service,\naccessibility statement) with proper metadata, SectionWrapper layout,\nand prose styling matching existing site patterns. Remove the \"Book\"\nlink from the footer since it's redundant with the About page mention.\nWire up the three placeholder # links to their new routes.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T07:51:52Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/17a5c2c5c3fd45bfe654f3384e09a09ed343b129"
+    },
+    {
+      "sha": "f376d063150f507539aa5b17f37de0182e41c007",
+      "message": "Hide subtitle on mobile to prevent header text wrapping",
+      "full_message": "Hide subtitle on mobile to prevent header text wrapping\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T07:35:54Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/f376d063150f507539aa5b17f37de0182e41c007"
+    },
+    {
+      "sha": "5631e74dcbca67b344c527a922da801ad67276f9",
+      "message": "Add cross-marketing, orange accent, animated hero, and emojis",
+      "full_message": "Add cross-marketing, orange accent, animated hero, and emojis\n\n- Add Writing section with book (IWNDWYT) and Substack (Narrative\n  Compression) cards for cross-marketing funnel between About and Booking\n- Weave book and Substack mentions into About, LeaderProfile, Contact,\n  and Footer\n- Add sameAs links to JSON-LD structured data for SEO cross-linking\n- Switch accent color from blue to bright orange (#FF8C00 buttons with\n  dark text, #CC6B00 links) across all interactive elements\n- Add animated mathematical gradient (sine wave interference) to Hero\n  with white radial overlay for readability\n- Add tasteful emojis to services, values, credentials, booking tiers,\n  writing cards, and section headings\n- Add \"Made with 🌲 in Oregon\" to footer\n- Respect prefers-reduced-motion for gradient animation\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T07:31:35Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/5631e74dcbca67b344c527a922da801ad67276f9"
+    },
+    {
+      "sha": "e5d8ad00dddbe1eb8ed9102c2a85c2f44f765602",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-02T06:20:15Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e5d8ad00dddbe1eb8ed9102c2a85c2f44f765602"
+    },
     {
       "sha": "e0e8efa92ac78dd1e3c5d31f5ef8a09959c0b36a",
       "message": "Add photo, logo/favicon, OG image, and left-align all text",
@@ -420,15 +465,6 @@
       "date": "2026-03-01T03:31:31Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e79ae939a8d96829b1cf5f5898c39a5e7f184624"
-    },
-    {
-      "sha": "e06f9ac0ab22b031098b4c34cb11b289a40fe3ab",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T03:20:08Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e06f9ac0ab22b031098b4c34cb11b289a40fe3ab"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1359,6 +1395,70 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1170279302,
+        "name": "randomdrake/reddep.com",
+        "url": "https://api.github.com/repos/randomdrake/reddep.com"
+      },
+      "payload": {
+        "repository_id": 1170279302,
+        "push_id": 31233818124,
+        "ref": "refs/heads/main",
+        "head": "77e475caa51830e25b63d758b420c31e17abdaae",
+        "before": "17a5c2c5c3fd45bfe654f3384e09a09ed343b129"
+      },
+      "created_at": "2026-03-02T07:54:13Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1170279302,
+        "name": "randomdrake/reddep.com",
+        "url": "https://api.github.com/repos/randomdrake/reddep.com"
+      },
+      "payload": {
+        "repository_id": 1170279302,
+        "push_id": 31233762916,
+        "ref": "refs/heads/main",
+        "head": "17a5c2c5c3fd45bfe654f3384e09a09ed343b129",
+        "before": "f376d063150f507539aa5b17f37de0182e41c007"
+      },
+      "created_at": "2026-03-02T07:52:00Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1170279302,
+        "name": "randomdrake/reddep.com",
+        "url": "https://api.github.com/repos/randomdrake/reddep.com"
+      },
+      "payload": {
+        "repository_id": 1170279302,
+        "push_id": 31233370668,
+        "ref": "refs/heads/main",
+        "head": "f376d063150f507539aa5b17f37de0182e41c007",
+        "before": "5631e74dcbca67b344c527a922da801ad67276f9"
+      },
+      "created_at": "2026-03-02T07:35:55Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1170279302,
+        "name": "randomdrake/reddep.com",
+        "url": "https://api.github.com/repos/randomdrake/reddep.com"
+      },
+      "payload": {
+        "repository_id": 1170279302,
+        "push_id": 31233267441,
+        "ref": "refs/heads/main",
+        "head": "5631e74dcbca67b344c527a922da801ad67276f9",
+        "before": "e0e8efa92ac78dd1e3c5d31f5ef8a09959c0b36a"
+      },
+      "created_at": "2026-03-02T07:31:41Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
@@ -2688,75 +2788,11 @@
         "before": "ec49b608b0bbf13788f1dbb2435e7b079e3e376c"
       },
       "created_at": "2026-03-01T03:16:51Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205635129,
-        "ref": "refs/heads/main",
-        "head": "5025a2d31bc1d2086371cf61dbb8e00db54900c1",
-        "before": "73ef0af767bad342ecc1e0357c3e3cdccb6f8feb"
-      },
-      "created_at": "2026-03-01T03:10:48Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205558652,
-        "ref": "refs/heads/main",
-        "head": "e4b431d1beac910a0e902ce37b8043c0b628c1c7",
-        "before": "a9b9b4992264c9f2fb3cb87495c00d507c7e299f"
-      },
-      "created_at": "2026-03-01T03:04:39Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205550632,
-        "ref": "refs/heads/main",
-        "head": "97dcec37e0aad9289aa82fabafbf7c1bfd02eb47",
-        "before": "ef47c422260b8f68301daaaabaa71d33b21afacf"
-      },
-      "created_at": "2026-03-01T03:04:04Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205402195,
-        "ref": "refs/heads/main",
-        "head": "44e84b4f11317bef38340527dbbc8ea50739ab16",
-        "before": "47e22f9ed3b699a3bd6f3f92d3e00e338937e37e"
-      },
-      "created_at": "2026-03-01T02:54:08Z"
     }
   ],
   "stats": {
     "total_stars": 203,
     "total_forks": 69,
-    "total_code_bytes": 1391242
+    "total_code_bytes": 1419646
   }
 }
