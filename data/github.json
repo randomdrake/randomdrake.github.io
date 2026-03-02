@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-02T12:12:05.675Z",
+  "generated_at": "2026-03-02T18:14:54.722Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-02T06:20:19Z",
-      "pushed_at": "2026-03-02T06:20:16Z"
+      "updated_at": "2026-03-02T12:12:10Z",
+      "pushed_at": "2026-03-02T12:12:06Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -259,6 +259,15 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "fcc1b197eec019b7817b5543d67256a9ca34385a",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-02T12:12:05Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/fcc1b197eec019b7817b5543d67256a9ca34385a"
+    },
     {
       "sha": "77e475caa51830e25b63d758b420c31e17abdaae",
       "message": "Add Vercel Analytics and update privacy policy",
@@ -456,15 +465,6 @@
       "date": "2026-03-01T03:32:05Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/ff2166ce70a6262e08761352da8fadfc7d2d2b09"
-    },
-    {
-      "sha": "e79ae939a8d96829b1cf5f5898c39a5e7f184624",
-      "message": "Unify commit and pipeline feeds into single chronological stream",
-      "full_message": "Unify commit and pipeline feeds into single chronological stream\n\nLeft-justified feed replaces alternating robot cards and separate pipeline\nsection. Commits and pipeline runs merged chronologically with color-coded\nleft borders (orange for David, tan for Claude, green/red/yellow for pipelines).\nRemoved unused pipeline CSS.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T03:31:31Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e79ae939a8d96829b1cf5f5898c39a5e7f184624"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
