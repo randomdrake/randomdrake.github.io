@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03T12:11:48.557Z",
+  "generated_at": "2026-03-03T18:16:00.277Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-03T06:17:32Z",
-      "pushed_at": "2026-03-03T06:17:28Z"
+      "updated_at": "2026-03-03T12:11:53Z",
+      "pushed_at": "2026-03-03T12:11:49Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -259,6 +259,15 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "41ef9cf813301650c60b7ab2f9842d4a58343ae3",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-03T12:11:48Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/41ef9cf813301650c60b7ab2f9842d4a58343ae3"
+    },
     {
       "sha": "f6ecb0dc14b140393e2858733576b868e617d646",
       "message": "Update GitHub data [automated]",
@@ -456,15 +465,6 @@
       "date": "2026-03-01T04:10:30Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/7a5a37cb00e4e993459e81a80609a769466b8f2a"
-    },
-    {
-      "sha": "4b16810115f5c0b4bed362ddb89bcd1b564e982c",
-      "message": "Remove Recent Activity section — redundant with unified feed",
-      "full_message": "Remove Recent Activity section — redundant with unified feed\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T04:10:13Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/4b16810115f5c0b4bed362ddb89bcd1b564e982c"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
