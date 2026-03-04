@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-04T12:11:20.349Z",
+  "generated_at": "2026-03-04T18:14:37.427Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
     "location": "Oregon",
     "blog": "https://davidbyrondrake.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
-    "public_repos": 16,
+    "public_repos": 18,
     "followers": 28
   },
   "repos": [
@@ -107,6 +107,18 @@
       "pushed_at": "2018-06-11T19:14:57Z"
     },
     {
+      "name": "lobehub",
+      "full_name": "randomdrake/lobehub",
+      "html_url": "https://github.com/randomdrake/lobehub",
+      "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+      "fork": true,
+      "language": null,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-03-04T16:46:40Z",
+      "pushed_at": "2026-03-04T16:44:59Z"
+    },
+    {
       "name": "nasa-apod-desktop",
       "full_name": "randomdrake/nasa-apod-desktop",
       "html_url": "https://github.com/randomdrake/nasa-apod-desktop",
@@ -151,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-04T06:15:30Z",
-      "pushed_at": "2026-03-04T06:15:27Z"
+      "updated_at": "2026-03-04T12:11:24Z",
+      "pushed_at": "2026-03-04T12:11:21Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -177,6 +189,18 @@
       "forks_count": 0,
       "updated_at": "2026-03-02T07:54:16Z",
       "pushed_at": "2026-03-02T07:54:13Z"
+    },
+    {
+      "name": "slack-to-discord",
+      "full_name": "randomdrake/slack-to-discord",
+      "html_url": "https://github.com/randomdrake/slack-to-discord",
+      "description": "Import a Slack export into a Discord server",
+      "fork": true,
+      "language": null,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-03-04T18:08:32Z",
+      "pushed_at": "2026-03-04T18:12:56Z"
     },
     {
       "name": "swagger-ui",
@@ -225,6 +249,18 @@
     "journal-down": {
       "Shell": 4856
     },
+    "lobehub": {
+      "TypeScript": 26720283,
+      "HTML": 215694,
+      "JavaScript": 57586,
+      "Shell": 45175,
+      "Gherkin": 29870,
+      "MDX": 11645,
+      "Dockerfile": 11429,
+      "PLpgSQL": 9963,
+      "TeX": 1797,
+      "CSS": 1498
+    },
     "nasa-apod-desktop": {
       "Python": 15553
     },
@@ -249,6 +285,9 @@
       "CSS": 2836,
       "JavaScript": 559
     },
+    "slack-to-discord": {
+      "Python": 48583
+    },
     "swagger-ui": {
       "JavaScript": 287744,
       "CSS": 31514,
@@ -259,6 +298,87 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "a0c6c9765c3b58a59d1db6c4047396cab2166c13",
+      "message": "🐛 fix: use keyPrefix to fix discord bot conflict (#12638)",
+      "full_message": "🐛 fix: use keyPrefix to fix discord bot conflict (#12638)\n\nsupport keyPrefix",
+      "repo": "lobehub",
+      "date": "2026-03-04T16:01:40Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/a0c6c9765c3b58a59d1db6c4047396cab2166c13"
+    },
+    {
+      "sha": "ab376d9185f8951aff782af8b957ed2184bc5b8f",
+      "message": "✨ feat: add device code auth flow (#12697)",
+      "full_message": "✨ feat: add device code auth flow (#12697)\n\n* add i18n\n\n* fix types",
+      "repo": "lobehub",
+      "date": "2026-03-04T15:58:41Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/ab376d9185f8951aff782af8b957ed2184bc5b8f"
+    },
+    {
+      "sha": "08b23a97326c980962f0f5540f735f7092396708",
+      "message": "✨ feat(google): add gemini-3.1-flash-lite-preview model and thinkingLevel5 extend param (#12652)",
+      "full_message": "✨ feat(google): add gemini-3.1-flash-lite-preview model and thinkingLevel5 extend param (#12652)",
+      "repo": "lobehub",
+      "date": "2026-03-04T15:39:49Z",
+      "author": "YuTengjing",
+      "url": "https://github.com/randomdrake/lobehub/commit/08b23a97326c980962f0f5540f735f7092396708"
+    },
+    {
+      "sha": "1fece1f8d9c01673894153f7b9a420394cefd010",
+      "message": "🔨 chore: update the market sdk to 0.31.3 (#12693)",
+      "full_message": "🔨 chore: update the market sdk to 0.31.3 (#12693)\n\nchore: update the market sdk to 0.31.3",
+      "repo": "lobehub",
+      "date": "2026-03-04T13:50:58Z",
+      "author": "LiJian",
+      "url": "https://github.com/randomdrake/lobehub/commit/1fece1f8d9c01673894153f7b9a420394cefd010"
+    },
+    {
+      "sha": "07997b44a534bded1080e560d42baa59f4f26574",
+      "message": "🐛 fix: skew plugin (#12669)",
+      "full_message": "🐛 fix: skew plugin (#12669)\n\n* fix: skew plugin\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n* refactor(vite): enhance vercelSkewProtection to handle static imports and improve coverage\n\n- Added handling for static import/export declarations to ensure correct deployment links.\n- Updated coverage documentation to reflect new handling for static imports and additional cases.\n- Adjusted comment numbering for clarity in the processing steps.\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n* fix: dev proxy\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n* refactor(AssistantGroup): streamline contentId handling in GroupMessage component\n\n- Simplified the logic for determining contentId by directly using lastAssistantMsg?.id.\n- Moved the creation and generation state checks to follow the contentId assignment for better clarity.\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n* ♻️ refactor: remove chunk error reload retry, keep notification only\n\nMade-with: Cursor\n\n* fix: inject\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n---------\n\nSigned-off-by: Innei <tukon479@gmail.com>",
+      "repo": "lobehub",
+      "date": "2026-03-04T13:47:31Z",
+      "author": "Innei",
+      "url": "https://github.com/randomdrake/lobehub/commit/07997b44a534bded1080e560d42baa59f4f26574"
+    },
+    {
+      "sha": "6ffd3cd06f6106fc6c2a42465a823d5a33ea99cf",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-04T12:11:20Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6ffd3cd06f6106fc6c2a42465a823d5a33ea99cf"
+    },
+    {
+      "sha": "5d19dbf430f7df6103f0cce6ad84c4338ae8a201",
+      "message": "fix: Move email contact (#12323)",
+      "full_message": "fix: Move email contact (#12323)\n\n* fix: Move email contact\n\n* style: profile\n\n* fix: urk\n\n* fix: urk\n\n* feat: loading indicator\n\n* fix: build error\n\n* fix: sort\n\n* fix: sort\n\n* fix: sort\n\n* fix: sort\n\n* fix: sort",
+      "repo": "lobehub",
+      "date": "2026-03-04T11:37:31Z",
+      "author": "René Wang",
+      "url": "https://github.com/randomdrake/lobehub/commit/5d19dbf430f7df6103f0cce6ad84c4338ae8a201"
+    },
+    {
+      "sha": "3f1473d65f0ae3f8717e1522ffc13bf55929291e",
+      "message": "fix(userMemories,database): should not fail if extra structure mismatch (#12686)",
+      "full_message": "fix(userMemories,database): should not fail if extra structure mismatch (#12686)",
+      "repo": "lobehub",
+      "date": "2026-03-04T11:09:13Z",
+      "author": "Neko",
+      "url": "https://github.com/randomdrake/lobehub/commit/3f1473d65f0ae3f8717e1522ffc13bf55929291e"
+    },
+    {
+      "sha": "bf5d6ce2f8d8662781cafa4084df5b42dffd9211",
+      "message": "🐛 fix: updown the old lobehub plugins (#12674)",
+      "full_message": "🐛 fix: updown the old lobehub plugins (#12674)\n\n* fix: updown the old lobehub plugins\n\n* fix: update test.ts",
+      "repo": "lobehub",
+      "date": "2026-03-04T10:05:43Z",
+      "author": "LiJian",
+      "url": "https://github.com/randomdrake/lobehub/commit/bf5d6ce2f8d8662781cafa4084df5b42dffd9211"
+    },
     {
       "sha": "65cbc21b4fd786379c3be10bde175c68ff5ddf38",
       "message": "Update GitHub data [automated]",
@@ -287,6 +407,51 @@
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/0a1a8acf824c081b785e4f143caa4b00e73d7667"
     },
     {
+      "sha": "6ba657e6d089fee2a0b6c7c2ba74bc73a954c93b",
+      "message": "🔨 chore: fix to improve gateway (#12647)",
+      "full_message": "🔨 chore: fix to improve gateway (#12647)\n\nimprove gateway",
+      "repo": "lobehub",
+      "date": "2026-03-03T16:10:53Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/6ba657e6d089fee2a0b6c7c2ba74bc73a954c93b"
+    },
+    {
+      "sha": "c2a49342f027c1be20e9c7e99aa873afc6e3b27b",
+      "message": "🔨 chore: update device gateway ci (#12645)",
+      "full_message": "🔨 chore: update device gateway ci (#12645)\n\nimprove gateway",
+      "repo": "lobehub",
+      "date": "2026-03-03T15:41:51Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/c2a49342f027c1be20e9c7e99aa873afc6e3b27b"
+    },
+    {
+      "sha": "d92bb7a8e826a7c60e12180dabe04b7371f93866",
+      "message": "🐛 fix(context-engine): allow tool type recovery from manifest when models strip suffixes (#12636)",
+      "full_message": "🐛 fix(context-engine): allow tool type recovery from manifest when models strip suffixes (#12636)\n\n🐛 fix(context-engine): allow tool type recovery from manifest when models like GLM strip suffixes",
+      "repo": "lobehub",
+      "date": "2026-03-03T15:35:07Z",
+      "author": "Luis Sambrano",
+      "url": "https://github.com/randomdrake/lobehub/commit/d92bb7a8e826a7c60e12180dabe04b7371f93866"
+    },
+    {
+      "sha": "f223aeb7f478aa88b0ca15fbff3da3e828991a09",
+      "message": " 🔨 chore: improve gateway (#12643)",
+      "full_message": " 🔨 chore: improve gateway (#12643)\n\nimprove gateway",
+      "repo": "lobehub",
+      "date": "2026-03-03T15:26:46Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/f223aeb7f478aa88b0ca15fbff3da3e828991a09"
+    },
+    {
+      "sha": "90714af0dce51c9d5ab20f977d9ca48c4a451aa8",
+      "message": "🐛 fix: add await to handleResponseAPIMode to ensure proper error handling (#12640)",
+      "full_message": "🐛 fix: add await to handleResponseAPIMode to ensure proper error handling (#12640)",
+      "repo": "lobehub",
+      "date": "2026-03-03T13:56:57Z",
+      "author": "YuTengjing",
+      "url": "https://github.com/randomdrake/lobehub/commit/90714af0dce51c9d5ab20f977d9ca48c4a451aa8"
+    },
+    {
       "sha": "41ef9cf813301650c60b7ab2f9842d4a58343ae3",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -294,6 +459,24 @@
       "date": "2026-03-03T12:11:48Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/41ef9cf813301650c60b7ab2f9842d4a58343ae3"
+    },
+    {
+      "sha": "936379bd218cd2c62a2917758e10e0302dc63d87",
+      "message": "Merge remote-tracking branch 'origin/main' into canary",
+      "full_message": "Merge remote-tracking branch 'origin/main' into canary",
+      "repo": "lobehub",
+      "date": "2026-03-03T12:07:53Z",
+      "author": "lobehubbot",
+      "url": "https://github.com/randomdrake/lobehub/commit/936379bd218cd2c62a2917758e10e0302dc63d87"
+    },
+    {
+      "sha": "a2c2a0ae76845365ef344a7ee54f2b14efa5fa81",
+      "message": "🚀 release: 20260303 (#12631)",
+      "full_message": "🚀 release: 20260303 (#12631)\n\nThis release includes **90 commits**. Key updates are below.\n\n### ✨ New Features and Enhancements\n\n- 🤖 Added **Discord IM bot integration** for receiving and responding to\nmessages within Discord channels.\n([#12517](https://github.com/lobehub/lobehub/pull/12517))\n- 🧩 Introduced **Agent Skills** support with progressive disclosure via\n`lobe-tools`, allowing agents to expose task-specific capabilities.\n([#12424](https://github.com/lobehub/lobehub/pull/12424),\n[#12489](https://github.com/lobehub/lobehub/pull/12489))\n- 🧠 Added **Memory Settings** for configuring memory effort and tool\npermissions. ([#12514](https://github.com/lobehub/lobehub/pull/12514))\n- 📧 Support for **changing email address** in profile settings.\n([#12549](https://github.com/lobehub/lobehub/pull/12549))\n- 🛡️ Added **unsaved changes guard** to prevent data loss on navigation.\n([#12332](https://github.com/lobehub/lobehub/pull/12332))\n- 🖱��� Support **Cmd+Click to open sidebar nav in new tab**.\n([#12574](https://github.com/lobehub/lobehub/pull/12574))\n- 🧮 Added **calculator builtin tool** for agents.\n([#11715](https://github.com/lobehub/lobehub/pull/11715))\n- 🎬 Added **video tab** to provider ModelList settings page with image\ndimension/aspect ratio constraints for uploads.\n([#12534](https://github.com/lobehub/lobehub/pull/12534),\n[#12607](https://github.com/lobehub/lobehub/pull/12607))\n- 🎯 Center active model on open in **model switch panel**.\n([#12215](https://github.com/lobehub/lobehub/pull/12215))\n- 🕹️ Support **agent management**.\n([#12061](https://github.com/lobehub/lobehub/pull/12061))\n\n### 🤖 Models and Provider Expansion\n\n- 🌟 Added **Kimi K2 thinking models** (Moonshot).\n([#12630](https://github.com/lobehub/lobehub/pull/12630))\n- 🍌 Added **Nano Banana 2** support.\n([#12493](https://github.com/lobehub/lobehub/pull/12493),\n[#12496](https://github.com/lobehub/lobehub/pull/12496))\n- 🎨 Added **Seedream 5 Lite** image generation model.\n([#12459](https://github.com/lobehub/lobehub/pull/12459))\n- 💨 Added **Qwen3.5 Flash** and Qwen3.5 OSS models.\n([#12465](https://github.com/lobehub/lobehub/pull/12465))\n- 🔮 Added **GLM-5**, **GLM-4.6V**, and **GLM-Image** for Zhipu.\n([#12272](https://github.com/lobehub/lobehub/pull/12272))\n- ���� Batch updated model lists for AI360, Hunyuan, InternLM, Spark,\nStepFun, Wenxin, and Seedream.\n([#12371](https://github.com/lobehub/lobehub/pull/12371))\n- 🗑️ Removed deprecated `chatgpt-4o-latest`.\n([#12486](https://github.com/lobehub/lobehub/pull/12486))\n- ➕ Supplemented models from NewAPI pricing endpoint.\n([#10628](https://github.com/lobehub/lobehub/pull/10628))\n\n### 🏗️ Architecture\n\n- ⚡ **Migrated frontend from Next.js App Router to Vite SPA** — a major\narchitectural change improving dev experience and build performance.\n([#12404](https://github.com/lobehub/lobehub/pull/12404))\n- 📂 Restructured SPA routes to `src/routes` and `src/router`.\n([#12542](https://github.com/lobehub/lobehub/pull/12542))\n- ♻️ Refactored client agent runtime.\n([#12482](https://github.com/lobehub/lobehub/pull/12482))\n- 🔥 Removed invite code requirement feature.\n([#12474](https://github.com/lobehub/lobehub/pull/12474))\n\n### 🖥️ Desktop Improvements\n\n- 🔧 Fixed better-auth client stub for Electron renderer.\n([#12563](https://github.com/lobehub/lobehub/pull/12563))\n\n### Stability, Security, and UX Fixes\n\n- Fixed topic/thread title summarization to respect `responseLanguage`\nsetting. ([#12627](https://github.com/lobehub/lobehub/pull/12627))\n- Fixed MCP tool install loading state.\n([#12629](https://github.com/lobehub/lobehub/pull/12629))\n- Fixed mermaid rendering in notebook documents.\n([#12624](https://github.com/lobehub/lobehub/pull/12624))\n- Fixed global memory setting and tool enabled logic.\n([#12610](https://github.com/lobehub/lobehub/pull/12610))\n- Fixed Vertex AI 400 error caused by duplicate tool function\ndeclarations. ([#12604](https://github.com/lobehub/lobehub/pull/12604))\n- Fixed multiple Vertex AI and Moonshot runtime issues.\n([#12595](https://github.com/lobehub/lobehub/pull/12595))\n- Fixed SiliconCloud model thinking mode toggle.\n([#10011](https://github.com/lobehub/lobehub/pull/10011))\n- Fixed DeepSeek-Reasoner `reasoning_content` for tool calls.\n([#12564](https://github.com/lobehub/lobehub/pull/12564))\n- Fixed Google API key header passing (`x-goog-api-key`).\n([#12506](https://github.com/lobehub/lobehub/pull/12506))\n- Fixed `@napi-rs/canvas` hoisting for PDF parsing in Docker.\n([#12475](https://github.com/lobehub/lobehub/pull/12475))\n- Fixed model select panel flickering and improved list implementation.\n([#12485](https://github.com/lobehub/lobehub/pull/12485))\n- Fixed memory tools to run in server correctly with correct cron\nschedule. ([#12471](https://github.com/lobehub/lobehub/pull/12471),\n[#12568](https://github.com/lobehub/lobehub/pull/12568))\n- Fixed group agent rename, skill search, and editor focus issues in\nagent settings.\n([#12511](https://github.com/lobehub/lobehub/pull/12511),\n[#12432](https://github.com/lobehub/lobehub/pull/12432),\n[#12512](https://github.com/lobehub/lobehub/pull/12512))\n- Fixed NewAPI proxy gzip handling.\n([#10628](https://github.com/lobehub/lobehub/pull/10628))\n- Fixed provider request filtering for disabling browser requests.\n([#12002](https://github.com/lobehub/lobehub/pull/12002))\n- Fixed `input_image` incorrectly passed when no `image_url` present.\n([#12017](https://github.com/lobehub/lobehub/pull/12017))\n- Fixed crawler error handling and timeout cancellation.\n([#12487](https://github.com/lobehub/lobehub/pull/12487))\n- Added username and fullName length validation.\n([#12614](https://github.com/lobehub/lobehub/pull/12614))\n- Added database migration to Vercel build command.\n([#12551](https://github.com/lobehub/lobehub/pull/12551))\n- Improved auth db fallback for secondary-storage sessions.\n([#12548](https://github.com/lobehub/lobehub/pull/12548))\n- Fixed type not preserved when model batch processing.\n([#10015](https://github.com/lobehub/lobehub/pull/10015))\n- Fixed search issue.\n([#12457](https://github.com/lobehub/lobehub/pull/12457))\n\n### 🙏 Credits\n\nHuge thanks to these contributors (alphabetical):\n\n@Innei @arvinxx @canisminor1990 @cy948 @eaten-cake @eronez @hezhijie0327\n@mikelambert @nekomeowww @rdmclin2 @sxjeru @tjx666",
+      "repo": "lobehub",
+      "date": "2026-03-03T12:07:11Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/a2c2a0ae76845365ef344a7ee54f2b14efa5fa81"
     },
     {
       "sha": "f6ecb0dc14b140393e2858733576b868e617d646",
@@ -458,15 +641,6 @@
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/aafeab92a2d061d1b0c4d0646eae597667f19b5d"
     },
     {
-      "sha": "82613b55fb1f1b5c5a1acea463274de4ce42563e",
-      "message": "Replace SVG data URI with CSS radial-gradient for dot pattern",
-      "full_message": "Replace SVG data URI with CSS radial-gradient for dot pattern\n\nAvoids encoding issues that caused raw text to render on the page.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T06:11:36Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/82613b55fb1f1b5c5a1acea463274de4ce42563e"
-    },
-    {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
       "message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
       "full_message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
@@ -537,6 +711,141 @@
       "date": "2026-02-28T22:22:21Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake/commit/38a9ddf512ef40ff2bb56b45b75b1df87ccd4238"
+    },
+    {
+      "sha": "6a093482747625e13c43866dcd6de583ab015f70",
+      "message": "Ensure export file is valid before starting",
+      "full_message": "Ensure export file is valid before starting\n\nProduces a much better error than a generic `FileNotFoundError` when the\nimport initially attempts to access `users.json`.\n\nAlso transparently handles the case where the export file has been\nmodified and the export contents have accidentally been nested under a\ntop-level folder.\n\nFixes #37",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T06:24:12Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/6a093482747625e13c43866dcd6de583ab015f70"
+    },
+    {
+      "sha": "8368bc1e99945e22cf4a690f256bd14d18d9c419",
+      "message": "Improve error message for files that fail to upload",
+      "full_message": "Improve error message for files that fail to upload",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T05:43:08Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/8368bc1e99945e22cf4a690f256bd14d18d9c419"
+    },
+    {
+      "sha": "8a8bef5e908b4f690dff088d674771234a82dada",
+      "message": "Fix some markdown formatting differences",
+      "full_message": "Fix some markdown formatting differences\n\nCo-authored-by: Alex Nisnevich <alex.nisnevich@gmail.com>",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T05:40:45Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/8a8bef5e908b4f690dff088d674771234a82dada"
+    },
+    {
+      "sha": "646a06099b763879cfa01cec91bcb3ad6fd965b0",
+      "message": "Preserve the original text of links",
+      "full_message": "Preserve the original text of links\n\nCo-authored-by: Alex Nisnevich <alex.nisnevich@gmail.com>",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T03:48:29Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/646a06099b763879cfa01cec91bcb3ad6fd965b0"
+    },
+    {
+      "sha": "706500d8ed8f0b6f50a844566aeb87cbb9c1ff50",
+      "message": "Remove 'subteam^' prefix from subteam/user group mentions",
+      "full_message": "Remove 'subteam^' prefix from subteam/user group mentions",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T03:22:47Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/706500d8ed8f0b6f50a844566aeb87cbb9c1ff50"
+    },
+    {
+      "sha": "e2e7ae1b489dcbeea326d0d31bcb3d3d6bb0d14f",
+      "message": "Correctly handle #channel links that only have channel ID rather than name",
+      "full_message": "Correctly handle #channel links that only have channel ID rather than name\n\nCo-authored-by: Alex Nisnevich <alex.nisnevich@gmail.com>",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T02:21:28Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/e2e7ae1b489dcbeea326d0d31bcb3d3d6bb0d14f"
+    },
+    {
+      "sha": "06a3d5a246299d7406f01e31dc4dff09ef617e68",
+      "message": "Fix for messages that don't include any text",
+      "full_message": "Fix for messages that don't include any text",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T01:53:34Z",
+      "author": "Alex Nisnevich",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/06a3d5a246299d7406f01e31dc4dff09ef617e68"
+    },
+    {
+      "sha": "8340d298527444089ca6c798f9b74b61083587c3",
+      "message": "Add better fallback for bot display name",
+      "full_message": "Add better fallback for bot display name",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T01:49:23Z",
+      "author": "Alex Nisnevich",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/8340d298527444089ca6c798f9b74b61083587c3"
+    },
+    {
+      "sha": "44ba2ce6296a6abb2830e6f58a5643bf6df0a75f",
+      "message": "Add fallback for user profile images",
+      "full_message": "Add fallback for user profile images",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T01:47:06Z",
+      "author": "Alex Nisnevich",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/44ba2ce6296a6abb2830e6f58a5643bf6df0a75f"
+    },
+    {
+      "sha": "77a7427e42c73d8274ed43e02c31edd8302ef3f4",
+      "message": "Merge pull request #39 from pR0Ps/feature/datetime-formats",
+      "full_message": "Merge pull request #39 from pR0Ps/feature/datetime-formats\n\nAdd customizable date and time formats via CLI flags",
+      "repo": "slack-to-discord",
+      "date": "2025-11-14T01:31:45Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/77a7427e42c73d8274ed43e02c31edd8302ef3f4"
+    },
+    {
+      "sha": "034a8e892cf0cc466e11b4dbf569de15f37f2803",
+      "message": "Fix thread names with empty date+time formats",
+      "full_message": "Fix thread names with empty date+time formats",
+      "repo": "slack-to-discord",
+      "date": "2025-07-04T04:03:02Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/034a8e892cf0cc466e11b4dbf569de15f37f2803"
+    },
+    {
+      "sha": "eda885a6968dd08040295be59fa4569ca9ae27ca",
+      "message": "Prevent failed cached streams from raising exceptions when being closed",
+      "full_message": "Prevent failed cached streams from raising exceptions when being closed\n\nIf the initial request fails, the `self._cache` attribute of the\n`CachedSeekableHTTPStream` would not be set. This would cause the\n`close()` method to raise an `AttributeError` when it was called as part\nof the `io.BufferedIOBase`'s `__del__` method. Fortunately, because the\nexception was raised in the destructor, it was ignored, but still logged\na warning.\n\nThis commit fixes the issue by ensuring the `_cache` attribute is set on\nthe object before making the initial request and potentially raising an\nexception.",
+      "repo": "slack-to-discord",
+      "date": "2025-07-01T20:22:23Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/eda885a6968dd08040295be59fa4569ca9ae27ca"
+    },
+    {
+      "sha": "3c59de2de44107618ad066a8016782dad5c01a2a",
+      "message": "Fix message formatting when using a blank time format",
+      "full_message": "Fix message formatting when using a blank time format",
+      "repo": "slack-to-discord",
+      "date": "2025-07-01T20:10:24Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/3c59de2de44107618ad066a8016782dad5c01a2a"
+    },
+    {
+      "sha": "2ad1535ea26e0398e14a75a6ff6d10611d3636c1",
+      "message": "Add CLI options to control the format of message dates/times",
+      "full_message": "Add CLI options to control the format of message dates/times\n\nCo-authored-by: Alex Nisnevich <alex.nisnevich@gmail.com>",
+      "repo": "slack-to-discord",
+      "date": "2025-07-01T19:40:49Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/2ad1535ea26e0398e14a75a6ff6d10611d3636c1"
+    },
+    {
+      "sha": "aa8c0fbe053cf074cb49b01d1d7579c302b63405",
+      "message": "Add logging to catch the import stopping without reporting an error",
+      "full_message": "Add logging to catch the import stopping without reporting an error\n\nIt seems to reliably log that the bot is logging out, but no error and\nno successful import message. Maybe a `BaseException` is causing it to\nstop?",
+      "repo": "slack-to-discord",
+      "date": "2024-11-27T05:20:00Z",
+      "author": "Carey Metcalfe",
+      "url": "https://github.com/randomdrake/slack-to-discord/commit/aa8c0fbe053cf074cb49b01d1d7579c302b63405"
     },
     {
       "sha": "b80750482bb8e20b7b4c2c14f04ff2ea0663bac0",
@@ -881,141 +1190,6 @@
       "url": "https://github.com/randomdrake/Bedrock-PHP/commit/3aa33c1cdf3e7fa948021ef2b91fda327dffbe43"
     },
     {
-      "sha": "5c0e6013fa5112867c6be9a2746830e2e22947c9",
-      "message": "Updating \"Generated\" Date",
-      "full_message": "Updating \"Generated\" Date",
-      "repo": "hots-cheat-sheet",
-      "date": "2018-03-03T05:04:33Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/5c0e6013fa5112867c6be9a2746830e2e22947c9"
-    },
-    {
-      "sha": "af751f58088f8f3d7db6aad2638110b1dd0c0fdb",
-      "message": "Merge branch 'master' of github.com:randomdrake/hots-cheat-sheet",
-      "full_message": "Merge branch 'master' of github.com:randomdrake/hots-cheat-sheet",
-      "repo": "hots-cheat-sheet",
-      "date": "2018-03-03T05:03:36Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/af751f58088f8f3d7db6aad2638110b1dd0c0fdb"
-    },
-    {
-      "sha": "90568a84042267c151dd8bb373967d3707fdb25b",
-      "message": "Updates and Changes, Added Maiev",
-      "full_message": "Updates and Changes, Added Maiev\n\n-Alexstraza\n--Removed Flame, added Abundance\n-Cho\n--Firestarter\n-E.T.C.\n--Balanced\n-Gazlowe\n--Bruiser\n-Greymane\n--Cocktail Party\n-Kel'Thuzad\n--Plaguelands\n--Added Chains\n-Lunara\n--Removed all\n--Added Unfair Advantage, Poke\n-Maiev\n--NEW!\n-Malthael\n--Reaper, Soul Rip\n-Ragnaros\n--Adjusted all\n-Tassadar\n--Templar's Will\n-Thrall\n--Removed Feral Spirit, added Crash Lightning\n-Tyreal\n--Removed all\n--Added Bruiser, Tank\n-Uther\n--Holy Radiance\n-Zeratul\n--Wormhole Cleave",
-      "repo": "hots-cheat-sheet",
-      "date": "2018-03-03T04:58:31Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/90568a84042267c151dd8bb373967d3707fdb25b"
-    },
-    {
-      "sha": "0589166e6479513d9909fb182586dfe5e705ca1f",
-      "message": "Updating with latest build date",
-      "full_message": "Updating with latest build date",
-      "repo": "hots-cheat-sheet",
-      "date": "2018-01-17T20:40:12Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/0589166e6479513d9909fb182586dfe5e705ca1f"
-    },
-    {
-      "sha": "eb582550850aa45955644a22688eb03f48fa8745",
-      "message": "Lots of Changes - New Heroes: Blaze, Hanzo",
-      "full_message": "Lots of Changes - New Heroes: Blaze, Hanzo\n\n-Adjusted Alextrasza build\n-Adjusted Auriel build\n-Added Blaze\n-Added Cassia build\n-Added Hanzo\n-Removed Leoric Mithril Mace build\n-Adjusted Malfurion builds\n-Removed Nazeebo Zombie, added Spider 2.0\n-Replaced Nova builds\n-Replaced Rehgar builds\n-Adjusted Valeera builds\n-Replaced Zeratul builds",
-      "repo": "hots-cheat-sheet",
-      "date": "2018-01-14T21:01:29Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/eb582550850aa45955644a22688eb03f48fa8745"
-    },
-    {
-      "sha": "176393f972f37cbc709ed3b54a2d0661e4495801",
-      "message": "Adding Alexstrasza and Other Changes",
-      "full_message": "Adding Alexstrasza and Other Changes\n\n-Added Alexstrasza\n-Ana\n--Adjusted All-round, Grenade\n-Kharazim\n--Adjusted Damage\n--Removed Support, Added Transcendence\n-Li Li\n--Adjusted Healing, Serpent\n--Removed Damage\n-Nazeebo\n--Removed Spider\n-Varian\n--Adjusted Fury",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-11-28T18:40:19Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/176393f972f37cbc709ed3b54a2d0661e4495801"
-    },
-    {
-      "sha": "ffe1e4bf461b58b59aca682d9a05cf25416efc9a",
-      "message": "Merge branch 'master' of github.com:randomdrake/hots-cheat-sheet",
-      "full_message": "Merge branch 'master' of github.com:randomdrake/hots-cheat-sheet",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-11-01T04:17:48Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/ffe1e4bf461b58b59aca682d9a05cf25416efc9a"
-    },
-    {
-      "sha": "ef80ab4ebc4041cbed10127b3eb8eab12f6c79d6",
-      "message": "New Changes for Halloween",
-      "full_message": "New Changes for Halloween\n\n-Brightwing: removed Pixie Dust build\n-Junkrat: added\n-Muradin: removed Haymaker Playmaker build\n-Nazeebo: new builds\n-Stukov: added Poppin' build\n-Thrall: added Burst Damage build",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-11-01T04:15:13Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/ef80ab4ebc4041cbed10127b3eb8eab12f6c79d6"
-    },
-    {
-      "sha": "8ed295402e2456442224499963b3ead9df3451fe",
-      "message": "Update README.md",
-      "full_message": "Update README.md",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-10-10T20:20:36Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/8ed295402e2456442224499963b3ead9df3451fe"
-    },
-    {
-      "sha": "1ad4458203f54501585f6b33e4cd58bd774c707e",
-      "message": "Handling for Sgt Hammer and Vikings (Fixes #1)",
-      "full_message": "Handling for Sgt Hammer and Vikings (Fixes #1)\n\n-Added separate and special handling for Sgt. Hammer and The Lost\nVikings pages",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-10-10T20:16:36Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/1ad4458203f54501585f6b33e4cd58bd774c707e"
-    },
-    {
-      "sha": "41b32c8a0677f03f25c60b95dd8d83f745a0d38c",
-      "message": "Kludge for Different Build Name Formats (Fixes #1)",
-      "full_message": "Kludge for Different Build Name Formats (Fixes #1)\n\n-Some heroes have different formats on their build pages\n-Added kludge to look for build names in <b> tags",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-10-10T19:46:21Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/41b32c8a0677f03f25c60b95dd8d83f745a0d38c"
-    },
-    {
-      "sha": "cf92af70ca433a28057e9ccd9dfb095adc0ce611",
-      "message": "Fixing Small Typo",
-      "full_message": "Fixing Small Typo",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-10-09T15:18:43Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/cf92af70ca433a28057e9ccd9dfb095adc0ce611"
-    },
-    {
-      "sha": "bf6991ff921ccb91f37d31bd9ff998b2806fd7e6",
-      "message": "Update README.md",
-      "full_message": "Update README.md",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-10-08T04:22:36Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/bf6991ff921ccb91f37d31bd9ff998b2806fd7e6"
-    },
-    {
-      "sha": "825fa58c5dbebcc2bcc08e18b6214ed67869b41d",
-      "message": "Update README.md",
-      "full_message": "Update README.md\n\nAdjusting link to point correctly to the PDF.",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-10-08T04:20:01Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/825fa58c5dbebcc2bcc08e18b6214ed67869b41d"
-    },
-    {
-      "sha": "efa59a7475f8ec2194b7cf5ef6ad6ee788848aea",
-      "message": "Update get-hots-data.php",
-      "full_message": "Update get-hots-data.php\n\nReplaced leftovers from license copy-pasta.",
-      "repo": "hots-cheat-sheet",
-      "date": "2017-10-08T03:59:34Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/hots-cheat-sheet/commit/efa59a7475f8ec2194b7cf5ef6ad6ee788848aea"
-    },
-    {
       "sha": "6f82b2a7d65a3aac3fea1bb9786d42054c01ea55",
       "message": "Bug Fixes and Removing Debug",
       "full_message": "Bug Fixes and Removing Debug\n\n-Removing some accidentally left in debug lines.\n-Fixing error where path was changed and prevented future errors by\ndefining it.",
@@ -1122,141 +1296,6 @@
       "date": "2017-09-11T04:32:51Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/journal-down/commit/0e00ca08bec85686691ce6a84ba3393417944a77"
-    },
-    {
-      "sha": "ea660553294c7288ebdf5aa9e29103927d870a20",
-      "message": "Merge pull request #3181 from scottohara/rename-pulse-animation",
-      "full_message": "Merge pull request #3181 from scottohara/rename-pulse-animation\n\nUse less generic pulse animation name (Fixes #3169)",
-      "repo": "swagger-ui",
-      "date": "2017-06-05T16:31:20Z",
-      "author": "Ron",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/ea660553294c7288ebdf5aa9e29103927d870a20"
-    },
-    {
-      "sha": "2257836114f8bc558e9cc5cf07c9781c432e3ff4",
-      "message": "Merge branch 'master' into rename-pulse-animation",
-      "full_message": "Merge branch 'master' into rename-pulse-animation",
-      "repo": "swagger-ui",
-      "date": "2017-06-05T16:28:33Z",
-      "author": "Ron",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/2257836114f8bc558e9cc5cf07c9781c432e3ff4"
-    },
-    {
-      "sha": "563a5643e7ed9f8985c9e8d9800d3db1a5a14bd9",
-      "message": "Merge pull request #3182 from scottohara/remove-legacy-clear-class",
-      "full_message": "Merge pull request #3182 from scottohara/remove-legacy-clear-class\n\nRemove unused legacy clear class (Fixes #3167)",
-      "repo": "swagger-ui",
-      "date": "2017-06-05T16:00:29Z",
-      "author": "shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/563a5643e7ed9f8985c9e8d9800d3db1a5a14bd9"
-    },
-    {
-      "sha": "af2c890e5130f510550557bebf1eaa3589ce3c6a",
-      "message": "Use less generic pulse animation name (Fixes #3169)",
-      "full_message": "Use less generic pulse animation name (Fixes #3169)",
-      "repo": "swagger-ui",
-      "date": "2017-06-04T22:38:39Z",
-      "author": "Scott O'Hara",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/af2c890e5130f510550557bebf1eaa3589ce3c6a"
-    },
-    {
-      "sha": "eed62339b2917c2d6f238f9637a847e08ab5293a",
-      "message": "Remove unused legacy clear class (Fixes #3167)",
-      "full_message": "Remove unused legacy clear class (Fixes #3167)",
-      "repo": "swagger-ui",
-      "date": "2017-06-04T22:36:49Z",
-      "author": "Scott O'Hara",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/eed62339b2917c2d6f238f9637a847e08ab5293a"
-    },
-    {
-      "sha": "eec04f4ce289137225d33489ed39e467e393b1a5",
-      "message": "Merge pull request #3180 from shockey/v/3.0.13",
-      "full_message": "Merge pull request #3180 from shockey/v/3.0.13\n\nv/3.0.13",
-      "repo": "swagger-ui",
-      "date": "2017-06-03T07:41:15Z",
-      "author": "shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/eec04f4ce289137225d33489ed39e467e393b1a5"
-    },
-    {
-      "sha": "58422825c987e07ce442dc8a109dacfa5cc48c12",
-      "message": "Rebuild dist",
-      "full_message": "Rebuild dist",
-      "repo": "swagger-ui",
-      "date": "2017-06-03T07:18:15Z",
-      "author": "Kyle Shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/58422825c987e07ce442dc8a109dacfa5cc48c12"
-    },
-    {
-      "sha": "5952bb6cbf1c91d1579545147efbc4b3769b8262",
-      "message": "Bump fast-json-patch in lockfile",
-      "full_message": "Bump fast-json-patch in lockfile",
-      "repo": "swagger-ui",
-      "date": "2017-06-03T07:16:44Z",
-      "author": "Kyle Shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/5952bb6cbf1c91d1579545147efbc4b3769b8262"
-    },
-    {
-      "sha": "b4cb0ce247ee7948593b07fe65922f20c9430390",
-      "message": "Rebuild dist",
-      "full_message": "Rebuild dist",
-      "repo": "swagger-ui",
-      "date": "2017-06-03T07:11:32Z",
-      "author": "Kyle Shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/b4cb0ce247ee7948593b07fe65922f20c9430390"
-    },
-    {
-      "sha": "19f7668b484a9b63beb1a904c8f360281169623b",
-      "message": "Bump declared version and upstream minimum versions",
-      "full_message": "Bump declared version and upstream minimum versions",
-      "repo": "swagger-ui",
-      "date": "2017-06-03T05:42:18Z",
-      "author": "Kyle Shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/19f7668b484a9b63beb1a904c8f360281169623b"
-    },
-    {
-      "sha": "f862caa599b11a1fff0c42f4173c076bd01b5dce",
-      "message": "Merge pull request #3178 from shockey/build",
-      "full_message": "Merge pull request #3178 from shockey/build\n\nRebuild dist",
-      "repo": "swagger-ui",
-      "date": "2017-06-02T22:55:09Z",
-      "author": "shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/f862caa599b11a1fff0c42f4173c076bd01b5dce"
-    },
-    {
-      "sha": "c471f59c537461d5acf33c75a2ff0e1c1cc9e959",
-      "message": "Rebuild dist",
-      "full_message": "Rebuild dist",
-      "repo": "swagger-ui",
-      "date": "2017-06-02T22:49:04Z",
-      "author": "Kyle Shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/c471f59c537461d5acf33c75a2ff0e1c1cc9e959"
-    },
-    {
-      "sha": "9a089045747345f017afcd5d70c7fe7b69a0b674",
-      "message": "Merge pull request #3165 from shockey/bug/3163-markdown-xss",
-      "full_message": "Merge pull request #3165 from shockey/bug/3163-markdown-xss\n\nSanitize Markdown inputs",
-      "repo": "swagger-ui",
-      "date": "2017-06-02T06:47:18Z",
-      "author": "shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/9a089045747345f017afcd5d70c7fe7b69a0b674"
-    },
-    {
-      "sha": "bec97cfaf51e572a7b603340363e72fad941bc0c",
-      "message": "Fix style error",
-      "full_message": "Fix style error",
-      "repo": "swagger-ui",
-      "date": "2017-06-02T05:24:31Z",
-      "author": "Kyle Shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/bec97cfaf51e572a7b603340363e72fad941bc0c"
-    },
-    {
-      "sha": "6ccd0371976b4c6fcc2962f42b935802e5d14296",
-      "message": "Merge branch 'bug/3163-markdown-xss' of github.com:shockey/swagger-ui into bug/3163-markdown-xss",
-      "full_message": "Merge branch 'bug/3163-markdown-xss' of github.com:shockey/swagger-ui into bug/3163-markdown-xss",
-      "repo": "swagger-ui",
-      "date": "2017-06-02T05:18:37Z",
-      "author": "Kyle Shockey",
-      "url": "https://github.com/randomdrake/swagger-ui/commit/6ccd0371976b4c6fcc2962f42b935802e5d14296"
     },
     {
       "sha": "237e6925cef41ec40eac4f4c348b8163521e7623",
@@ -1395,6 +1434,286 @@
     }
   ],
   "events": [
+    {
+      "type": "DeleteEvent",
+      "repo": {
+        "id": 1172819234,
+        "name": "randomdrake/slack-to-discord",
+        "url": "https://api.github.com/repos/randomdrake/slack-to-discord"
+      },
+      "payload": {
+        "ref": "master",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/master",
+        "pusher_type": "user"
+      },
+      "created_at": "2026-03-04T18:12:57Z"
+    },
+    {
+      "type": "CreateEvent",
+      "repo": {
+        "id": 1172819234,
+        "name": "randomdrake/slack-to-discord",
+        "url": "https://api.github.com/repos/randomdrake/slack-to-discord"
+      },
+      "payload": {
+        "ref": "main",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/main",
+        "master_branch": "main",
+        "description": "Import a Slack export into a Discord server",
+        "pusher_type": "user"
+      },
+      "created_at": "2026-03-04T18:08:49Z"
+    },
+    {
+      "type": "ForkEvent",
+      "repo": {
+        "id": 332272331,
+        "name": "pR0Ps/slack-to-discord",
+        "url": "https://api.github.com/repos/pR0Ps/slack-to-discord"
+      },
+      "payload": {
+        "action": "forked",
+        "forkee": {
+          "id": 1172819234,
+          "node_id": "R_kgDORefNIg",
+          "name": "slack-to-discord",
+          "full_name": "randomdrake/slack-to-discord",
+          "private": false,
+          "owner": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/randomdrake/slack-to-discord",
+          "description": "Import a Slack export into a Discord server",
+          "fork": true,
+          "url": "https://api.github.com/repos/randomdrake/slack-to-discord",
+          "forks_url": "https://api.github.com/repos/randomdrake/slack-to-discord/forks",
+          "keys_url": "https://api.github.com/repos/randomdrake/slack-to-discord/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/randomdrake/slack-to-discord/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/randomdrake/slack-to-discord/teams",
+          "hooks_url": "https://api.github.com/repos/randomdrake/slack-to-discord/hooks",
+          "issue_events_url": "https://api.github.com/repos/randomdrake/slack-to-discord/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/randomdrake/slack-to-discord/events",
+          "assignees_url": "https://api.github.com/repos/randomdrake/slack-to-discord/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/randomdrake/slack-to-discord/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/randomdrake/slack-to-discord/tags",
+          "blobs_url": "https://api.github.com/repos/randomdrake/slack-to-discord/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/randomdrake/slack-to-discord/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/randomdrake/slack-to-discord/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/randomdrake/slack-to-discord/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/randomdrake/slack-to-discord/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/randomdrake/slack-to-discord/languages",
+          "stargazers_url": "https://api.github.com/repos/randomdrake/slack-to-discord/stargazers",
+          "contributors_url": "https://api.github.com/repos/randomdrake/slack-to-discord/contributors",
+          "subscribers_url": "https://api.github.com/repos/randomdrake/slack-to-discord/subscribers",
+          "subscription_url": "https://api.github.com/repos/randomdrake/slack-to-discord/subscription",
+          "commits_url": "https://api.github.com/repos/randomdrake/slack-to-discord/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/randomdrake/slack-to-discord/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/randomdrake/slack-to-discord/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/randomdrake/slack-to-discord/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/randomdrake/slack-to-discord/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/randomdrake/slack-to-discord/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/randomdrake/slack-to-discord/merges",
+          "archive_url": "https://api.github.com/repos/randomdrake/slack-to-discord/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/randomdrake/slack-to-discord/downloads",
+          "issues_url": "https://api.github.com/repos/randomdrake/slack-to-discord/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/randomdrake/slack-to-discord/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/randomdrake/slack-to-discord/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/randomdrake/slack-to-discord/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/randomdrake/slack-to-discord/labels{/name}",
+          "releases_url": "https://api.github.com/repos/randomdrake/slack-to-discord/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/randomdrake/slack-to-discord/deployments",
+          "created_at": "2026-03-04T18:08:32Z",
+          "updated_at": "2026-03-04T18:08:32Z",
+          "pushed_at": "2026-03-04T18:12:56Z",
+          "git_url": "git://github.com/randomdrake/slack-to-discord.git",
+          "ssh_url": "git@github.com:randomdrake/slack-to-discord.git",
+          "clone_url": "https://github.com/randomdrake/slack-to-discord.git",
+          "svn_url": "https://github.com/randomdrake/slack-to-discord",
+          "homepage": "https://pypi.org/project/slack-to-discord/",
+          "size": 3409,
+          "stargazers_count": 0,
+          "watchers_count": 0,
+          "language": null,
+          "has_issues": false,
+          "has_projects": true,
+          "has_downloads": true,
+          "has_wiki": true,
+          "has_pages": false,
+          "has_discussions": false,
+          "forks_count": 0,
+          "mirror_url": null,
+          "archived": false,
+          "disabled": false,
+          "open_issues_count": 0,
+          "license": null,
+          "allow_forking": true,
+          "is_template": false,
+          "web_commit_signoff_required": false,
+          "has_pull_requests": true,
+          "pull_request_creation_policy": "all",
+          "topics": [],
+          "visibility": "public",
+          "forks": 0,
+          "open_issues": 0,
+          "watchers": 0,
+          "default_branch": "main"
+        }
+      },
+      "created_at": "2026-03-04T18:08:32Z"
+    },
+    {
+      "type": "ForkEvent",
+      "repo": {
+        "id": 643445235,
+        "name": "lobehub/lobehub",
+        "url": "https://api.github.com/repos/lobehub/lobehub"
+      },
+      "payload": {
+        "action": "forked",
+        "forkee": {
+          "id": 1172750542,
+          "node_id": "R_kgDORebAzg",
+          "name": "lobehub",
+          "full_name": "randomdrake/lobehub",
+          "private": false,
+          "owner": {
+            "login": "randomdrake",
+            "id": 1679509,
+            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/randomdrake",
+            "html_url": "https://github.com/randomdrake",
+            "followers_url": "https://api.github.com/users/randomdrake/followers",
+            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
+            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
+            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
+            "repos_url": "https://api.github.com/users/randomdrake/repos",
+            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/randomdrake/lobehub",
+          "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+          "fork": true,
+          "url": "https://api.github.com/repos/randomdrake/lobehub",
+          "forks_url": "https://api.github.com/repos/randomdrake/lobehub/forks",
+          "keys_url": "https://api.github.com/repos/randomdrake/lobehub/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/randomdrake/lobehub/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/randomdrake/lobehub/teams",
+          "hooks_url": "https://api.github.com/repos/randomdrake/lobehub/hooks",
+          "issue_events_url": "https://api.github.com/repos/randomdrake/lobehub/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/randomdrake/lobehub/events",
+          "assignees_url": "https://api.github.com/repos/randomdrake/lobehub/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/randomdrake/lobehub/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/randomdrake/lobehub/tags",
+          "blobs_url": "https://api.github.com/repos/randomdrake/lobehub/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/randomdrake/lobehub/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/randomdrake/lobehub/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/randomdrake/lobehub/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/randomdrake/lobehub/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/randomdrake/lobehub/languages",
+          "stargazers_url": "https://api.github.com/repos/randomdrake/lobehub/stargazers",
+          "contributors_url": "https://api.github.com/repos/randomdrake/lobehub/contributors",
+          "subscribers_url": "https://api.github.com/repos/randomdrake/lobehub/subscribers",
+          "subscription_url": "https://api.github.com/repos/randomdrake/lobehub/subscription",
+          "commits_url": "https://api.github.com/repos/randomdrake/lobehub/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/randomdrake/lobehub/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/randomdrake/lobehub/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/randomdrake/lobehub/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/randomdrake/lobehub/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/randomdrake/lobehub/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/randomdrake/lobehub/merges",
+          "archive_url": "https://api.github.com/repos/randomdrake/lobehub/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/randomdrake/lobehub/downloads",
+          "issues_url": "https://api.github.com/repos/randomdrake/lobehub/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/randomdrake/lobehub/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/randomdrake/lobehub/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/randomdrake/lobehub/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/randomdrake/lobehub/labels{/name}",
+          "releases_url": "https://api.github.com/repos/randomdrake/lobehub/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/randomdrake/lobehub/deployments",
+          "created_at": "2026-03-04T16:46:40Z",
+          "updated_at": "2026-03-04T16:46:40Z",
+          "pushed_at": "2026-03-04T16:44:59Z",
+          "git_url": "git://github.com/randomdrake/lobehub.git",
+          "ssh_url": "git@github.com:randomdrake/lobehub.git",
+          "clone_url": "https://github.com/randomdrake/lobehub.git",
+          "svn_url": "https://github.com/randomdrake/lobehub",
+          "homepage": "https://lobehub.com",
+          "size": 686661,
+          "stargazers_count": 0,
+          "watchers_count": 0,
+          "language": null,
+          "has_issues": false,
+          "has_projects": true,
+          "has_downloads": true,
+          "has_wiki": false,
+          "has_pages": false,
+          "has_discussions": false,
+          "forks_count": 0,
+          "mirror_url": null,
+          "archived": false,
+          "disabled": false,
+          "open_issues_count": 0,
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null,
+            "node_id": "MDc6TGljZW5zZTA="
+          },
+          "allow_forking": true,
+          "is_template": false,
+          "web_commit_signoff_required": false,
+          "has_pull_requests": true,
+          "pull_request_creation_policy": "all",
+          "topics": [],
+          "visibility": "public",
+          "forks": 0,
+          "open_issues": 0,
+          "watchers": 0,
+          "default_branch": "canary"
+        }
+      },
+      "created_at": "2026-03-04T16:46:40Z"
+    },
+    {
+      "type": "WatchEvent",
+      "repo": {
+        "id": 643445235,
+        "name": "lobehub/lobehub",
+        "url": "https://api.github.com/repos/lobehub/lobehub"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "created_at": "2026-03-04T16:46:32Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
@@ -2708,91 +3027,11 @@
         "before": "49cc9f2c98e5a69194ac723b46138944a7db3f8a"
       },
       "created_at": "2026-03-01T04:10:16Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31206141281,
-        "ref": "refs/heads/main",
-        "head": "e9f9fbc8a7aec01a27129a1ea03ed0128e4b05b6",
-        "before": "ff2166ce70a6262e08761352da8fadfc7d2d2b09"
-      },
-      "created_at": "2026-03-01T03:51:27Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205894993,
-        "ref": "refs/heads/main",
-        "head": "e79ae939a8d96829b1cf5f5898c39a5e7f184624",
-        "before": "e06f9ac0ab22b031098b4c34cb11b289a40fe3ab"
-      },
-      "created_at": "2026-03-01T03:31:44Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205755889,
-        "ref": "refs/heads/main",
-        "head": "3c1c20e50dc5e776922b524eb6a2afcc5d767a2f",
-        "before": "509235e3118fcb3a218005cf10a4547b31d820ac"
-      },
-      "created_at": "2026-03-01T03:19:58Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205722856,
-        "ref": "refs/heads/main",
-        "head": "6edd5203e997761e4f0967bd2ce46ebf5a8e3bb1",
-        "before": "1756a31a93e9304bd47db102fce078dd03a3e3e7"
-      },
-      "created_at": "2026-03-01T03:17:22Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 31205715774,
-        "ref": "refs/heads/main",
-        "head": "6fc30faa8c1b5eaf06cbb31c0624942772f2c79f",
-        "before": "ec49b608b0bbf13788f1dbb2435e7b079e3e376c"
-      },
-      "created_at": "2026-03-01T03:16:51Z"
     }
   ],
   "stats": {
     "total_stars": 203,
     "total_forks": 69,
-    "total_code_bytes": 1419646
+    "total_code_bytes": 28573169
   }
 }
