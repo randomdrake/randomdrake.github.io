@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T00:21:53.523Z",
+  "generated_at": "2026-03-04T06:15:26.844Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-03T18:16:05Z",
-      "pushed_at": "2026-03-03T18:16:01Z"
+      "updated_at": "2026-03-04T00:21:57Z",
+      "pushed_at": "2026-03-04T00:21:54Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -259,6 +259,15 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "406c023c3479b04c47247b4ffcce6ff49f8d83c3",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-04T00:21:53Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/406c023c3479b04c47247b4ffcce6ff49f8d83c3"
+    },
     {
       "sha": "0a1a8acf824c081b785e4f143caa4b00e73d7667",
       "message": "Update GitHub data [automated]",
@@ -456,15 +465,6 @@
       "date": "2026-03-01T06:09:49Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/b7c4201e35676d4a28d594c9ebdc6c6eea89a8c8"
-    },
-    {
-      "sha": "eb956092c1bc906bc1a4ff922720b6c6b6a63244",
-      "message": "Fix malformed SVG data URI in Substack CTA background pattern",
-      "full_message": "Fix malformed SVG data URI in Substack CTA background pattern\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T06:09:23Z",
-      "author": "David Drake",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/eb956092c1bc906bc1a4ff922720b6c6b6a63244"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
