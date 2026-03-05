@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-05T00:22:27.967Z",
+  "generated_at": "2026-03-05T06:17:29.248Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-04T18:14:42Z",
-      "pushed_at": "2026-03-04T18:14:38Z"
+      "updated_at": "2026-03-05T00:22:32Z",
+      "pushed_at": "2026-03-05T00:22:28Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -298,6 +298,15 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "f66bbea17c93bbc09de14df8a5e8fece0c5a9413",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-05T00:22:28Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/f66bbea17c93bbc09de14df8a5e8fece0c5a9413"
+    },
     {
       "sha": "603d55755d7cce00f2b84a76adf56bf92b0dba32",
       "message": "Revamp README with clearer structure and formatting",
@@ -639,15 +648,6 @@
       "date": "2026-03-01T12:07:54Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/649e88cf962a9b825705a127511f0b9163f50de1"
-    },
-    {
-      "sha": "f6d3459ef65c41bdd1113827e8f6d8ca81100ce4",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-01T06:15:54Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/f6d3459ef65c41bdd1113827e8f6d8ca81100ce4"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1634,7 +1634,7 @@
             "site_admin": false
           },
           "html_url": "https://github.com/randomdrake/lobehub",
-          "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level ��� enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+          "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
           "fork": true,
           "url": "https://api.github.com/repos/randomdrake/lobehub",
           "forks_url": "https://api.github.com/repos/randomdrake/lobehub/forks",
@@ -2848,7 +2848,7 @@
           },
           "created_at": "2026-03-01T05:53:37Z",
           "updated_at": "2026-03-01T05:53:37Z",
-          "body": "Hey @tgulacsi — thank you for this really thoughtful and ambitious contribution. You were ahead of your time on several fronts here: auto-detecting resolution, auto-detecting the download folder, adding XFCE4 support, and introducing command-line arguments. That's a lot of good ideas packed into one PR.\n\nSince this was opened, the codebase has been significantly modernized ��� it's now Python 3 and already has auto-resolution detection (via `xrandr`) and auto-download-path detection (via `GLib`), covering two of the big features you proposed here, just implemented differently. The Python 2 imports (`optparse`, old `glib`, `urllib2`) and structure mean this can't be merged into the current code.\n\nI'm closing this out, but wanted to acknowledge that features like CLI argument support and multi-desktop-environment support are still interesting ideas for the future. If they get built, your PR laid the groundwork for thinking about them. Thanks for the effort you put into this.",
+          "body": "Hey @tgulacsi — thank you for this really thoughtful and ambitious contribution. You were ahead of your time on several fronts here: auto-detecting resolution, auto-detecting the download folder, adding XFCE4 support, and introducing command-line arguments. That's a lot of good ideas packed into one PR.\n\nSince this was opened, the codebase has been significantly modernized — it's now Python 3 and already has auto-resolution detection (via `xrandr`) and auto-download-path detection (via `GLib`), covering two of the big features you proposed here, just implemented differently. The Python 2 imports (`optparse`, old `glib`, `urllib2`) and structure mean this can't be merged into the current code.\n\nI'm closing this out, but wanted to acknowledge that features like CLI argument support and multi-desktop-environment support are still interesting ideas for the future. If they get built, your PR laid the groundwork for thinking about them. Thanks for the effort you put into this.",
           "pin": null,
           "reactions": {
             "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208092/reactions",
