@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-05T18:37:08.473Z",
+  "generated_at": "2026-03-06T00:26:40.674Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-05T12:12:40Z",
-      "pushed_at": "2026-03-05T12:12:26Z"
+      "updated_at": "2026-03-05T18:37:13Z",
+      "pushed_at": "2026-03-05T18:37:09Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -298,6 +298,15 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "cb3e33ecac88b16a2d73488731feed493d591b38",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-05T18:37:08Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/cb3e33ecac88b16a2d73488731feed493d591b38"
+    },
     {
       "sha": "3ae4a871df1d53ffca53a27352a599adcf92426e",
       "message": "Update GitHub data [automated]",
@@ -639,15 +648,6 @@
       "date": "2026-03-02T02:52:31Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/reddep.com/commit/bb5b4483ec038342547e5583284db7ebf21c87ab"
-    },
-    {
-      "sha": "6c590a5419e0a53c9b69e171042ba3674469d4e5",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-02T00:21:41Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6c590a5419e0a53c9b69e171042ba3674469d4e5"
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
@@ -1634,7 +1634,7 @@
             "site_admin": false
           },
           "html_url": "https://github.com/randomdrake/lobehub",
-          "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level ��� enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+          "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
           "fork": true,
           "url": "https://api.github.com/repos/randomdrake/lobehub",
           "forks_url": "https://api.github.com/repos/randomdrake/lobehub/forks",
