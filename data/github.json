@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T12:12:06.737Z",
+  "generated_at": "2026-03-10T18:16:45.158Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-10T06:15:52Z",
-      "pushed_at": "2026-03-10T06:15:48Z"
+      "updated_at": "2026-03-10T12:12:11Z",
+      "pushed_at": "2026-03-10T12:12:07Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -187,8 +187,8 @@
       "language": "TypeScript",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-02T07:54:16Z",
-      "pushed_at": "2026-03-02T07:54:13Z"
+      "updated_at": "2026-03-10T15:22:29Z",
+      "pushed_at": "2026-03-10T15:22:25Z"
     },
     {
       "name": "slack-to-discord",
@@ -281,7 +281,7 @@
       "CSS": 58
     },
     "reddep.com": {
-      "TypeScript": 84157,
+      "TypeScript": 84145,
       "CSS": 2836,
       "JavaScript": 559
     },
@@ -298,6 +298,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "dc4a255661b0bb5b035ba44a3115b2aa58e91b80",
+      "message": "Remove inaccurate \"2 languages\" claim from README author bio",
+      "full_message": "Remove inaccurate \"2 languages\" claim from README author bio\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-10T15:22:15Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/dc4a255661b0bb5b035ba44a3115b2aa58e91b80"
+    },
+    {
+      "sha": "4305f119b06ce2b8083165a88065dbff3949459b",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-10T12:12:06Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/4305f119b06ce2b8083165a88065dbff3949459b"
+    },
     {
       "sha": "6e0839d023d5bc6dbf48b10a8c2adbafaeb5a6ce",
       "message": "Update GitHub data [automated]",
@@ -425,13 +443,13 @@
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/9ce8ccd179b8081943afb8a3cd2b3a87346fbe61"
     },
     {
-      "sha": "8a5dac77e239b267a05a05d4771765c52e77339f",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-06T18:12:33Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/8a5dac77e239b267a05a05d4771765c52e77339f"
+      "sha": "39722c91c427f30d3bab847f19fed23c78ec8177",
+      "message": "Fix Author credential chip: remove inaccurate \"3 Languages\" claim",
+      "full_message": "Fix Author credential chip: remove inaccurate \"3 Languages\" claim\n\nBook is published in English only; Spanish translation is in progress.\nChanged chip to \"Published Author\" in both About components.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-05T22:42:29Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/39722c91c427f30d3bab847f19fed23c78ec8177"
     },
     {
       "sha": "603d55755d7cce00f2b84a76adf56bf92b0dba32",
@@ -1437,6 +1455,38 @@
     {
       "type": "PushEvent",
       "repo": {
+        "id": 1170279302,
+        "name": "randomdrake/reddep.com",
+        "url": "https://api.github.com/repos/randomdrake/reddep.com"
+      },
+      "payload": {
+        "repository_id": 1170279302,
+        "push_id": 31534226191,
+        "ref": "refs/heads/main",
+        "head": "dc4a255661b0bb5b035ba44a3115b2aa58e91b80",
+        "before": "39722c91c427f30d3bab847f19fed23c78ec8177"
+      },
+      "created_at": "2026-03-10T15:22:26Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1170279302,
+        "name": "randomdrake/reddep.com",
+        "url": "https://api.github.com/repos/randomdrake/reddep.com"
+      },
+      "payload": {
+        "repository_id": 1170279302,
+        "push_id": 31534060109,
+        "ref": "refs/heads/main",
+        "head": "39722c91c427f30d3bab847f19fed23c78ec8177",
+        "before": "77e475caa51830e25b63d758b420c31e17abdaae"
+      },
+      "created_at": "2026-03-10T15:18:11Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
         "id": 1172819234,
         "name": "randomdrake/slack-to-discord",
         "url": "https://api.github.com/repos/randomdrake/slack-to-discord"
@@ -1634,7 +1684,7 @@
             "site_admin": false
           },
           "html_url": "https://github.com/randomdrake/lobehub",
-          "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level �� enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+          "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
           "fork": true,
           "url": "https://api.github.com/repos/randomdrake/lobehub",
           "forks_url": "https://api.github.com/repos/randomdrake/lobehub/forks",
@@ -2866,172 +2916,11 @@
         }
       },
       "created_at": "2026-03-01T05:53:37Z"
-    },
-    {
-      "type": "PullRequestEvent",
-      "repo": {
-        "id": 5223187,
-        "name": "randomdrake/nasa-apod-desktop",
-        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
-      },
-      "payload": {
-        "action": "closed",
-        "number": 3,
-        "pull_request": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/3",
-          "id": 1918139,
-          "number": 3,
-          "head": {
-            "ref": "patch-1",
-            "sha": "4f525697b08564174a78a81256d0457283bced36",
-            "repo": {
-              "id": null,
-              "url": "https://api.github.com/repos/",
-              "name": null
-            }
-          },
-          "base": {
-            "ref": "master",
-            "sha": "54be520ddf006ba8c8aea136cef509d856911144",
-            "repo": {
-              "id": 5223187,
-              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
-              "name": "nasa-apod-desktop"
-            }
-          }
-        }
-      },
-      "created_at": "2014-07-26T04:24:19Z"
-    },
-    {
-      "type": "IssueCommentEvent",
-      "repo": {
-        "id": 5223187,
-        "name": "randomdrake/nasa-apod-desktop",
-        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
-      },
-      "payload": {
-        "action": "created",
-        "issue": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3",
-          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
-          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/labels{/name}",
-          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/comments",
-          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/events",
-          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3",
-          "id": 5909023,
-          "node_id": "MDExOlB1bGxSZXF1ZXN0MTkxODEzOQ==",
-          "number": 3,
-          "title": "Keep the aspect ratio through ImageOps.fit",
-          "user": {
-            "login": "milot-mirdita",
-            "id": 63657,
-            "node_id": "MDQ6VXNlcjYzNjU3",
-            "avatar_url": "https://avatars.githubusercontent.com/u/63657?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/milot-mirdita",
-            "html_url": "https://github.com/milot-mirdita",
-            "followers_url": "https://api.github.com/users/milot-mirdita/followers",
-            "following_url": "https://api.github.com/users/milot-mirdita/following{/other_user}",
-            "gists_url": "https://api.github.com/users/milot-mirdita/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/milot-mirdita/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/milot-mirdita/subscriptions",
-            "organizations_url": "https://api.github.com/users/milot-mirdita/orgs",
-            "repos_url": "https://api.github.com/users/milot-mirdita/repos",
-            "events_url": "https://api.github.com/users/milot-mirdita/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/milot-mirdita/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 2,
-          "created_at": "2012-07-30T00:28:54Z",
-          "updated_at": "2026-03-01T05:53:33Z",
-          "closed_at": "2026-03-01T05:53:33Z",
-          "assignee": null,
-          "active_lock_reason": null,
-          "draft": false,
-          "pull_request": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/3",
-            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3",
-            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3.diff",
-            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3.patch",
-            "merged_at": null
-          },
-          "body": "With the use of ImageOps.fit the aspect ratio of the picture isn't distorted. This cuts off (in a pretty dumb way) that is outside of the center.\nA better approach might be something based on image entropy to cut out \"uninteresting\" parts of the images. Reddit uses a setup similar to this to make good thumbnails.\n",
-          "reactions": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        },
-        "comment": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208003",
-          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/3#issuecomment-3979208003",
-          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/3",
-          "id": 3979208003,
-          "node_id": "IC_kwDOAE-zE87tLeVD",
-          "user": {
-            "login": "randomdrake",
-            "id": 1679509,
-            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/randomdrake",
-            "html_url": "https://github.com/randomdrake",
-            "followers_url": "https://api.github.com/users/randomdrake/followers",
-            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
-            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
-            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
-            "repos_url": "https://api.github.com/users/randomdrake/repos",
-            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "created_at": "2026-03-01T05:53:32Z",
-          "updated_at": "2026-03-01T05:53:32Z",
-          "body": "Hey @milot-mirdita — thank you for this contribution, and apologies for letting it sit so long without a response. The idea of using `ImageOps.fit()` to preserve aspect ratio instead of stretching is a genuinely good one, and your observation about the distortion problem was spot-on.\n\nSince this was opened, the codebase has gone through a full Python 3 rewrite, and `Image.ANTIALIAS` (used in the PR) has been removed from modern Pillow in favor of `Image.LANCZOS`. Between the merge conflicts and the API changes, this PR can't be applied as-is anymore. I'm going to close it, but the core idea is worth revisiting — if aspect-ratio-aware resizing gets added down the road, your PR was the original inspiration. Thanks again for taking the time.",
-          "pin": null,
-          "reactions": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208003/reactions",
-            "total_count": 1,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 1,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "performed_via_github_app": null
-        }
-      },
-      "created_at": "2026-03-01T05:53:32Z"
     }
   ],
   "stats": {
     "total_stars": 203,
     "total_forks": 69,
-    "total_code_bytes": 28573169
+    "total_code_bytes": 28573157
   }
 }
