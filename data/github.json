@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T12:12:36.127Z",
+  "generated_at": "2026-03-11T18:18:47.371Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-11T06:17:27Z",
-      "pushed_at": "2026-03-11T06:17:23Z"
+      "updated_at": "2026-03-11T12:12:40Z",
+      "pushed_at": "2026-03-11T12:12:36Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -187,8 +187,8 @@
       "language": "TypeScript",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-10T15:22:29Z",
-      "pushed_at": "2026-03-10T15:22:25Z"
+      "updated_at": "2026-03-11T16:24:06Z",
+      "pushed_at": "2026-03-11T16:24:03Z"
     },
     {
       "name": "slack-to-discord",
@@ -281,7 +281,7 @@
       "CSS": 58
     },
     "reddep.com": {
-      "TypeScript": 84145,
+      "TypeScript": 84227,
       "CSS": 2836,
       "JavaScript": 559
     },
@@ -298,6 +298,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "5dd3cb2f871f55547150d494ae46254456ba36c4",
+      "message": "Remove prosthetic-vs-therapeutic references and update pricing copy",
+      "full_message": "Remove prosthetic-vs-therapeutic references and update pricing copy\n\nRemove all mentions of the prosthetic-vs-therapeutic framework across\nthe site. Update booking card descriptions with stronger positioning\n(HIPAA, SOC 2, engineering velocity). Include prior pricing adjustments\nand lookup key update.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-11T16:23:57Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/5dd3cb2f871f55547150d494ae46254456ba36c4"
+    },
+    {
+      "sha": "1127a2a9a2527fce8cda7d7015a6cd2a5f1c1408",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-11T12:12:36Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/1127a2a9a2527fce8cda7d7015a6cd2a5f1c1408"
+    },
     {
       "sha": "f51e2bcf0dd931087e4153022c8318f6905eecb9",
       "message": "Update GitHub data [automated]",
@@ -432,15 +450,6 @@
       "date": "2026-03-08T00:22:00Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/0b3dafd995c3d49026ee34dc581edf4e3b1fc5fa"
-    },
-    {
-      "sha": "351d50dd2c9ca07cd7897b10406e298e869a50b7",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-07T18:06:33Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/351d50dd2c9ca07cd7897b10406e298e869a50b7"
     },
     {
       "sha": "39722c91c427f30d3bab847f19fed23c78ec8177",
@@ -1452,6 +1461,22 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1170279302,
+        "name": "randomdrake/reddep.com",
+        "url": "https://api.github.com/repos/randomdrake/reddep.com"
+      },
+      "payload": {
+        "repository_id": 1170279302,
+        "push_id": 31579013389,
+        "ref": "refs/heads/main",
+        "head": "5dd3cb2f871f55547150d494ae46254456ba36c4",
+        "before": "dc4a255661b0bb5b035ba44a3115b2aa58e91b80"
+      },
+      "created_at": "2026-03-11T16:24:03Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
@@ -2540,7 +2565,7 @@
           },
           "created_at": "2026-03-01T05:53:47Z",
           "updated_at": "2026-03-01T05:53:47Z",
-          "body": "Hey @simonrw — thank you for working on macOS support! Having NASA's Astronomy Picture of the Day as your wallpaper on a Mac is a great idea, and you were the first to take a shot at making it happen.\n\nSince 2012, both the codebase and macOS itself have changed dramatically. The script has been rewritten for Python 3, and modern macOS versions (Ventura and later) have moved away from the System Preferences AppleScript model that this PR targets. The resolution detection (`xrandr`) and wallpaper setting (`gsettings`) are also Linux-specific, so proper macOS support would need its own detection paths throughout.\n\nI'm closing this PR, but macOS support remains a genuinely desirable feature. If it gets built in the future, it'll need a fresh implementation targeting modern macOS APIs and Python 3 — but your PR proved the concept that it's possible. Thanks for the contribution.",
+          "body": "Hey @simonrw �� thank you for working on macOS support! Having NASA's Astronomy Picture of the Day as your wallpaper on a Mac is a great idea, and you were the first to take a shot at making it happen.\n\nSince 2012, both the codebase and macOS itself have changed dramatically. The script has been rewritten for Python 3, and modern macOS versions (Ventura and later) have moved away from the System Preferences AppleScript model that this PR targets. The resolution detection (`xrandr`) and wallpaper setting (`gsettings`) are also Linux-specific, so proper macOS support would need its own detection paths throughout.\n\nI'm closing this PR, but macOS support remains a genuinely desirable feature. If it gets built in the future, it'll need a fresh implementation targeting modern macOS APIs and Python 3 — but your PR proved the concept that it's possible. Thanks for the contribution.",
           "pin": null,
           "reactions": {
             "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208259/reactions",
@@ -2791,136 +2816,11 @@
         }
       },
       "created_at": "2014-06-16T17:33:35Z"
-    },
-    {
-      "type": "IssueCommentEvent",
-      "repo": {
-        "id": 5223187,
-        "name": "randomdrake/nasa-apod-desktop",
-        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
-      },
-      "payload": {
-        "action": "created",
-        "issue": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4",
-          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
-          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/labels{/name}",
-          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/comments",
-          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/events",
-          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4",
-          "id": 6023237,
-          "node_id": "MDExOlB1bGxSZXF1ZXN0MTk3MTI2Nw==",
-          "number": 4,
-          "title": "Download path, window geometry discovery, plus wallpaper setting on XFCE4",
-          "user": {
-            "login": "tgulacsi",
-            "id": 256074,
-            "node_id": "MDQ6VXNlcjI1NjA3NA==",
-            "avatar_url": "https://avatars.githubusercontent.com/u/256074?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/tgulacsi",
-            "html_url": "https://github.com/tgulacsi",
-            "followers_url": "https://api.github.com/users/tgulacsi/followers",
-            "following_url": "https://api.github.com/users/tgulacsi/following{/other_user}",
-            "gists_url": "https://api.github.com/users/tgulacsi/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/tgulacsi/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/tgulacsi/subscriptions",
-            "organizations_url": "https://api.github.com/users/tgulacsi/orgs",
-            "repos_url": "https://api.github.com/users/tgulacsi/repos",
-            "events_url": "https://api.github.com/users/tgulacsi/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/tgulacsi/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 1,
-          "created_at": "2012-08-03T20:31:26Z",
-          "updated_at": "2026-03-01T05:53:38Z",
-          "closed_at": "2026-03-01T05:53:38Z",
-          "assignee": null,
-          "active_lock_reason": null,
-          "draft": false,
-          "pull_request": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/4",
-            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4",
-            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4.diff",
-            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4.patch",
-            "merged_at": null
-          },
-          "body": "1. Add flags for command-line overriding of download path, image size and SHOW_DEBUG.\n2. get default download path from glib, if importable - otherwise use $HOME/Downloads\n3. get default image size using xprop (I think it exists on every X11)\n4. format flake8-compatible.\n",
-          "reactions": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        },
-        "comment": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208092",
-          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/4#issuecomment-3979208092",
-          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/4",
-          "id": 3979208092,
-          "node_id": "IC_kwDOAE-zE87tLeWc",
-          "user": {
-            "login": "randomdrake",
-            "id": 1679509,
-            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/randomdrake",
-            "html_url": "https://github.com/randomdrake",
-            "followers_url": "https://api.github.com/users/randomdrake/followers",
-            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
-            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
-            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
-            "repos_url": "https://api.github.com/users/randomdrake/repos",
-            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "created_at": "2026-03-01T05:53:37Z",
-          "updated_at": "2026-03-01T05:53:37Z",
-          "body": "Hey @tgulacsi — thank you for this really thoughtful and ambitious contribution. You were ahead of your time on several fronts here: auto-detecting resolution, auto-detecting the download folder, adding XFCE4 support, and introducing command-line arguments. That's a lot of good ideas packed into one PR.\n\nSince this was opened, the codebase has been significantly modernized — it's now Python 3 and already has auto-resolution detection (via `xrandr`) and auto-download-path detection (via `GLib`), covering two of the big features you proposed here, just implemented differently. The Python 2 imports (`optparse`, old `glib`, `urllib2`) and structure mean this can't be merged into the current code.\n\nI'm closing this out, but wanted to acknowledge that features like CLI argument support and multi-desktop-environment support are still interesting ideas for the future. If they get built, your PR laid the groundwork for thinking about them. Thanks for the effort you put into this.",
-          "pin": null,
-          "reactions": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208092/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "performed_via_github_app": null
-        }
-      },
-      "created_at": "2026-03-01T05:53:37Z"
     }
   ],
   "stats": {
     "total_stars": 203,
     "total_forks": 69,
-    "total_code_bytes": 28573157
+    "total_code_bytes": 28573239
   }
 }
