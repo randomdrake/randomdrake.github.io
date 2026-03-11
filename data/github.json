@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T18:16:45.158Z",
+  "generated_at": "2026-03-11T00:19:35.735Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-10T12:12:11Z",
-      "pushed_at": "2026-03-10T12:12:07Z"
+      "updated_at": "2026-03-10T18:16:50Z",
+      "pushed_at": "2026-03-10T18:16:45Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "f3d4646f5b659be906d065b984847fd3f68ed603",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-10T18:16:45Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/f3d4646f5b659be906d065b984847fd3f68ed603"
+    },
+    {
       "sha": "dc4a255661b0bb5b035ba44a3115b2aa58e91b80",
       "message": "Remove inaccurate \"2 languages\" claim from README author bio",
       "full_message": "Remove inaccurate \"2 languages\" claim from README author bio\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
@@ -432,15 +441,6 @@
       "date": "2026-03-07T06:10:42Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/21833080886be795d2ce77f16c1002ba7a8709ff"
-    },
-    {
-      "sha": "9ce8ccd179b8081943afb8a3cd2b3a87346fbe61",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-07T00:21:42Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/9ce8ccd179b8081943afb8a3cd2b3a87346fbe61"
     },
     {
       "sha": "39722c91c427f30d3bab847f19fed23c78ec8177",
