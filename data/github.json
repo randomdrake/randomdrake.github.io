@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T18:18:47.371Z",
+  "generated_at": "2026-03-12T00:19:06.214Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-11T12:12:40Z",
-      "pushed_at": "2026-03-11T12:12:36Z"
+      "updated_at": "2026-03-11T18:18:51Z",
+      "pushed_at": "2026-03-11T18:18:48Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -298,6 +298,15 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "5e8daac8613eabceff52e4ef0fdcf0377790ae6b",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-11T18:18:47Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/5e8daac8613eabceff52e4ef0fdcf0377790ae6b"
+    },
     {
       "sha": "5dd3cb2f871f55547150d494ae46254456ba36c4",
       "message": "Remove prosthetic-vs-therapeutic references and update pricing copy",
@@ -441,15 +450,6 @@
       "date": "2026-03-08T06:14:06Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/cc3697a232ebea21dd7e3f383b0002953ba7ca2d"
-    },
-    {
-      "sha": "0b3dafd995c3d49026ee34dc581edf4e3b1fc5fa",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-08T00:22:00Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/0b3dafd995c3d49026ee34dc581edf4e3b1fc5fa"
     },
     {
       "sha": "39722c91c427f30d3bab847f19fed23c78ec8177",
@@ -2109,7 +2109,6 @@
           "created_at": "2026-03-01T05:54:02Z",
           "updated_at": "2026-03-01T05:54:02Z",
           "body": "Hey @LorenzoTell — thank you for this substantial contribution. There's clearly a lot of work here, and several parts of it are genuinely valuable.\n\nThe Python 3 migration work you did (urllib, subprocess, print functions, LANCZOS, etc.) is solid, but as it turns out, the codebase has already been independently ported to Python 3 on our end. The Wayland wallpaper fix — setting both `picture-uri` and `picture-uri-dark` — is a great catch for GNOME on Wayland, and I'll be incorporating that idea.\n\nYou also found several real bugs that I want to call out and give you credit for:\n- The missing `return` in `human_readable_size()` for GB-range values\n- The `largest` variable never being updated in `find_resolution()`\n- The missing default for the `content-length` header in `get_image_info()`\n\nI'll be cherry-picking those fixes into the current codebase. I'm closing the PR because the full diff changes too many things at once (config defaults, removal of the `main()` wrapper, dropping `lxml`, etc.) to merge cleanly, but your bug-finding and Wayland work are appreciated and won't go to waste. Thanks for the effort.",
-          "pin": null,
           "reactions": {
             "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208506/reactions",
             "total_count": 0,
@@ -2280,7 +2279,6 @@
           "created_at": "2026-03-01T05:53:54Z",
           "updated_at": "2026-03-01T05:53:54Z",
           "body": "Closing this Dependabot PR — thanks for the automated security nudge, but it's been overtaken by events. The project's dependencies have been modernized to use `lxml>=5.0` and `Pillow>=10.0` (replacing the old `PIL==1.1.7`), so the bump to 4.9.1 proposed here is no longer needed. Appreciate Dependabot keeping an eye on things.",
-          "pin": null,
           "reactions": {
             "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208378/reactions",
             "total_count": 0,
@@ -2441,7 +2439,6 @@
           "created_at": "2026-03-01T05:53:51Z",
           "updated_at": "2026-03-01T05:53:51Z",
           "body": "Hey @jharmn — thanks for documenting the installation pain points you ran into on Debian 8. Dependency installation has historically been one of the trickiest parts of getting this script running, and you took the time to write up what worked for you, which is appreciated.\n\nSince 2015, the landscape has shifted considerably: the `PIL` package has been fully replaced by `Pillow`, the `--allow-external` and `--allow-unverified` pip flags have been removed, and the apt packages you referenced (`python-imaging`) no longer exist in modern distributions. The project's dependencies have also been modernized to use `Pillow>=10.0` and `lxml>=5.0`.\n\nI'm closing this out since the content is no longer applicable to current systems, but thanks for contributing back your findings at the time.",
-          "pin": null,
           "reactions": {
             "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208334/reactions",
             "total_count": 0,
@@ -2565,8 +2562,7 @@
           },
           "created_at": "2026-03-01T05:53:47Z",
           "updated_at": "2026-03-01T05:53:47Z",
-          "body": "Hey @simonrw �� thank you for working on macOS support! Having NASA's Astronomy Picture of the Day as your wallpaper on a Mac is a great idea, and you were the first to take a shot at making it happen.\n\nSince 2012, both the codebase and macOS itself have changed dramatically. The script has been rewritten for Python 3, and modern macOS versions (Ventura and later) have moved away from the System Preferences AppleScript model that this PR targets. The resolution detection (`xrandr`) and wallpaper setting (`gsettings`) are also Linux-specific, so proper macOS support would need its own detection paths throughout.\n\nI'm closing this PR, but macOS support remains a genuinely desirable feature. If it gets built in the future, it'll need a fresh implementation targeting modern macOS APIs and Python 3 — but your PR proved the concept that it's possible. Thanks for the contribution.",
-          "pin": null,
+          "body": "Hey @simonrw — thank you for working on macOS support! Having NASA's Astronomy Picture of the Day as your wallpaper on a Mac is a great idea, and you were the first to take a shot at making it happen.\n\nSince 2012, both the codebase and macOS itself have changed dramatically. The script has been rewritten for Python 3, and modern macOS versions (Ventura and later) have moved away from the System Preferences AppleScript model that this PR targets. The resolution detection (`xrandr`) and wallpaper setting (`gsettings`) are also Linux-specific, so proper macOS support would need its own detection paths throughout.\n\nI'm closing this PR, but macOS support remains a genuinely desirable feature. If it gets built in the future, it'll need a fresh implementation targeting modern macOS APIs and Python 3 — but your PR proved the concept that it's possible. Thanks for the contribution.",
           "reactions": {
             "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208259/reactions",
             "total_count": 0,
@@ -2727,7 +2723,6 @@
           "created_at": "2026-03-01T05:53:41Z",
           "updated_at": "2026-03-01T05:53:41Z",
           "body": "Hey @xraymemory — thanks for taking a crack at adding multi-window-manager support. The goal of detecting whether the user is running GNOME vs. XFCE and setting the wallpaper accordingly was a worthwhile one.\n\nAs @tgulacsi noted at the time, parsing `top` output for process detection is fragile and there are better approaches (like checking environment variables or using `xprop`). The PR also inadvertently includes some debugging artifacts. Since then, the codebase has been rewritten for Python 3, so this can no longer be applied. Closing this out — but thanks for the contribution and the early exploration of multi-DE support.",
-          "pin": null,
           "reactions": {
             "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208171/reactions",
             "total_count": 0,
