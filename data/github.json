@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15T06:21:43.315Z",
+  "generated_at": "2026-03-15T12:10:03.584Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-15T00:26:42Z",
-      "pushed_at": "2026-03-15T00:26:38Z"
+      "updated_at": "2026-03-15T06:21:46Z",
+      "pushed_at": "2026-03-15T06:21:43Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "c9d9919fe15d7918e2126ae1b01994e46c0879f0",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-15T06:21:43Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/c9d9919fe15d7918e2126ae1b01994e46c0879f0"
+    },
+    {
       "sha": "2526885ff6e44bfb93e6453e2eb3bbd7e79ec9aa",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -432,15 +441,6 @@
       "date": "2026-03-11T16:23:57Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/reddep.com/commit/5dd3cb2f871f55547150d494ae46254456ba36c4"
-    },
-    {
-      "sha": "1127a2a9a2527fce8cda7d7015a6cd2a5f1c1408",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-11T12:12:36Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/1127a2a9a2527fce8cda7d7015a6cd2a5f1c1408"
     },
     {
       "sha": "dc4a255661b0bb5b035ba44a3115b2aa58e91b80",
