@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T18:21:45.943Z",
+  "generated_at": "2026-03-19T00:24:47.209Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-18T12:18:05Z",
-      "pushed_at": "2026-03-18T12:18:00Z"
+      "updated_at": "2026-03-18T18:21:51Z",
+      "pushed_at": "2026-03-18T18:21:46Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -187,8 +187,8 @@
       "language": "TypeScript",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-11T16:24:06Z",
-      "pushed_at": "2026-03-11T16:24:03Z"
+      "updated_at": "2026-03-18T19:01:34Z",
+      "pushed_at": "2026-03-18T19:01:30Z"
     },
     {
       "name": "slack-to-discord",
@@ -281,7 +281,7 @@
       "CSS": 58
     },
     "reddep.com": {
-      "TypeScript": 84227,
+      "TypeScript": 84080,
       "CSS": 2836,
       "JavaScript": 559
     },
@@ -298,6 +298,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "f362a1c823cb7acacd806d98f8f6215103b32f44",
+      "message": "Replace Substack with Medium and clean up writing copy",
+      "full_message": "Replace Substack with Medium and clean up writing copy\n\nSwitch all links and references from randomdrake.substack.com to\nrandomdrake.medium.com, remove \"Narrative Compression\" as a publication\nname, remove neurodivergence mention, and update labels from Newsletter\nto Blog.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-18T19:01:26Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/f362a1c823cb7acacd806d98f8f6215103b32f44"
+    },
+    {
+      "sha": "59af6a6f7096669ddf0d8e4c30d585969d9c65b2",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-18T18:21:45Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/59af6a6f7096669ddf0d8e4c30d585969d9c65b2"
+    },
     {
       "sha": "856d619b17b8e94e025a0ce81d80ac3124254226",
       "message": "Update GitHub data [automated]",
@@ -423,15 +441,6 @@
       "date": "2026-03-15T06:21:43Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/c9d9919fe15d7918e2126ae1b01994e46c0879f0"
-    },
-    {
-      "sha": "2526885ff6e44bfb93e6453e2eb3bbd7e79ec9aa",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-15T00:26:38Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/2526885ff6e44bfb93e6453e2eb3bbd7e79ec9aa"
     },
     {
       "sha": "5dd3cb2f871f55547150d494ae46254456ba36c4",
@@ -1461,6 +1470,22 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1170279302,
+        "name": "randomdrake/reddep.com",
+        "url": "https://api.github.com/repos/randomdrake/reddep.com"
+      },
+      "payload": {
+        "repository_id": 1170279302,
+        "push_id": 31847242655,
+        "ref": "refs/heads/main",
+        "head": "f362a1c823cb7acacd806d98f8f6215103b32f44",
+        "before": "5dd3cb2f871f55547150d494ae46254456ba36c4"
+      },
+      "created_at": "2026-03-18T19:01:30Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
@@ -2775,47 +2800,11 @@
         }
       },
       "created_at": "2014-07-20T10:25:35Z"
-    },
-    {
-      "type": "PullRequestEvent",
-      "repo": {
-        "id": 5223187,
-        "name": "randomdrake/nasa-apod-desktop",
-        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
-      },
-      "payload": {
-        "action": "closed",
-        "number": 4,
-        "pull_request": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/4",
-          "id": 1971267,
-          "number": 4,
-          "head": {
-            "ref": "master",
-            "sha": "10c0e1b86030e9ed5af581678943990397cef28a",
-            "repo": {
-              "id": 5289271,
-              "url": "https://api.github.com/repos/tgulacsi/nasa-apod-desktop",
-              "name": "nasa-apod-desktop"
-            }
-          },
-          "base": {
-            "ref": "master",
-            "sha": "54be520ddf006ba8c8aea136cef509d856911144",
-            "repo": {
-              "id": 5223187,
-              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
-              "name": "nasa-apod-desktop"
-            }
-          }
-        }
-      },
-      "created_at": "2014-06-16T17:33:35Z"
     }
   ],
   "stats": {
     "total_stars": 202,
     "total_forks": 69,
-    "total_code_bytes": 28573239
+    "total_code_bytes": 28573092
   }
 }
