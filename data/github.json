@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-22T18:08:25.836Z",
+  "generated_at": "2026-03-23T00:25:30.249Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-22T12:08:46Z",
-      "pushed_at": "2026-03-22T12:08:43Z"
+      "updated_at": "2026-03-22T18:08:29Z",
+      "pushed_at": "2026-03-22T18:08:26Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "16aec73a91c94706fbb091ff31eabadb58820f0c",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-22T18:08:25Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/16aec73a91c94706fbb091ff31eabadb58820f0c"
+    },
+    {
       "sha": "a32602c11488a96eca7fa66a3dd21843a52153aa",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +432,6 @@
       "date": "2026-03-19T06:22:18Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6bd1ab6385293ca11020b244585e3be82a5aa8f4"
-    },
-    {
-      "sha": "caa7e7b3f1d5d76449396a58243155dbf31976ef",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-19T00:24:47Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/caa7e7b3f1d5d76449396a58243155dbf31976ef"
     },
     {
       "sha": "f362a1c823cb7acacd806d98f8f6215103b32f44",
@@ -2587,7 +2587,7 @@
           },
           "created_at": "2026-03-01T05:53:47Z",
           "updated_at": "2026-03-01T05:53:47Z",
-          "body": "Hey @simonrw — thank you for working on macOS support! Having NASA's Astronomy Picture of the Day as your wallpaper on a Mac is a great idea, and you were the first to take a shot at making it happen.\n\nSince 2012, both the codebase and macOS itself have changed dramatically. The script has been rewritten for Python 3, and modern macOS versions (Ventura and later) have moved away from the System Preferences AppleScript model that this PR targets. The resolution detection (`xrandr`) and wallpaper setting (`gsettings`) are also Linux-specific, so proper macOS support would need its own detection paths throughout.\n\nI'm closing this PR, but macOS support remains a genuinely desirable feature. If it gets built in the future, it'll need a fresh implementation targeting modern macOS APIs and Python 3 — but your PR proved the concept that it's possible. Thanks for the contribution.",
+          "body": "Hey @simonrw �� thank you for working on macOS support! Having NASA's Astronomy Picture of the Day as your wallpaper on a Mac is a great idea, and you were the first to take a shot at making it happen.\n\nSince 2012, both the codebase and macOS itself have changed dramatically. The script has been rewritten for Python 3, and modern macOS versions (Ventura and later) have moved away from the System Preferences AppleScript model that this PR targets. The resolution detection (`xrandr`) and wallpaper setting (`gsettings`) are also Linux-specific, so proper macOS support would need its own detection paths throughout.\n\nI'm closing this PR, but macOS support remains a genuinely desirable feature. If it gets built in the future, it'll need a fresh implementation targeting modern macOS APIs and Python 3 — but your PR proved the concept that it's possible. Thanks for the contribution.",
           "reactions": {
             "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208259/reactions",
             "total_count": 0,
