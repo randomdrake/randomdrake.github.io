@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T19:21:15.372Z",
+  "generated_at": "2026-03-25T00:24:03.309Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-24T19:21:01Z",
-      "pushed_at": "2026-03-24T19:20:57Z"
+      "updated_at": "2026-03-24T19:21:20Z",
+      "pushed_at": "2026-03-24T19:21:16Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "27f15cd2e50910c37f6c9f9cb061b9ea5df54b08",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-24T19:21:15Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/27f15cd2e50910c37f6c9f9cb061b9ea5df54b08"
+    },
+    {
       "sha": "22a4bccd1928770d441418d16e86bf297d90a9e3",
       "message": "Update writing CTA to highlight publishing history and reach",
       "full_message": "Update writing CTA to highlight publishing history and reach\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
@@ -423,15 +432,6 @@
       "date": "2026-03-21T18:07:54Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/ec8f8fdc39c7d2412d3d8235d954486e2e786482"
-    },
-    {
-      "sha": "6a5ba026068019afac1bd4b78d11dcfd533954f2",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-21T12:08:14Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6a5ba026068019afac1bd4b78d11dcfd533954f2"
     },
     {
       "sha": "f362a1c823cb7acacd806d98f8f6215103b32f44",
