@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T12:16:44.205Z",
+  "generated_at": "2026-03-25T18:20:44.970Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -151,8 +151,8 @@
       "language": null,
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-01T01:23:56Z",
-      "pushed_at": "2026-03-01T01:23:53Z"
+      "updated_at": "2026-03-25T18:01:26Z",
+      "pushed_at": "2026-03-25T18:01:21Z"
     },
     {
       "name": "randomdrake.github.io",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-25T06:24:32Z",
-      "pushed_at": "2026-03-25T06:24:29Z"
+      "updated_at": "2026-03-25T12:16:48Z",
+      "pushed_at": "2026-03-25T12:16:44Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,33 @@
   },
   "commits": [
     {
+      "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
+      "message": "Update heart emoji from 💜 to 🧡 in README",
+      "full_message": "Update heart emoji from 💜 to 🧡 in README",
+      "repo": "randomdrake",
+      "date": "2026-03-25T18:01:21Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/7c3d14cf42cb2840cd6d571f645c4db4836d90a5"
+    },
+    {
+      "sha": "81e8636cd7c0fb2a9e5fbff4ab928e33d2121fab",
+      "message": "Update writing frequency description in README",
+      "full_message": "Update writing frequency description in README",
+      "repo": "randomdrake",
+      "date": "2026-03-25T18:00:46Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/81e8636cd7c0fb2a9e5fbff4ab928e33d2121fab"
+    },
+    {
+      "sha": "e5518c904ae571765b1ad9de33900134c2a856ad",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-25T12:16:44Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e5518c904ae571765b1ad9de33900134c2a856ad"
+    },
+    {
       "sha": "75fe525ca882f23614742dea4bcee3243a4b1c53",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +450,6 @@
       "date": "2026-03-22T12:08:42Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/a32602c11488a96eca7fa66a3dd21843a52153aa"
-    },
-    {
-      "sha": "8746c579fcb05b2395526300c2b4f680671c54fc",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-22T06:18:15Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/8746c579fcb05b2395526300c2b4f680671c54fc"
     },
     {
       "sha": "f362a1c823cb7acacd806d98f8f6215103b32f44",
@@ -705,8 +723,8 @@
     },
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
-      "message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
-      "full_message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🧬🌿🏳️‍���� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
+      "full_message": "🧬🌿🏳️‍���� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:10:43Z",
       "author": "David Drake",
@@ -1470,6 +1488,38 @@
     }
   ],
   "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1169575717,
+        "name": "randomdrake/randomdrake",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake"
+      },
+      "payload": {
+        "repository_id": 1169575717,
+        "push_id": 32105467474,
+        "ref": "refs/heads/main",
+        "head": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
+        "before": "81e8636cd7c0fb2a9e5fbff4ab928e33d2121fab"
+      },
+      "created_at": "2026-03-25T18:01:22Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1169575717,
+        "name": "randomdrake/randomdrake",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake"
+      },
+      "payload": {
+        "repository_id": 1169575717,
+        "push_id": 32105441168,
+        "ref": "refs/heads/main",
+        "head": "81e8636cd7c0fb2a9e5fbff4ab928e33d2121fab",
+        "before": "4ad27a2757d902a70a1f42fbefaea3aac5525e36"
+      },
+      "created_at": "2026-03-25T18:00:47Z"
+    },
     {
       "type": "PushEvent",
       "repo": {
@@ -2620,166 +2670,6 @@
         }
       },
       "created_at": "2026-03-01T05:53:47Z"
-    },
-    {
-      "type": "PullRequestEvent",
-      "repo": {
-        "id": 5223187,
-        "name": "randomdrake/nasa-apod-desktop",
-        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
-      },
-      "payload": {
-        "action": "closed",
-        "number": 6,
-        "pull_request": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/6",
-          "id": 1974036,
-          "number": 6,
-          "head": {
-            "ref": "macosx",
-            "sha": "30a507071f37579be328e060ed007e6d29098a67",
-            "repo": {
-              "id": null,
-              "url": "https://api.github.com/repos/",
-              "name": null
-            }
-          },
-          "base": {
-            "ref": "master",
-            "sha": "54be520ddf006ba8c8aea136cef509d856911144",
-            "repo": {
-              "id": 5223187,
-              "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
-              "name": "nasa-apod-desktop"
-            }
-          }
-        }
-      },
-      "created_at": "2014-06-19T02:24:10Z"
-    },
-    {
-      "type": "IssueCommentEvent",
-      "repo": {
-        "id": 5223187,
-        "name": "randomdrake/nasa-apod-desktop",
-        "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop"
-      },
-      "payload": {
-        "action": "created",
-        "issue": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5",
-          "repository_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop",
-          "labels_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/labels{/name}",
-          "comments_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/comments",
-          "events_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/events",
-          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5",
-          "id": 6023249,
-          "node_id": "MDExOlB1bGxSZXF1ZXN0MTk3MTI3MA==",
-          "number": 5,
-          "title": "Added functionality to differentiate between Window Managers",
-          "user": {
-            "login": "xraymemory",
-            "id": 970291,
-            "node_id": "MDQ6VXNlcjk3MDI5MQ==",
-            "avatar_url": "https://avatars.githubusercontent.com/u/970291?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/xraymemory",
-            "html_url": "https://github.com/xraymemory",
-            "followers_url": "https://api.github.com/users/xraymemory/followers",
-            "following_url": "https://api.github.com/users/xraymemory/following{/other_user}",
-            "gists_url": "https://api.github.com/users/xraymemory/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/xraymemory/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/xraymemory/subscriptions",
-            "organizations_url": "https://api.github.com/users/xraymemory/orgs",
-            "repos_url": "https://api.github.com/users/xraymemory/repos",
-            "events_url": "https://api.github.com/users/xraymemory/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/xraymemory/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 2,
-          "created_at": "2012-08-03T20:31:40Z",
-          "updated_at": "2026-03-01T05:53:42Z",
-          "closed_at": "2026-03-01T05:53:42Z",
-          "assignee": null,
-          "active_lock_reason": null,
-          "draft": false,
-          "pull_request": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/pulls/5",
-            "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5",
-            "diff_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5.diff",
-            "patch_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5.patch",
-            "merged_at": null
-          },
-          "body": "Hello. Neat little script. I've added about five lines of code that now make sure that it can run on both Gnome and xfce. It is hard, if not impossible, to do this in the general case so I just have it read the output of 'top' and search for specific processes ('gnome-sessions' for gnome, 'xfwm4' for xfce4). \n",
-          "reactions": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null
-        },
-        "comment": {
-          "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208171",
-          "html_url": "https://github.com/randomdrake/nasa-apod-desktop/pull/5#issuecomment-3979208171",
-          "issue_url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/5",
-          "id": 3979208171,
-          "node_id": "IC_kwDOAE-zE87tLeXr",
-          "user": {
-            "login": "randomdrake",
-            "id": 1679509,
-            "node_id": "MDQ6VXNlcjE2Nzk1MDk=",
-            "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/randomdrake",
-            "html_url": "https://github.com/randomdrake",
-            "followers_url": "https://api.github.com/users/randomdrake/followers",
-            "following_url": "https://api.github.com/users/randomdrake/following{/other_user}",
-            "gists_url": "https://api.github.com/users/randomdrake/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/randomdrake/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/randomdrake/subscriptions",
-            "organizations_url": "https://api.github.com/users/randomdrake/orgs",
-            "repos_url": "https://api.github.com/users/randomdrake/repos",
-            "events_url": "https://api.github.com/users/randomdrake/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/randomdrake/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "created_at": "2026-03-01T05:53:41Z",
-          "updated_at": "2026-03-01T05:53:41Z",
-          "body": "Hey @xraymemory — thanks for taking a crack at adding multi-window-manager support. The goal of detecting whether the user is running GNOME vs. XFCE and setting the wallpaper accordingly was a worthwhile one.\n\nAs @tgulacsi noted at the time, parsing `top` output for process detection is fragile and there are better approaches (like checking environment variables or using `xprop`). The PR also inadvertently includes some debugging artifacts. Since then, the codebase has been rewritten for Python 3, so this can no longer be applied. Closing this out — but thanks for the contribution and the early exploration of multi-DE support.",
-          "reactions": {
-            "url": "https://api.github.com/repos/randomdrake/nasa-apod-desktop/issues/comments/3979208171/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "performed_via_github_app": null
-        }
-      },
-      "created_at": "2026-03-01T05:53:41Z"
     }
   ],
   "stats": {
