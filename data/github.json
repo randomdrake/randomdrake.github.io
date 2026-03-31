@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T06:30:12.365Z",
+  "generated_at": "2026-03-31T12:20:14.441Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-31T00:26:23Z",
-      "pushed_at": "2026-03-31T00:26:18Z"
+      "updated_at": "2026-03-31T06:30:17Z",
+      "pushed_at": "2026-03-31T06:30:13Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "797f249af95deef403f9b2da4ea3288143e44a15",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-03-31T06:30:12Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/797f249af95deef403f9b2da4ea3288143e44a15"
+    },
+    {
       "sha": "3c789fe5dd8ffa11bdd2f7a9405f304f827b34a0",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +432,6 @@
       "date": "2026-03-27T18:19:14Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/71a0bd338201279ccfb574404462de445d76be86"
-    },
-    {
-      "sha": "d5e4322362f793a17380dfd22975100fc0f1c098",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-27T12:15:46Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/d5e4322362f793a17380dfd22975100fc0f1c098"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -723,8 +723,8 @@
     },
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
-      "message": "🧬🌿🏳️‍�� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
-      "full_message": "🧬🌿🏳️‍�� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🧬🌿🏳️‍���� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
+      "full_message": "🧬🌿🏳️‍���� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:10:43Z",
       "author": "David Drake",
@@ -768,8 +768,8 @@
     },
     {
       "sha": "38a9ddf512ef40ff2bb56b45b75b1df87ccd4238",
-      "message": "🌈✨🏳���‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
-      "full_message": "🌈✨🏳���‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
+      "full_message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:22:21Z",
       "author": "David Drake",
