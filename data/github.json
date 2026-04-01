@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T12:20:14.443Z",
+  "generated_at": "2026-04-01T18:19:37.556Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-01T06:36:16Z",
-      "pushed_at": "2026-04-01T06:36:13Z"
+      "updated_at": "2026-04-01T12:20:19Z",
+      "pushed_at": "2026-04-01T12:20:15Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "954cdc252570cacc82fdbe8ece53fa2c84119800",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-01T12:20:15Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/954cdc252570cacc82fdbe8ece53fa2c84119800"
+    },
+    {
       "sha": "08bd3b0acbfb77c83a0e4c89555c7526a4506057",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +432,6 @@
       "date": "2026-03-29T00:27:00Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/d8ce877f50844dbc68e23bd0951fcc63772558eb"
-    },
-    {
-      "sha": "a0f35eb4b424d307c15a9e41dce290c95b403e89",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-28T18:09:03Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/a0f35eb4b424d307c15a9e41dce290c95b403e89"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -723,8 +723,8 @@
     },
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
-      "message": "🧬🌿🏳️‍�� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
-      "full_message": "🧬🌿🏳️‍�� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
+      "full_message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:10:43Z",
       "author": "David Drake",
@@ -742,7 +742,7 @@
     {
       "sha": "5ff98a145fa258003d0a816f631e4d83213229c9",
       "message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️",
-      "full_message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️\n\nreplaced the external LinkedIn hotlink with a proper local asset\nreference. downloaded the phytocannabinoid synthesis chart image into\nassets/ and updated the README link accordingly. hotlinking is a\nno-go — we keep our own copies around here!! 💜\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "full_message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️\n\nreplaced the external LinkedIn hotlink with a proper local asset\nreference. downloaded the phytocannabinoid synthesis chart image into\nassets/ and updated the README link accordingly. hotlinking is a\nno-go — we keep our own copies around here!! ����\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:05:55Z",
       "author": "David Drake",
@@ -1895,118 +1895,6 @@
         "action": "started"
       },
       "created_at": "2026-03-04T16:46:32Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1170279302,
-        "name": "randomdrake/reddep.com",
-        "url": "https://api.github.com/repos/randomdrake/reddep.com"
-      },
-      "payload": {
-        "repository_id": 1170279302,
-        "push_id": 31233818124,
-        "ref": "refs/heads/main",
-        "head": "77e475caa51830e25b63d758b420c31e17abdaae",
-        "before": "17a5c2c5c3fd45bfe654f3384e09a09ed343b129"
-      },
-      "created_at": "2026-03-02T07:54:13Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1170279302,
-        "name": "randomdrake/reddep.com",
-        "url": "https://api.github.com/repos/randomdrake/reddep.com"
-      },
-      "payload": {
-        "repository_id": 1170279302,
-        "push_id": 31233762916,
-        "ref": "refs/heads/main",
-        "head": "17a5c2c5c3fd45bfe654f3384e09a09ed343b129",
-        "before": "f376d063150f507539aa5b17f37de0182e41c007"
-      },
-      "created_at": "2026-03-02T07:52:00Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1170279302,
-        "name": "randomdrake/reddep.com",
-        "url": "https://api.github.com/repos/randomdrake/reddep.com"
-      },
-      "payload": {
-        "repository_id": 1170279302,
-        "push_id": 31233370668,
-        "ref": "refs/heads/main",
-        "head": "f376d063150f507539aa5b17f37de0182e41c007",
-        "before": "5631e74dcbca67b344c527a922da801ad67276f9"
-      },
-      "created_at": "2026-03-02T07:35:55Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1170279302,
-        "name": "randomdrake/reddep.com",
-        "url": "https://api.github.com/repos/randomdrake/reddep.com"
-      },
-      "payload": {
-        "repository_id": 1170279302,
-        "push_id": 31233267441,
-        "ref": "refs/heads/main",
-        "head": "5631e74dcbca67b344c527a922da801ad67276f9",
-        "before": "e0e8efa92ac78dd1e3c5d31f5ef8a09959c0b36a"
-      },
-      "created_at": "2026-03-02T07:31:41Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1170279302,
-        "name": "randomdrake/reddep.com",
-        "url": "https://api.github.com/repos/randomdrake/reddep.com"
-      },
-      "payload": {
-        "repository_id": 1170279302,
-        "push_id": 31231209967,
-        "ref": "refs/heads/main",
-        "head": "e0e8efa92ac78dd1e3c5d31f5ef8a09959c0b36a",
-        "before": "af4c7e89dfbf9c43e82d69691a7948c16f47af3a"
-      },
-      "created_at": "2026-03-02T06:00:40Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1170279302,
-        "name": "randomdrake/reddep.com",
-        "url": "https://api.github.com/repos/randomdrake/reddep.com"
-      },
-      "payload": {
-        "repository_id": 1170279302,
-        "push_id": 31230422931,
-        "ref": "refs/heads/main",
-        "head": "af4c7e89dfbf9c43e82d69691a7948c16f47af3a",
-        "before": "5da8ee51a13eb6c7e37f58bad886ca9c6beebafd"
-      },
-      "created_at": "2026-03-02T05:21:46Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1170279302,
-        "name": "randomdrake/reddep.com",
-        "url": "https://api.github.com/repos/randomdrake/reddep.com"
-      },
-      "payload": {
-        "repository_id": 1170279302,
-        "push_id": 31230396926,
-        "ref": "refs/heads/main",
-        "head": "5da8ee51a13eb6c7e37f58bad886ca9c6beebafd",
-        "before": "611bf27fb6ce8129b16bb08790cec9a7d769082e"
-      },
-      "created_at": "2026-03-02T05:20:19Z"
     }
   ],
   "stats": {
