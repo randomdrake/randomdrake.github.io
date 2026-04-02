@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T18:19:37.556Z",
+  "generated_at": "2026-04-02T00:24:27.067Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-01T12:20:19Z",
-      "pushed_at": "2026-04-01T12:20:15Z"
+      "updated_at": "2026-04-01T18:19:47Z",
+      "pushed_at": "2026-04-01T18:19:38Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "93d0d50d54c14004dc5f7d614aa22a7dcf25c8ce",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-01T18:19:37Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/93d0d50d54c14004dc5f7d614aa22a7dcf25c8ce"
+    },
+    {
       "sha": "954cdc252570cacc82fdbe8ece53fa2c84119800",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +432,6 @@
       "date": "2026-03-29T06:26:00Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/1a9608ae74dd8f9e788eeaf116659c57e7e368bf"
-    },
-    {
-      "sha": "d8ce877f50844dbc68e23bd0951fcc63772558eb",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-03-29T00:27:00Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/d8ce877f50844dbc68e23bd0951fcc63772558eb"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -742,7 +742,7 @@
     {
       "sha": "5ff98a145fa258003d0a816f631e4d83213229c9",
       "message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️",
-      "full_message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️\n\nreplaced the external LinkedIn hotlink with a proper local asset\nreference. downloaded the phytocannabinoid synthesis chart image into\nassets/ and updated the README link accordingly. hotlinking is a\nno-go — we keep our own copies around here!! ����\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "full_message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️\n\nreplaced the external LinkedIn hotlink with a proper local asset\nreference. downloaded the phytocannabinoid synthesis chart image into\nassets/ and updated the README link accordingly. hotlinking is a\nno-go — we keep our own copies around here!! 💜\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:05:55Z",
       "author": "David Drake",
