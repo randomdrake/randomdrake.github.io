@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T18:09:46.820Z",
+  "generated_at": "2026-04-05T00:27:27.537Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-04T12:10:54Z",
-      "pushed_at": "2026-04-04T12:10:49Z"
+      "updated_at": "2026-04-04T18:09:55Z",
+      "pushed_at": "2026-04-04T18:09:47Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "4185ff78c7d2ba65e3ab8efcbc0cdfe790fbb5eb",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-04T18:09:46Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/4185ff78c7d2ba65e3ab8efcbc0cdfe790fbb5eb"
+    },
+    {
       "sha": "1e6fc0b210592de860fea96ae045c9a5f6ee92c2",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +432,6 @@
       "date": "2026-04-01T06:36:13Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/08bd3b0acbfb77c83a0e4c89555c7526a4506057"
-    },
-    {
-      "sha": "7480448811553909132af55d5fdd6b5f7fd71f39",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-04-01T00:29:02Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/7480448811553909132af55d5fdd6b5f7fd71f39"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -768,8 +768,8 @@
     },
     {
       "sha": "38a9ddf512ef40ff2bb56b45b75b1df87ccd4238",
-      "message": "🌈✨🏳���‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
-      "full_message": "🌈✨🏳���‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
+      "full_message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:22:21Z",
       "author": "David Drake",
