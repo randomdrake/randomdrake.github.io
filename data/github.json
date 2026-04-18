@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T00:27:46.973Z",
+  "generated_at": "2026-04-18T06:27:03.158Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-17T18:18:55Z",
-      "pushed_at": "2026-04-17T18:18:51Z"
+      "updated_at": "2026-04-18T00:27:51Z",
+      "pushed_at": "2026-04-18T00:27:47Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "56b884de5735ac4c028f03069489933a4d85c23e",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-18T00:27:47Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/56b884de5735ac4c028f03069489933a4d85c23e"
+    },
+    {
       "sha": "a4f2bb29b42a4893ad5f843a0f24e2c4e7588bd3",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +432,6 @@
       "date": "2026-04-14T12:22:32Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6dc817e67cb640b16dc7b73d7132f96dbeec7d04"
-    },
-    {
-      "sha": "3d30ac013a2a5a491d1f5432b6ab3254664e0cda",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-04-14T06:38:21Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/3d30ac013a2a5a491d1f5432b6ab3254664e0cda"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -1535,22 +1535,6 @@
         "before": "598211be9ab0800cc580e403521f7d50d18643c6"
       },
       "created_at": "2026-03-24T19:20:58Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 1170279302,
-        "name": "randomdrake/reddep.com",
-        "url": "https://api.github.com/repos/randomdrake/reddep.com"
-      },
-      "payload": {
-        "repository_id": 1170279302,
-        "push_id": 31847242655,
-        "ref": "refs/heads/main",
-        "head": "f362a1c823cb7acacd806d98f8f6215103b32f44",
-        "before": "5dd3cb2f871f55547150d494ae46254456ba36c4"
-      },
-      "created_at": "2026-03-18T19:01:30Z"
     }
   ],
   "stats": {
