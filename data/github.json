@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T06:36:02.808Z",
+  "generated_at": "2026-04-19T12:12:36.744Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-19T00:30:05Z",
-      "pushed_at": "2026-04-19T00:30:02Z"
+      "updated_at": "2026-04-19T06:36:06Z",
+      "pushed_at": "2026-04-19T06:36:03Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "1158ed7bf00bc0514da647fbb690f8fbc5537ba2",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-19T06:36:02Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/1158ed7bf00bc0514da647fbb690f8fbc5537ba2"
+    },
+    {
       "sha": "7188cef98e47e26bfd12e233904e67091b8019fd",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +432,6 @@
       "date": "2026-04-15T18:26:00Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/fd2140e94446f0d5348da52637f309fb8edca879"
-    },
-    {
-      "sha": "9b85dd57acc87e5dda13cd07077df35421b62f0c",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-04-15T12:22:05Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/9b85dd57acc87e5dda13cd07077df35421b62f0c"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -723,8 +723,8 @@
     },
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
-      "message": "🧬🌿🏳️‍���� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
-      "full_message": "🧬🌿🏳️‍���� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🧬🌿🏳️‍��� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
+      "full_message": "🧬🌿🏳️‍��� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:10:43Z",
       "author": "David Drake",
