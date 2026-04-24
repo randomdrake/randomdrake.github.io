@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T00:33:10.112Z",
+  "generated_at": "2026-04-24T06:40:37.569Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-23T18:25:19Z",
-      "pushed_at": "2026-04-23T18:25:15Z"
+      "updated_at": "2026-04-24T00:33:14Z",
+      "pushed_at": "2026-04-24T00:33:10Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "4352d2b46d0cd5d978c86aa1684969c473bad723",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-24T00:33:10Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/4352d2b46d0cd5d978c86aa1684969c473bad723"
+    },
+    {
       "sha": "d84b493af7da9b6061e9cdb0d6c2e72c4f8bb4d3",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +432,6 @@
       "date": "2026-04-20T12:26:19Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/9d1bf3b9a5b709d209ce7a6845cb832d002caf70"
-    },
-    {
-      "sha": "9dcb86e15b374168cac477e99c99792a1983967b",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-04-20T06:46:14Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/9dcb86e15b374168cac477e99c99792a1983967b"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -723,8 +723,8 @@
     },
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
-      "message": "🧬🌿🏳️‍��� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
-      "full_message": "🧬🌿🏳️‍��� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
+      "full_message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:10:43Z",
       "author": "David Drake",
@@ -760,7 +760,7 @@
     {
       "sha": "bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa",
       "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
-      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  �� intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:41:58Z",
       "author": "David Drake",
@@ -1519,22 +1519,6 @@
         "before": "4ad27a2757d902a70a1f42fbefaea3aac5525e36"
       },
       "created_at": "2026-03-25T18:00:47Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": {
-        "id": 973888039,
-        "name": "randomdrake/randomdrake.github.io",
-        "url": "https://api.github.com/repos/randomdrake/randomdrake.github.io"
-      },
-      "payload": {
-        "repository_id": 973888039,
-        "push_id": 32061582034,
-        "ref": "refs/heads/main",
-        "head": "22a4bccd1928770d441418d16e86bf297d90a9e3",
-        "before": "598211be9ab0800cc580e403521f7d50d18643c6"
-      },
-      "created_at": "2026-03-24T19:20:58Z"
     }
   ],
   "stats": {
