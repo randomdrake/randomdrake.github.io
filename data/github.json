@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T00:35:41.430Z",
+  "generated_at": "2026-04-28T06:56:12.466Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-27T18:28:50Z",
-      "pushed_at": "2026-04-27T18:28:46Z"
+      "updated_at": "2026-04-28T00:35:45Z",
+      "pushed_at": "2026-04-28T00:35:42Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "90baeecc0530fc1f1400b705e776fb811e476f04",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-28T00:35:41Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/90baeecc0530fc1f1400b705e776fb811e476f04"
+    },
+    {
       "sha": "891f5b011cc27e5405c1df003bafd5ba940e518d",
       "message": "💼✨🏳️‍🌈 README pro polish!! engineering-leader register aligned with davidbyrondrake.com — dropped AI researcher framing + phytocannabinoid section, swapped Substack for Medium, CEO / CTO front and center!! 🏳️‍⚧️✨",
       "full_message": "💼✨🏳️‍🌈 README pro polish!! engineering-leader register aligned with davidbyrondrake.com — dropped AI researcher framing + phytocannabinoid section, swapped Substack for Medium, CEO / CTO front and center!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
@@ -432,15 +441,6 @@
       "date": "2026-04-24T12:22:42Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/cc29cf9bfa3e082d81b67696c0c8e78053b6514d"
-    },
-    {
-      "sha": "21ce3465e0817893b9bac50a8698daa891022181",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-04-24T06:40:37Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/21ce3465e0817893b9bac50a8698daa891022181"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -714,8 +714,8 @@
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
-      "message": "🚀✨🏳️‍���� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
-      "full_message": "🚀✨🏳️‍���� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🚀✨🏳️‍�� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳️‍�� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:23:52Z",
       "author": "David Drake",
