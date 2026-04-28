@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-27T18:28:45.319Z",
+  "generated_at": "2026-04-28T00:35:41.430Z",
   "profile": {
     "name": "David Drake",
-    "bio": "Engineering leader · Narrative compression researcher · Author of I Will Not Drink With You Today · Theatre → CS → the space between",
+    "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
     "location": "Oregon",
     "blog": "https://davidbyrondrake.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
@@ -151,8 +151,8 @@
       "language": null,
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-03-25T18:01:26Z",
-      "pushed_at": "2026-03-25T18:01:21Z"
+      "updated_at": "2026-04-27T19:00:34Z",
+      "pushed_at": "2026-04-27T19:00:30Z"
     },
     {
       "name": "randomdrake.github.io",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-27T12:33:34Z",
-      "pushed_at": "2026-04-27T12:33:31Z"
+      "updated_at": "2026-04-27T18:28:50Z",
+      "pushed_at": "2026-04-27T18:28:46Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,24 @@
   },
   "commits": [
     {
+      "sha": "891f5b011cc27e5405c1df003bafd5ba940e518d",
+      "message": "💼✨🏳️‍🌈 README pro polish!! engineering-leader register aligned with davidbyrondrake.com — dropped AI researcher framing + phytocannabinoid section, swapped Substack for Medium, CEO / CTO front and center!! 🏳️‍⚧️✨",
+      "full_message": "💼✨🏳️‍🌈 README pro polish!! engineering-leader register aligned with davidbyrondrake.com — dropped AI researcher framing + phytocannabinoid section, swapped Substack for Medium, CEO / CTO front and center!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-04-27T19:00:09Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/891f5b011cc27e5405c1df003bafd5ba940e518d"
+    },
+    {
+      "sha": "a5c3b51e11aaa25d88c7fdf0582751bbde612fc9",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-27T18:28:45Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/a5c3b51e11aaa25d88c7fdf0582751bbde612fc9"
+    },
+    {
       "sha": "1f839688b0854a35600999db721be0152f65ed28",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -423,15 +441,6 @@
       "date": "2026-04-24T06:40:37Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/21ce3465e0817893b9bac50a8698daa891022181"
-    },
-    {
-      "sha": "4352d2b46d0cd5d978c86aa1684969c473bad723",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-04-24T00:33:10Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/4352d2b46d0cd5d978c86aa1684969c473bad723"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -705,8 +714,8 @@
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
-      "message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
-      "full_message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🚀✨🏳️‍���� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳️‍���� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:23:52Z",
       "author": "David Drake",
@@ -723,8 +732,8 @@
     },
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
-      "message": "🧬🌿🏳️‍���� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
-      "full_message": "🧬🌿🏳️‍���� phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
+      "full_message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:10:43Z",
       "author": "David Drake",
@@ -1487,7 +1496,24 @@
       "url": "https://github.com/randomdrake/nasa-apod-desktop/commit/f96d1963ae0e1a365fda11d1238e905ed3e58f2e"
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "type": "PushEvent",
+      "repo": {
+        "id": 1169575717,
+        "name": "randomdrake/randomdrake",
+        "url": "https://api.github.com/repos/randomdrake/randomdrake"
+      },
+      "payload": {
+        "repository_id": 1169575717,
+        "push_id": 33405957545,
+        "ref": "refs/heads/main",
+        "head": "891f5b011cc27e5405c1df003bafd5ba940e518d",
+        "before": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5"
+      },
+      "created_at": "2026-04-27T19:00:30Z"
+    }
+  ],
   "stats": {
     "total_stars": 202,
     "total_forks": 69,
