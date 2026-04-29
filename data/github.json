@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T00:36:43.457Z",
+  "generated_at": "2026-04-29T06:50:50.584Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-04-28T18:33:29Z",
-      "pushed_at": "2026-04-28T18:33:26Z"
+      "updated_at": "2026-04-29T00:36:47Z",
+      "pushed_at": "2026-04-29T00:36:44Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "3a0fe7d27bcb34149d71bc9f72b9406471b54e76",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-04-29T00:36:43Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/3a0fe7d27bcb34149d71bc9f72b9406471b54e76"
+    },
+    {
       "sha": "2d02e5dc3b82eb3cc34110fa2d80f78e14141d35",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -432,15 +441,6 @@
       "date": "2026-04-25T12:14:50Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e592e3acee27e2973bf97a8fc28dffac187b8e88"
-    },
-    {
-      "sha": "93f87f1827ae58c71485c2da94cd9544f585fc0c",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-04-25T06:32:08Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/93f87f1827ae58c71485c2da94cd9544f585fc0c"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -714,8 +714,8 @@
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
-      "message": "🚀✨🏳️‍�� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
-      "full_message": "🚀✨🏳️‍�� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🚀✨🏳️��🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳️��🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:23:52Z",
       "author": "David Drake",
@@ -769,7 +769,7 @@
     {
       "sha": "bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa",
       "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
-      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  ��� personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:41:58Z",
       "author": "David Drake",
