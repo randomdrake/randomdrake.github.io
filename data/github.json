@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T12:21:41.464Z",
+  "generated_at": "2026-05-01T18:24:32.969Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -163,8 +163,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-05-01T06:56:00Z",
-      "pushed_at": "2026-05-01T06:55:57Z"
+      "updated_at": "2026-05-01T12:21:46Z",
+      "pushed_at": "2026-05-01T12:21:42Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -299,6 +299,15 @@
   },
   "commits": [
     {
+      "sha": "7a6d44ee05df8b8168d104df2eec5b20435bf622",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-05-01T12:21:41Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/7a6d44ee05df8b8168d104df2eec5b20435bf622"
+    },
+    {
       "sha": "b71df0c8f3e91213d22b92f9ee7db6de530ac492",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -432,15 +441,6 @@
       "date": "2026-04-27T19:00:09Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/randomdrake/commit/891f5b011cc27e5405c1df003bafd5ba940e518d"
-    },
-    {
-      "sha": "a5c3b51e11aaa25d88c7fdf0582751bbde612fc9",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-04-27T18:28:45Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/a5c3b51e11aaa25d88c7fdf0582751bbde612fc9"
     },
     {
       "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
@@ -742,7 +742,7 @@
     {
       "sha": "905cc88f43df862665170a39a8710f43a84517e0",
       "message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️",
-      "full_message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️\n\nsubstack is the money maker so let's give it the spotlight it deserves!!\nadded a big bold orange \"Subscribe on Substack\" badge right below the\nheader (downloaded locally, no hotlinking!!), moved substack to first\nposition in the links bar, bolded it in the \"what i'm up to\" section\nwith an inline subscribe link. substack is front and center everywhere\nnow. 💜🧡\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "full_message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️\n\nsubstack is the money maker so let's give it the spotlight it deserves!!\nadded a big bold orange \"Subscribe on Substack\" badge right below the\nheader (downloaded locally, no hotlinking!!), moved substack to first\nposition in the links bar, bolded it in the \"what i'm up to\" section\nwith an inline subscribe link. substack is front and center everywhere\nnow. ��🧡\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:07:56Z",
       "author": "David Drake",
