@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-07T12:39:02.839Z",
+  "generated_at": "2026-05-07T18:35:22.861Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
     "location": "Oregon",
     "blog": "https://davidbyrondrake.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
-    "public_repos": 18,
+    "public_repos": 19,
     "followers": 28
   },
   "repos": [
@@ -119,6 +119,18 @@
       "pushed_at": "2026-03-04T16:44:59Z"
     },
     {
+      "name": "narrative-compression",
+      "full_name": "randomdrake/narrative-compression",
+      "html_url": "https://github.com/randomdrake/narrative-compression",
+      "description": null,
+      "fork": false,
+      "language": "HTML",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-05-07T15:53:58Z",
+      "pushed_at": "2026-05-07T15:38:58Z"
+    },
+    {
       "name": "nasa-apod-desktop",
       "full_name": "randomdrake/nasa-apod-desktop",
       "html_url": "https://github.com/randomdrake/nasa-apod-desktop",
@@ -163,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-05-07T07:01:34Z",
-      "pushed_at": "2026-05-07T07:01:30Z"
+      "updated_at": "2026-05-07T12:39:28Z",
+      "pushed_at": "2026-05-07T12:39:03Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -261,6 +273,9 @@
       "TeX": 1797,
       "CSS": 1498
     },
+    "narrative-compression": {
+      "HTML": 91940
+    },
     "nasa-apod-desktop": {
       "Python": 15553
     },
@@ -298,6 +313,24 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
+      "message": "Add files via upload",
+      "full_message": "Add files via upload",
+      "repo": "narrative-compression",
+      "date": "2026-05-07T15:38:58Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/narrative-compression/commit/d37709c58c48ec3efc6a9f6a2519e979056409fa"
+    },
+    {
+      "sha": "f0d47d6eefc3e7a1eee412b5f6a9572a074170e1",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-05-07T12:39:02Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/f0d47d6eefc3e7a1eee412b5f6a9572a074170e1"
+    },
     {
       "sha": "0fae3d63e5c1092bebd47019d726ded1cf3b47c3",
       "message": "Update GitHub data [automated]",
@@ -423,15 +456,6 @@
       "date": "2026-05-04T00:36:01Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/907e45142932e0ee6432827f614b2cb43b993351"
-    },
-    {
-      "sha": "59261fa95b98797bbf3c73981e624c3c36026353",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-05-03T18:19:19Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/59261fa95b98797bbf3c73981e624c3c36026353"
     },
     {
       "sha": "891f5b011cc27e5405c1df003bafd5ba940e518d",
@@ -769,7 +793,7 @@
     {
       "sha": "bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa",
       "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
-      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  �� personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:41:58Z",
       "author": "David Drake",
@@ -1118,141 +1142,6 @@
       "url": "https://github.com/randomdrake/react-flow-org-chart/commit/abdcf9c3a0db5b846bdc43bfd8e9b5add90274c6"
     },
     {
-      "sha": "67df927d194ace85e7b53cdb023d9402bce07438",
-      "message": "Merge pull request #98 from Expensify/cole_fix",
-      "full_message": "Merge pull request #98 from Expensify/cole_fix\n\nCheck if the preferred host exists in keys not in array",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-09T10:59:28Z",
-      "author": "Ionatan Wiznia",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/67df927d194ace85e7b53cdb023d9402bce07438"
-    },
-    {
-      "sha": "6458381155b490ee4ed6e3a7dbab77c2fcb4c670",
-      "message": "Style",
-      "full_message": "Style",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-07T16:55:35Z",
-      "author": "Cole Eason",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/6458381155b490ee4ed6e3a7dbab77c2fcb4c670"
-    },
-    {
-      "sha": "b8ba3ae35bfaf831102ce2c61585ca2dca0e4911",
-      "message": "Cast to string",
-      "full_message": "Cast to string",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-07T16:47:25Z",
-      "author": "Cole Eason",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/b8ba3ae35bfaf831102ce2c61585ca2dca0e4911"
-    },
-    {
-      "sha": "8fba1a0b8ae58e2fcc120c2de84f72d71045823c",
-      "message": "Update tag number",
-      "full_message": "Update tag number",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-07T16:01:15Z",
-      "author": "Cole Eason",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/8fba1a0b8ae58e2fcc120c2de84f72d71045823c"
-    },
-    {
-      "sha": "42e6fb63b77a6288ff6a3d245cb28f27f50308e3",
-      "message": "Check if the preferred host exists in keys not in array",
-      "full_message": "Check if the preferred host exists in keys not in array",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-07T15:59:48Z",
-      "author": "Cole Eason",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/42e6fb63b77a6288ff6a3d245cb28f27f50308e3"
-    },
-    {
-      "sha": "286609798eb8ba782a94946c907d231c4874f19c",
-      "message": "Merge pull request #97 from Expensify/cole_fix_preferredhost",
-      "full_message": "Merge pull request #97 from Expensify/cole_fix_preferredhost\n\nFix preferred host when host doesn't exist in the configs",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-03T19:02:22Z",
-      "author": "Matt Bullock",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/286609798eb8ba782a94946c907d231c4874f19c"
-    },
-    {
-      "sha": "79a8ee2ebcd572afa12828ca411a1cb1e78b6550",
-      "message": "Too many brackets",
-      "full_message": "Too many brackets",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-03T18:53:01Z",
-      "author": "Cole Eason",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/79a8ee2ebcd572afa12828ca411a1cb1e78b6550"
-    },
-    {
-      "sha": "7dad92a5318ddf6208c10a959a71acf295cde1c8",
-      "message": "Check earlier",
-      "full_message": "Check earlier",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-03T18:50:15Z",
-      "author": "Cole Eason",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/7dad92a5318ddf6208c10a959a71acf295cde1c8"
-    },
-    {
-      "sha": "ac65cc680dbe3c061ce7fe32d92d66ad55c45fb5",
-      "message": "Update version number",
-      "full_message": "Update version number",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-03T18:43:02Z",
-      "author": "Cole Eason",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/ac65cc680dbe3c061ce7fe32d92d66ad55c45fb5"
-    },
-    {
-      "sha": "3e0519461b6ba885cc712fc1a1ef7865427811ca",
-      "message": "Fix perferred host when host doesn't exist in the cconfigs",
-      "full_message": "Fix perferred host when host doesn't exist in the cconfigs",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-03T18:35:19Z",
-      "author": "Cole Eason",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/3e0519461b6ba885cc712fc1a1ef7865427811ca"
-    },
-    {
-      "sha": "c1cd4848fd069cf406b896b8f99598f20e88a941",
-      "message": "Merge pull request #96 from Expensify/mb-vers",
-      "full_message": "Merge pull request #96 from Expensify/mb-vers\n\nVersion update for auto deleting stuck jobs",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-02T18:21:56Z",
-      "author": "Tyler Karaszewski",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/c1cd4848fd069cf406b896b8f99598f20e88a941"
-    },
-    {
-      "sha": "4166519786b62f5ff70918a9bab708c4a49fa37b",
-      "message": "build version 1.4.1",
-      "full_message": "build version 1.4.1",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-02T18:19:38Z",
-      "author": "Matt Bullock",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/4166519786b62f5ff70918a9bab708c4a49fa37b"
-    },
-    {
-      "sha": "3c7f461b37227c5c44d02bb5ebaeac0aa6e9f324",
-      "message": "Merge pull request #72 from Expensify/mb-clear-db",
-      "full_message": "Merge pull request #72 from Expensify/mb-clear-db\n\nClear stuck jobs automatically",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-02T18:16:12Z",
-      "author": "Tyler Karaszewski",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/3c7f461b37227c5c44d02bb5ebaeac0aa6e9f324"
-    },
-    {
-      "sha": "d39728ad2cfa8a9cde2c944b4c8db2493d246fb4",
-      "message": "Merge pull request #95 from Expensify/mb-param",
-      "full_message": "Merge pull request #95 from Expensify/mb-param\n\nOnly send mockRequest when it's specified",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-02T17:22:07Z",
-      "author": "Tyler Karaszewski",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/d39728ad2cfa8a9cde2c944b4c8db2493d246fb4"
-    },
-    {
-      "sha": "3aa33c1cdf3e7fa948021ef2b91fda327dffbe43",
-      "message": "update composer",
-      "full_message": "update composer",
-      "repo": "Bedrock-PHP",
-      "date": "2018-05-01T23:39:39Z",
-      "author": "Matt Bullock",
-      "url": "https://github.com/randomdrake/Bedrock-PHP/commit/3aa33c1cdf3e7fa948021ef2b91fda327dffbe43"
-    },
-    {
       "sha": "6f82b2a7d65a3aac3fea1bb9786d42054c01ea55",
       "message": "Bug Fixes and Removing Debug",
       "full_message": "Bug Fixes and Removing Debug\n\n-Removing some accidentally left in debug lines.\n-Fixing error where path was changed and prevented future errors by\ndefining it.",
@@ -1498,6 +1387,23 @@
   ],
   "events": [
     {
+      "type": "CreateEvent",
+      "repo": {
+        "id": 1232104990,
+        "name": "randomdrake/narrative-compression",
+        "url": "https://api.github.com/repos/randomdrake/narrative-compression"
+      },
+      "payload": {
+        "ref": "main",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/main",
+        "master_branch": "main",
+        "description": null,
+        "pusher_type": "user"
+      },
+      "created_at": "2026-05-07T15:38:59Z"
+    },
+    {
       "type": "PushEvent",
       "repo": {
         "id": 1169575717,
@@ -1517,6 +1423,6 @@
   "stats": {
     "total_stars": 202,
     "total_forks": 69,
-    "total_code_bytes": 28573284
+    "total_code_bytes": 28665224
   }
 }
