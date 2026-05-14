@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T12:38:22.308Z",
+  "generated_at": "2026-05-14T18:37:55.463Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -175,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-05-14T07:02:27Z",
-      "pushed_at": "2026-05-14T07:02:23Z"
+      "updated_at": "2026-05-14T12:38:27Z",
+      "pushed_at": "2026-05-14T12:38:23Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -314,6 +314,15 @@
   },
   "commits": [
     {
+      "sha": "6cdb674c53d0897f72566997b55edf2a515dcd01",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-05-14T12:38:22Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6cdb674c53d0897f72566997b55edf2a515dcd01"
+    },
+    {
       "sha": "d89823266fceedcd9646aefa5a81623cbe45d99d",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -438,15 +447,6 @@
       "date": "2026-05-11T00:38:16Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e1eb9436724ca078fc95bc3b7cf79cbd8ce2d920"
-    },
-    {
-      "sha": "2db79778c32d5a2025210612a68f229510195ad1",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-05-10T18:20:43Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/2db79778c32d5a2025210612a68f229510195ad1"
     },
     {
       "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
@@ -738,8 +738,8 @@
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
-      "message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
-      "full_message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🚀✨🏳️‍���� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳️‍���� README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:23:52Z",
       "author": "David Drake",
@@ -766,7 +766,7 @@
     {
       "sha": "905cc88f43df862665170a39a8710f43a84517e0",
       "message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️",
-      "full_message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️\n\nsubstack is the money maker so let's give it the spotlight it deserves!!\nadded a big bold orange \"Subscribe on Substack\" badge right below the\nheader (downloaded locally, no hotlinking!!), moved substack to first\nposition in the links bar, bolded it in the \"what i'm up to\" section\nwith an inline subscribe link. substack is front and center everywhere\nnow. ����🧡\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "full_message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️\n\nsubstack is the money maker so let's give it the spotlight it deserves!!\nadded a big bold orange \"Subscribe on Substack\" badge right below the\nheader (downloaded locally, no hotlinking!!), moved substack to first\nposition in the links bar, bolded it in the \"what i'm up to\" section\nwith an inline subscribe link. substack is front and center everywhere\nnow. 💜🧡\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:07:56Z",
       "author": "David Drake",
