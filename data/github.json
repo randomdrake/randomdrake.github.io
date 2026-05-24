@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T12:24:27.415Z",
+  "generated_at": "2026-05-24T18:22:51.012Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -175,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-05-24T07:07:21Z",
-      "pushed_at": "2026-05-24T07:07:17Z"
+      "updated_at": "2026-05-24T12:24:31Z",
+      "pushed_at": "2026-05-24T12:24:28Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -314,6 +314,15 @@
   },
   "commits": [
     {
+      "sha": "89916a30021e784fea72d89c37cae32ead47fa17",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-05-24T12:24:27Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/89916a30021e784fea72d89c37cae32ead47fa17"
+    },
+    {
       "sha": "7a1754ff8f78de4bcf4589b46be3735dc89b9bd6",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -438,15 +447,6 @@
       "date": "2026-05-21T00:43:39Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/5f9bbf145eb69e3a8064f54a080ca7defbd4a41d"
-    },
-    {
-      "sha": "0ec5a6ad91c979d204393fff35bfa8b14f77da30",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-05-20T18:48:49Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/0ec5a6ad91c979d204393fff35bfa8b14f77da30"
     },
     {
       "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
@@ -792,8 +792,8 @@
     },
     {
       "sha": "bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa",
-      "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
-      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! ����️‍⚧️✨🔭",
+      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! ����️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:41:58Z",
       "author": "David Drake",
@@ -801,8 +801,8 @@
     },
     {
       "sha": "38a9ddf512ef40ff2bb56b45b75b1df87ccd4238",
-      "message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
-      "full_message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🌈✨🏳️���🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
+      "full_message": "🌈✨🏳️���🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:22:21Z",
       "author": "David Drake",
