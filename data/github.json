@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T18:22:51.012Z",
+  "generated_at": "2026-05-25T00:42:55.487Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -175,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-05-24T12:24:31Z",
-      "pushed_at": "2026-05-24T12:24:28Z"
+      "updated_at": "2026-05-24T18:22:55Z",
+      "pushed_at": "2026-05-24T18:22:51Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -314,6 +314,15 @@
   },
   "commits": [
     {
+      "sha": "f51f9fea4aa037c777bdcf575efb4ab6ec05df1c",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-05-24T18:22:51Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/f51f9fea4aa037c777bdcf575efb4ab6ec05df1c"
+    },
+    {
       "sha": "89916a30021e784fea72d89c37cae32ead47fa17",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -438,15 +447,6 @@
       "date": "2026-05-21T07:18:25Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/5b446ab0346ecd1e5f3aeb775c98e672fd2697b6"
-    },
-    {
-      "sha": "5f9bbf145eb69e3a8064f54a080ca7defbd4a41d",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-05-21T00:43:39Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/5f9bbf145eb69e3a8064f54a080ca7defbd4a41d"
     },
     {
       "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
@@ -738,8 +738,8 @@
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
-      "message": "🚀✨��️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
-      "full_message": "🚀✨��️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:23:52Z",
       "author": "David Drake",
@@ -792,8 +792,8 @@
     },
     {
       "sha": "bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa",
-      "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! ����️‍⚧️✨🔭",
-      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! ����️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
+      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:41:58Z",
       "author": "David Drake",
@@ -801,8 +801,8 @@
     },
     {
       "sha": "38a9ddf512ef40ff2bb56b45b75b1df87ccd4238",
-      "message": "🌈✨🏳️���🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
-      "full_message": "🌈✨🏳️���🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
+      "full_message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:22:21Z",
       "author": "David Drake",
