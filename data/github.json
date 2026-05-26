@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T00:41:39.662Z",
+  "generated_at": "2026-05-26T07:13:28.862Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -175,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-05-25T18:34:40Z",
-      "pushed_at": "2026-05-25T18:34:36Z"
+      "updated_at": "2026-05-26T00:41:57Z",
+      "pushed_at": "2026-05-26T00:41:40Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -314,6 +314,15 @@
   },
   "commits": [
     {
+      "sha": "05ab334e51eddd5adc36938176d9d8f2adeb3ddd",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-05-26T00:41:39Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/05ab334e51eddd5adc36938176d9d8f2adeb3ddd"
+    },
+    {
       "sha": "9095c254fd048aba78a6a21bf84d51dfd897b039",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -438,15 +447,6 @@
       "date": "2026-05-22T12:49:38Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/ac3b20c09b7b64a3c9dc123a7f7e9036da926379"
-    },
-    {
-      "sha": "6f26fa012ddf39ee7a0923c4f1911eebfc8da357",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-05-22T07:14:34Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/6f26fa012ddf39ee7a0923c4f1911eebfc8da357"
     },
     {
       "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
@@ -738,8 +738,8 @@
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
-      "message": "🚀✨����️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
-      "full_message": "🚀✨����️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:23:52Z",
       "author": "David Drake",
@@ -801,8 +801,8 @@
     },
     {
       "sha": "38a9ddf512ef40ff2bb56b45b75b1df87ccd4238",
-      "message": "🌈✨🏳��‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
-      "full_message": "🌈✨🏳��‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
+      "full_message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:22:21Z",
       "author": "David Drake",
