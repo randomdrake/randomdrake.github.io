@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T13:14:48.429Z",
+  "generated_at": "2026-05-28T18:53:30.988Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -175,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-05-28T07:21:44Z",
-      "pushed_at": "2026-05-28T07:21:39Z"
+      "updated_at": "2026-05-28T13:14:54Z",
+      "pushed_at": "2026-05-28T13:14:49Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -240,20 +240,38 @@
     }
   ],
   "languages": {
+    "Bedrock-PHP": {
+      "PHP": 98615,
+      "Shell": 2723
+    },
     "data.gov": {
       "PHP": 268919,
       "JavaScript": 233147,
       "CSS": 145600
     },
+    "docs": {},
     "hots-cheat-sheet": {
       "PHP": 5486
     },
+    "human-headers": {},
     "intro.js": {},
     "jenks": {
       "PHP": 24784
     },
     "journal-down": {
       "Shell": 4856
+    },
+    "lobehub": {
+      "TypeScript": 26720283,
+      "HTML": 215694,
+      "JavaScript": 57586,
+      "Shell": 45175,
+      "Gherkin": 29870,
+      "MDX": 11645,
+      "Dockerfile": 11429,
+      "PLpgSQL": 9963,
+      "TeX": 1797,
+      "CSS": 1498
     },
     "narrative-compression": {
       "HTML": 91940
@@ -266,14 +284,24 @@
       "CSS": 477,
       "JavaScript": 83
     },
+    "randomdrake": {},
     "randomdrake.github.io": {
       "HTML": 74372,
       "JavaScript": 4639
+    },
+    "react-flow-org-chart": {
+      "JavaScript": 6134,
+      "TypeScript": 4829,
+      "HTML": 734,
+      "CSS": 58
     },
     "reddep.com": {
       "TypeScript": 84080,
       "CSS": 2836,
       "JavaScript": 559
+    },
+    "slack-to-discord": {
+      "Python": 48583
     },
     "swagger-ui": {
       "JavaScript": 287744,
@@ -285,6 +313,15 @@
     "Third-Party": {}
   },
   "commits": [
+    {
+      "sha": "f55d28da77090fc473e52dae5e76a8be04bcda7b",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-05-28T13:14:48Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/f55d28da77090fc473e52dae5e76a8be04bcda7b"
+    },
     {
       "sha": "d458e1e2284e9b89864f26f601dd07adcc04cfff",
       "message": "Update GitHub data [automated]",
@@ -412,15 +449,6 @@
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/c1f649483536548696b307f749f7f37ae1d1a244"
     },
     {
-      "sha": "f51f9fea4aa037c777bdcf575efb4ab6ec05df1c",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-05-24T18:22:51Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/f51f9fea4aa037c777bdcf575efb4ab6ec05df1c"
-    },
-    {
       "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
       "message": "Add files via upload",
       "full_message": "Add files via upload",
@@ -430,6 +458,69 @@
       "url": "https://github.com/randomdrake/narrative-compression/commit/d37709c58c48ec3efc6a9f6a2519e979056409fa"
     },
     {
+      "sha": "891f5b011cc27e5405c1df003bafd5ba940e518d",
+      "message": "💼✨🏳️‍🌈 README pro polish!! engineering-leader register aligned with davidbyrondrake.com — dropped AI researcher framing + phytocannabinoid section, swapped Substack for Medium, CEO / CTO front and center!! 🏳️‍⚧️✨",
+      "full_message": "💼✨🏳️‍🌈 README pro polish!! engineering-leader register aligned with davidbyrondrake.com — dropped AI researcher framing + phytocannabinoid section, swapped Substack for Medium, CEO / CTO front and center!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-04-27T19:00:09Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/891f5b011cc27e5405c1df003bafd5ba940e518d"
+    },
+    {
+      "sha": "7c3d14cf42cb2840cd6d571f645c4db4836d90a5",
+      "message": "Update heart emoji from 💜 to 🧡 in README",
+      "full_message": "Update heart emoji from 💜 to 🧡 in README",
+      "repo": "randomdrake",
+      "date": "2026-03-25T18:01:21Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/7c3d14cf42cb2840cd6d571f645c4db4836d90a5"
+    },
+    {
+      "sha": "81e8636cd7c0fb2a9e5fbff4ab928e33d2121fab",
+      "message": "Update writing frequency description in README",
+      "full_message": "Update writing frequency description in README",
+      "repo": "randomdrake",
+      "date": "2026-03-25T18:00:46Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/81e8636cd7c0fb2a9e5fbff4ab928e33d2121fab"
+    },
+    {
+      "sha": "f362a1c823cb7acacd806d98f8f6215103b32f44",
+      "message": "Replace Substack with Medium and clean up writing copy",
+      "full_message": "Replace Substack with Medium and clean up writing copy\n\nSwitch all links and references from randomdrake.substack.com to\nrandomdrake.medium.com, remove \"Narrative Compression\" as a publication\nname, remove neurodivergence mention, and update labels from Newsletter\nto Blog.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-18T19:01:26Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/f362a1c823cb7acacd806d98f8f6215103b32f44"
+    },
+    {
+      "sha": "5dd3cb2f871f55547150d494ae46254456ba36c4",
+      "message": "Remove prosthetic-vs-therapeutic references and update pricing copy",
+      "full_message": "Remove prosthetic-vs-therapeutic references and update pricing copy\n\nRemove all mentions of the prosthetic-vs-therapeutic framework across\nthe site. Update booking card descriptions with stronger positioning\n(HIPAA, SOC 2, engineering velocity). Include prior pricing adjustments\nand lookup key update.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-11T16:23:57Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/5dd3cb2f871f55547150d494ae46254456ba36c4"
+    },
+    {
+      "sha": "dc4a255661b0bb5b035ba44a3115b2aa58e91b80",
+      "message": "Remove inaccurate \"2 languages\" claim from README author bio",
+      "full_message": "Remove inaccurate \"2 languages\" claim from README author bio\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-10T15:22:15Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/dc4a255661b0bb5b035ba44a3115b2aa58e91b80"
+    },
+    {
+      "sha": "39722c91c427f30d3bab847f19fed23c78ec8177",
+      "message": "Fix Author credential chip: remove inaccurate \"3 Languages\" claim",
+      "full_message": "Fix Author credential chip: remove inaccurate \"3 Languages\" claim\n\nBook is published in English only; Spanish translation is in progress.\nChanged chip to \"Published Author\" in both About components.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-05T22:42:29Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/39722c91c427f30d3bab847f19fed23c78ec8177"
+    },
+    {
       "sha": "603d55755d7cce00f2b84a76adf56bf92b0dba32",
       "message": "Revamp README with clearer structure and formatting",
       "full_message": "Revamp README with clearer structure and formatting\n\n- Add badges for Python version and license\n- Organize into clear sections: capabilities, setup, options\n- Add permissions table for Discord bot setup\n- Add CLI options reference table\n- Credit original author\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
@@ -437,6 +528,285 @@
       "date": "2026-03-04T18:21:15Z",
       "author": "David Drake",
       "url": "https://github.com/randomdrake/slack-to-discord/commit/603d55755d7cce00f2b84a76adf56bf92b0dba32"
+    },
+    {
+      "sha": "a0c6c9765c3b58a59d1db6c4047396cab2166c13",
+      "message": "🐛 fix: use keyPrefix to fix discord bot conflict (#12638)",
+      "full_message": "🐛 fix: use keyPrefix to fix discord bot conflict (#12638)\n\nsupport keyPrefix",
+      "repo": "lobehub",
+      "date": "2026-03-04T16:01:40Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/a0c6c9765c3b58a59d1db6c4047396cab2166c13"
+    },
+    {
+      "sha": "ab376d9185f8951aff782af8b957ed2184bc5b8f",
+      "message": "✨ feat: add device code auth flow (#12697)",
+      "full_message": "✨ feat: add device code auth flow (#12697)\n\n* add i18n\n\n* fix types",
+      "repo": "lobehub",
+      "date": "2026-03-04T15:58:41Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/ab376d9185f8951aff782af8b957ed2184bc5b8f"
+    },
+    {
+      "sha": "08b23a97326c980962f0f5540f735f7092396708",
+      "message": "✨ feat(google): add gemini-3.1-flash-lite-preview model and thinkingLevel5 extend param (#12652)",
+      "full_message": "✨ feat(google): add gemini-3.1-flash-lite-preview model and thinkingLevel5 extend param (#12652)",
+      "repo": "lobehub",
+      "date": "2026-03-04T15:39:49Z",
+      "author": "YuTengjing",
+      "url": "https://github.com/randomdrake/lobehub/commit/08b23a97326c980962f0f5540f735f7092396708"
+    },
+    {
+      "sha": "1fece1f8d9c01673894153f7b9a420394cefd010",
+      "message": "🔨 chore: update the market sdk to 0.31.3 (#12693)",
+      "full_message": "🔨 chore: update the market sdk to 0.31.3 (#12693)\n\nchore: update the market sdk to 0.31.3",
+      "repo": "lobehub",
+      "date": "2026-03-04T13:50:58Z",
+      "author": "LiJian",
+      "url": "https://github.com/randomdrake/lobehub/commit/1fece1f8d9c01673894153f7b9a420394cefd010"
+    },
+    {
+      "sha": "07997b44a534bded1080e560d42baa59f4f26574",
+      "message": "🐛 fix: skew plugin (#12669)",
+      "full_message": "🐛 fix: skew plugin (#12669)\n\n* fix: skew plugin\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n* refactor(vite): enhance vercelSkewProtection to handle static imports and improve coverage\n\n- Added handling for static import/export declarations to ensure correct deployment links.\n- Updated coverage documentation to reflect new handling for static imports and additional cases.\n- Adjusted comment numbering for clarity in the processing steps.\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n* fix: dev proxy\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n* refactor(AssistantGroup): streamline contentId handling in GroupMessage component\n\n- Simplified the logic for determining contentId by directly using lastAssistantMsg?.id.\n- Moved the creation and generation state checks to follow the contentId assignment for better clarity.\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n* ♻️ refactor: remove chunk error reload retry, keep notification only\n\nMade-with: Cursor\n\n* fix: inject\n\nSigned-off-by: Innei <tukon479@gmail.com>\n\n---------\n\nSigned-off-by: Innei <tukon479@gmail.com>",
+      "repo": "lobehub",
+      "date": "2026-03-04T13:47:31Z",
+      "author": "Innei",
+      "url": "https://github.com/randomdrake/lobehub/commit/07997b44a534bded1080e560d42baa59f4f26574"
+    },
+    {
+      "sha": "5d19dbf430f7df6103f0cce6ad84c4338ae8a201",
+      "message": "fix: Move email contact (#12323)",
+      "full_message": "fix: Move email contact (#12323)\n\n* fix: Move email contact\n\n* style: profile\n\n* fix: urk\n\n* fix: urk\n\n* feat: loading indicator\n\n* fix: build error\n\n* fix: sort\n\n* fix: sort\n\n* fix: sort\n\n* fix: sort\n\n* fix: sort",
+      "repo": "lobehub",
+      "date": "2026-03-04T11:37:31Z",
+      "author": "René Wang",
+      "url": "https://github.com/randomdrake/lobehub/commit/5d19dbf430f7df6103f0cce6ad84c4338ae8a201"
+    },
+    {
+      "sha": "3f1473d65f0ae3f8717e1522ffc13bf55929291e",
+      "message": "fix(userMemories,database): should not fail if extra structure mismatch (#12686)",
+      "full_message": "fix(userMemories,database): should not fail if extra structure mismatch (#12686)",
+      "repo": "lobehub",
+      "date": "2026-03-04T11:09:13Z",
+      "author": "Neko",
+      "url": "https://github.com/randomdrake/lobehub/commit/3f1473d65f0ae3f8717e1522ffc13bf55929291e"
+    },
+    {
+      "sha": "bf5d6ce2f8d8662781cafa4084df5b42dffd9211",
+      "message": "🐛 fix: updown the old lobehub plugins (#12674)",
+      "full_message": "🐛 fix: updown the old lobehub plugins (#12674)\n\n* fix: updown the old lobehub plugins\n\n* fix: update test.ts",
+      "repo": "lobehub",
+      "date": "2026-03-04T10:05:43Z",
+      "author": "LiJian",
+      "url": "https://github.com/randomdrake/lobehub/commit/bf5d6ce2f8d8662781cafa4084df5b42dffd9211"
+    },
+    {
+      "sha": "6ba657e6d089fee2a0b6c7c2ba74bc73a954c93b",
+      "message": "🔨 chore: fix to improve gateway (#12647)",
+      "full_message": "🔨 chore: fix to improve gateway (#12647)\n\nimprove gateway",
+      "repo": "lobehub",
+      "date": "2026-03-03T16:10:53Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/6ba657e6d089fee2a0b6c7c2ba74bc73a954c93b"
+    },
+    {
+      "sha": "c2a49342f027c1be20e9c7e99aa873afc6e3b27b",
+      "message": "🔨 chore: update device gateway ci (#12645)",
+      "full_message": "🔨 chore: update device gateway ci (#12645)\n\nimprove gateway",
+      "repo": "lobehub",
+      "date": "2026-03-03T15:41:51Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/c2a49342f027c1be20e9c7e99aa873afc6e3b27b"
+    },
+    {
+      "sha": "d92bb7a8e826a7c60e12180dabe04b7371f93866",
+      "message": "🐛 fix(context-engine): allow tool type recovery from manifest when models strip suffixes (#12636)",
+      "full_message": "🐛 fix(context-engine): allow tool type recovery from manifest when models strip suffixes (#12636)\n\n🐛 fix(context-engine): allow tool type recovery from manifest when models like GLM strip suffixes",
+      "repo": "lobehub",
+      "date": "2026-03-03T15:35:07Z",
+      "author": "Luis Sambrano",
+      "url": "https://github.com/randomdrake/lobehub/commit/d92bb7a8e826a7c60e12180dabe04b7371f93866"
+    },
+    {
+      "sha": "f223aeb7f478aa88b0ca15fbff3da3e828991a09",
+      "message": " 🔨 chore: improve gateway (#12643)",
+      "full_message": " 🔨 chore: improve gateway (#12643)\n\nimprove gateway",
+      "repo": "lobehub",
+      "date": "2026-03-03T15:26:46Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/f223aeb7f478aa88b0ca15fbff3da3e828991a09"
+    },
+    {
+      "sha": "90714af0dce51c9d5ab20f977d9ca48c4a451aa8",
+      "message": "🐛 fix: add await to handleResponseAPIMode to ensure proper error handling (#12640)",
+      "full_message": "🐛 fix: add await to handleResponseAPIMode to ensure proper error handling (#12640)",
+      "repo": "lobehub",
+      "date": "2026-03-03T13:56:57Z",
+      "author": "YuTengjing",
+      "url": "https://github.com/randomdrake/lobehub/commit/90714af0dce51c9d5ab20f977d9ca48c4a451aa8"
+    },
+    {
+      "sha": "936379bd218cd2c62a2917758e10e0302dc63d87",
+      "message": "Merge remote-tracking branch 'origin/main' into canary",
+      "full_message": "Merge remote-tracking branch 'origin/main' into canary",
+      "repo": "lobehub",
+      "date": "2026-03-03T12:07:53Z",
+      "author": "lobehubbot",
+      "url": "https://github.com/randomdrake/lobehub/commit/936379bd218cd2c62a2917758e10e0302dc63d87"
+    },
+    {
+      "sha": "a2c2a0ae76845365ef344a7ee54f2b14efa5fa81",
+      "message": "🚀 release: 20260303 (#12631)",
+      "full_message": "🚀 release: 20260303 (#12631)\n\nThis release includes **90 commits**. Key updates are below.\n\n### ✨ New Features and Enhancements\n\n- 🤖 Added **Discord IM bot integration** for receiving and responding to\nmessages within Discord channels.\n([#12517](https://github.com/lobehub/lobehub/pull/12517))\n- 🧩 Introduced **Agent Skills** support with progressive disclosure via\n`lobe-tools`, allowing agents to expose task-specific capabilities.\n([#12424](https://github.com/lobehub/lobehub/pull/12424),\n[#12489](https://github.com/lobehub/lobehub/pull/12489))\n- 🧠 Added **Memory Settings** for configuring memory effort and tool\npermissions. ([#12514](https://github.com/lobehub/lobehub/pull/12514))\n- 📧 Support for **changing email address** in profile settings.\n([#12549](https://github.com/lobehub/lobehub/pull/12549))\n- 🛡️ Added **unsaved changes guard** to prevent data loss on navigation.\n([#12332](https://github.com/lobehub/lobehub/pull/12332))\n- 🖱️ Support **Cmd+Click to open sidebar nav in new tab**.\n([#12574](https://github.com/lobehub/lobehub/pull/12574))\n- 🧮 Added **calculator builtin tool** for agents.\n([#11715](https://github.com/lobehub/lobehub/pull/11715))\n- 🎬 Added **video tab** to provider ModelList settings page with image\ndimension/aspect ratio constraints for uploads.\n([#12534](https://github.com/lobehub/lobehub/pull/12534),\n[#12607](https://github.com/lobehub/lobehub/pull/12607))\n- 🎯 Center active model on open in **model switch panel**.\n([#12215](https://github.com/lobehub/lobehub/pull/12215))\n- 🕹️ Support **agent management**.\n([#12061](https://github.com/lobehub/lobehub/pull/12061))\n\n### 🤖 Models and Provider Expansion\n\n- 🌟 Added **Kimi K2 thinking models** (Moonshot).\n([#12630](https://github.com/lobehub/lobehub/pull/12630))\n- 🍌 Added **Nano Banana 2** support.\n([#12493](https://github.com/lobehub/lobehub/pull/12493),\n[#12496](https://github.com/lobehub/lobehub/pull/12496))\n- 🎨 Added **Seedream 5 Lite** image generation model.\n([#12459](https://github.com/lobehub/lobehub/pull/12459))\n- 💨 Added **Qwen3.5 Flash** and Qwen3.5 OSS models.\n([#12465](https://github.com/lobehub/lobehub/pull/12465))\n- 🔮 Added **GLM-5**, **GLM-4.6V**, and **GLM-Image** for Zhipu.\n([#12272](https://github.com/lobehub/lobehub/pull/12272))\n- 📦 Batch updated model lists for AI360, Hunyuan, InternLM, Spark,\nStepFun, Wenxin, and Seedream.\n([#12371](https://github.com/lobehub/lobehub/pull/12371))\n- 🗑️ Removed deprecated `chatgpt-4o-latest`.\n([#12486](https://github.com/lobehub/lobehub/pull/12486))\n- ➕ Supplemented models from NewAPI pricing endpoint.\n([#10628](https://github.com/lobehub/lobehub/pull/10628))\n\n### 🏗️ Architecture\n\n- ⚡ **Migrated frontend from Next.js App Router to Vite SPA** — a major\narchitectural change improving dev experience and build performance.\n([#12404](https://github.com/lobehub/lobehub/pull/12404))\n- 📂 Restructured SPA routes to `src/routes` and `src/router`.\n([#12542](https://github.com/lobehub/lobehub/pull/12542))\n- ♻️ Refactored client agent runtime.\n([#12482](https://github.com/lobehub/lobehub/pull/12482))\n- 🔥 Removed invite code requirement feature.\n([#12474](https://github.com/lobehub/lobehub/pull/12474))\n\n### 🖥️ Desktop Improvements\n\n- 🔧 Fixed better-auth client stub for Electron renderer.\n([#12563](https://github.com/lobehub/lobehub/pull/12563))\n\n### Stability, Security, and UX Fixes\n\n- Fixed topic/thread title summarization to respect `responseLanguage`\nsetting. ([#12627](https://github.com/lobehub/lobehub/pull/12627))\n- Fixed MCP tool install loading state.\n([#12629](https://github.com/lobehub/lobehub/pull/12629))\n- Fixed mermaid rendering in notebook documents.\n([#12624](https://github.com/lobehub/lobehub/pull/12624))\n- Fixed global memory setting and tool enabled logic.\n([#12610](https://github.com/lobehub/lobehub/pull/12610))\n- Fixed Vertex AI 400 error caused by duplicate tool function\ndeclarations. ([#12604](https://github.com/lobehub/lobehub/pull/12604))\n- Fixed multiple Vertex AI and Moonshot runtime issues.\n([#12595](https://github.com/lobehub/lobehub/pull/12595))\n- Fixed SiliconCloud model thinking mode toggle.\n([#10011](https://github.com/lobehub/lobehub/pull/10011))\n- Fixed DeepSeek-Reasoner `reasoning_content` for tool calls.\n([#12564](https://github.com/lobehub/lobehub/pull/12564))\n- Fixed Google API key header passing (`x-goog-api-key`).\n([#12506](https://github.com/lobehub/lobehub/pull/12506))\n- Fixed `@napi-rs/canvas` hoisting for PDF parsing in Docker.\n([#12475](https://github.com/lobehub/lobehub/pull/12475))\n- Fixed model select panel flickering and improved list implementation.\n([#12485](https://github.com/lobehub/lobehub/pull/12485))\n- Fixed memory tools to run in server correctly with correct cron\nschedule. ([#12471](https://github.com/lobehub/lobehub/pull/12471),\n[#12568](https://github.com/lobehub/lobehub/pull/12568))\n- Fixed group agent rename, skill search, and editor focus issues in\nagent settings.\n([#12511](https://github.com/lobehub/lobehub/pull/12511),\n[#12432](https://github.com/lobehub/lobehub/pull/12432),\n[#12512](https://github.com/lobehub/lobehub/pull/12512))\n- Fixed NewAPI proxy gzip handling.\n([#10628](https://github.com/lobehub/lobehub/pull/10628))\n- Fixed provider request filtering for disabling browser requests.\n([#12002](https://github.com/lobehub/lobehub/pull/12002))\n- Fixed `input_image` incorrectly passed when no `image_url` present.\n([#12017](https://github.com/lobehub/lobehub/pull/12017))\n- Fixed crawler error handling and timeout cancellation.\n([#12487](https://github.com/lobehub/lobehub/pull/12487))\n- Added username and fullName length validation.\n([#12614](https://github.com/lobehub/lobehub/pull/12614))\n- Added database migration to Vercel build command.\n([#12551](https://github.com/lobehub/lobehub/pull/12551))\n- Improved auth db fallback for secondary-storage sessions.\n([#12548](https://github.com/lobehub/lobehub/pull/12548))\n- Fixed type not preserved when model batch processing.\n([#10015](https://github.com/lobehub/lobehub/pull/10015))\n- Fixed search issue.\n([#12457](https://github.com/lobehub/lobehub/pull/12457))\n\n### 🙏 Credits\n\nHuge thanks to these contributors (alphabetical):\n\n@Innei @arvinxx @canisminor1990 @cy948 @eaten-cake @eronez @hezhijie0327\n@mikelambert @nekomeowww @rdmclin2 @sxjeru @tjx666",
+      "repo": "lobehub",
+      "date": "2026-03-03T12:07:11Z",
+      "author": "Arvin Xu",
+      "url": "https://github.com/randomdrake/lobehub/commit/a2c2a0ae76845365ef344a7ee54f2b14efa5fa81"
+    },
+    {
+      "sha": "77e475caa51830e25b63d758b420c31e17abdaae",
+      "message": "Add Vercel Analytics and update privacy policy",
+      "full_message": "Add Vercel Analytics and update privacy policy\n\nInstall @vercel/analytics and add the <Analytics /> component to the\nroot layout. Update the privacy policy to accurately describe the\ncookieless, privacy-friendly page view metrics.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T07:54:07Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/77e475caa51830e25b63d758b420c31e17abdaae"
+    },
+    {
+      "sha": "17a5c2c5c3fd45bfe654f3384e09a09ed343b129",
+      "message": "Add Privacy, Terms, Accessibility pages and remove Book footer link",
+      "full_message": "Add Privacy, Terms, Accessibility pages and remove Book footer link\n\nCreate three new legal pages (privacy policy, terms of service,\naccessibility statement) with proper metadata, SectionWrapper layout,\nand prose styling matching existing site patterns. Remove the \"Book\"\nlink from the footer since it's redundant with the About page mention.\nWire up the three placeholder # links to their new routes.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T07:51:52Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/17a5c2c5c3fd45bfe654f3384e09a09ed343b129"
+    },
+    {
+      "sha": "f376d063150f507539aa5b17f37de0182e41c007",
+      "message": "Hide subtitle on mobile to prevent header text wrapping",
+      "full_message": "Hide subtitle on mobile to prevent header text wrapping\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T07:35:54Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/f376d063150f507539aa5b17f37de0182e41c007"
+    },
+    {
+      "sha": "5631e74dcbca67b344c527a922da801ad67276f9",
+      "message": "Add cross-marketing, orange accent, animated hero, and emojis",
+      "full_message": "Add cross-marketing, orange accent, animated hero, and emojis\n\n- Add Writing section with book (IWNDWYT) and Substack (Narrative\n  Compression) cards for cross-marketing funnel between About and Booking\n- Weave book and Substack mentions into About, LeaderProfile, Contact,\n  and Footer\n- Add sameAs links to JSON-LD structured data for SEO cross-linking\n- Switch accent color from blue to bright orange (#FF8C00 buttons with\n  dark text, #CC6B00 links) across all interactive elements\n- Add animated mathematical gradient (sine wave interference) to Hero\n  with white radial overlay for readability\n- Add tasteful emojis to services, values, credentials, booking tiers,\n  writing cards, and section headings\n- Add \"Made with 🌲 in Oregon\" to footer\n- Respect prefers-reduced-motion for gradient animation\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T07:31:35Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/5631e74dcbca67b344c527a922da801ad67276f9"
+    },
+    {
+      "sha": "e0e8efa92ac78dd1e3c5d31f5ef8a09959c0b36a",
+      "message": "Add photo, logo/favicon, OG image, and left-align all text",
+      "full_message": "Add photo, logo/favicon, OG image, and left-align all text\n\n- Add David's photo to About section (main page) and LeaderProfile\n- Replace favicon with new RedDep logo (multi-size .ico, 192px icon, 180px apple-icon)\n- Create 1200x630 OG image from logo for social sharing\n- Wire og:image and twitter:image in layout metadata\n- Remove center-justified text across all sections and components\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "reddep.com",
+      "date": "2026-03-02T06:00:32Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/e0e8efa92ac78dd1e3c5d31f5ef8a09959c0b36a"
+    },
+    {
+      "sha": "af4c7e89dfbf9c43e82d69691a7948c16f47af3a",
+      "message": "docs: add project README",
+      "full_message": "docs: add project README",
+      "repo": "reddep.com",
+      "date": "2026-03-02T05:20:18Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/af4c7e89dfbf9c43e82d69691a7948c16f47af3a"
+    },
+    {
+      "sha": "30875af358b36960c010167e97d718ba824141d8",
+      "message": "feat: build complete RedDep site with About page and NDA trust messaging",
+      "full_message": "feat: build complete RedDep site with About page and NDA trust messaging\n\nImplements the full single-page marketing and booking site from the\ninitial Next.js scaffold, plus a dedicated /about page with expanded\nleader profile, capability areas, and NDA trust banner.\n\nKey additions:\n- Pride-themed brand system (colors, typography, gradient bar)\n- All home page sections (Hero, Mission/Vision, Services, Values, About, Booking, Contact)\n- Stripe checkout integration with Cal.com booking flow\n- /about page with LeaderProfile, CapabilityAreas, NdaTrustBanner\n- Pathname-aware header navigation (anchor links on home, full paths elsewhere)\n- NDA/confidentiality messaging in Contact section\n- SEO metadata, sitemap, robots.txt, JSON-LD structured data\n- WCAG AA accessibility (skip nav, focus indicators, reduced motion, semantic HTML)\n- Vercel deployment config with security headers",
+      "repo": "reddep.com",
+      "date": "2026-03-02T05:17:22Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/30875af358b36960c010167e97d718ba824141d8"
+    },
+    {
+      "sha": "bb5b4483ec038342547e5583284db7ebf21c87ab",
+      "message": "Initial commit from Create Next App",
+      "full_message": "Initial commit from Create Next App",
+      "repo": "reddep.com",
+      "date": "2026-03-02T02:52:31Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/reddep.com/commit/bb5b4483ec038342547e5583284db7ebf21c87ab"
+    },
+    {
+      "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
+      "message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-03-01T01:23:52Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/4ad27a2757d902a70a1f42fbefaea3aac5525e36"
+    },
+    {
+      "sha": "b0358e1c9e5c64200acc2ab62375c84e6b92d566",
+      "message": "🌐✨🏳️‍🌈 README glow-up!! aligned with the randomdrake.github.io dashboard vibes — polished heading, Daily Writing section, Claude AI usage, compliance badges, and that 💜☕ footer energy!! 🏳️‍⚧️✨",
+      "full_message": "🌐✨🏳️‍🌈 README glow-up!! aligned with the randomdrake.github.io dashboard vibes — polished heading, Daily Writing section, Claude AI usage, compliance badges, and that 💜☕ footer energy!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-03-01T01:18:56Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/b0358e1c9e5c64200acc2ab62375c84e6b92d566"
+    },
+    {
+      "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
+      "message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
+      "full_message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-02-28T23:10:43Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/58206ec5798ac692230dc099a18774eeda3a441f"
+    },
+    {
+      "sha": "905cc88f43df862665170a39a8710f43a84517e0",
+      "message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️",
+      "full_message": "✍️🔥🏳️‍🌈 substack is the STAR now — big subscribe badge, top billing, the works!! 📬✨🏳️‍⚧️\n\nsubstack is the money maker so let's give it the spotlight it deserves!!\nadded a big bold orange \"Subscribe on Substack\" badge right below the\nheader (downloaded locally, no hotlinking!!), moved substack to first\nposition in the links bar, bolded it in the \"what i'm up to\" section\nwith an inline subscribe link. substack is front and center everywhere\nnow. 💜🧡\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-02-28T23:07:56Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/905cc88f43df862665170a39a8710f43a84517e0"
+    },
+    {
+      "sha": "5ff98a145fa258003d0a816f631e4d83213229c9",
+      "message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️",
+      "full_message": "🚫🔗✨🏳️‍🌈 no hotlinking!! downloaded phytocannabinoid chart locally — assets belong in the repo!! 🧬🌿🏳️‍⚧️\n\nreplaced the external LinkedIn hotlink with a proper local asset\nreference. downloaded the phytocannabinoid synthesis chart image into\nassets/ and updated the README link accordingly. hotlinking is a\nno-go — we keep our own copies around here!! 💜\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-02-28T23:05:55Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/5ff98a145fa258003d0a816f631e4d83213229c9"
+    },
+    {
+      "sha": "2aba64933c85b03a124d071f392bae9e0b4a99a3",
+      "message": "🧬✨🏳️‍🌈 added phytocannabinoid synthesis pioneer cred — first to chart the whole process!! 🌿🔬✨🏳️‍⚧️",
+      "full_message": "🧬✨🏳️‍🌈 added phytocannabinoid synthesis pioneer cred — first to chart the whole process!! 🌿🔬✨🏳️‍⚧️\n\nbecause being the FIRST to map the complete phytocannabinoid synthesis\npathway is absolutely something that belongs on the profile!! added it\nto the intro paragraph with a link to the chart AND as a bullet in the\nfun facts section. science queen energy!! 🧪💜\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-02-28T23:03:27Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/2aba64933c85b03a124d071f392bae9e0b4a99a3"
+    },
+    {
+      "sha": "bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa",
+      "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
+      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-02-28T22:41:58Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa"
+    },
+    {
+      "sha": "38a9ddf512ef40ff2bb56b45b75b1df87ccd4238",
+      "message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈",
+      "full_message": "🌈✨🏳️‍🌈 the Big Bang — summoning this repo into existence!! 🏳️‍⚧️✨🌈\n\n🎉 created README.md because every beautiful chaotic journey needs a starting point\n🧠 hyperfocused energy channeled into manifesting this git repo from the void\n💖 sending queer joy into the commit history from the very first line\n🦄 let the neurodivergent magic BEGIN\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "repo": "randomdrake",
+      "date": "2026-02-28T22:22:21Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/randomdrake/commit/38a9ddf512ef40ff2bb56b45b75b1df87ccd4238"
     },
     {
       "sha": "6a093482747625e13c43866dcd6de583ab015f70",
@@ -563,6 +933,321 @@
       "date": "2025-07-01T19:40:49Z",
       "author": "Carey Metcalfe",
       "url": "https://github.com/randomdrake/slack-to-discord/commit/2ad1535ea26e0398e14a75a6ff6d10611d3636c1"
+    },
+    {
+      "sha": "b80750482bb8e20b7b4c2c14f04ff2ea0663bac0",
+      "message": "Update README.md",
+      "full_message": "Update README.md",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T17:59:18Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/b80750482bb8e20b7b4c2c14f04ff2ea0663bac0"
+    },
+    {
+      "sha": "21bc943a7f8f625391c963200e2813fc701e7acb",
+      "message": "Correctly use Next.js",
+      "full_message": "Correctly use Next.js",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T17:09:45Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/21bc943a7f8f625391c963200e2813fc701e7acb"
+    },
+    {
+      "sha": "ff3390992f4d2fdc45e4e5cb1c7ce15313bb59db",
+      "message": "Adding screen recording",
+      "full_message": "Adding screen recording",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T16:43:51Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/ff3390992f4d2fdc45e4e5cb1c7ce15313bb59db"
+    },
+    {
+      "sha": "8c27641a65c04b667027262782fa380ed6c9adc1",
+      "message": "Updating README",
+      "full_message": "Updating README",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T16:43:02Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/8c27641a65c04b667027262782fa380ed6c9adc1"
+    },
+    {
+      "sha": "6eaf19965a5811544c733a93c4cb6e69839bdbbb",
+      "message": "Consistent headers",
+      "full_message": "Consistent headers",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T16:07:46Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/6eaf19965a5811544c733a93c4cb6e69839bdbbb"
+    },
+    {
+      "sha": "efe28818af0058a55dfad698c3750ed9017cbb0d",
+      "message": "Linter fixes",
+      "full_message": "Linter fixes",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T04:32:10Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/efe28818af0058a55dfad698c3750ed9017cbb0d"
+    },
+    {
+      "sha": "81909702195e6966a2d40c24d322c805fc450de0",
+      "message": "Using chart.js for Dashboard Chart",
+      "full_message": "Using chart.js for Dashboard Chart",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T04:31:01Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/81909702195e6966a2d40c24d322c805fc450de0"
+    },
+    {
+      "sha": "a7f4255e0ce1ec6c0a263fdc525d30aa96e290b3",
+      "message": "Getting rid of (overview)",
+      "full_message": "Getting rid of (overview)",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T04:30:28Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/a7f4255e0ce1ec6c0a263fdc525d30aa96e290b3"
+    },
+    {
+      "sha": "b1c24dca9ae2e2893d053f6940cab8b6975fc99b",
+      "message": "Moving revenue to API",
+      "full_message": "Moving revenue to API",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-08T04:28:28Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/b1c24dca9ae2e2893d053f6940cab8b6975fc99b"
+    },
+    {
+      "sha": "65700e0f117c51f094fade695e0167afb637cef3",
+      "message": "Adjust profile image to provide w/h classes",
+      "full_message": "Adjust profile image to provide w/h classes",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-07T23:28:20Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/65700e0f117c51f094fade695e0167afb637cef3"
+    },
+    {
+      "sha": "7cf30bc47560f751b1d26772824b3932051baaec",
+      "message": "Use Promise where necessary",
+      "full_message": "Use Promise where necessary",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-07T23:23:21Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/7cf30bc47560f751b1d26772824b3932051baaec"
+    },
+    {
+      "sha": "63235d4b140031626c878d32f79adaba9bc56d7a",
+      "message": "Hopefully fix bug",
+      "full_message": "Hopefully fix bug",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-07T23:19:28Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/63235d4b140031626c878d32f79adaba9bc56d7a"
+    },
+    {
+      "sha": "ec6e9e388865c746879e87b4776bb323a2dfa715",
+      "message": "Fixes #2 Utilize Profile Images for Customers on Create Invoice",
+      "full_message": "Fixes #2 Utilize Profile Images for Customers on Create Invoice",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-07T21:29:33Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/ec6e9e388865c746879e87b4776bb323a2dfa715"
+    },
+    {
+      "sha": "23fdf26cb48380b0b82daf87e25ee8079383e383",
+      "message": "#2 Let Us Use www.gravatar.com For Images",
+      "full_message": "#2 Let Us Use www.gravatar.com For Images",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-07T21:29:08Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/23fdf26cb48380b0b82daf87e25ee8079383e383"
+    },
+    {
+      "sha": "5c6c2e71455df631cb98d80987917db6a72a2bf7",
+      "message": "#2 Using and Updating Profile Image on Edit Invoice Page",
+      "full_message": "#2 Using and Updating Profile Image on Edit Invoice Page",
+      "repo": "nextjs-dashboard",
+      "date": "2024-11-07T21:10:56Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/nextjs-dashboard/commit/5c6c2e71455df631cb98d80987917db6a72a2bf7"
+    },
+    {
+      "sha": "38a47894027e5776c19f84d6bfbef88904704f82",
+      "message": "Fix issue with new Node version",
+      "full_message": "Fix issue with new Node version",
+      "repo": "react-flow-org-chart",
+      "date": "2024-11-01T19:48:03Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/react-flow-org-chart/commit/38a47894027e5776c19f84d6bfbef88904704f82"
+    },
+    {
+      "sha": "6be4899187e72e6f98705729f13b3ac7c267f92d",
+      "message": "Small updates to README",
+      "full_message": "Small updates to README",
+      "repo": "react-flow-org-chart",
+      "date": "2024-10-30T19:28:26Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/react-flow-org-chart/commit/6be4899187e72e6f98705729f13b3ac7c267f92d"
+    },
+    {
+      "sha": "85ab84223f309ba4470b7c63c64d065ddf232bee",
+      "message": "Removing more bad CSS files",
+      "full_message": "Removing more bad CSS files",
+      "repo": "react-flow-org-chart",
+      "date": "2024-10-30T19:13:19Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/react-flow-org-chart/commit/85ab84223f309ba4470b7c63c64d065ddf232bee"
+    },
+    {
+      "sha": "aa437e3d2f0912a7d182b3c1f3a16084c6f6f897",
+      "message": "Removing another accidentally generated CSS",
+      "full_message": "Removing another accidentally generated CSS",
+      "repo": "react-flow-org-chart",
+      "date": "2024-10-30T18:49:49Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/react-flow-org-chart/commit/aa437e3d2f0912a7d182b3c1f3a16084c6f6f897"
+    },
+    {
+      "sha": "95de7876192bdcdc7a0ef673466ee2f713113ee7",
+      "message": "Removing generated CSS",
+      "full_message": "Removing generated CSS",
+      "repo": "react-flow-org-chart",
+      "date": "2024-10-30T18:48:57Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/react-flow-org-chart/commit/95de7876192bdcdc7a0ef673466ee2f713113ee7"
+    },
+    {
+      "sha": "c57e613c0d8180b67e388e8370a9474ef7aa612e",
+      "message": "Adding more README stuff and a recording",
+      "full_message": "Adding more README stuff and a recording",
+      "repo": "react-flow-org-chart",
+      "date": "2024-10-30T18:48:03Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/react-flow-org-chart/commit/c57e613c0d8180b67e388e8370a9474ef7aa612e"
+    },
+    {
+      "sha": "caa371bc7a42e0863de6bc13a07e631b9f534aa8",
+      "message": "Adding screenshots",
+      "full_message": "Adding screenshots",
+      "repo": "react-flow-org-chart",
+      "date": "2024-10-30T18:30:18Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/react-flow-org-chart/commit/caa371bc7a42e0863de6bc13a07e631b9f534aa8"
+    },
+    {
+      "sha": "abdcf9c3a0db5b846bdc43bfd8e9b5add90274c6",
+      "message": "First commit 🎉",
+      "full_message": "First commit 🎉",
+      "repo": "react-flow-org-chart",
+      "date": "2024-10-30T18:19:06Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/react-flow-org-chart/commit/abdcf9c3a0db5b846bdc43bfd8e9b5add90274c6"
+    },
+    {
+      "sha": "6f82b2a7d65a3aac3fea1bb9786d42054c01ea55",
+      "message": "Bug Fixes and Removing Debug",
+      "full_message": "Bug Fixes and Removing Debug\n\n-Removing some accidentally left in debug lines.\n-Fixing error where path was changed and prevented future errors by\ndefining it.",
+      "repo": "journal-down",
+      "date": "2017-09-12T18:28:57Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/6f82b2a7d65a3aac3fea1bb9786d42054c01ea55"
+    },
+    {
+      "sha": "a175074acdcbb29d314e5774327b7333bb0a56e5",
+      "message": "Updating and Editing",
+      "full_message": "Updating and Editing",
+      "repo": "journal-down",
+      "date": "2017-09-12T04:12:58Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/a175074acdcbb29d314e5774327b7333bb0a56e5"
+    },
+    {
+      "sha": "6a58537a6e381752dfcf093a4ed94de89b79d44f",
+      "message": "Moving from /Journal to /JournalDown",
+      "full_message": "Moving from /Journal to /JournalDown",
+      "repo": "journal-down",
+      "date": "2017-09-12T04:12:45Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/6a58537a6e381752dfcf093a4ed94de89b79d44f"
+    },
+    {
+      "sha": "57db0e2c7835e63ceca34f1c550515c5b44a26d2",
+      "message": "Update README.md",
+      "full_message": "Update README.md",
+      "repo": "journal-down",
+      "date": "2017-09-12T04:04:28Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/57db0e2c7835e63ceca34f1c550515c5b44a26d2"
+    },
+    {
+      "sha": "4a703388182cd96a75208909c0177c9470db4410",
+      "message": "Adding README Stuff",
+      "full_message": "Adding README Stuff",
+      "repo": "journal-down",
+      "date": "2017-09-12T04:01:13Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/4a703388182cd96a75208909c0177c9470db4410"
+    },
+    {
+      "sha": "5e8502bf383f3370e94532c251885f821d303ff4",
+      "message": "Remove old .sh File",
+      "full_message": "Remove old .sh File",
+      "repo": "journal-down",
+      "date": "2017-09-12T03:16:21Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/5e8502bf383f3370e94532c251885f821d303ff4"
+    },
+    {
+      "sha": "44b96852dc6e7bb6b08e3b738b18b9d14dea0344",
+      "message": "BASH Version of JournalDown",
+      "full_message": "BASH Version of JournalDown",
+      "repo": "journal-down",
+      "date": "2017-09-12T03:15:45Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/44b96852dc6e7bb6b08e3b738b18b9d14dea0344"
+    },
+    {
+      "sha": "7fcfa5b6f9d10658e382f2e6ddd186986e5d4bcf",
+      "message": "Adding Bash File - Still Needs to Handle Arguments and Be Tested",
+      "full_message": "Adding Bash File - Still Needs to Handle Arguments and Be Tested",
+      "repo": "journal-down",
+      "date": "2017-09-11T18:34:43Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/7fcfa5b6f9d10658e382f2e6ddd186986e5d4bcf"
+    },
+    {
+      "sha": "dc1c215e82c1626412836963423dafa63832aaa2",
+      "message": "Added Arguments, Cleaned up Code",
+      "full_message": "Added Arguments, Cleaned up Code",
+      "repo": "journal-down",
+      "date": "2017-09-11T16:58:55Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/dc1c215e82c1626412836963423dafa63832aaa2"
+    },
+    {
+      "sha": "5e17daceb146bbab64258a26a5f5794df63f3cf3",
+      "message": "First Journaldown Script Commit",
+      "full_message": "First Journaldown Script Commit",
+      "repo": "journal-down",
+      "date": "2017-09-11T04:48:40Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/5e17daceb146bbab64258a26a5f5794df63f3cf3"
+    },
+    {
+      "sha": "8d5ecd51b36388f7564fc0a718139496a7a3643f",
+      "message": "Update README.md",
+      "full_message": "Update README.md",
+      "repo": "journal-down",
+      "date": "2017-09-11T04:34:16Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/8d5ecd51b36388f7564fc0a718139496a7a3643f"
+    },
+    {
+      "sha": "0e00ca08bec85686691ce6a84ba3393417944a77",
+      "message": "Initial commit",
+      "full_message": "Initial commit",
+      "repo": "journal-down",
+      "date": "2017-09-11T04:32:51Z",
+      "author": "David Drake",
+      "url": "https://github.com/randomdrake/journal-down/commit/0e00ca08bec85686691ce6a84ba3393417944a77"
     },
     {
       "sha": "237e6925cef41ec40eac4f4c348b8163521e7623",
@@ -722,6 +1407,6 @@
   "stats": {
     "total_stars": 202,
     "total_forks": 69,
-    "total_code_bytes": 1398608
+    "total_code_bytes": 28665224
   }
 }
