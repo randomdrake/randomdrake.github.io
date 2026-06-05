@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T00:46:00.440Z",
+  "generated_at": "2026-06-05T07:30:49.177Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -175,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-06-04T18:47:33Z",
-      "pushed_at": "2026-06-04T18:47:29Z"
+      "updated_at": "2026-06-05T00:46:04Z",
+      "pushed_at": "2026-06-05T00:46:01Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -314,6 +314,15 @@
   },
   "commits": [
     {
+      "sha": "af21d098cdcd99b4c31b40193d34197565061302",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-06-05T00:46:00Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/af21d098cdcd99b4c31b40193d34197565061302"
+    },
+    {
       "sha": "e93b2039d4b44bd32998bdf0fe873b46664128d0",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -438,15 +447,6 @@
       "date": "2026-06-01T14:03:11Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/09fb927ae0cafa7d6359d41a38f3565f1d4553a8"
-    },
-    {
-      "sha": "eabc88a5b2231cde38c648a8244dd30ae5b45f37",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-06-01T07:47:10Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/eabc88a5b2231cde38c648a8244dd30ae5b45f37"
     },
     {
       "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
@@ -757,7 +757,7 @@
     {
       "sha": "58206ec5798ac692230dc099a18774eeda3a441f",
       "message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️",
-      "full_message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link — this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "full_message": "🧬🌿🏳️‍🌈 phytocannabinoid synthesis chart is now a FEATURED section — full width, full glory!! 🔬✨🏳️‍⚧️\n\ngave the cannabinoid synthesis chart its own dedicated section with a\n🧬 header, a descriptive intro paragraph, and the full-width chart\nimage displayed right there in the README for everyone to see!! no more\nhiding behind a text link �� this pioneering work deserves to be SEEN.\nalso cleaned up the intro paragraph to keep the bold text mention\nwithout the old link since the chart now speaks for itself below. 💜🌿\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T23:10:43Z",
       "author": "David Drake",
@@ -792,8 +792,8 @@
     },
     {
       "sha": "bd41c6a8124bea7ce9a9489f7c06fa6fd61f10fa",
-      "message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
-      "full_message": "🌌✨🏳️‍🌈 the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🌌✨🏳️‍�� the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭",
+      "full_message": "🌌✨🏳️‍�� the space between — full profile README with real-deal Hubble imagery!! 🏳️‍⚧️✨🔭\n\nswapped out the AI-generated dragon banner for an actual NASA Hubble Space\nTelescope photo from Unsplash — because why use fake cosmos when the real\nuniverse is RIGHT THERE being gorgeous?? 💜💙🩷\n\nbuilt out the whole profile README with:\n  ✨ intro that captures the theatre→CS→AI arc\n  📖 the book, the writing, the whole story\n  🔭 what's current (narrative compression! AI! substack!)\n  ⭐ notable open source (nasa-apod-desktop still slapping at 151 stars)\n  🧰 tech stack\n  🌲 personal flavor (commodore 64 tattoo!! oregon forever!!)\n  🔗 all the socials and links\n\nthis is a human being's profile, not a template. it breathes. 🫁🌈\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-02-28T22:41:58Z",
       "author": "David Drake",
