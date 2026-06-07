@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T00:46:30.392Z",
+  "generated_at": "2026-06-07T07:24:57.135Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -175,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-06-06T18:28:22Z",
-      "pushed_at": "2026-06-06T18:28:18Z"
+      "updated_at": "2026-06-07T00:46:34Z",
+      "pushed_at": "2026-06-07T00:46:31Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -314,6 +314,15 @@
   },
   "commits": [
     {
+      "sha": "65bdf1785850588e83a4dee6952732e53f6a625a",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-06-07T00:46:30Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/65bdf1785850588e83a4dee6952732e53f6a625a"
+    },
+    {
       "sha": "76938152e4635e41b88cee9cdb15d47f912d3b3a",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -438,15 +447,6 @@
       "date": "2026-06-03T13:38:21Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/2d2a65877b4a12e4ab742af9699763a0a6542cd4"
-    },
-    {
-      "sha": "e3023647a8761a7db5a912597cbb6b03e977c669",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-06-03T07:43:07Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e3023647a8761a7db5a912597cbb6b03e977c669"
     },
     {
       "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
@@ -738,8 +738,8 @@
     },
     {
       "sha": "4ad27a2757d902a70a1f42fbefaea3aac5525e36",
-      "message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
-      "full_message": "🚀✨🏳️‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "message": "🚀✨🏳���‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨",
+      "full_message": "🚀✨🏳���‍🌈 README diet + dashboard CTA!! trimmed the static stuff the live site does WAY better — repos, languages, Claude AI, compliance badges all live on the dashboard now, baby!! go see the real show!! 🏳️‍⚧️✨\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
       "repo": "randomdrake",
       "date": "2026-03-01T01:23:52Z",
       "author": "David Drake",
