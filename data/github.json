@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T18:28:17.867Z",
+  "generated_at": "2026-06-07T00:46:30.392Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -175,8 +175,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-06-06T12:28:35Z",
-      "pushed_at": "2026-06-06T12:28:32Z"
+      "updated_at": "2026-06-06T18:28:22Z",
+      "pushed_at": "2026-06-06T18:28:18Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -314,6 +314,15 @@
   },
   "commits": [
     {
+      "sha": "76938152e4635e41b88cee9cdb15d47f912d3b3a",
+      "message": "Update GitHub data [automated]",
+      "full_message": "Update GitHub data [automated]",
+      "repo": "randomdrake.github.io",
+      "date": "2026-06-06T18:28:17Z",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/76938152e4635e41b88cee9cdb15d47f912d3b3a"
+    },
+    {
       "sha": "62cd2463b348a47c6e5e2797a3f9f129bb8fd25f",
       "message": "Update GitHub data [automated]",
       "full_message": "Update GitHub data [automated]",
@@ -438,15 +447,6 @@
       "date": "2026-06-03T07:43:07Z",
       "author": "github-actions[bot]",
       "url": "https://github.com/randomdrake/randomdrake.github.io/commit/e3023647a8761a7db5a912597cbb6b03e977c669"
-    },
-    {
-      "sha": "95eaedc11b594455784f91b06aa1cfadd7bb7397",
-      "message": "Update GitHub data [automated]",
-      "full_message": "Update GitHub data [automated]",
-      "repo": "randomdrake.github.io",
-      "date": "2026-06-03T00:53:26Z",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/randomdrake/randomdrake.github.io/commit/95eaedc11b594455784f91b06aa1cfadd7bb7397"
     },
     {
       "sha": "d37709c58c48ec3efc6a9f6a2519e979056409fa",
@@ -1385,25 +1385,7 @@
       "url": "https://github.com/randomdrake/nasa-apod-desktop/commit/f96d1963ae0e1a365fda11d1238e905ed3e58f2e"
     }
   ],
-  "events": [
-    {
-      "type": "CreateEvent",
-      "repo": {
-        "id": 1232104990,
-        "name": "randomdrake/narrative-compression",
-        "url": "https://api.github.com/repos/randomdrake/narrative-compression"
-      },
-      "payload": {
-        "ref": "main",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/main",
-        "master_branch": "main",
-        "description": null,
-        "pusher_type": "user"
-      },
-      "created_at": "2026-05-07T15:38:59Z"
-    }
-  ],
+  "events": [],
   "stats": {
     "total_stars": 202,
     "total_forks": 69,
