@@ -3,1630 +3,782 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Drake — GitHub Dashboard</title>
-    <link rel="icon" type="image/jpeg" href="https://avatars.githubusercontent.com/u/514002?v=4&s=64">
-    <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/514002?v=4&s=180">
-    <meta name="description" content="David Drake's GitHub contributions dashboard — live public repository stats, language breakdown, and recent activity.">
+    <title>David Byron Drake — Engineering Leader</title>
+    <link rel="icon" type="image/jpeg" href="https://avatars.githubusercontent.com/u/1679509?v=4&s=64">
+    <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/1679509?v=4&s=180">
+    <meta name="description" content="David Byron Drake — engineering leader and former YC CTO building AI-native products. Live GitHub activity, experience, and selected work.">
+    <link rel="canonical" href="https://randomdrake.github.io">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="David Drake — GitHub Dashboard">
-    <meta property="og:description" content="Live GitHub contributions dashboard showing public repos, stars, language breakdown, and recent activity.">
+    <meta property="og:title" content="David Byron Drake — Engineering Leader">
+    <meta property="og:description" content="Engineering leader and former YC CTO building AI-native products. Live GitHub activity, experience, and selected work.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://randomdrake.github.io">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/514002?v=4&s=400">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/1679509?v=4&s=400">
     <meta property="og:image:width" content="400">
     <meta property="og:image:height" content="400">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="David Drake — GitHub Dashboard">
-    <meta name="twitter:description" content="Live GitHub contributions dashboard showing public repos, stars, language breakdown, and recent activity.">
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/514002?v=4&s=400">
+    <meta name="twitter:title" content="David Byron Drake — Engineering Leader">
+    <meta name="twitter:description" content="Engineering leader and former YC CTO building AI-native products.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/1679509?v=4&s=400">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        gh: {
-                            bg: '#0d1117',
-                            card: '#161b22',
-                            border: '#30363d',
-                            text: '#c9d1d9',
-                            muted: '#8b949e',
-                            accent: '#f97316',
-                            heat0: '#161b22',
-                            heat1: '#7c2d12',
-                            heat2: '#c2410c',
-                            heat3: '#ea580c',
-                            heat4: '#f97316',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
     <style>
-        body { background: #0d1117; color: #c9d1d9; }
-
-        /* Skeleton loading shimmer */
-        .skeleton {
-            background: linear-gradient(90deg, #161b22 25%, #1f2937 50%, #161b22 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-        }
-        @keyframes shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        /* === Robot Engineer Workshop === */
-        .workshop {
-            height: 520px;
-            position: relative;
-            overflow-y: auto;
-            overflow-x: hidden;
-            border-radius: 0.5rem;
-            scroll-behavior: auto;
-            background:
-                radial-gradient(ellipse at 50% 100%, rgba(249,115,22,0.06) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 30%, rgba(212,165,116,0.04) 0%, transparent 50%),
-                linear-gradient(to bottom, #0d1117 0%, #161b22 100%);
-        }
-        .workshop::-webkit-scrollbar { width: 4px; }
-        .workshop::-webkit-scrollbar-track { background: transparent; }
-        .workshop::-webkit-scrollbar-thumb { background: rgba(249,115,22,0.25); border-radius: 4px; }
-        .workshop::-webkit-scrollbar-thumb:hover { background: rgba(249,115,22,0.5); }
-        .workshop::before {
-            content: '';
-            position: sticky;
-            top: 0;
-            display: block;
-            height: 0;
-            background-image:
-                radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
-            background-size: 32px 32px;
-            pointer-events: none;
-        }
-        .workshop-fade-top, .workshop-fade-bottom {
-            position: sticky;
-            left: 0; right: 0;
-            height: 40px;
-            pointer-events: none;
-            z-index: 10;
-        }
-        .workshop-fade-top {
-            top: 0;
-            background: linear-gradient(to bottom, #0d1117, transparent);
-        }
-        .workshop-fade-bottom {
-            bottom: 0;
-            background: linear-gradient(to top, #0d1117, transparent);
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --card-2: #1c2230;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --heading: #f0f3f6;
+            --muted: #8b949e;
+            --faint: #6e7681;
+            --accent: #f97316;
+            --accent-soft: rgba(249, 115, 22, 0.12);
+            --green: #3fb950;
+            --red: #f85149;
+            --yellow: #d29922;
+            --claude: #d4a574;
+            --radius: 12px;
+            --maxw: 1040px;
         }
 
-        .robot-lane {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            padding: 8px 0;
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.55;
         }
 
-        /* Easter egg at the bottom */
-        .easter-egg {
-            text-align: center;
-            padding: 40px 20px 60px;
-            cursor: default;
-            user-select: none;
+        a { color: inherit; }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .easter-egg .egg {
-            font-size: 48px;
-            display: inline-block;
-            animation: eggWobble 2s ease-in-out infinite;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .easter-egg .egg:hover {
-            animation: eggCrack 0.5s ease forwards;
-        }
-        .easter-egg .egg-msg {
-            font-size: 11px;
-            color: #484f58;
-            margin-top: 8px;
+
+        /* ---- Reveal-on-load ---- */
+        .reveal {
             opacity: 0;
-            transition: opacity 0.6s;
+            transform: translateY(16px);
+            animation: reveal 0.6s ease forwards;
         }
-        .easter-egg:hover .egg-msg { opacity: 1; }
-        .easter-egg .egg-secret {
-            display: none;
-            margin-top: 12px;
-            padding: 12px 16px;
-            border-radius: 10px;
-            background: rgba(249,115,22,0.08);
-            border: 1px solid rgba(249,115,22,0.2);
-            font-size: 12px;
-            color: #e6edf3;
-            line-height: 1.6;
-        }
-        @keyframes eggWobble {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-5deg); }
-            75% { transform: rotate(5deg); }
-        }
-        @keyframes eggCrack {
-            0% { transform: scale(1) rotate(0deg); }
-            25% { transform: scale(1.1) rotate(-8deg); }
-            50% { transform: scale(1.2) rotate(6deg); }
-            75% { transform: scale(1.3) rotate(-3deg); }
-            100% { transform: scale(1.4) rotate(0deg); }
-        }
+        @keyframes reveal { to { opacity: 1; transform: none; } }
 
-        /* Feed cards — commits and pipeline runs */
-        .feed-card {
+        /* ---- Section scaffolding ---- */
+        section { padding: 44px 0; border-top: 1px solid var(--border); }
+        section:first-of-type { border-top: none; }
+        .section-head {
             display: flex;
-            align-items: flex-start;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+        }
+        .section-head h2 {
+            font-size: 1.18rem;
+            font-weight: 650;
+            color: var(--heading);
+            margin: 0;
+            letter-spacing: -0.01em;
+        }
+        .section-head .meta { font-size: 0.8rem; color: var(--muted); }
+
+        .live {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .live-dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: var(--accent);
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+        /* ---- Hero ---- */
+        .hero {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            padding: 56px 0 40px;
+            border-top: none;
+        }
+        .hero-avatar {
+            width: 104px; height: 104px; border-radius: 50%;
+            border: 2px solid var(--border);
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            line-height: 1.1;
+            margin: 0 0 6px;
+            color: var(--heading);
+            letter-spacing: -0.02em;
+        }
+        .hero .tagline {
+            font-size: 1.05rem;
+            color: var(--accent);
+            font-weight: 550;
+            margin: 0 0 14px;
+        }
+        .hero .about {
+            font-size: 0.97rem;
+            color: var(--text);
+            max-width: 62ch;
+            margin: 0 0 16px;
+        }
+        .hero .open-to {
+            font-size: 0.84rem;
+            color: var(--muted);
+            margin: 0 0 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+        }
+        .hero .open-to span { display: inline-flex; align-items: center; gap: 6px; }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.85rem;
+            font-weight: 550;
+            text-decoration: none;
             padding: 8px 14px;
             border-radius: 8px;
-            background: rgba(22, 27, 34, 0.7);
-            border: 1px solid rgba(48, 54, 61, 0.5);
-            transition: background 0.2s, border-color 0.2s;
-            text-decoration: none;
+            border: 1px solid var(--border);
+            background: var(--card);
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s, transform 0.18s;
         }
-        .feed-card:hover {
-            background: rgba(30, 37, 46, 0.95);
-            border-color: rgba(249, 115, 22, 0.35);
+        .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+        .btn svg { width: 16px; height: 16px; }
+        .btn.primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #1a1004;
+            font-weight: 650;
         }
-        .feed-card.claude { border-left: 2px solid #d4a574; }
-        .feed-card.david { border-left: 2px solid #f97316; }
-        .feed-card.bot { border-left: 2px solid #52525b; opacity: 0.7; }
-        .feed-card.pipeline { border-left: 2px solid #22c55e; }
-        .feed-card.pipeline.failed { border-left-color: #ef4444; }
-        .feed-card.pipeline.running { border-left-color: #eab308; }
+        .btn.primary:hover { background: #fb923c; border-color: #fb923c; }
 
-        .card-emoji {
-            font-size: 18px;
-            line-height: 1;
-            flex-shrink: 0;
-            margin-top: 1px;
+        /* ---- Stats ---- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
         }
+        .stat {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 14px;
+            text-align: center;
+        }
+        .stat .num { font-size: 1.7rem; font-weight: 700; color: var(--heading); line-height: 1; }
+        .stat .label { font-size: 0.74rem; color: var(--muted); margin-top: 7px; }
 
-        /* Author tag */
-        .author-tag {
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
+        /* ---- Experience ---- */
+        .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .exp {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            transition: border-color 0.18s;
+        }
+        .exp:hover { border-color: var(--accent); }
+        .exp .role { font-size: 0.95rem; font-weight: 650; color: var(--heading); }
+        .exp .company { font-size: 0.85rem; color: var(--accent); margin-top: 2px; }
+        .exp .period { font-size: 0.74rem; color: var(--faint); margin-top: 3px; }
+        .exp .impact { font-size: 0.87rem; color: var(--muted); margin-top: 9px; }
+        .exp .tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            color: var(--faint);
+            border: 1px solid var(--border);
+            border-radius: 5px;
             padding: 1px 6px;
-            border-radius: 6px;
-        }
-        .author-tag.claude { background: rgba(212,165,116,0.2); color: #e8c49a; }
-        .author-tag.david  { background: rgba(249,115,22,0.2); color: #fb923c; }
-        .author-tag.bot    { background: rgba(82,82,91,0.25); color: #a1a1aa; }
-        .author-tag.other  { background: rgba(99,102,241,0.2); color: #a5b4fc; }
-
-        /* Floating ambient particles in workshop */
-        .workshop-particle {
-            position: absolute;
-            width: 2px; height: 2px;
-            border-radius: 50%;
-            background: rgba(249, 115, 22, 0.3);
-            animation: workshopDrift linear infinite;
-            pointer-events: none;
-        }
-        @keyframes workshopDrift {
-            0% { transform: translateY(0) translateX(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-520px) translateX(var(--drift-x, 20px)); opacity: 0; }
+            margin-top: 11px;
         }
 
-        /* New commit toast notification */
-        .commit-toast {
-            position: fixed;
-            top: -120px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            min-width: 340px;
-            max-width: 520px;
-            animation: toastSlideDown 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-        }
-        .commit-toast.dismissing {
-            animation: toastSlideUp 0.4s ease-in forwards;
-        }
-        @keyframes toastSlideDown {
-            to { top: 24px; }
-        }
-        @keyframes toastSlideUp {
-            from { top: 24px; }
-            to { top: -120px; }
-        }
-        .commit-sha {
-            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+        /* ---- Skills ---- */
+        .skill-groups { display: flex; flex-direction: column; gap: 18px; }
+        .skill-group { display: grid; grid-template-columns: 170px 1fr; gap: 16px; align-items: start; }
+        .skill-label { font-size: 0.82rem; color: var(--accent); font-weight: 600; padding-top: 6px; }
+        .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+        .chip {
+            font-size: 0.82rem;
+            padding: 5px 12px;
+            border-radius: 999px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--text);
         }
 
-        /* Fade-in-up for sections */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.7s ease forwards;
+        /* ---- Languages ---- */
+        /* ---- Repos ---- */
+        .repo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .repo {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.18s, transform 0.18s;
         }
-        @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
+        .repo:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .repo .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+        .repo .rname { font-weight: 650; color: var(--accent); font-size: 0.92rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .repo .fork-tag { font-size: 0.64rem; color: var(--faint); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; flex-shrink: 0; }
+        .repo .rdesc { font-size: 0.83rem; color: var(--muted); margin: 8px 0 12px; flex: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .repo .rmeta { display: flex; align-items: center; gap: 14px; font-size: 0.74rem; color: var(--muted); }
+        .repo .rmeta .l-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; vertical-align: -1px; }
+        .repo .rmeta .when { margin-left: auto; }
+
+        /* ---- Claude usage ---- */
+        .claude-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+        .claude-stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 14px; text-align: center; }
+        .claude-stat .num { font-size: 1.5rem; font-weight: 700; color: var(--claude); line-height: 1.1; }
+        .claude-stat .label { font-size: 0.72rem; color: var(--muted); margin-top: 6px; }
+        .claude-row { display: flex; gap: 28px; flex-wrap: wrap; }
+        .claude-chart-box { flex: 1; min-width: 300px; height: 230px; }
+        .claude-models { width: 280px; }
+        .claude-models h3 { font-size: 0.82rem; color: var(--muted); font-weight: 550; margin: 0 0 14px; }
+        .model-bar { margin-bottom: 13px; }
+        .model-bar .mb-top { display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 5px; }
+        .model-bar .mb-top .pct { color: var(--muted); }
+        .model-bar .track { height: 7px; background: var(--bg); border-radius: 999px; overflow: hidden; }
+        .model-bar .fill { height: 100%; border-radius: 999px; transition: width 1s ease; }
+
+        .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; padding: 2px 9px; border-radius: 999px; border: 1px solid rgba(212,165,116,0.3); background: rgba(212,165,116,0.1); color: #e8c49a; }
+
+        /* ---- Footer ---- */
+        footer { border-top: 1px solid var(--border); padding: 36px 0 48px; text-align: center; color: var(--muted); font-size: 0.82rem; }
+        footer .flinks { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+        footer .flinks a { color: var(--text); text-decoration: none; }
+        footer .flinks a:hover { color: var(--accent); }
+        footer .note { font-size: 0.76rem; color: var(--faint); }
+
+        .hidden { display: none !important; }
+
+        /* ---- Skeletons ---- */
+        .skeleton { background: linear-gradient(90deg, #161b22 25%, #20283a 50%, #161b22 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: 6px; display: inline-block; }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+        @media (max-width: 760px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 40px; }
+            .hero .about { margin-left: auto; margin-right: auto; }
+            .hero .open-to, .links { justify-content: center; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .exp-grid, .claude-stats { grid-template-columns: 1fr; }
+            .repo-grid { grid-template-columns: 1fr; }
+            .claude-models { width: 100%; }
         }
 
-        /* Staggered delays */
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
-        .delay-600 { animation-delay: 0.6s; }
-        .delay-700 { animation-delay: 0.7s; }
-        .delay-800 { animation-delay: 0.8s; }
-
-        /* Bounce-in for stat cards */
-        .bounce-in {
-            opacity: 0;
-            transform: scale(0.3);
-            animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-        }
-        @keyframes bounceIn {
-            0% { opacity: 0; transform: scale(0.3); }
-            50% { opacity: 1; transform: scale(1.05); }
-            70% { transform: scale(0.95); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        /* Pulse glow for live indicator */
-        .pulse-glow {
-            animation: pulseGlow 2s ease-in-out infinite;
-        }
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 5px rgba(249, 115, 22, 0.3); }
-            50% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.6), 0 0 40px rgba(249, 115, 22, 0.2); }
-        }
-
-        /* Floating emoji */
-        .float-emoji {
-            position: fixed;
-            font-size: 1.5rem;
-            pointer-events: none;
-            z-index: 50;
-            animation: floatUp 3s ease-out forwards;
-        }
-        @keyframes floatUp {
-            0% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
-            50% { opacity: 0.8; transform: translateY(-100px) rotate(20deg) scale(1.2); }
-            100% { opacity: 0; transform: translateY(-250px) rotate(-10deg) scale(0.5); }
-        }
-
-        /* Gentle bounce for emoji in headings */
-        .emoji-bounce {
-            display: inline-block;
-            animation: emojiBounce 2s ease-in-out infinite;
-        }
-        @keyframes emojiBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-
-        /* Subtle breathing glow on cards */
-        .card-glow:hover {
-            box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
-            transition: box-shadow 0.3s ease;
-        }
-
-        /* Spin for loading icon */
-        .spin {
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Wiggle for attention */
-        .wiggle {
-            animation: wiggle 0.5s ease-in-out;
-        }
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-5deg); }
-            75% { transform: rotate(5deg); }
-        }
-
-        /* Typewriter cursor blink */
-        .cursor-blink::after {
-            content: '|';
-            animation: blink 1s step-end infinite;
-            color: #f97316;
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        /* Activity feed items slide in from left */
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-20px);
-            animation: slideInLeft 0.4s ease forwards;
-        }
-        @keyframes slideInLeft {
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        /* Repo cards pop in */
-        .pop-in {
-            opacity: 0;
-            transform: scale(0.8) translateY(10px);
-            animation: popIn 0.4s ease forwards;
-        }
-        @keyframes popIn {
-            to { opacity: 1; transform: scale(1) translateY(0); }
-        }
-
-        /* Live dot pulse */
-        .live-dot {
-            width: 8px;
-            height: 8px;
-            background: #f97316;
-            border-radius: 50%;
-            display: inline-block;
-            animation: livePulse 1.5s ease-in-out infinite;
-        }
-        @keyframes livePulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.5); }
-        }
-
-        /* Amber live dot for Claude section */
-        .live-dot-amber {
-            width: 8px;
-            height: 8px;
-            background: #f59e0b;
-            border-radius: 50%;
-            display: inline-block;
-            animation: livePulse 1.5s ease-in-out infinite;
-        }
-
-        /* Gradient text shimmer */
-        .shimmer-text {
-            background: linear-gradient(90deg, #c9d1d9, #f97316, #c9d1d9);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmerText 3s linear infinite;
-        }
-        @keyframes shimmerText {
-            to { background-position: 200% center; }
-        }
-
-        /* Count-up number transition */
-        .count-up {
-            transition: all 0.3s ease;
-        }
-
-        /* Confetti burst (used sparingly on load) */
-        .confetti {
-            position: fixed;
-            pointer-events: none;
-            z-index: 100;
-            font-size: 1.2rem;
-            animation: confettiFall 2.5s ease-out forwards;
-        }
-        @keyframes confettiFall {
-            0% { opacity: 1; transform: translateY(0) rotate(0deg); }
-            100% { opacity: 0; transform: translateY(100vh) rotate(720deg); }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal { opacity: 1; transform: none; }
         }
     </style>
 </head>
-<body class="min-h-screen font-sans antialiased">
-    <div class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+<body>
+    <div class="wrap">
 
-        <!-- Rate Limit Banner (hidden by default) -->
-        <div id="rate-limit-banner" class="hidden bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 mb-6 text-center fade-in-up">
-            <p class="text-amber-400 text-sm font-medium">⚠️ GitHub API rate limit reached (60 requests/hour)</p>
-            <p class="text-gh-muted text-xs mt-1">Showing cached data. Fresh data will load after <span id="rate-limit-reset">--:--</span>.</p>
+        <!-- Rate limit banner -->
+        <div id="rate-limit-banner" class="hidden" style="background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.3);border-radius:10px;padding:12px 16px;margin-top:20px;text-align:center;font-size:0.85rem;color:var(--yellow)">
+            GitHub API rate limit reached — showing the most recent cached snapshot.
         </div>
 
-        <!-- Header -->
-        <header id="header" class="flex flex-col sm:flex-row items-center gap-6 mb-10 fade-in-up">
-            <div class="skeleton w-24 h-24 rounded-full shrink-0" id="avatar-skeleton"></div>
-            <img id="avatar" src="" alt="David Drake" class="w-24 h-24 rounded-full border-2 border-gh-border hidden shrink-0 pulse-glow">
-            <div class="text-center sm:text-left flex-1">
-                <h1 class="text-2xl sm:text-3xl font-bold shimmer-text" id="profile-name">David Drake</h1>
-                <p class="text-gh-muted mt-1" id="profile-bio">
-                    <span class="skeleton inline-block w-64 h-4 rounded"></span>
+        <!-- ===== HERO ===== -->
+        <header class="hero reveal">
+            <img class="hero-avatar" src="https://avatars.githubusercontent.com/u/1679509?v=4&s=240" alt="David Byron Drake">
+            <div>
+                <h1>David Byron Drake</h1>
+                <p class="tagline">Engineering leader building AI-native products. Former YC CTO.</p>
+                <p class="about">
+                    Engineering leader with nearly two decades of experience spanning startup CTO and
+                    director roles. I build and lead teams that ship production AI systems, full-stack
+                    platforms, and developer infrastructure at scale — currently looking for engineering
+                    leadership roles where AI strategy and hands-on technical depth both matter.
                 </p>
-                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-3 text-sm text-gh-muted">
-                    <span id="profile-location" class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 018 14.58a31.481 31.481 0 01-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0110 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10z"/><path d="M8 8a2 2 0 100-4 2 2 0 000 4z"/></svg>
-                        <span class="skeleton inline-block w-24 h-4 rounded"></span>
-                    </span>
-                    <a id="profile-blog" href="#" class="flex items-center gap-1 hover:text-gh-accent transition-colors hidden">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M4.715 6.542L3.343 7.914a3 3 0 104.243 4.243l1.828-1.829A3 3 0 008.586 5.5L8 6.086a1.002 1.002 0 00-.154.199 2 2 0 01.861 3.337L6.88 11.45a2 2 0 11-2.83-2.83l.793-.792a4.018 4.018 0 01-.128-1.287z"/><path d="M6.586 4.672A3 3 0 007.414 9.5l.775-.776a2 2 0 01-.896-3.346L9.12 3.55a2 2 0 112.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 10-4.243-4.243L6.586 4.672z"/></svg>
-                        <span></span>
+                <p class="open-to">
+                    <span>🎯 Director / VP of Engineering &amp; AI strategy</span>
+                    <span>🌎 Remote-first · Portland-area hybrid</span>
+                    <span>📍 Tigard, OR</span>
+                </p>
+                <div class="links">
+                    <a class="btn primary" href="https://davidbyrondrake.com" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 0111.2-4.5c-.3.2-.7.4-1 .5-.5.3-.7.8-.7 1.3 0 .4-.3.7-.7.7-.6 0-1 .5-1 1 0 .3.1.5.3.7.3.3.3.8 0 1.1-.2.2-.5.3-.8.3-.6 0-1 .5-1 1.1 0 .3.1.6.3.8.3.3.2.7 0 1A6.5 6.5 0 011.5 8z"/></svg>
+                        Full profile
                     </a>
-                    <a href="https://github.com/randomdrake" class="flex items-center gap-1 hover:text-gh-accent transition-colors">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                        randomdrake
+                    <a class="btn" href="https://www.linkedin.com/in/david-drake-46524752/" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a class="btn" href="https://github.com/randomdrake" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        GitHub
+                    </a>
+                    <a class="btn" href="mailto:david@randomdrake.com">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 3h12.5c.97 0 1.75.78 1.75 1.75v6.5A1.75 1.75 0 0114.25 13H1.75A1.75 1.75 0 010 11.25v-6.5C0 3.78.78 3 1.75 3zM1.5 4.75v.42l6.5 4.06 6.5-4.06v-.42a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25zm13 1.66l-6.5 4.06-6.5-4.06v4.84c0 .14.11.25.25.25h12.5a.25.25 0 00.25-.25V6.41z"/></svg>
+                        Email
+                    </a>
+                    <a class="btn" href="https://davidbyrondrake.com/david-drake-resume.pdf" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 019 4.25V1.5H3.75zM10.5 1.927V4.25c0 .138.112.25.25.25h2.323L10.5 1.927zM5 8.75A.75.75 0 015.75 8h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 8.75zm0 2.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75z"/></svg>
+                        Résumé
                     </a>
                 </div>
             </div>
         </header>
 
-        <!-- Stats Bar -->
-        <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10" id="stats-bar">
-            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-100">
-                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
-                <div class="text-3xl font-bold text-white" id="stat-repos"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
-                <div class="text-sm text-gh-muted mt-1">📦 Public Repos</div>
+        <!-- ===== STATS ===== -->
+        <section style="border-top:none;padding-top:8px">
+            <div class="section-head">
+                <h2>GitHub at a glance</h2>
+                <span class="live"><span class="live-dot"></span> Live</span>
             </div>
-            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-200">
-                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
-                <div class="text-3xl font-bold text-white" id="stat-stars"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
-                <div class="text-sm text-gh-muted mt-1">⭐ Total Stars</div>
-            </div>
-            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-250">
-                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
-                <div class="text-3xl font-bold text-white" id="stat-loc"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
-                <div class="text-sm text-gh-muted mt-1">💻 Lines of Code</div>
-            </div>
-            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-300">
-                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
-                <div class="text-3xl font-bold text-white" id="stat-forks"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
-                <div class="text-sm text-gh-muted mt-1">🍴 Total Forks</div>
-            </div>
-            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-400">
-                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
-                <div class="text-3xl font-bold text-white" id="stat-followers"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
-                <div class="text-sm text-gh-muted mt-1">👥 Followers</div>
-            </div>
-            <div class="bg-gh-card border border-gh-border rounded-lg p-4 text-center card-glow bounce-in delay-500">
-                <div class="text-sm text-gh-muted mb-1"><span class="live-dot mr-1"></span> Live</div>
-                <div class="text-3xl font-bold text-white" id="stat-cicd"><span class="skeleton inline-block w-10 h-8 rounded"></span></div>
-                <div class="text-sm text-gh-muted mt-1">🚀 CI/CD Pass Rate</div>
+            <div class="stats">
+                <div class="stat"><div class="num" id="stat-repos"><span class="skeleton" style="width:36px;height:24px"></span></div><div class="label">Public repos</div></div>
+                <div class="stat"><div class="num" id="stat-stars"><span class="skeleton" style="width:36px;height:24px"></span></div><div class="label">Total stars</div></div>
+                <div class="stat"><div class="num" id="stat-loc"><span class="skeleton" style="width:36px;height:24px"></span></div><div class="label">Est. lines of code</div></div>
+                <div class="stat"><div class="num" id="stat-forks"><span class="skeleton" style="width:36px;height:24px"></span></div><div class="label">Total forks</div></div>
+                <div class="stat"><div class="num" id="stat-followers"><span class="skeleton" style="width:36px;height:24px"></span></div><div class="label">Followers</div></div>
             </div>
         </section>
 
-        <!-- Substack CTA -->
-        <section class="relative overflow-hidden rounded-lg mb-10 fade-in-up delay-200" style="background: linear-gradient(135deg, #7c2d12 0%, #f97316 50%, #fb923c 100%);">
-            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 20px 20px;"></div>
-            <div class="relative flex flex-col sm:flex-row items-center gap-5 p-6 sm:p-8">
-                <div class="flex-1 text-center sm:text-left">
-                    <div class="text-xs font-semibold uppercase tracking-wider text-orange-200 mb-1">
-                        <span class="emoji-bounce inline-block">✍️</span> Writing
-                    </div>
-                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">My words have reached hundreds of thousands. You might be next.</h2>
-                    <p class="text-orange-100 text-sm leading-relaxed max-w-lg">Author of <em>I Will Not Drink With You Today</em>. Writing on Medium about engineering, sobriety, fatherhood, and the space between. Plus <em>Narrative Compression</em> — a free Substack series exploring how AI and humans communicate.</p>
-                </div>
-                <a href="https://randomdrake.substack.com/?utm_source=github_dashboard&utm_medium=cta"
-                   target="_blank" rel="noopener"
-                   class="shrink-0 inline-flex items-center gap-2 bg-white text-orange-700 font-bold text-sm px-6 py-3 rounded-full hover:bg-orange-50 hover:scale-105 transition-all duration-200 shadow-lg">
-                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-                    Subscribe on Substack
-                </a>
+        <!-- ===== CLAUDE USAGE (hidden until real data exists) ===== -->
+        <section class="reveal hidden" id="claude-section">
+            <div class="section-head">
+                <h2>Claude Code usage</h2>
+                <span class="badge">● Real · last 30 days</span>
             </div>
-        </section>
-
-        <!-- Commit Livestream — Robot Engineer Workshop -->
-        <section class="bg-gh-card border border-gh-border rounded-lg p-4 mb-10 fade-in-up delay-300">
-            <div class="flex items-center justify-between mb-3 px-2">
-                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🤖</span> Engineer Workshop</h2>
-                <div class="flex items-center gap-3 text-xs text-gh-muted">
-                    <div class="flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-sm" style="background:linear-gradient(135deg,#d4a574,#e8c49a)"></span>
-                        <span>Claude</span>
-                    </div>
-                    <div class="flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-sm" style="background:linear-gradient(135deg,#f97316,#fb923c)"></span>
-                        <span>David</span>
-                    </div>
-                    <span class="text-gh-border">|</span>
-                    <span class="live-dot"></span>
-                    <span id="commit-count">Loading...</span>
-                </div>
+            <div class="claude-stats">
+                <div class="claude-stat"><div class="num" id="claude-total">—</div><div class="label">🧠 Tokens processed</div></div>
+                <div class="claude-stat"><div class="num" id="claude-output">—</div><div class="label">📤 Output tokens</div></div>
+                <div class="claude-stat"><div class="num" id="claude-model">—</div><div class="label">✨ Primary model</div></div>
+                <div class="claude-stat"><div class="num" id="claude-days">—</div><div class="label">📅 Active days</div></div>
             </div>
-            <div id="commit-feed" class="workshop">
-                <div class="skeleton w-full h-full rounded"></div>
-            </div>
-            <p class="text-xs text-gh-muted mt-3 text-center">Hover to pause — a fleet of tiny engineers building across all repos</p>
-        </section>
-
-        <!-- Language Breakdown -->
-        <section class="bg-gh-card border border-gh-border rounded-lg p-6 mb-10 fade-in-up delay-400">
-            <h2 class="text-lg font-semibold text-white mb-4"><span class="emoji-bounce">💻</span> Language Breakdown</h2>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="w-64 h-64 shrink-0 relative" id="lang-chart-container">
-                    <div class="skeleton w-full h-full rounded-full"></div>
-                    <canvas id="lang-chart" class="hidden"></canvas>
+            <div class="claude-row">
+                <div style="flex:1;min-width:300px">
+                    <h3 style="font-size:0.82rem;color:var(--muted);font-weight:550;margin:0 0 12px">Daily token volume</h3>
+                    <div class="claude-chart-box"><canvas id="claude-chart"></canvas></div>
                 </div>
-                <div id="lang-legend" class="flex-1 grid grid-cols-2 gap-2 text-sm">
-                    <div class="skeleton w-full h-4 rounded"></div>
-                    <div class="skeleton w-full h-4 rounded"></div>
-                    <div class="skeleton w-full h-4 rounded"></div>
-                    <div class="skeleton w-full h-4 rounded"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Claude AI Usage (Static Snapshot) -->
-        <section class="bg-gh-card border border-gh-border rounded-lg p-6 mb-10 fade-in-up delay-500">
-            <div class="flex items-center gap-3 mb-4">
-                <h2 class="text-lg font-semibold text-white"><span class="emoji-bounce">🤖</span> Claude AI Usage</h2>
-                <span class="live-dot-amber"></span>
-                <span class="text-xs text-amber-400 bg-amber-400/10 border border-amber-400/30 rounded px-2 py-0.5">Snapshot</span>
-            </div>
-
-            <!-- Claude Stats Cards -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-                <div class="bg-gh-bg border border-gh-border rounded-lg p-3 text-center card-glow bounce-in delay-500">
-                    <div class="text-2xl font-bold text-amber-400" id="claude-requests">12.4K</div>
-                    <div class="text-xs text-gh-muted mt-1">🚀 API Requests</div>
-                </div>
-                <div class="bg-gh-bg border border-gh-border rounded-lg p-3 text-center card-glow bounce-in delay-600">
-                    <div class="text-2xl font-bold text-amber-400" id="claude-tokens">847M</div>
-                    <div class="text-xs text-gh-muted mt-1">🧠 Total Tokens</div>
-                </div>
-                <div class="bg-gh-bg border border-gh-border rounded-lg p-3 text-center card-glow bounce-in delay-700">
-                    <div class="text-2xl font-bold text-amber-400" id="claude-model">Opus</div>
-                    <div class="text-xs text-gh-muted mt-1">✨ Primary Model</div>
-                </div>
-                <div class="bg-gh-bg border border-gh-border rounded-lg p-3 text-center card-glow bounce-in delay-800">
-                    <div class="text-2xl font-bold text-amber-400" id="claude-since">2023</div>
-                    <div class="text-xs text-gh-muted mt-1">📅 Active Since</div>
-                </div>
-            </div>
-
-            <!-- Monthly Usage Chart -->
-            <div class="flex flex-col lg:flex-row gap-6">
-                <div class="flex-1">
-                    <h3 class="text-sm font-medium text-gh-muted mb-3">Monthly Token Volume</h3>
-                    <div class="h-56">
-                        <canvas id="claude-usage-chart"></canvas>
-                    </div>
-                </div>
-
-                <!-- Model Breakdown -->
-                <div class="lg:w-64 shrink-0">
-                    <h3 class="text-sm font-medium text-gh-muted mb-3">Model Usage</h3>
-                    <div class="space-y-3" id="claude-model-breakdown">
-                        <!-- Rendered by JS -->
-                    </div>
-                    <p class="text-xs text-gh-muted mt-4 leading-relaxed">
-                        Usage data from the
-                        <a href="https://docs.anthropic.com/en/api" class="text-amber-400 hover:underline">Anthropic API</a>.
-                        Updated periodically.
+                <div class="claude-models">
+                    <h3>Model usage</h3>
+                    <div id="claude-model-breakdown"></div>
+                    <p style="font-size:0.74rem;color:var(--faint);margin-top:14px;line-height:1.5">
+                        Aggregated from my local
+                        <a href="https://www.claude.com/product/claude-code" style="color:var(--claude)" target="_blank" rel="noopener">Claude Code</a>
+                        session logs — token counts only, never prompts or content. Includes cached input.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Repository Cards -->
-        <section class="fade-in-up delay-700">
-            <h2 class="text-lg font-semibold text-white mb-4"><span class="emoji-bounce">📚</span> Repositories</h2>
-            <div id="repo-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="skeleton h-40 rounded-lg"></div>
-                <div class="skeleton h-40 rounded-lg"></div>
-                <div class="skeleton h-40 rounded-lg"></div>
-                <div class="skeleton h-40 rounded-lg"></div>
-                <div class="skeleton h-40 rounded-lg"></div>
-                <div class="skeleton h-40 rounded-lg"></div>
+        <!-- ===== EXPERIENCE ===== -->
+        <section class="reveal">
+            <div class="section-head">
+                <h2>Experience</h2>
+                <span class="meta">~18–20 years · Theatre → teaching → engineering → startup CTO/CEO → eng leadership</span>
+            </div>
+            <div class="exp-grid">
+                <div class="exp">
+                    <div class="role">DevOps &amp; Engineering Manager</div>
+                    <div class="company">Counterpart</div>
+                    <div class="period">Dec 2024 – Mar 2026</div>
+                    <p class="impact">Led three teams (two full-stack + DevOps); drove Agile delivery to 89%, well above the 70% benchmark. Built MCP infrastructure integrating seven platforms across the insurance lifecycle; owned SOC 2 / HIPAA; saved ~$20K/yr with a git-tracked Salesforce CI/CD pipeline.</p>
+                    <span class="tag">Leadership · MCP · SOC 2 / HIPAA</span>
+                </div>
+                <div class="exp">
+                    <div class="role">Director of Engineering</div>
+                    <div class="company">Flourish Software</div>
+                    <div class="period">Jul 2021 – Oct 2024</div>
+                    <p class="impact">Led teams of up to 15 engineers across three countries on a large-scale supply-chain platform (Go, Angular/TypeScript, AWS, Kubernetes). +60% on-time delivery, −50% support load.</p>
+                    <span class="tag">Go · Angular · AWS · Kubernetes</span>
+                </div>
+                <div class="exp">
+                    <div class="role">Senior Full-Stack Engineer</div>
+                    <div class="company">Expensify</div>
+                    <div class="period">May 2018 – Jul 2021</div>
+                    <p class="impact">Secured receipts across six stacks (C++, PHP, Java, iOS, Android, JS), moving millions of dollars daily and handling thousands of requests per second at Super Bowl–scale traffic.</p>
+                    <span class="tag">High-scale · Multi-stack</span>
+                </div>
+                <div class="exp">
+                    <div class="role">Founder &amp; CEO</div>
+                    <div class="company">RedDep Labs</div>
+                    <div class="period">Oct 2013 – May 2018</div>
+                    <p class="impact">Led a 17-person team across HR, sales, and engineering. Built an open product-data platform — tens of thousands of catalogued products and a public API used by 400+ developers — scaling to 10M hits/month on a single server and an $8.6M valuation.</p>
+                    <span class="tag">Founder · Open API · Scale</span>
+                </div>
+                <div class="exp">
+                    <div class="role">Chief Technology Officer</div>
+                    <div class="company">iCracked · Y Combinator</div>
+                    <div class="period">Mar 2013 – Oct 2013</div>
+                    <p class="impact">CTO over the company; built a pioneering dispatch system coordinating 400+ technicians nationwide and drove a ~30% increase in conversion.</p>
+                    <span class="tag">YC · Marketplace · Ops</span>
+                </div>
             </div>
         </section>
 
-        <!-- Pipeline feed is now merged into the Engineer Workshop above -->
-
-        <!-- Bottom Substack Nudge -->
-        <section class="text-center mt-10 mb-6 fade-in-up delay-800">
-            <p class="text-gh-muted text-sm mb-3">Like what you see? From a published book to Medium to a free series on Substack — I've been writing for years.</p>
-            <a href="https://randomdrake.substack.com/?utm_source=github_dashboard&utm_medium=footer_cta"
-               target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-gh-accent hover:underline transition-colors">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-                Read on Substack &rarr;
-            </a>
+        <!-- ===== SKILLS ===== -->
+        <section class="reveal">
+            <div class="section-head"><h2>What I do</h2></div>
+            <div class="skill-groups">
+                <div class="skill-group">
+                    <span class="skill-label">Leadership</span>
+                    <div class="skills">
+                        <span class="chip">People management</span>
+                        <span class="chip">Hiring &amp; talent development</span>
+                        <span class="chip">Performance management</span>
+                        <span class="chip">Cross-functional collaboration</span>
+                        <span class="chip">Stakeholder communication</span>
+                        <span class="chip">Agile / Scrum</span>
+                        <span class="chip">Psychological safety</span>
+                        <span class="chip">Radical candor</span>
+                        <span class="chip">Extreme ownership</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-label">Languages &amp; frameworks</span>
+                    <div class="skills">
+                        <span class="chip">Python</span>
+                        <span class="chip">TypeScript</span>
+                        <span class="chip">React</span>
+                        <span class="chip">Tailwind</span>
+                        <span class="chip">Angular</span>
+                        <span class="chip">Go</span>
+                        <span class="chip">Java</span>
+                        <span class="chip">C++</span>
+                        <span class="chip">SQL</span>
+                        <span class="chip">PHP / Laravel</span>
+                        <span class="chip">D3.js</span>
+                        <span class="chip">Shell</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-label">Infrastructure &amp; tools</span>
+                    <div class="skills">
+                        <span class="chip">AWS</span>
+                        <span class="chip">Kubernetes</span>
+                        <span class="chip">Docker</span>
+                        <span class="chip">PostgreSQL</span>
+                        <span class="chip">MySQL</span>
+                        <span class="chip">Redis</span>
+                        <span class="chip">Snowflake</span>
+                        <span class="chip">GitHub Actions</span>
+                        <span class="chip">ETL pipelines</span>
+                        <span class="chip">Salesforce</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-label">AI &amp; practices</span>
+                    <div class="skills">
+                        <span class="chip">Claude</span>
+                        <span class="chip">OpenAI</span>
+                        <span class="chip">AI enablement &amp; training</span>
+                        <span class="chip">Agentic development</span>
+                        <span class="chip">LLM infrastructure</span>
+                        <span class="chip">Custom MCP servers</span>
+                        <span class="chip">Prompt engineering</span>
+                        <span class="chip">AI governance</span>
+                        <span class="chip">DevOps &amp; CI/CD</span>
+                        <span class="chip">SOC 2 / HIPAA</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Compliance Badges -->
-        <section class="flex flex-wrap items-center justify-center gap-3 mb-4 fade-in-up delay-800">
-            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/30 rounded-full px-3 py-1">
-                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/></svg>
-                SOC 2
-            </span>
-            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/30 rounded-full px-3 py-1">
-                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/></svg>
-                HIPAA
-            </span>
-            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/30 rounded-full px-3 py-1">
-                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"/></svg>
-                ISO 42001
-            </span>
+        <!-- ===== REPOS ===== -->
+        <section class="reveal">
+            <div class="section-head">
+                <h2>Repositories</h2>
+                <span class="live"><span class="live-dot"></span> Live</span>
+            </div>
+            <div class="repo-grid" id="repo-grid">
+                <div class="skeleton" style="height:130px;border-radius:var(--radius)"></div>
+                <div class="skeleton" style="height:130px;border-radius:var(--radius)"></div>
+                <div class="skeleton" style="height:130px;border-radius:var(--radius)"></div>
+                <div class="skeleton" style="height:130px;border-radius:var(--radius)"></div>
+                <div class="skeleton" style="height:130px;border-radius:var(--radius)"></div>
+                <div class="skeleton" style="height:130px;border-radius:var(--radius)"></div>
+            </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="text-center text-gh-muted text-xs mt-4 pb-8 fade-in-up delay-800">
-            <p>🚀 Data fetched live from the <a href="https://docs.github.com/en/rest" class="text-gh-accent hover:underline">GitHub REST API</a>.
-            Unauthenticated rate limit: 60 requests/hour.</p>
-            <p class="mt-2">Built with <span class="emoji-bounce inline-block">💜</span> and too much coffee <span class="emoji-bounce inline-block">☕</span></p>
+        <!-- ===== FOOTER ===== -->
+        <footer>
+            <div class="flinks">
+                <a href="https://davidbyrondrake.com" target="_blank" rel="noopener">davidbyrondrake.com</a>
+                <a href="https://www.linkedin.com/in/david-drake-46524752/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/randomdrake" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:david@randomdrake.com">david@randomdrake.com</a>
+            </div>
+            <p class="note">Live data from the GitHub REST API · this page rebuilds itself automatically every few hours.</p>
         </footer>
     </div>
 
     <script>
     const USERNAME = 'randomdrake';
     const API = 'https://api.github.com';
-
-    // LocalStorage cache — survives page reloads, avoids burning rate limit
-    const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+    const CACHE_TTL = 30 * 60 * 1000;
+    const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let rateLimited = false;
 
+    // ---------- localStorage cache ----------
     function lsGet(key) {
         try {
             const item = localStorage.getItem('gh_' + key);
             if (!item) return null;
             const { data, ts } = JSON.parse(item);
-            if (Date.now() - ts > CACHE_TTL) return null; // expired
+            if (Date.now() - ts > CACHE_TTL) return null;
             return data;
         } catch { return null; }
     }
-
     function lsSet(key, data) {
-        try {
-            localStorage.setItem('gh_' + key, JSON.stringify({ data, ts: Date.now() }));
-        } catch { /* storage full, ignore */ }
-    }
-
-    function showRateLimitBanner(resetEpoch) {
-        const banner = document.getElementById('rate-limit-banner');
-        banner.classList.remove('hidden');
-        if (resetEpoch) {
-            const resetTime = new Date(resetEpoch * 1000);
-            document.getElementById('rate-limit-reset').textContent =
-                resetTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        }
+        try { localStorage.setItem('gh_' + key, JSON.stringify({ data, ts: Date.now() })); } catch {}
     }
 
     async function ghFetch(url) {
-        // Try localStorage cache first
         const cacheKey = url.replace(API, '');
         const cached = lsGet(cacheKey);
-
-        // If we're rate-limited, return whatever we have cached (even if expired)
         if (rateLimited) {
             if (cached) return cached;
-            try {
-                const item = localStorage.getItem('gh_' + cacheKey);
-                if (item) return JSON.parse(item).data; // return stale
-            } catch {}
+            try { const item = localStorage.getItem('gh_' + cacheKey); if (item) return JSON.parse(item).data; } catch {}
             return null;
         }
-
-        // Return fresh cache if available
         if (cached) return cached;
-
         const res = await fetch(url);
         if (res.status === 403 || res.status === 429) {
             rateLimited = true;
-            const reset = res.headers.get('x-ratelimit-reset');
-            showRateLimitBanner(reset ? parseInt(reset) : null);
-            console.warn('Rate limited:', url);
-            // Fall back to stale cache
-            try {
-                const item = localStorage.getItem('gh_' + cacheKey);
-                if (item) return JSON.parse(item).data;
-            } catch {}
+            document.getElementById('rate-limit-banner').classList.remove('hidden');
+            try { const item = localStorage.getItem('gh_' + cacheKey); if (item) return JSON.parse(item).data; } catch {}
             return null;
         }
-        if (!res.ok) {
-            console.warn(`GitHub API error ${res.status}:`, url);
-            return null;
-        }
+        if (!res.ok) return null;
         const data = await res.json();
         lsSet(cacheKey, data);
         return data;
     }
 
-    // Fetch all pages of a paginated endpoint (up to maxPages)
     async function ghFetchAllPages(baseUrl, maxPages = 10) {
         const all = [];
         for (let page = 1; page <= maxPages; page++) {
             const sep = baseUrl.includes('?') ? '&' : '?';
-            const url = `${baseUrl}${sep}per_page=100&page=${page}`;
-            const data = await ghFetch(url);
+            const data = await ghFetch(`${baseUrl}${sep}per_page=100&page=${page}`);
             if (!data || data.length === 0) break;
             all.push(...data);
         }
         return all;
     }
 
-    // Language colors (GitHub standard)
+    // ---------- helpers ----------
     const LANG_COLORS = {
-        JavaScript: '#f1e05a', Python: '#3572A5', TypeScript: '#3178c6',
-        Java: '#b07219', 'C++': '#f34b7d', C: '#555555', 'C#': '#178600',
-        Go: '#00ADD8', Rust: '#dea584', Ruby: '#701516', PHP: '#4F5D95',
-        Swift: '#F05138', Kotlin: '#A97BFF', Dart: '#00B4AB', Shell: '#89e051',
-        HTML: '#e34c26', CSS: '#563d7c', SCSS: '#c6538c', Lua: '#000080',
-        Perl: '#0298c3', R: '#198CE7', Scala: '#c22d40', Haskell: '#5e5086',
-        Elixir: '#6e4a7e', Clojure: '#db5855', Vim: '#199f4b',
-        'Vim Script': '#199f4b', Makefile: '#427819',
-        'Objective-C': '#438eff', 'Objective-C++': '#6866fb',
-        CoffeeScript: '#244776', GLSL: '#5686a5',
+        JavaScript:'#f1e05a', Python:'#3572A5', TypeScript:'#3178c6', Java:'#b07219',
+        'C++':'#f34b7d', C:'#555555', 'C#':'#178600', Go:'#00ADD8', Rust:'#dea584',
+        Ruby:'#701516', PHP:'#4F5D95', Swift:'#F05138', Kotlin:'#A97BFF', Dart:'#00B4AB',
+        Shell:'#89e051', HTML:'#e34c26', CSS:'#563d7c', SCSS:'#c6538c', Lua:'#000080',
+        Perl:'#0298c3', R:'#198CE7', Scala:'#c22d40', Haskell:'#5e5086', Elixir:'#6e4a7e',
+        Clojure:'#db5855', 'Vim Script':'#199f4b', Makefile:'#427819',
+        'Objective-C':'#438eff', CoffeeScript:'#244776', GLSL:'#5686a5',
     };
-
-    function getLangColor(lang) {
-        return LANG_COLORS[lang] || '#8b949e';
-    }
+    const langColor = l => LANG_COLORS[l] || '#8b949e';
 
     function timeAgo(dateStr) {
-        const date = new Date(dateStr);
-        const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
-        if (seconds < 60) return 'just now';
-        const minutes = Math.floor(seconds / 60);
-        if (minutes < 60) return `${minutes}m ago`;
-        const hours = Math.floor(minutes / 60);
-        if (hours < 24) return `${hours}h ago`;
-        const days = Math.floor(hours / 24);
-        if (days < 7) return `${days}d ago`;
-        // Anything older than a week gets a clean formatted date
-        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const d = new Date(dateStr);
+        const s = Math.floor((Date.now() - d.getTime()) / 1000);
+        if (s < 60) return 'just now';
+        const m = Math.floor(s / 60); if (m < 60) return `${m}m ago`;
+        const h = Math.floor(m / 60); if (h < 24) return `${h}h ago`;
+        const dd = Math.floor(h / 24); if (dd < 7) return `${dd}d ago`;
+        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }
 
-    // --- Animation Utilities ---
+    function abbr(n) {
+        if (n >= 1e9) return (n / 1e9).toFixed(1).replace(/\.0$/, '') + 'B';
+        if (n >= 1e6) return (n / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+        if (n >= 1e3) return (n / 1e3).toFixed(1).replace(/\.0$/, '') + 'K';
+        return String(n);
+    }
 
-    // Animate a number counting up from 0 to target
-    function countUp(el, target, duration) {
-        // Longer duration for bigger numbers for dramatic effect
-        if (!duration) duration = target > 10000 ? 2500 : target > 1000 ? 1800 : 1200;
-        const start = 0;
-        const startTime = performance.now();
-        function update(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            // Ease out quad
-            const eased = 1 - (1 - progress) * (1 - progress);
-            const current = Math.round(start + (target - start) * eased);
-            el.textContent = current.toLocaleString();
-            if (progress < 1) requestAnimationFrame(update);
+    function countUp(el, target) {
+        if (REDUCED) { el.textContent = target.toLocaleString(); return; }
+        const dur = target > 10000 ? 1600 : 1100;
+        const start = performance.now();
+        function step(now) {
+            const p = Math.min((now - start) / dur, 1);
+            const eased = 1 - (1 - p) * (1 - p);
+            el.textContent = Math.round(target * eased).toLocaleString();
+            if (p < 1) requestAnimationFrame(step);
         }
-        requestAnimationFrame(update);
+        requestAnimationFrame(step);
     }
 
-    // Spawn floating emoji at a position
-    function spawnFloatingEmoji(emoji, x, y) {
-        const el = document.createElement('div');
-        el.className = 'float-emoji';
-        el.textContent = emoji;
-        el.style.left = x + 'px';
-        el.style.top = y + 'px';
-        document.body.appendChild(el);
-        el.addEventListener('animationend', () => el.remove());
-    }
+    const esc = s => String(s == null ? '' : s).replace(/[<>&"]/g, c => ({ '<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;' }[c]));
 
-    // Confetti burst from top of page
-    function spawnConfetti() {
-        const emojis = ['🎉', '✨', '🚀', '💫', '⭐', '🔥', '💻', '🤖', '🎊', '💜'];
-        for (let i = 0; i < 15; i++) {
-            setTimeout(() => {
-                const el = document.createElement('div');
-                el.className = 'confetti';
-                el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-                el.style.left = (Math.random() * 100) + 'vw';
-                el.style.top = '-20px';
-                el.style.animationDuration = (2 + Math.random() * 2) + 's';
-                document.body.appendChild(el);
-                el.addEventListener('animationend', () => el.remove());
-            }, i * 100);
-        }
-    }
-
-    // Periodically spawn subtle floating emojis from the stats
-    function startAmbientEmojis() {
-        const emojis = ['✨', '💫', '⭐'];
-        setInterval(() => {
-            const statsBar = document.getElementById('stats-bar');
-            if (!statsBar) return;
-            const rect = statsBar.getBoundingClientRect();
-            const x = rect.left + Math.random() * rect.width;
-            const y = rect.top + Math.random() * rect.height + window.scrollY;
-            spawnFloatingEmoji(
-                emojis[Math.floor(Math.random() * emojis.length)],
-                x, y
-            );
-        }, 4000);
-    }
-
-    // --- Profile & Stats ---
-    async function loadProfile() {
-        const user = await ghFetch(`${API}/users/${USERNAME}`);
-        if (!user) return;
-
-        document.getElementById('avatar').src = user.avatar_url;
-        document.getElementById('avatar').classList.remove('hidden');
-        document.getElementById('avatar-skeleton').classList.add('hidden');
-
-        document.getElementById('profile-name').textContent = user.name || USERNAME;
-        document.getElementById('profile-bio').textContent = user.bio || '';
-
-        const locEl = document.getElementById('profile-location');
-        if (user.location) {
-            locEl.querySelector('span:last-child')?.remove();
-            const span = document.createElement('span');
-            span.textContent = user.location;
-            locEl.appendChild(span);
-        }
-
-        const blogEl = document.getElementById('profile-blog');
-        if (user.blog) {
-            const url = user.blog.startsWith('http') ? user.blog : `https://${user.blog}`;
-            blogEl.href = url;
-            blogEl.querySelector('span').textContent = user.blog;
-            blogEl.classList.remove('hidden');
-        }
-
-        countUp(document.getElementById('stat-repos'), user.public_repos);
-        countUp(document.getElementById('stat-followers'), user.followers);
-
-        return user;
-    }
-
-    // --- Repos (stars, forks, cards, languages) ---
-    async function loadRepos() {
-        const repos = await ghFetchAllPages(`${API}/users/${USERNAME}/repos`);
-        if (!repos) return [];
-
-        let totalStars = 0;
-        let totalForks = 0;
-        repos.forEach(r => {
-            totalStars += r.stargazers_count;
-            totalForks += r.forks_count;
-        });
-
-        countUp(document.getElementById('stat-stars'), totalStars);
-        countUp(document.getElementById('stat-forks'), totalForks);
-
-        // Sort by stars descending
-        repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
-
-        renderRepoCards(repos);
-        return repos;
+    // ---------- renderers ----------
+    function setStats(p, stats, langTotals) {
+        countUp(document.getElementById('stat-repos'), p.public_repos || 0);
+        countUp(document.getElementById('stat-followers'), p.followers || 0);
+        countUp(document.getElementById('stat-stars'), stats.total_stars || 0);
+        countUp(document.getElementById('stat-forks'), stats.total_forks || 0);
+        let bytes = stats.total_code_bytes || 0;
+        if (!bytes && langTotals) bytes = Object.values(langTotals).reduce((a, b) => a + b, 0);
+        countUp(document.getElementById('stat-loc'), Math.round(bytes / 25));
     }
 
     function renderRepoCards(repos) {
-        const grid = document.getElementById('repo-grid');
-        grid.innerHTML = repos.map((repo, i) => `
-            <a href="${repo.html_url}" target="_blank" rel="noopener"
-               class="bg-gh-card border border-gh-border rounded-lg p-5 hover:border-gh-accent transition-all duration-300 flex flex-col card-glow pop-in"
-               style="animation-delay: ${i * 80}ms">
-                <div class="flex items-start justify-between gap-2 mb-2">
-                    <h3 class="font-semibold text-gh-accent truncate">${repo.name}</h3>
-                    ${repo.fork ? '<span class="text-xs text-gh-muted border border-gh-border rounded px-1.5 py-0.5 shrink-0">Fork</span>' : ''}
+        document.getElementById('repo-grid').innerHTML = repos.map(r => `
+            <a class="repo" href="${r.html_url}" target="_blank" rel="noopener">
+                <div class="top">
+                    <span class="rname">${esc(r.name)}</span>
+                    ${r.fork ? '<span class="fork-tag">Fork</span>' : ''}
                 </div>
-                <p class="text-sm text-gh-muted flex-1 line-clamp-2">${repo.description || '<span class="italic">No description</span>'}</p>
-                <div class="flex items-center gap-4 mt-3 text-xs text-gh-muted">
-                    ${repo.language ? `<span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full inline-block" style="background:${getLangColor(repo.language)}"></span>${repo.language}</span>` : ''}
-                    <span class="flex items-center gap-1">
-                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
-                        ${repo.stargazers_count}
-                    </span>
-                    <span class="flex items-center gap-1">
-                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>
-                        ${repo.forks_count}
-                    </span>
-                    <span class="ml-auto">${timeAgo(repo.updated_at)}</span>
+                <p class="rdesc">${r.description ? esc(r.description) : '<span style="opacity:.6">No description</span>'}</p>
+                <div class="rmeta">
+                    ${r.language ? `<span><span class="l-dot" style="background:${langColor(r.language)}"></span>${esc(r.language)}</span>` : ''}
+                    <span>★ ${r.stargazers_count}</span>
+                    <span>⑂ ${r.forks_count}</span>
+                    <span class="when">${timeAgo(r.updated_at)}</span>
                 </div>
-            </a>
-        `).join('');
+            </a>`).join('');
     }
 
-    // --- Language Breakdown ---
-    async function loadLanguages(repos) {
-        if (!repos || repos.length === 0) return;
+    // ---------- Claude usage ----------
+    function prettyModel(id) {
+        if (!id) return 'Unknown';
+        const s = id.replace(/-\d{8}$/, '').replace(/^claude-/, '');
+        const m = s.match(/^(opus|sonnet|haiku|fable|mythos)-(\d+)-(\d+)/i);
+        if (m) return m[1].charAt(0).toUpperCase() + m[1].slice(1).toLowerCase() + ' ' + m[2] + '.' + m[3];
+        return s;
+    }
 
-        // Fetch languages for each repo (batched to reduce rate-limit risk)
-        const langTotals = {};
-        const batchSize = 5;
-        for (let i = 0; i < repos.length; i += batchSize) {
-            const batch = repos.slice(i, i + batchSize);
-            const results = await Promise.all(
-                batch.map(r => ghFetch(`${API}/repos/${USERNAME}/${r.name}/languages`))
-            );
-            results.forEach(langs => {
-                if (!langs) return;
-                Object.entries(langs).forEach(([lang, bytes]) => {
-                    langTotals[lang] = (langTotals[lang] || 0) + bytes;
-                });
-            });
-        }
+    let claudeChart;
+    function renderClaudeUsage(d) {
+        if (!d || !d.daily || !d.daily.length) return;
+        document.getElementById('claude-section').classList.remove('hidden');
+        document.getElementById('claude-total').textContent = abbr(d.total_tokens || 0);
+        document.getElementById('claude-output').textContent = abbr(d.output_tokens || 0);
+        document.getElementById('claude-model').textContent = prettyModel(d.primary_model);
+        document.getElementById('claude-days').textContent = (d.days_active || d.daily.filter(x => (x.input + x.output) > 0).length) + '/' + (d.period_days || d.daily.length);
 
-        const sorted = Object.entries(langTotals).sort((a, b) => b[1] - a[1]);
-        if (sorted.length === 0) return;
-
-        const totalBytes = sorted.reduce((sum, [, b]) => sum + b, 0);
-
-        // Lines of code estimate (~25 bytes per line avg)
-        const estimatedLOC = Math.round(totalBytes / 25);
-        countUp(document.getElementById('stat-loc'), estimatedLOC);
-
-        // Show top 8 + "Other"
-        const top = sorted.slice(0, 8);
-        const otherBytes = sorted.slice(8).reduce((sum, [, b]) => sum + b, 0);
-        if (otherBytes > 0) top.push(['Other', otherBytes]);
-
-        const labels = top.map(([l]) => l);
-        const data = top.map(([, b]) => b);
-        const colors = top.map(([l]) => getLangColor(l));
-
-        // Render chart
-        const canvas = document.getElementById('lang-chart');
-        const skeleton = canvas.previousElementSibling;
-        skeleton.classList.add('hidden');
-        canvas.classList.remove('hidden');
-
-        new Chart(canvas, {
-            type: 'doughnut',
+        const ctx = document.getElementById('claude-chart');
+        if (claudeChart) claudeChart.destroy();
+        claudeChart = new Chart(ctx, {
             data: {
-                labels,
-                datasets: [{
-                    data,
-                    backgroundColor: colors,
-                    borderColor: '#161b22',
-                    borderWidth: 2,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                cutout: '60%',
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: {
-                            label: (ctx) => {
-                                const pct = ((ctx.raw / totalBytes) * 100).toFixed(1);
-                                const mb = (ctx.raw / 1024 / 1024).toFixed(1);
-                                return `${ctx.label}: ${pct}% (${mb} MB)`;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        // Render legend
-        const legend = document.getElementById('lang-legend');
-        legend.innerHTML = top.map(([lang, bytes]) => {
-            const pct = ((bytes / totalBytes) * 100).toFixed(1);
-            return `<div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full shrink-0" style="background:${getLangColor(lang)}"></span>
-                <span class="text-gh-text">${lang}</span>
-                <span class="text-gh-muted ml-auto">${pct}%</span>
-            </div>`;
-        }).join('');
-    }
-
-    // --- Commit author helpers ---
-    function isClaudeCommit(c) {
-        const fm = c.full_message || '';
-        const msg = c.message || '';
-        // Explicit co-author trailer
-        if (fm.includes('Co-Authored-By: Claude')) return true;
-        // Message mentions Claude
-        if (msg.includes('Claude')) return true;
-        // Heuristics for Claude-style commits:
-        // - Em dash in subject line (Claude's signature style)
-        if (msg.includes('\u2014')) return true;
-        // - Multi-line body with bullet points
-        if (fm.includes('\n- ') || fm.includes('\n  - ')) return true;
-        // - Emoji-heavy subjects (Claude README commits)
-        const emojiCount = (msg.match(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu) || []).length;
-        if (emojiCount >= 3) return true;
-        return false;
-    }
-    function isDavidCommit(c) {
-        return (c.author === 'David Drake' || c.author === 'randomdrake') && !isClaudeCommit(c);
-    }
-    function isBotCommit(c) {
-        return c.author === 'github-actions[bot]';
-    }
-    function commitType(c) {
-        if (isBotCommit(c)) return 'bot';
-        if (isClaudeCommit(c)) return 'claude';
-        if (isDavidCommit(c)) return 'david';
-        return 'other';
-    }
-    function authorLabel(c) {
-        const t = commitType(c);
-        if (t === 'claude') return 'Claude';
-        if (t === 'david') return 'David';
-        if (t === 'bot') return 'Bot';
-        return c.author?.split(' ')[0] || '?';
-    }
-
-    // Repo emojis — each repo gets a distinct icon
-    const REPO_EMOJI = {
-        'randomdrake.github.io': '🌐',
-        'nextjs-dashboard':      '📊',
-        'react-flow-org-chart':  '🌳',
-        'hots-cheat-sheet':      '🎮',
-        'chanern':               '🧬',
-        'marijuana':             '🌿',
-        'scern':                 '🧪',
-        'php-nntp':              '📰',
-        'larpern':               '🔍',
-        'amber':                 '💎',
-        'randomdrake':           '📝',
-    };
-    // Author type emojis
-    const AUTHOR_EMOJI = {
-        claude: '🤖',
-        david:  '👨‍💻',
-        bot:    '⚙️',
-        other:  '👤',
-    };
-
-    function cardEmoji(c) {
-        // Use repo emoji if available, otherwise fall back to author type
-        return REPO_EMOJI[c.repo] || AUTHOR_EMOJI[commitType(c)] || '🔧';
-    }
-
-    // Build a single feed card (commit or pipeline run)
-    function feedCard(item) {
-        if (item._type === 'pipeline') {
-            const r = item;
-            const cls = r.conclusion === 'failure' ? 'failed' : (r.status === 'in_progress' || r.status === 'queued') ? 'running' : '';
-            const emoji = r.conclusion === 'success' ? '✅' : r.conclusion === 'failure' ? '❌' : '🔄';
-            const label = r.status === 'in_progress' ? 'RUNNING' : r.conclusion === 'success' ? 'passed' : r.conclusion === 'failure' ? 'failed' : r.status;
-            return `
-            <a href="${r.html_url}" target="_blank" rel="noopener" class="feed-card pipeline ${cls}">
-                <span class="card-emoji">${emoji}</span>
-                <div style="min-width:0;flex:1">
-                    <p style="font-size:12px;color:#e6edf3;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${(r.head_commit?.message?.split('\\n')[0] || r.name || 'Pipeline run').replace(/</g, '&lt;')}</p>
-                    <div style="display:flex;align-items:center;gap:6px;margin-top:3px;flex-wrap:wrap">
-                        <span class="author-tag bot">${label}</span>
-                        <span style="font-size:10px;color:#484f58">${r.name}</span>
-                        <span style="font-size:10px;color:#484f58">#${r.run_number}</span>
-                        <span style="font-size:10px;color:#484f58">&middot;</span>
-                        <span style="font-size:10px;color:#484f58">${timeAgo(r.created_at)}</span>
-                    </div>
-                </div>
-            </a>`;
-        }
-        // Commit card
-        const c = item;
-        const type = commitType(c);
-        return `
-        <a href="${c.url}" target="_blank" rel="noopener" class="feed-card ${type}">
-            <span class="card-emoji" title="${c.repo}">${cardEmoji(c)}</span>
-            <div style="min-width:0;flex:1">
-                <p style="font-size:12px;color:#e6edf3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0">${c.message.replace(/</g, '&lt;')}</p>
-                <div style="display:flex;align-items:center;gap:6px;margin-top:3px;flex-wrap:wrap">
-                    <span class="author-tag ${type}">${authorLabel(c)}</span>
-                    <code style="font-size:9px;color:#f97316">${(c.sha || '').slice(0, 7)}</code>
-                    <span style="font-size:10px;color:#f97316">${c.repo}</span>
-                    <span style="font-size:10px;color:#484f58">&middot;</span>
-                    <span style="font-size:10px;color:#484f58">${timeAgo(c.date)}</span>
-                </div>
-            </div>
-        </a>`;
-    }
-
-    // --- Commit Livestream ---
-    async function loadCommitFeed(repos) {
-        if (!repos || repos.length === 0) return;
-
-        const sorted = [...repos].sort((a, b) =>
-            new Date(b.pushed_at) - new Date(a.pushed_at)
-        );
-        const active = sorted.slice(0, 10);
-
-        const allCommits = [];
-        const batchSize = 5;
-        for (let i = 0; i < active.length; i += batchSize) {
-            const batch = active.slice(i, i + batchSize);
-            const results = await Promise.all(
-                batch.map(r => ghFetch(`${API}/repos/${USERNAME}/${r.name}/commits?per_page=10`))
-            );
-            results.forEach((commits, j) => {
-                if (!commits) return;
-                commits.forEach(c => {
-                    allCommits.push({
-                        sha: c.sha.slice(0, 7),
-                        message: c.commit.message.split('\n')[0],
-                        full_message: c.commit.message,
-                        repo: batch[j].name,
-                        date: c.commit.author.date,
-                        author: c.commit.author.name,
-                        url: c.html_url,
-                    });
-                });
-            });
-        }
-
-        allCommits.sort((a, b) => new Date(b.date) - new Date(a.date));
-        if (allCommits.length > 0) lastKnownCommitSha = allCommits[0].sha;
-        renderCommitFeed(allCommits);
-    }
-
-    // --- Claude AI Usage (Static Snapshot) ---
-    // UPDATE: Replace this data with real numbers from the Anthropic Admin API:
-    //   GET /v1/organizations/usage_report/messages?bucket_width=1d&group_by[]=model
-    //   GET /v1/organizations/cost_report?bucket_width=1d
-    const CLAUDE_DATA = {
-        requests: '12.4K',
-        tokens: '847M',
-        primaryModel: 'Opus',
-        activeSince: '2023',
-        // Monthly token usage (input + output) — last 8 months
-        monthly: [
-            { month: 'Jul \'25', input: 42_000_000, output: 18_000_000 },
-            { month: 'Aug \'25', input: 58_000_000, output: 24_000_000 },
-            { month: 'Sep \'25', input: 71_000_000, output: 31_000_000 },
-            { month: 'Oct \'25', input: 89_000_000, output: 38_000_000 },
-            { month: 'Nov \'25', input: 105_000_000, output: 45_000_000 },
-            { month: 'Dec \'25', input: 98_000_000, output: 42_000_000 },
-            { month: 'Jan \'26', input: 124_000_000, output: 53_000_000 },
-            { month: 'Feb \'26', input: 112_000_000, output: 48_000_000 },
-        ],
-        // Model usage distribution (% of total requests)
-        models: [
-            { name: 'Claude Opus 4.6', pct: 45, color: '#f59e0b' },
-            { name: 'Claude Sonnet 4.6', pct: 35, color: '#d97706' },
-            { name: 'Claude Haiku 4.5', pct: 15, color: '#b45309' },
-            { name: 'Other / Legacy', pct: 5, color: '#92400e' },
-        ],
-    };
-
-    function renderClaudeUsage() {
-        // Stats are already in HTML, but we animate them via countUp later
-
-        // Monthly usage bar chart
-        const ctx = document.getElementById('claude-usage-chart');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: CLAUDE_DATA.monthly.map(m => m.month),
+                labels: d.daily.map(x => x.date.slice(5)),
                 datasets: [
-                    {
-                        label: 'Input Tokens',
-                        data: CLAUDE_DATA.monthly.map(m => m.input),
-                        backgroundColor: '#f59e0b',
-                        borderRadius: 4,
-                    },
-                    {
-                        label: 'Output Tokens',
-                        data: CLAUDE_DATA.monthly.map(m => m.output),
-                        backgroundColor: '#d97706',
-                        borderRadius: 4,
-                    },
-                ],
+                    { type: 'bar', label: 'Input (incl. cache)', data: d.daily.map(x => x.input), backgroundColor: '#d4a574', borderRadius: 3, yAxisID: 'y', order: 2 },
+                    { type: 'line', label: 'Output', data: d.daily.map(x => x.output), borderColor: '#f97316', backgroundColor: '#f97316', yAxisID: 'y1', tension: 0.3, borderWidth: 2, pointRadius: 2, pointHoverRadius: 4, order: 1 },
+                ]
             },
             options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                animation: {
-                    duration: 1500,
-                    easing: 'easeOutQuart',
-                },
+                responsive: true, maintainAspectRatio: false,
+                animation: REDUCED ? false : { duration: 900 },
+                interaction: { mode: 'index', intersect: false },
                 scales: {
-                    x: {
-                        stacked: true,
-                        grid: { color: '#30363d' },
-                        ticks: { color: '#8b949e', font: { size: 11 } },
-                    },
-                    y: {
-                        stacked: true,
-                        grid: { color: '#30363d' },
-                        ticks: {
-                            color: '#8b949e',
-                            font: { size: 11 },
-                            callback: v => (v / 1_000_000).toFixed(0) + 'M',
-                        },
-                    },
+                    x: { grid: { color: '#21262d' }, ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 10 } },
+                    y: { position: 'left', grid: { color: '#21262d' }, ticks: { color: '#d4a574', font: { size: 10 }, callback: v => abbr(v) }, title: { display: true, text: 'Input', color: '#d4a574', font: { size: 10 } } },
+                    y1: { position: 'right', grid: { drawOnChartArea: false }, ticks: { color: '#f97316', font: { size: 10 }, callback: v => abbr(v) }, title: { display: true, text: 'Output', color: '#f97316', font: { size: 10 } } }
                 },
-                plugins: {
-                    legend: {
-                        labels: { color: '#8b949e', boxWidth: 12, padding: 16 },
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: ctx => {
-                                const m = (ctx.raw / 1_000_000).toFixed(1);
-                                return `${ctx.dataset.label}: ${m}M tokens`;
-                            },
-                        },
-                    },
-                },
-            },
-        });
-
-        // Model breakdown horizontal bars
-        const breakdown = document.getElementById('claude-model-breakdown');
-        breakdown.innerHTML = CLAUDE_DATA.models.map(m => `
-            <div>
-                <div class="flex justify-between text-sm mb-1">
-                    <span class="text-gh-text">${m.name}</span>
-                    <span class="text-gh-muted">${m.pct}%</span>
-                </div>
-                <div class="w-full bg-gh-bg rounded-full h-2 overflow-hidden">
-                    <div class="h-full rounded-full transition-all duration-1000 ease-out claude-bar" style="background:${m.color};width:0%" data-width="${m.pct}%"></div>
-                </div>
-            </div>
-        `).join('');
-
-        // Animate bars in after a short delay
-        requestAnimationFrame(() => {
-            setTimeout(() => {
-                document.querySelectorAll('.claude-bar').forEach(bar => {
-                    bar.style.width = bar.dataset.width;
-                });
-            }, 300);
-        });
-    }
-
-    // --- CI/CD pass rate stat ---
-    let _cicdStatUpdated = false;
-    function updateCicdStat(runs) {
-        const completed = runs.filter(r => r.status === 'completed');
-        if (completed.length === 0) {
-            document.getElementById('stat-cicd').textContent = '—';
-            return;
-        }
-        const passed = completed.filter(r => r.conclusion === 'success').length;
-        const rate = Math.round((passed / completed.length) * 100);
-        const el = document.getElementById('stat-cicd');
-        if (!_cicdStatUpdated) {
-            _cicdStatUpdated = true;
-            countUp(el, rate, 1200);
-            // Add % after animation
-            setTimeout(() => { el.textContent = rate + '%'; }, 1300);
-        } else {
-            el.textContent = rate + '%';
-        }
-    }
-
-    // --- Pipeline data (merged into unified feed) ---
-    async function loadPipelines() {
-        try {
-            const data = await ghFetch(`${API}/repos/${USERNAME}/randomdrake.github.io/actions/runs?per_page=20`);
-            if (data && data.workflow_runs) {
-                _feedPipelines = data.workflow_runs;
-                renderUnifiedFeed();
-                updateCicdStat(data.workflow_runs);
-
-                const hasActive = data.workflow_runs.some(r => r.status === 'in_progress' || r.status === 'queued');
-                setTimeout(loadPipelines, hasActive ? 15000 : 60000);
-            } else {
-                setTimeout(loadPipelines, 60000);
+                plugins: { legend: { labels: { color: '#8b949e', boxWidth: 11, padding: 14 } }, tooltip: { callbacks: { label: c => `${c.dataset.label}: ${abbr(c.raw)} tokens` } } }
             }
-        } catch (err) {
-            console.warn('Pipeline fetch failed:', err);
-            setTimeout(loadPipelines, 60000);
-        }
+        });
+
+        const palette = ['#d4a574', '#c2925f', '#b07a4a', '#9a6a3f', '#845a35'];
+        const box = document.getElementById('claude-model-breakdown');
+        box.innerHTML = (d.models || []).map((m, i) => `
+            <div class="model-bar">
+                <div class="mb-top"><span>${esc(prettyModel(m.name))}</span><span class="pct">${m.pct}%</span></div>
+                <div class="track"><div class="fill" style="background:${palette[i % palette.length]};width:0%" data-w="${m.pct}%"></div></div>
+            </div>`).join('');
+        requestAnimationFrame(() => setTimeout(() => {
+            box.querySelectorAll('.fill').forEach(f => { f.style.width = f.dataset.w; });
+        }, 200));
     }
 
-    // --- Load from pre-built static JSON (generated by GitHub Actions) ---
+    // ---------- static data path ----------
     async function loadFromStaticData() {
         try {
             const res = await fetch('data/github.json');
             if (!res.ok) return false;
             const data = await res.json();
-            console.log('Loaded static data from', data.generated_at);
 
-            // Profile
-            const p = data.profile;
-            document.getElementById('avatar').src = p.avatar_url;
-            document.getElementById('avatar').classList.remove('hidden');
-            document.getElementById('avatar-skeleton').classList.add('hidden');
-            document.getElementById('profile-name').textContent = p.name || USERNAME;
-            document.getElementById('profile-bio').textContent = p.bio || '';
-            const locEl = document.getElementById('profile-location');
-            if (p.location) {
-                locEl.querySelector('span:last-child')?.remove();
-                const span = document.createElement('span');
-                span.textContent = p.location;
-                locEl.appendChild(span);
-            }
-            const blogEl = document.getElementById('profile-blog');
-            if (p.blog) {
-                const url = p.blog.startsWith('http') ? p.blog : `https://${p.blog}`;
-                blogEl.href = url;
-                blogEl.querySelector('span').textContent = p.blog;
-                blogEl.classList.remove('hidden');
-            }
-            countUp(document.getElementById('stat-repos'), p.public_repos);
-            countUp(document.getElementById('stat-followers'), p.followers);
-            countUp(document.getElementById('stat-stars'), data.stats.total_stars);
-            countUp(document.getElementById('stat-forks'), data.stats.total_forks);
-
-            // Lines of code — estimate from language bytes (~25 bytes per line avg)
             const langTotals = {};
-            let totalCodeBytes = data.stats.total_code_bytes || 0;
-            Object.values(data.languages).forEach(langs => {
-                Object.entries(langs).forEach(([lang, bytes]) => {
-                    langTotals[lang] = (langTotals[lang] || 0) + bytes;
-                    if (!totalCodeBytes) totalCodeBytes += bytes;
-                });
-            });
-            const estimatedLOC = Math.round(totalCodeBytes / 25);
-            countUp(document.getElementById('stat-loc'), estimatedLOC);
+            Object.values(data.languages || {}).forEach(langs =>
+                Object.entries(langs).forEach(([l, b]) => { langTotals[l] = (langTotals[l] || 0) + b; }));
 
-            // Repos
-            const repos = data.repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
-            renderRepoCards(repos);
-
-            // Languages
-            renderLanguageChart(langTotals);
-
-            // Commits (lastKnownCommitSha set inside renderCommitFeed)
-            renderCommitFeed(data.commits);
-
+            setStats(data.profile || {}, data.stats || {}, langTotals);
+            renderRepoCards((data.repos || []).slice().sort((a, b) => b.stargazers_count - a.stargazers_count));
             return true;
-        } catch (err) {
-            console.warn('Static data load failed, falling back to live API:', err);
-            return false;
-        }
+        } catch { return false; }
     }
 
-    // --- Extracted render functions (shared by static + live paths) ---
-
-    function renderLanguageChart(langTotals) {
-        const sorted = Object.entries(langTotals).sort((a, b) => b[1] - a[1]);
-        if (sorted.length === 0) return;
-        const totalBytes = sorted.reduce((sum, [, b]) => sum + b, 0);
-        const top = sorted.slice(0, 8);
-        const otherBytes = sorted.slice(8).reduce((sum, [, b]) => sum + b, 0);
-        if (otherBytes > 0) top.push(['Other', otherBytes]);
-
-        const canvas = document.getElementById('lang-chart');
-        canvas.previousElementSibling.classList.add('hidden');
-        canvas.classList.remove('hidden');
-
-        new Chart(canvas, {
-            type: 'doughnut',
-            data: {
-                labels: top.map(([l]) => l),
-                datasets: [{
-                    data: top.map(([, b]) => b),
-                    backgroundColor: top.map(([l]) => getLangColor(l)),
-                    borderColor: '#161b22',
-                    borderWidth: 2,
-                }]
-            },
-            options: {
-                responsive: true, maintainAspectRatio: true, cutout: '60%',
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: {
-                            label: (ctx) => {
-                                const pct = ((ctx.raw / totalBytes) * 100).toFixed(1);
-                                const mb = (ctx.raw / 1024 / 1024).toFixed(1);
-                                return `${ctx.label}: ${pct}% (${mb} MB)`;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        document.getElementById('lang-legend').innerHTML = top.map(([lang, bytes]) => {
-            const pct = ((bytes / totalBytes) * 100).toFixed(1);
-            return `<div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full shrink-0" style="background:${getLangColor(lang)}"></span>
-                <span class="text-gh-text">${lang}</span>
-                <span class="text-gh-muted ml-auto">${pct}%</span>
-            </div>`;
-        }).join('');
-    }
-
-    // Store commits + pipeline runs globally so they can be merged
-    let _feedCommits = [];
-    let _feedPipelines = [];
-    let _autoScrollStarted = false;
-
-    function renderUnifiedFeed() {
-        const feed = document.getElementById('commit-feed');
-
-        // Normalize to a common shape for sorting
-        const items = [];
-        _feedCommits.forEach(c => items.push({ ...c, _type: 'commit', _date: new Date(c.date) }));
-        _feedPipelines.forEach(r => items.push({ ...r, _type: 'pipeline', _date: new Date(r.created_at) }));
-
-        // Chronological: oldest first, newest at bottom
-        items.sort((a, b) => a._date - b._date);
-
-        const commitCount = _feedCommits.length;
-        const pipelineCount = _feedPipelines.length;
-        document.getElementById('commit-count').textContent =
-            `${commitCount} commits` + (pipelineCount ? ` · ${pipelineCount} runs` : '');
-
-        if (items.length === 0) {
-            feed.innerHTML = '<p class="text-gh-muted text-center py-8">No activity found</p>';
-            return;
-        }
-
-        const cardsHTML = items.map(item => feedCard(item)).join('');
-
-        const easterEggHTML = `
-            <div class="easter-egg" id="easter-egg">
-                <div class="egg" onclick="document.getElementById('egg-secret').style.display='block';this.textContent='🐣'">🥚</div>
-                <div class="egg-msg">You scrolled through everything. You earned this.</div>
-                <div class="egg-secret" id="egg-secret">
-                    🐣 <strong>Congrats, you found me!</strong><br><br>
-                    This entire dashboard was built by a human (David) and an AI (Claude) pair-programming together.<br>
-                    Every card above is real — ${_feedCommits.filter(isClaudeCommit).length} commits co-authored with Claude,
-                    ${_feedCommits.filter(isDavidCommit).length} by David solo, ${pipelineCount} pipeline runs.<br><br>
-                    The future is humans and robots building things together. 🤖🧡👨‍💻<br><br>
-                    <a href="https://randomdrake.substack.com?utm_source=dashboard&utm_medium=easter_egg" target="_blank"
-                       style="color:#f97316;text-decoration:underline">Subscribe to see what we build next →</a>
-                </div>
-            </div>
-        `;
-
-        // Remember scroll position to avoid jarring re-render
-        const wasAtBottom = feed.scrollTop >= feed.scrollHeight - feed.clientHeight - 50;
-
-        feed.innerHTML = `
-            <div class="workshop-fade-top"></div>
-            <div class="robot-lane">
-                ${easterEggHTML}
-                ${cardsHTML}
-            </div>
-            <div class="workshop-fade-bottom"></div>
-        `;
-
-        if (!_autoScrollStarted) {
-            // Start scrolled to the bottom (newest first)
-            feed.scrollTop = feed.scrollHeight;
-            _autoScrollStarted = true;
-
-            let autoScrolling = true;
-            let userScrolled = false;
-
-            function autoScroll() {
-                if (autoScrolling && !userScrolled) {
-                    feed.scrollTop -= 0.6;
-                    if (feed.scrollTop <= 0) {
-                        feed.scrollTop = feed.scrollHeight - feed.clientHeight;
-                    }
-                }
-                requestAnimationFrame(autoScroll);
-            }
-
-            feed.addEventListener('mouseenter', () => { autoScrolling = false; });
-            feed.addEventListener('mouseleave', () => { autoScrolling = true; userScrolled = false; });
-            feed.addEventListener('wheel', () => { userScrolled = true; }, { passive: true });
-            feed.addEventListener('touchstart', () => { userScrolled = true; }, { passive: true });
-            requestAnimationFrame(autoScroll);
-        } else if (wasAtBottom) {
-            feed.scrollTop = feed.scrollHeight;
-        }
-    }
-
-    function renderCommitFeed(commits) {
-        _feedCommits = commits;
-        if (_feedCommits.length > 0) lastKnownCommitSha = [..._feedCommits].sort((a, b) => new Date(b.date) - new Date(a.date))[0].sha;
-        renderUnifiedFeed();
-    }
-
-    // --- Init ---
-    async function init() {
-        // Claude usage is static data — always render, no API needed
-        renderClaudeUsage();
-
-        // Try static data first (generated by GitHub Actions, zero API calls)
-        const loaded = await loadFromStaticData();
-
-        if (!loaded) {
-            // Fall back to live API
-            try {
-                const [, repos] = await Promise.all([
-                    loadProfile(),
-                    loadRepos(),
-                ]);
-
-                if (repos && repos.length > 0) {
-                    await Promise.all([
-                        loadLanguages(repos),
-                        loadCommitFeed(repos),
-                    ]);
-                }
-            } catch (err) {
-                console.error('Dashboard init error:', err);
-            }
-        }
-
-        // Pipeline status is always live (real-time by nature)
-        loadPipelines();
-
-        // Celebrate!
-        if (!rateLimited) spawnConfetti();
-        startAmbientEmojis();
-
-        // Clean up any remaining skeletons
-        document.querySelectorAll('.skeleton').forEach(el => {
-            el.style.animation = 'none';
-            el.style.background = 'transparent';
-        });
-    }
-
-    // --- New Commit Toast Notification ---
-    let lastKnownCommitSha = null;
-
-    function showCommitToast(commit) {
-        // Remove any existing toast
-        document.querySelectorAll('.commit-toast').forEach(el => el.remove());
-
-        const toast = document.createElement('div');
-        toast.className = 'commit-toast';
-        toast.innerHTML = `
-            <div class="bg-gh-card border border-gh-accent/40 rounded-lg shadow-lg shadow-orange-500/10 p-4 backdrop-blur-sm">
-                <div class="flex items-center gap-3">
-                    <div class="shrink-0 w-9 h-9 rounded-full bg-gh-accent/20 flex items-center justify-center">
-                        <span class="text-lg">🚀</span>
-                    </div>
-                    <div class="min-w-0 flex-1">
-                        <div class="flex items-center gap-2 mb-0.5">
-                            <span class="text-xs font-semibold text-gh-accent uppercase tracking-wide">New Commit</span>
-                            <span class="live-dot"></span>
-                        </div>
-                        <p class="text-sm text-gh-text truncate">${commit.message.replace(/</g, '&lt;')}</p>
-                        <div class="flex items-center gap-2 text-xs text-gh-muted mt-0.5">
-                            <code class="text-gh-accent">${commit.sha.slice(0, 7)}</code>
-                            <span>&middot;</span>
-                            <span>${commit.repo}</span>
-                            <span>&middot;</span>
-                            <span>${timeAgo(commit.date)}</span>
-                        </div>
-                    </div>
-                    <button onclick="this.closest('.commit-toast').classList.add('dismissing');setTimeout(()=>this.closest('.commit-toast')?.remove(),400)"
-                            class="shrink-0 text-gh-muted hover:text-gh-text transition-colors p-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-                    </button>
-                </div>
-            </div>
-        `;
-        document.body.appendChild(toast);
-
-        // Auto-dismiss after 8 seconds
-        setTimeout(() => {
-            if (toast.parentNode) {
-                toast.classList.add('dismissing');
-                setTimeout(() => toast.remove(), 400);
-            }
-        }, 8000);
-    }
-
-    async function pollForNewCommits() {
+    // Claude Code usage lives in its own file (generated locally, committed).
+    async function loadClaudeUsage() {
         try {
-            const res = await fetch('data/github.json?_t=' + Date.now());
+            const res = await fetch('data/claude.json');
             if (!res.ok) return;
-            const data = await res.json();
-            if (!data.commits || data.commits.length === 0) return;
-
-            const newestSha = data.commits[0].sha;
-
-            if (lastKnownCommitSha && newestSha !== lastKnownCommitSha) {
-                // New commit detected — show toast and refresh the feed
-                showCommitToast(data.commits[0]);
-                renderCommitFeed(data.commits);
-            }
-
-            lastKnownCommitSha = newestSha;
-        } catch (err) {
-            // Silently ignore poll failures
-        }
+            renderClaudeUsage(await res.json());
+        } catch {}
     }
 
-    init().then(() => {
-        // Poll for new commits every 2 minutes
-        setInterval(pollForNewCommits, 120_000);
-    });
+    // ---------- live fallback ----------
+    async function loadLive() {
+        const user = await ghFetch(`${API}/users/${USERNAME}`);
+        const repos = await ghFetchAllPages(`${API}/users/${USERNAME}/repos`);
+        if (!repos || !repos.length) return;
+
+        const stats = {
+            total_stars: repos.reduce((s, r) => s + r.stargazers_count, 0),
+            total_forks: repos.reduce((s, r) => s + r.forks_count, 0),
+        };
+
+        const langTotals = {};
+        const batch = 5;
+        for (let i = 0; i < repos.length; i += batch) {
+            const results = await Promise.all(repos.slice(i, i + batch).map(r => ghFetch(`${API}/repos/${USERNAME}/${r.name}/languages`)));
+            results.forEach(langs => { if (langs) Object.entries(langs).forEach(([l, b]) => { langTotals[l] = (langTotals[l] || 0) + b; }); });
+        }
+        stats.total_code_bytes = Object.values(langTotals).reduce((a, b) => a + b, 0);
+
+        setStats(user || {}, stats, langTotals);
+        renderRepoCards(repos.slice().sort((a, b) => b.stargazers_count - a.stargazers_count));
+    }
+
+    (async function init() {
+        const ok = await loadFromStaticData();
+        if (!ok) { try { await loadLive(); } catch (e) { console.error(e); } }
+        loadClaudeUsage();
+    })();
     </script>
 </body>
 </html>

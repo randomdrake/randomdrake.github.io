@@ -82,36 +82,7 @@ async function main() {
     if (langs) languages[repo.name] = langs;
   }
 
-  // Commits from the 10 most recently pushed repos
-  console.log('Fetching commits...');
-  const sortedByPush = [...repos].sort((a, b) =>
-    new Date(b.pushed_at) - new Date(a.pushed_at)
-  );
-  const activeRepos = sortedByPush.slice(0, 10);
-  const commits = [];
-  for (const repo of activeRepos) {
-    const raw = await apiFetch(`/repos/${USERNAME}/${repo.name}/commits?per_page=15`);
-    if (!raw) continue;
-    raw.forEach(c => {
-      const fullMsg = c.commit.message;
-      commits.push({
-        sha: c.sha,
-        message: fullMsg.split('\n')[0],
-        full_message: fullMsg,
-        repo: repo.name,
-        date: c.commit.author.date,
-        author: c.commit.author.name,
-        url: c.html_url,
-      });
-    });
-  }
-  commits.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  // Recent events
-  console.log('Fetching events...');
-  const events = await apiFetch(`/users/${USERNAME}/events/public?per_page=30`);
-
-  // Assemble output
+  // Assemble output (the page consumes profile, repos, languages, and stats)
   const output = {
     generated_at: new Date().toISOString(),
     profile: {
@@ -125,13 +96,6 @@ async function main() {
     },
     repos,
     languages,
-    commits,
-    events: (events || []).map(e => ({
-      type: e.type,
-      repo: e.repo,
-      payload: e.payload,
-      created_at: e.created_at,
-    })),
   };
 
   // Compute aggregates
@@ -151,7 +115,7 @@ async function main() {
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
 
   console.log(`Written to ${outPath} (${(fs.statSync(outPath).size / 1024).toFixed(1)} KB)`);
-  console.log(`Stats: ${repos.length} repos, ${commits.length} commits, ${output.stats.total_stars} stars`);
+  console.log(`Stats: ${repos.length} repos, ${output.stats.total_stars} stars`);
 }
 
 main().catch(err => {
