@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Byron Drake — Engineering Leader</title>
+    <title>David Byron Drake — Senior Engineering Manager at New Relic</title>
     <link rel="icon" type="image/jpeg" href="https://avatars.githubusercontent.com/u/1679509?v=4&s=64">
     <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/1679509?v=4&s=180">
-    <meta name="description" content="David Byron Drake — engineering leader and former YC CTO building AI-native products. Live GitHub activity, experience, and selected work.">
+    <meta name="description" content="David Byron Drake — Senior Engineering Manager at New Relic. Engineering leadership, selected writing, and open-source work.">
     <link rel="canonical" href="https://randomdrake.github.io">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="David Byron Drake — Engineering Leader">
-    <meta property="og:description" content="Engineering leader and former YC CTO building AI-native products. Live GitHub activity, experience, and selected work.">
+    <meta property="og:title" content="David Byron Drake — Senior Engineering Manager at New Relic">
+    <meta property="og:description" content="David Byron Drake — Senior Engineering Manager at New Relic. Engineering leadership, selected writing, and open-source work.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://randomdrake.github.io">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/1679509?v=4&s=400">
@@ -20,11 +20,10 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="David Byron Drake — Engineering Leader">
-    <meta name="twitter:description" content="Engineering leader and former YC CTO building AI-native products.">
+    <meta name="twitter:title" content="David Byron Drake — Senior Engineering Manager at New Relic">
+    <meta name="twitter:description" content="David Byron Drake — Senior Engineering Manager at New Relic. Engineering leadership, selected writing, and open-source work.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/1679509?v=4&s=400">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 
     <style>
         :root {
@@ -41,7 +40,6 @@
             --green: #3fb950;
             --red: #f85149;
             --yellow: #d29922;
-            --claude: #d4a574;
             --radius: 12px;
             --maxw: 1040px;
         }
@@ -144,7 +142,7 @@
             max-width: 62ch;
             margin: 0 0 16px;
         }
-        .hero .open-to {
+        .hero .details {
             font-size: 0.84rem;
             color: var(--muted);
             margin: 0 0 18px;
@@ -152,7 +150,7 @@
             flex-wrap: wrap;
             gap: 6px 14px;
         }
-        .hero .open-to span { display: inline-flex; align-items: center; gap: 6px; }
+        .hero .details span { display: inline-flex; align-items: center; gap: 6px; }
 
         .links {
             display: flex;
@@ -260,22 +258,15 @@
         .repo .rmeta .l-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; vertical-align: -1px; }
         .repo .rmeta .when { margin-left: auto; }
 
-        /* ---- Claude usage ---- */
-        .claude-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
-        .claude-stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 14px; text-align: center; }
-        .claude-stat .num { font-size: 1.5rem; font-weight: 700; color: var(--claude); line-height: 1.1; }
-        .claude-stat .label { font-size: 0.72rem; color: var(--muted); margin-top: 6px; }
-        .claude-row { display: flex; gap: 28px; flex-wrap: wrap; }
-        .claude-chart-box { flex: 1; min-width: 300px; height: 230px; }
-        .claude-models { width: 280px; }
-        .claude-models h3 { font-size: 0.82rem; color: var(--muted); font-weight: 550; margin: 0 0 14px; }
-        .model-bar { margin-bottom: 13px; }
-        .model-bar .mb-top { display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 5px; }
-        .model-bar .mb-top .pct { color: var(--muted); }
-        .model-bar .track { height: 7px; background: var(--bg); border-radius: 999px; overflow: hidden; }
-        .model-bar .fill { height: 100%; border-radius: 999px; transition: width 1s ease; }
-
-        .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; padding: 2px 9px; border-radius: 999px; border: 1px solid rgba(212,165,116,0.3); background: rgba(212,165,116,0.1); color: #e8c49a; }
+        /* ---- Selected writing ---- */
+        .writing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .essay { display: flex; flex-direction: column; padding: 22px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); text-decoration: none; transition: border-color 0.18s, transform 0.18s; }
+        .essay:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .essay:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+        .essay .topic { color: var(--muted); font-size: 0.74rem; }
+        .essay h3 { color: var(--heading); font-size: 1.02rem; line-height: 1.4; margin: 12px 0; }
+        .essay p { font-size: 0.87rem; color: var(--muted); margin: 0 0 20px; flex: 1; }
+        .essay .read { color: var(--accent); font-size: 0.82rem; font-weight: 600; }
 
         /* ---- Footer ---- */
         footer { border-top: 1px solid var(--border); padding: 36px 0 48px; text-align: center; color: var(--muted); font-size: 0.82rem; }
@@ -293,11 +284,11 @@
         @media (max-width: 760px) {
             .hero { flex-direction: column; text-align: center; padding-top: 40px; }
             .hero .about { margin-left: auto; margin-right: auto; }
-            .hero .open-to, .links { justify-content: center; }
+            .hero .details, .links { justify-content: center; }
             .stats { grid-template-columns: repeat(2, 1fr); }
-            .exp-grid, .claude-stats { grid-template-columns: 1fr; }
+            .exp-grid { grid-template-columns: 1fr; }
             .repo-grid { grid-template-columns: 1fr; }
-            .claude-models { width: 100%; }
+            .writing-grid { grid-template-columns: 1fr; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -324,16 +315,14 @@
             <img class="hero-avatar" src="https://avatars.githubusercontent.com/u/1679509?v=4&s=240" alt="David Byron Drake">
             <div>
                 <h1>David Byron Drake</h1>
-                <p class="tagline">Engineering leader building AI-native products. Former YC CTO.</p>
+                <p class="tagline">Senior Engineering Manager · New Relic</p>
                 <p class="about">
-                    Engineering leader with nearly two decades of experience spanning startup CTO and
-                    director roles. I build and lead teams that ship production AI systems, full-stack
-                    platforms, and developer infrastructure at scale — currently looking for engineering
-                    leadership roles where AI strategy and hands-on technical depth both matter.
+                    I’m a Senior Engineering Manager at New Relic, with nearly two decades of
+                    experience across engineering, startup leadership, and building software at scale.
+                    I care about helping people grow, understanding the problems behind the requests,
+                    and building teams that deliver useful software.
                 </p>
-                <p class="open-to">
-                    <span>🎯 Director / VP of Engineering &amp; AI strategy</span>
-                    <span>🌎 Remote-first · Portland-area hybrid</span>
+                <p class="details">
                     <span>📍 Tigard, OR</span>
                 </p>
                 <div class="links">
@@ -353,10 +342,7 @@
                         <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 3h12.5c.97 0 1.75.78 1.75 1.75v6.5A1.75 1.75 0 0114.25 13H1.75A1.75 1.75 0 010 11.25v-6.5C0 3.78.78 3 1.75 3zM1.5 4.75v.42l6.5 4.06 6.5-4.06v-.42a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25zm13 1.66l-6.5 4.06-6.5-4.06v4.84c0 .14.11.25.25.25h12.5a.25.25 0 00.25-.25V6.41z"/></svg>
                         Email
                     </a>
-                    <a class="btn" href="https://davidbyrondrake.com/david-drake-resume.pdf" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 019 4.25V1.5H3.75zM10.5 1.927V4.25c0 .138.112.25.25.25h2.323L10.5 1.927zM5 8.75A.75.75 0 015.75 8h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 8.75zm0 2.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75z"/></svg>
-                        Résumé
-                    </a>
+                    <a class="btn" href="https://randomdrake.com" target="_blank" rel="noopener">Writing</a>
                 </div>
             </div>
         </header>
@@ -376,32 +362,31 @@
             </div>
         </section>
 
-        <!-- ===== CLAUDE USAGE (hidden until real data exists) ===== -->
-        <section class="reveal hidden" id="claude-section">
+        <!-- ===== WRITING ===== -->
+        <section class="reveal" id="writing">
             <div class="section-head">
-                <h2>Claude Code usage</h2>
-                <span class="badge">● Real · last 30 days</span>
+                <h2>Selected writing</h2>
+                <a class="meta" href="https://randomdrake.com" target="_blank" rel="noopener">More on randomdrake.com ↗</a>
             </div>
-            <div class="claude-stats">
-                <div class="claude-stat"><div class="num" id="claude-total">—</div><div class="label">🧠 Tokens processed</div></div>
-                <div class="claude-stat"><div class="num" id="claude-output">—</div><div class="label">📤 Output tokens</div></div>
-                <div class="claude-stat"><div class="num" id="claude-model">—</div><div class="label">✨ Primary model</div></div>
-                <div class="claude-stat"><div class="num" id="claude-days">—</div><div class="label">📅 Active days</div></div>
-            </div>
-            <div class="claude-row">
-                <div style="flex:1;min-width:300px">
-                    <h3 style="font-size:0.82rem;color:var(--muted);font-weight:550;margin:0 0 12px">Daily token volume</h3>
-                    <div class="claude-chart-box"><canvas id="claude-chart"></canvas></div>
-                </div>
-                <div class="claude-models">
-                    <h3>Model usage</h3>
-                    <div id="claude-model-breakdown"></div>
-                    <p style="font-size:0.74rem;color:var(--faint);margin-top:14px;line-height:1.5">
-                        Aggregated from my local
-                        <a href="https://www.claude.com/product/claude-code" style="color:var(--claude)" target="_blank" rel="noopener">Claude Code</a>
-                        session logs — token counts only, never prompts or content. Includes cached input.
-                    </p>
-                </div>
+            <div class="writing-grid">
+                <a class="essay" href="https://randomdrake.com/2017/02/10/empathy-as-a-trait-for-good-developers/" target="_blank" rel="noopener">
+                    <span class="topic">People &amp; engineering · <time datetime="2017-02-10">2017</time></span>
+                    <h3>Empathy as a Trait for Good Developers</h3>
+                    <p>How listening, curiosity, and understanding someone else’s needs lead to more useful software.</p>
+                    <span class="read">Read essay ↗</span>
+                </a>
+                <a class="essay" href="https://randomdrake.com/2014/01/09/never-going-back-a-week-of-not-eating-lunch-at-my-desk/" target="_blank" rel="noopener">
+                    <span class="topic">Work &amp; life · <time datetime="2014-01-09">2014</time></span>
+                    <h3>Never Going Back – A Week of Not Eating Lunch at My Desk</h3>
+                    <p>A small change in daily habits, and what it taught me about focus, enjoyment, and owning my time.</p>
+                    <span class="read">Read essay ↗</span>
+                </a>
+                <a class="essay" href="https://randomdrake.com/2014/02/21/tomodachi-entrepreneurship-in-the-face-of-the-great-east-japan-earthquake/" target="_blank" rel="noopener">
+                    <span class="topic">Teaching &amp; entrepreneurship · <time datetime="2014-02-21">2014</time></span>
+                    <h3>Tomodachi – Entrepreneurship in the Face of the Great East Japan Earthquake</h3>
+                    <p>Sharing the possibilities of building a business with Japanese students visiting a Silicon Valley startup.</p>
+                    <span class="read">Read essay ↗</span>
+                </a>
             </div>
         </section>
 
@@ -413,11 +398,17 @@
             </div>
             <div class="exp-grid">
                 <div class="exp">
+                    <div class="role">Senior Engineering Manager</div>
+                    <div class="company">New Relic</div>
+                    <div class="period">Current</div>
+                    <span class="tag">Engineering leadership</span>
+                </div>
+                <div class="exp">
                     <div class="role">DevOps &amp; Engineering Manager</div>
                     <div class="company">Counterpart</div>
                     <div class="period">Dec 2024 – Mar 2026</div>
-                    <p class="impact">Led three teams (two full-stack + DevOps); drove Agile delivery to 89%, well above the 70% benchmark. Built MCP infrastructure integrating seven platforms across the insurance lifecycle; owned SOC 2 / HIPAA; saved ~$20K/yr with a git-tracked Salesforce CI/CD pipeline.</p>
-                    <span class="tag">Leadership · MCP · SOC 2 / HIPAA</span>
+                    <p class="impact">Led three teams (two full-stack + DevOps); drove Agile delivery to 89%, well above the 70% benchmark. Owned SOC 2 / HIPAA; saved ~$20K/yr with a git-tracked Salesforce CI/CD pipeline.</p>
+                    <span class="tag">Leadership · Delivery · SOC 2 / HIPAA</span>
                 </div>
                 <div class="exp">
                     <div class="role">Director of Engineering</div>
@@ -501,16 +492,8 @@
                     </div>
                 </div>
                 <div class="skill-group">
-                    <span class="skill-label">AI &amp; practices</span>
+                    <span class="skill-label">Engineering practices</span>
                     <div class="skills">
-                        <span class="chip">Claude</span>
-                        <span class="chip">OpenAI</span>
-                        <span class="chip">AI enablement &amp; training</span>
-                        <span class="chip">Agentic development</span>
-                        <span class="chip">LLM infrastructure</span>
-                        <span class="chip">Custom MCP servers</span>
-                        <span class="chip">Prompt engineering</span>
-                        <span class="chip">AI governance</span>
                         <span class="chip">DevOps &amp; CI/CD</span>
                         <span class="chip">SOC 2 / HIPAA</span>
                     </div>
@@ -537,7 +520,8 @@
         <!-- ===== FOOTER ===== -->
         <footer>
             <div class="flinks">
-                <a href="https://davidbyrondrake.com" target="_blank" rel="noopener">davidbyrondrake.com</a>
+                <a href="https://randomdrake.com" target="_blank" rel="noopener">Writing</a>
+                <a href="https://davidbyrondrake.com" target="_blank" rel="noopener">Full profile</a>
                 <a href="https://www.linkedin.com/in/david-drake-46524752/" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="https://github.com/randomdrake" target="_blank" rel="noopener">GitHub</a>
                 <a href="mailto:david@randomdrake.com">david@randomdrake.com</a>
@@ -672,59 +656,6 @@
             </a>`).join('');
     }
 
-    // ---------- Claude usage ----------
-    function prettyModel(id) {
-        if (!id) return 'Unknown';
-        const s = id.replace(/-\d{8}$/, '').replace(/^claude-/, '');
-        const m = s.match(/^(opus|sonnet|haiku|fable|mythos)-(\d+)-(\d+)/i);
-        if (m) return m[1].charAt(0).toUpperCase() + m[1].slice(1).toLowerCase() + ' ' + m[2] + '.' + m[3];
-        return s;
-    }
-
-    let claudeChart;
-    function renderClaudeUsage(d) {
-        if (!d || !d.daily || !d.daily.length) return;
-        document.getElementById('claude-section').classList.remove('hidden');
-        document.getElementById('claude-total').textContent = abbr(d.total_tokens || 0);
-        document.getElementById('claude-output').textContent = abbr(d.output_tokens || 0);
-        document.getElementById('claude-model').textContent = prettyModel(d.primary_model);
-        document.getElementById('claude-days').textContent = (d.days_active || d.daily.filter(x => (x.input + x.output) > 0).length) + '/' + (d.period_days || d.daily.length);
-
-        const ctx = document.getElementById('claude-chart');
-        if (claudeChart) claudeChart.destroy();
-        claudeChart = new Chart(ctx, {
-            data: {
-                labels: d.daily.map(x => x.date.slice(5)),
-                datasets: [
-                    { type: 'bar', label: 'Input (incl. cache)', data: d.daily.map(x => x.input), backgroundColor: '#d4a574', borderRadius: 3, yAxisID: 'y', order: 2 },
-                    { type: 'line', label: 'Output', data: d.daily.map(x => x.output), borderColor: '#f97316', backgroundColor: '#f97316', yAxisID: 'y1', tension: 0.3, borderWidth: 2, pointRadius: 2, pointHoverRadius: 4, order: 1 },
-                ]
-            },
-            options: {
-                responsive: true, maintainAspectRatio: false,
-                animation: REDUCED ? false : { duration: 900 },
-                interaction: { mode: 'index', intersect: false },
-                scales: {
-                    x: { grid: { color: '#21262d' }, ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 10 } },
-                    y: { position: 'left', grid: { color: '#21262d' }, ticks: { color: '#d4a574', font: { size: 10 }, callback: v => abbr(v) }, title: { display: true, text: 'Input', color: '#d4a574', font: { size: 10 } } },
-                    y1: { position: 'right', grid: { drawOnChartArea: false }, ticks: { color: '#f97316', font: { size: 10 }, callback: v => abbr(v) }, title: { display: true, text: 'Output', color: '#f97316', font: { size: 10 } } }
-                },
-                plugins: { legend: { labels: { color: '#8b949e', boxWidth: 11, padding: 14 } }, tooltip: { callbacks: { label: c => `${c.dataset.label}: ${abbr(c.raw)} tokens` } } }
-            }
-        });
-
-        const palette = ['#d4a574', '#c2925f', '#b07a4a', '#9a6a3f', '#845a35'];
-        const box = document.getElementById('claude-model-breakdown');
-        box.innerHTML = (d.models || []).map((m, i) => `
-            <div class="model-bar">
-                <div class="mb-top"><span>${esc(prettyModel(m.name))}</span><span class="pct">${m.pct}%</span></div>
-                <div class="track"><div class="fill" style="background:${palette[i % palette.length]};width:0%" data-w="${m.pct}%"></div></div>
-            </div>`).join('');
-        requestAnimationFrame(() => setTimeout(() => {
-            box.querySelectorAll('.fill').forEach(f => { f.style.width = f.dataset.w; });
-        }, 200));
-    }
-
     // ---------- static data path ----------
     async function loadFromStaticData() {
         try {
@@ -740,15 +671,6 @@
             renderRepoCards((data.repos || []).slice().sort((a, b) => b.stargazers_count - a.stargazers_count));
             return true;
         } catch { return false; }
-    }
-
-    // Claude Code usage lives in its own file (generated locally, committed).
-    async function loadClaudeUsage() {
-        try {
-            const res = await fetch('data/claude.json');
-            if (!res.ok) return;
-            renderClaudeUsage(await res.json());
-        } catch {}
     }
 
     // ---------- live fallback ----------
@@ -777,7 +699,6 @@
     (async function init() {
         const ok = await loadFromStaticData();
         if (!ok) { try { await loadLive(); } catch (e) { console.error(e); } }
-        loadClaudeUsage();
     })();
     </script>
 </body>
