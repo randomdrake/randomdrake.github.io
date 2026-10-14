@@ -1,15 +1,27 @@
 {
-  "generated_at": "2026-10-14T00:21:09.446Z",
+  "generated_at": "2026-10-14T06:13:54.507Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
     "location": "Oregon",
     "blog": "https://davidbyrondrake.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
-    "public_repos": 19,
+    "public_repos": 20,
     "followers": 28
   },
   "repos": [
+    {
+      "name": "atelier",
+      "full_name": "randomdrake/atelier",
+      "html_url": "https://github.com/randomdrake/atelier",
+      "description": "A place for AI to express itself.",
+      "fork": false,
+      "language": "JavaScript",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-10-14T04:27:52Z",
+      "pushed_at": "2026-10-14T04:27:48Z"
+    },
     {
       "name": "Bedrock-PHP",
       "full_name": "randomdrake/Bedrock-PHP",
@@ -175,8 +187,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-13T18:12:37Z",
-      "pushed_at": "2026-10-13T18:12:32Z"
+      "updated_at": "2026-10-14T00:21:14Z",
+      "pushed_at": "2026-10-14T00:21:10Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -240,6 +252,10 @@
     }
   ],
   "languages": {
+    "atelier": {
+      "JavaScript": 138901,
+      "HTML": 16122
+    },
     "Bedrock-PHP": {
       "PHP": 98615,
       "Shell": 2723
@@ -315,6 +331,6 @@
   "stats": {
     "total_stars": 203,
     "total_forks": 68,
-    "total_code_bytes": 28630035
+    "total_code_bytes": 28785058
   }
 }
