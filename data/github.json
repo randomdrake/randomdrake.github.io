@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-14T18:10:43.544Z",
+  "generated_at": "2026-10-15T00:21:06.838Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
     "location": "Oregon",
     "blog": "https://davidbyrondrake.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
-    "public_repos": 20,
+    "public_repos": 21,
     "followers": 28
   },
   "repos": [
@@ -19,8 +19,8 @@
       "language": "JavaScript",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-14T17:08:58Z",
-      "pushed_at": "2026-10-14T17:08:55Z"
+      "updated_at": "2026-10-15T00:11:42Z",
+      "pushed_at": "2026-10-15T00:11:38Z"
     },
     {
       "name": "Bedrock-PHP",
@@ -57,6 +57,18 @@
       "forks_count": 0,
       "updated_at": "2014-04-11T20:57:36Z",
       "pushed_at": "2014-03-20T19:58:02Z"
+    },
+    {
+      "name": "ember",
+      "full_name": "randomdrake/ember",
+      "html_url": "https://github.com/randomdrake/ember",
+      "description": "HTML Design Redlining With Only a GitHub Dependency",
+      "fork": false,
+      "language": null,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-10-14T23:49:53Z",
+      "pushed_at": "2026-10-14T23:49:50Z"
     },
     {
       "name": "hots-cheat-sheet",
@@ -187,8 +199,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-14T12:13:03Z",
-      "pushed_at": "2026-10-14T12:12:59Z"
+      "updated_at": "2026-10-14T18:10:49Z",
+      "pushed_at": "2026-10-14T18:10:44Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -253,10 +265,10 @@
   ],
   "languages": {
     "atelier": {
-      "JavaScript": 268908,
+      "JavaScript": 306824,
       "TypeScript": 21175,
-      "Shell": 17989,
-      "HTML": 17957
+      "HTML": 18097,
+      "Shell": 17989
     },
     "Bedrock-PHP": {
       "PHP": 98615,
@@ -268,6 +280,7 @@
       "CSS": 145600
     },
     "docs": {},
+    "ember": {},
     "hots-cheat-sheet": {
       "PHP": 5486
     },
@@ -333,6 +346,6 @@
   "stats": {
     "total_stars": 203,
     "total_forks": 68,
-    "total_code_bytes": 28956064
+    "total_code_bytes": 28994120
   }
 }
