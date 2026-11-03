@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T12:07:43.133Z",
+  "generated_at": "2026-11-03T18:06:26.077Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -19,8 +19,8 @@
       "language": "JavaScript",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-02T23:12:21Z",
-      "pushed_at": "2026-11-02T23:12:17Z"
+      "updated_at": "2026-11-03T17:16:23Z",
+      "pushed_at": "2026-11-03T17:16:19Z"
     },
     {
       "name": "Bedrock-PHP",
@@ -199,8 +199,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-03T06:09:33Z",
-      "pushed_at": "2026-11-03T06:09:29Z"
+      "updated_at": "2026-11-03T12:07:47Z",
+      "pushed_at": "2026-11-03T12:07:44Z"
     },
     {
       "name": "react-flow-org-chart",
@@ -277,9 +277,9 @@
   ],
   "languages": {
     "atelier": {
-      "JavaScript": 361483,
+      "JavaScript": 364287,
       "TypeScript": 21175,
-      "HTML": 19097,
+      "HTML": 19391,
       "Shell": 17989
     },
     "Bedrock-PHP": {
@@ -359,6 +359,6 @@
   "stats": {
     "total_stars": 203,
     "total_forks": 68,
-    "total_code_bytes": 29049779
+    "total_code_bytes": 29052877
   }
 }
