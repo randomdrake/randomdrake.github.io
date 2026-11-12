@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T12:08:08.542Z",
+  "generated_at": "2026-11-12T18:06:30.636Z",
   "profile": {
     "name": "David Drake",
     "bio": "Engineering Leader • Team Builder • Former CEO / CTO",
@@ -7,7 +7,7 @@
     "blog": "https://davidbyrondrake.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/1679509?v=4",
     "public_repos": 22,
-    "followers": 31
+    "followers": 30
   },
   "repos": [
     {
@@ -19,8 +19,8 @@
       "language": "JavaScript",
       "stargazers_count": 1,
       "forks_count": 0,
-      "updated_at": "2026-11-12T00:28:18Z",
-      "pushed_at": "2026-11-11T23:28:14Z"
+      "updated_at": "2026-11-12T17:25:29Z",
+      "pushed_at": "2026-11-12T17:17:26Z"
     },
     {
       "name": "Bedrock-PHP",
@@ -199,8 +199,8 @@
       "language": "HTML",
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-12T07:09:43Z",
-      "pushed_at": "2026-11-12T06:09:39Z"
+      "updated_at": "2026-11-12T13:08:13Z",
+      "pushed_at": "2026-11-12T12:08:09Z"
     },
     {
       "name": "react-flow-org-chart",
